@@ -3,7 +3,7 @@ name: Cypress Tests
 # Schedule workflow to run at 7:30 PM Cairo time (UTC+2) every day
 on:
   schedule:
-    - cron: "00 17 * * 2"  # Runs every Tuesday at 17:00 UTC, which is 7:00 PM Cairo (UTC+2)
+    - cron: "07 11 * * 3"  # Runs every Tuesday at 17:00 UTC, which is 7:00 PM Cairo (UTC+2)
   workflow_dispatch:  # Allows manual trigger from the GitHub Actions UI  
 
 jobs:
