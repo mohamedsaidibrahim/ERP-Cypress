@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  cypress:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - CYPRESS_CACHE_FOLDER=/root/.cache/Cypress
+    depends_on:
+      - your_service_name  # if you have other services to run
