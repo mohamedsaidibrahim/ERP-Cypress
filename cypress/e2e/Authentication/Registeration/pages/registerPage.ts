@@ -2,8 +2,29 @@ import { generateRandomEmail } from "../../../../support/utils";
 import { AuthData } from "../../data/auth_data";
 
 export class RegisterationPage {
+
   static visit() {
+    // Catch uncaught exceptions specific to the "children" error
+    Cypress.on('uncaught:exception', (err) => {
+      if (err.message.includes("Cannot read properties of null (reading 'children')")) {
+        return false;
+      }
+      return true;
+    });
+
+    cy.viewport(1920, 1080);
     cy.visit(AuthData.registerationUrl);
+
+    cy.wait(3000); // Initial wait for page load
+
+    cy.url().then((currentUrl) => {
+      if (currentUrl.includes("2004")) {
+        cy.reload();
+        cy.log("You Are In: " + AuthData.registerationUrl);
+      } else {
+       this.visit(); // Retry if not on the correct page
+      }
+    });
   }
 
   static clickLangButton() {

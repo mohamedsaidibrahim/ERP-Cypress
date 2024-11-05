@@ -249,6 +249,6 @@ export default defineConfig({
       // 'cypress/e2e/Global_tests/PERFORMANCE/page_load_time/page_load_time.cy.ts'
     ],
   },
-  viewportWidth: 1280,
-  viewportHeight: 720,
+  viewportWidth: 1920,
+  viewportHeight: 1080,
 });
