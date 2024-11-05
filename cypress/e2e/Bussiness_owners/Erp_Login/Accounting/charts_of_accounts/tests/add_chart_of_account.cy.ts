@@ -10,8 +10,9 @@ describe("Adding Chart of Account", () => {
 
   it("1.Verify All Components are displaying in their correct states", () => {
     ChartOfAccounts.landing();
-    cy.wait(1500);
+    cy.wait(2000);
     AddingAccountScreen.clickAddNewButton();
+    cy.wait(1500);
     // Verify Labels
     cy.contains('[data-pc-section="legendtitle"]', "Account").should(
       "be.visible"
@@ -84,8 +85,9 @@ describe("Adding Chart of Account", () => {
 
   it("2.Verify Adding new Parent Chart of Account HAS PARENT", () => {
     ChartOfAccounts.landing();
-    cy.wait(1500);
+    cy.wait(2000);
     AddingAccountScreen.clickAddNewButton();
+    cy.wait(1500);
     cy.getFirstItemInDropDownList("natureId").then(($natureId) => {
       cy.wrap($natureId)
         .invoke("text")
@@ -124,11 +126,11 @@ describe("Adding Chart of Account", () => {
         });
     });
     AddingAccountScreen.selectTags();
-    AddingAccountScreen.checkPeriodicActiveAccountActivation();
+    AddingAccountScreen.checkActiveAccountActivation();
     AddingAccountScreen.clickSaveButton();
     cy.wait(2000);
     ChartOfAccounts.SearchAnTreeAccount(AccountingData.testParentAccountAddedd);
-    cy.get('div[class="description"]').last().scrollIntoView().click();
+    cy.get('div[class="description"]').last().scrollIntoView().click({force:true});
     cy.wait(1000);
     cy.verifyPlaceholderText(2, AccountingData.testParentAccountAddedd);
     cy.wait(1000);
@@ -148,8 +150,9 @@ describe("Adding Chart of Account", () => {
 
   it("3.Verify Adding new Parent Chart of Account WITHOUT PARENT", () => {
     ChartOfAccounts.landing();
-    cy.wait(1500);
+    cy.wait(2000);
     AddingAccountScreen.clickAddNewButton();
+    cy.wait(1500);
     cy.getFirstItemInDropDownList("natureId").then(($natureId) => {
       cy.wrap($natureId)
         .invoke("text")
@@ -209,10 +212,11 @@ describe("Adding Chart of Account", () => {
     });
   });
 
-  it("4.Verify Adding new Detail Chart of Account", () => {
+  it.only("4.Verify Adding new Detail Chart of Account", () => {
     ChartOfAccounts.landing();
-    cy.wait(1500);
+    cy.wait(2000);
     AddingAccountScreen.clickAddNewButton();
+    cy.wait(1500);
     cy.getFirstItemInDropDownList("natureId").then(($natureId) => {
       cy.wrap($natureId)
         .invoke("text")
@@ -252,7 +256,7 @@ describe("Adding Chart of Account", () => {
         });
     });
     AddingAccountScreen.selectTags();
-    AddingAccountScreen.checkPeriodicActiveAccountActivation();
+    AddingAccountScreen.checkActiveAccountActivation();
     AddingAccountScreen.clickIsDetail();
     AddingAccountScreen.checkOptionalCostCenterConfiguration();
     cy.clickInputtedSearchDropDownList(

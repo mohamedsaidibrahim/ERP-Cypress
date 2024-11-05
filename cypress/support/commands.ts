@@ -1816,7 +1816,7 @@ declare namespace Cypress {
 }
 Cypress.Commands.add("getFirstItemInDropDownList", (attrName: string) => {
   cy.getByTestAttribute(attrName).scrollIntoView().should("be.visible");
-  cy.get(attrName).find('span[role="combobox"]').click();
+  cy.getByTestAttribute(attrName).find('[role="combobox"]').click();
   cy.get('[role="listbox"]').then(($listbox) => {
     if (
       $listbox
@@ -1842,7 +1842,7 @@ declare namespace Cypress {
 }
 Cypress.Commands.add("getLastItemInDropDownList", (attrName: string) => {
   cy.getByTestAttribute(attrName).scrollIntoView().should("be.visible");
-  cy.get(attrName).find('span[role="combobox"]').click();
+  cy.getByTestAttribute(attrName).find('[role="combobox"]').click();
   cy.get('[role="listbox"]').then(($listbox) => {
     if (
       $listbox

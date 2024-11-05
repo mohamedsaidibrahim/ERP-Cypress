@@ -97,17 +97,22 @@ export class AddingAccountScreen {
   }
   static checkPeriodicActiveAccountActivation() {
     cy.get('span[class="p-radiobutton-icon"]').eq(2).click({ force: true });
-    this.setPeriodicActiveFrom();
+    this.clickSaveButton();
+    cy.get('span[class="p-radiobutton-icon"]').eq(2).click({ force: true });
     this.setPeriodicActiveTo();
   }
   //   mm/dd/yyyy
   static setPeriodicActiveFrom() {
-    cy.get('input[role="combobox"]').eq(1)
-      .first()
-      .type(AccountingData.periodicActiveFrom);
-  }
+    cy.get('input[role="combobox"]').eq(1).scrollIntoView().click();
+    cy.get('td[aria-label="5"]').scrollIntoView().click();
+    cy.get("body").click();
+    cy.wait(3500);
+      }
   static setPeriodicActiveTo() {
-    cy.get('input[role="combobox"]').last().type(AccountingData.periodicActiveTo);
+    cy.get('input[role="combobox"]').eq(2).scrollIntoView().click();
+    cy.get('td[aria-label="28"]').scrollIntoView().click();
+    cy.get("body").click();
+    cy.wait(3500);
   }
   static checkMandatoryCostCenterConfiguration() {
     cy.get('span[class="p-radiobutton-icon"]').eq(0).click({ force: true });

@@ -22,7 +22,7 @@ export class RegisterationPage {
         cy.reload();
         cy.log("You Are In: " + AuthData.registerationUrl);
       } else {
-       this.visit(); // Retry if not on the correct page
+        this.visit(); // Retry if not on the correct page
       }
     });
   }
@@ -56,7 +56,7 @@ export class RegisterationPage {
     cy.visibilityOfRequiredStar('label[for="email"]');
   }
   static inputEmail() {
-    cy.confirmEmailRegExCompatibility('input[name="email"]',generateRandomEmail());
+    cy.confirmEmailRegExCompatibility('input[name="email"]', generateRandomEmail());
   }
 
   static checkCountryLabel(CountryLabel: string) {
@@ -202,17 +202,17 @@ export class RegisterationPage {
     registerMail: string
   ) {
     cy.get("h4").contains(headerStr);
-    cy.contains("p",paraString).should('be.visible');
+    cy.contains("p", paraString).should('be.visible');
     // cy.contains("p",registerMail).should('be.visible');
   }
-  static implemntNormalRegSteps( phone: string) {
+  static implemntNormalRegSteps(phone: string) {
     RegisterationPage.typeFullName(AuthData.fullName);
     RegisterationPage.inputEmail();
     RegisterationPage.clickDropDownCountryList();
     RegisterationPage.inputCountry(AuthData.country);
     RegisterationPage.inputPassword(AuthData.pass);
     RegisterationPage.inputConfirmPassword(AuthData.pass);
-    RegisterationPage.inputPhoneNumber( phone);
+    RegisterationPage.inputPhoneNumber(phone);
     RegisterationPage.checkCountryCode(AuthData.code);
     RegisterationPage.confirmCheckBox();
     RegisterationPage.clickRegisterationButton();

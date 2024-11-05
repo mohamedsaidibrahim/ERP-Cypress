@@ -129,7 +129,7 @@ export class CostCenter {
         }
       });
   }
- 
+
   static clickMasterDataDropDown() {
     cy.get(
       ':nth-child(2) > app-layout-page.ng-star-inserted > [dir="ltr"] > .Layout > app-layout-sidebar > .sidebar > .nav-links > :nth-child(1) > #parent0 > .arrow'
@@ -164,10 +164,10 @@ export class CostCenter {
     cy.get("button.pi-plus").should("have.class", "btn_add");
     cy.get("button.pi-plus").should("have.class", "pi-plus");
   }
-  static clickTreeAddButton() {
+  static clickLastTreeAddButton() {
     cy.get("button.pi-plus").should("be.visible");
     cy.get("button.pi-plus").should("be.enabled");
-    cy.get("button.pi-plus").click();
+    cy.get("button.pi-plus").last().scrollIntoView().click();
   }
   static clickEditButtonParentAccount() {
     cy.get('button[class="btn_tree_item btn_edit pi pi-pencil"]').should(
