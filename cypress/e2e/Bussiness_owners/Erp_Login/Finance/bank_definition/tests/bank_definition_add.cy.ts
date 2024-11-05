@@ -46,7 +46,7 @@ describe("Bank Definition (Add)", () => {
       .should("be.visible");
   });
 
-  it("2.Verify Submitting new Bank Definition", () => {
+  it.only("2.Verify Submitting new Bank Definition", () => {
     BankDefinition.landing();
     cy.wait(2000);
     cy.getInitItemsCountInListView();
@@ -54,8 +54,6 @@ describe("Bank Definition (Add)", () => {
     cy.wait(1000);
     BankDefinition.clickAddNewButton();
     cy.wait(1000);
-    cy.getByTestAttribute("code").clear().type(FinanceData.code);
-    cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     cy.getByTestAttribute("shortName").clear().type(FinanceData.shortName);
     cy.getByTestAttribute("bankAddress").clear().type(FinanceData.bankAddress);
     cy.getByTestAttribute("contactName").clear().type(FinanceData.contactName);
@@ -64,11 +62,12 @@ describe("Bank Definition (Add)", () => {
     cy.getByTestAttribute("fax").clear().type(FinanceData.fax);
     BankDefinition.addAccountNumber();
     BankDefinition.addAccountCode();
-    BankDefinition.selectAllBranches();
+    // BankDefinition.selectAllBranches();
+    cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     BankDefinition.addIBN();
     // BankDefinition.addCurrency();
     BankDefinition.addOpeningBalance();
-    BankDefinition.selectUserPermission();
+    // BankDefinition.selectUserPermission();
     cy.wait(1000);
     BankDefinition.clickSaveButton();
     // Assertion
