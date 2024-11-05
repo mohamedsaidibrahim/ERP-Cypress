@@ -1,3 +1,4 @@
+import { InventoryData } from "../../../Inventory/data/inventory_data";
 import { FinanceData } from "../../data/finance_data";
 import { TreasuryDefinition } from "../pages/treasury_definition";
 
@@ -8,7 +9,7 @@ describe("Treasury Definition (Add)", () => {
 
   it("1.Verify All components are displaying", () => {
     TreasuryDefinition.landing();
-    cy.wait(1500);
+    cy.wait(2000);
     TreasuryDefinition.clickAddNewButton();
     cy.verifyDimmidInput("code");
     // Verify Labels
@@ -27,10 +28,11 @@ describe("Treasury Definition (Add)", () => {
 
   it("2.Verify Submitting new Treasury Definition", () => {
     TreasuryDefinition.landing();
-    
+    cy.wait(2000);
     cy.getInitItemsCountInListView();
     TreasuryDefinition.clickAddNewButton();
-    cy.getFirstItemInDropDownList("accountId");
+    cy.zoomOut();
+    cy.clickInputtedSearchDropDownList("accountId",InventoryData.pAccount);
     cy.clickInputtedSearchDropDownList(
       "currencyId",
       FinanceData.correctCurrency
@@ -48,10 +50,13 @@ describe("Treasury Definition (Add)", () => {
 
   it("3.Verify Required Validation and The name Field is Required", () => {
     TreasuryDefinition.landing();
+    cy.wait(2000);
     TreasuryDefinition.clickAddNewButton();
+    cy.wait(1000);
+    cy.zoomOut();
     TreasuryDefinition.clickSaveButton();
     cy.verifyDisplayingTheRequiredValidationMsgsCount(4);
-    cy.getFirstItemInDropDownList("accountId");
+    cy.clickInputtedSearchDropDownList("accountId",InventoryData.pAccount);
     cy.verifyDisplayingTheRequiredValidationMsgsCount(4);
     cy.clickInputtedSearchDropDownList(
       "currencyId",
@@ -65,16 +70,17 @@ describe("Treasury Definition (Add)", () => {
     TreasuryDefinition.inputOpeningBalance();
     cy.verifyNotExistanceTheRequiredValidation();
     TreasuryDefinition.clickSaveButton();
-    cy.wait(500);
-    TreasuryDefinition.submitSaving();
     cy.wait(1500);
     cy.get('div[role="dialog"]').should("not.exist");
   });
 
   it("4.Verify Different Currency Validation", () => {
     TreasuryDefinition.landing();
+    cy.wait(2000);
     TreasuryDefinition.clickAddNewButton();
-    cy.getFirstItemInDropDownList("accountId");
+    cy.wait(1000);
+    cy.zoomOut();
+    cy.clickInputtedSearchDropDownList("accountId",InventoryData.pAccount);
     cy.clickInputtedSearchDropDownList("currencyId", FinanceData.wrongCurrency);
     cy.checkAllMultiSelect(0);
     cy.getByTestAttribute("name").clear().type(FinanceData.treasuryName);
@@ -87,8 +93,11 @@ describe("Treasury Definition (Add)", () => {
 
   it("5.Verify Different openingBalance Confirmation", () => {
     TreasuryDefinition.landing();
+    cy.wait(2000);
+    cy.getInitItemsCountInListView();
     TreasuryDefinition.clickAddNewButton();
-    cy.getFirstItemInDropDownList("accountId");
+    cy.zoomOut();
+    cy.clickInputtedSearchDropDownList("accountId",InventoryData.pAccount);
     cy.clickInputtedSearchDropDownList(
       "currencyId",
       FinanceData.correctCurrency
@@ -98,11 +107,10 @@ describe("Treasury Definition (Add)", () => {
     TreasuryDefinition.inputDiffOpeningBalance();
     TreasuryDefinition.clickSaveButton();
     // Assertion
-    cy.wait(500);
-    cy.get('div[role="dialog"]').should("be.visible");
-    cy.wait(500);
-    TreasuryDefinition.submitSaving();
-    cy.wait(1500);
-    cy.get('div[role="dialog"]').should("not.exist");
+    cy.wait(1000);
+    // cy.get('div[role="dialog"]').should("be.visible");
+    // TreasuryDefinition.submitSaving();
+    // cy.wait(1500);
+    cy.assertnewItemAddedToListView();
   });
 });

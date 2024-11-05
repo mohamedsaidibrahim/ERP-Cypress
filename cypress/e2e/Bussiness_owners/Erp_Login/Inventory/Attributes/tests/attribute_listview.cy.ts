@@ -8,7 +8,7 @@ describe("Attribute (Listview)", () => {
 
   it("1.Verify all the components are displayed on the Listview", () => {
     Attribute.landing();
-    cy.wait(1500);
+    cy.wait(3000);
     cy.zoomOut();
     cy.get("table").then((table) => {
       cy.wrap(table)
@@ -36,12 +36,12 @@ describe("Attribute (Listview)", () => {
 
   it("2.should filter the table based on search input in the first two columns", () => {
     Attribute.landing();
-    cy.wait(1500);
+    cy.wait(3000);
     cy.verifySearchFunctionalityDots();
   });
   it("3.Verify Deleting An Existing Attribute (All fields are filled)", () => {
     Attribute.landing();
-    cy.wait(1500);
+    cy.wait(3000);
     
     cy.getInitItemsCountInListView();
     cy.clickFirstDeleteActionButton();

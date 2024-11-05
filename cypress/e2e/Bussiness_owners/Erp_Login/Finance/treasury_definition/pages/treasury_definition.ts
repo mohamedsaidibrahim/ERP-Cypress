@@ -39,6 +39,8 @@ export class TreasuryDefinition {
     cy.wait(2000);
     cy.get("body").then(($body) => {
       if ($body.find('div[role="dialog"]').length > 1) {
+        cy.contains("div", /confirm/i).should("be.visible");
+        cy.get("p.confirm").should("be.visible");
         cy.getByTestAttribute("save").last().click({ force: true });
       }
     });
