@@ -46,7 +46,7 @@ describe("Bank Definition (Add)", () => {
       .should("be.visible");
   });
 
-  it.only("2.Verify Submitting new Bank Definition", () => {
+  it("2.Verify Submitting new Bank Definition", () => {
     BankDefinition.landing();
     cy.wait(2000);
     cy.getInitItemsCountInListView();
