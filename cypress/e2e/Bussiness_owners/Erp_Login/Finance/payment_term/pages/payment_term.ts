@@ -13,7 +13,7 @@ export class PaymentTerm {
     cy.getByTestAttribute("btn_delet").click();
   }
   static clickSaveButton() {
-    cy.getByTestAttribute("save").scrollIntoView().click();
+    cy.contains("button",/save/i).scrollIntoView().click();
   }
 
   static clickSCancelButton() {
@@ -64,15 +64,7 @@ export class PaymentTerm {
   static clearName() {
     cy.getByTestAttribute("name").clear();
   }
-  static setafterValue(row: number, str: any) {
-    cy.clickCellInATable(row, 0);
-    cy.get("tbody tr")
-      .last()
-      .find('input[data-testid="afterValue"]')
-      .last()
-      .clear()
-      .type(str);
-  }
+
   static clearafterValue(row:number) {
     cy.clickCellInATable(row, 1);
     cy.get("tbody tr")
@@ -91,14 +83,26 @@ export class PaymentTerm {
       .clear()
       .type(str);
   }
-  static clearAfterValue(row:number) {
+
+
+  static clearDueTermValue(row:number) {
+    cy.clickCellInATable(row, 0);
     cy.get("tbody tr")
-      .eq(row)
-      .find('input[data-testid="afterValue"]')
+      .last()
+      .find('input[data-testid="dueTermValue"]')
       .last()
       .clear();
   }
 
+  static setDueTermValue(row: number, str: any) {
+    cy.clickCellInATable(row, 0);
+    cy.get("tbody tr")
+      .last()
+      .find('input[data-testid="dueTermValue"]')
+      .last()
+      .clear()
+      .type(str);
+  }
   static setAfterPeriod(row: number, index: number) {
     cy.clickCellInATable(row, 2);
     index % 2 == 0
