@@ -78,10 +78,10 @@ export class CustomerDefinition {
     cy.get('input[type="file"]').attachFile(imagePath);
   }
   static setContactMobileCountryCode() {
-    cy.selectCountryByIndex(1, "+20");
+    cy.clickInputtedSearchDropDownList("contactMobileCode", "+20");
   }
   static setContactPersonalMobileCountryCode() {
-    cy.selectCountryByIndex(2, "+20");
+    cy.clickInputtedSearchDropDownList("contactPersonMobileCode", "+20");
   }
   static setContactMobile(str: any) {
     cy.inputText("contactMobile", str);
@@ -174,7 +174,7 @@ export class CustomerDefinition {
   }
 
   static setCountryId() {
-    cy.selectCountryByIndex(3, "egypt").then(($countryId) => {
+    cy.clickInputtedSearchDropDownList("countryId", "egypt").then(($countryId) => {
       if ($countryId != null) {
         cy.wrap($countryId)
           .invoke("text")
@@ -217,17 +217,17 @@ export class CustomerDefinition {
     });
   }
 
-  static setPriceListId() {
-    cy.getFirstItemInDropDownList("priceListId").then(($priceListId) => {
-      if ($priceListId != null) {
-        cy.wrap($priceListId)
+  static setpricePolicyId() {
+    cy.getFirstItemInDropDownList("pricePolicyId").then(($pricePolicyId) => {
+      if ($pricePolicyId != null) {
+        cy.wrap($pricePolicyId)
           .invoke("text")
-          .then((priceListIdTxt) => {
-            cy.log("priceListIdTxt::: " + priceListIdTxt);
-            cy.wrap(priceListIdTxt).as("priceListIdTxt");
+          .then((pricePolicyIdTxt) => {
+            cy.log("pricePolicyIdTxt::: " + pricePolicyIdTxt);
+            cy.wrap(pricePolicyIdTxt).as("pricePolicyIdTxt");
           });
       } else {
-        cy.wrap("").as("priceListIdTxt");
+        cy.wrap("").as("pricePolicyIdTxt");
       }
     });
   }

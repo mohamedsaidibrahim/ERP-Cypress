@@ -212,7 +212,7 @@ describe("Adding Chart of Account", () => {
     });
   });
 
-  it.only("4.Verify Adding new Detail Chart of Account", () => {
+  it("4.Verify Adding new Detail Chart of Account", () => {
     ChartOfAccounts.landing();
     cy.wait(2000);
     AddingAccountScreen.clickAddNewButton();

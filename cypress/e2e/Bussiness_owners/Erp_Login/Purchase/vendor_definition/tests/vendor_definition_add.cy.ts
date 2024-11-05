@@ -5,13 +5,13 @@ describe("Vendor Definition (Add)", () => {
   beforeEach(() => {
     cy.visit(PurchaseData.VendorDefinitionUrl);
   });
+
   it("1.Verify Adding new Vendor Definition (All fields are filled)", () => {
     VendorDefinition.landing();
     cy.wait(1500);
-    
     cy.getInitItemsCountInListView();
-
     cy.clickAddNewButton();
+    cy.wait(1500);
     // Essential Header Data
     VendorDefinition.setName(PurchaseData.vName);
     cy.wait(750);
@@ -52,7 +52,7 @@ describe("Vendor Definition (Add)", () => {
     // Financial
     VendorDefinition.switchToFinancialTab();
     VendorDefinition.setPaymentTermId();
-    VendorDefinition.setPriceListId();
+    VendorDefinition.setpricePolicyId();
     VendorDefinition.setCreditLimit(PurchaseData.vCreditLimit);
     VendorDefinition.setCurrencyId();
     // Accounting
@@ -63,7 +63,7 @@ describe("Vendor Definition (Add)", () => {
     VendorDefinition.setDiscountAccountId();
 
     VendorDefinition.clickSaveButton2();
-    
+
     cy.assertnewItemAddedToListView();
   });
 
@@ -80,7 +80,7 @@ describe("Vendor Definition (Add)", () => {
     VendorDefinition.setName(PurchaseData.vName);
     cy.get('div[class="error ng-star-inserted"]').should("not.exist");
   });
-  
+
   it("3.Verify Labels", () => {
     VendorDefinition.landing();
     cy.wait(1000);
@@ -118,7 +118,7 @@ describe("Vendor Definition (Add)", () => {
     // Financial
     VendorDefinition.switchToFinancialTab();
     cy.verifyLabelText("paymentTermId", /payment term/i);
-    cy.verifyLabelText("priceListId", /price list/i);
+    cy.verifyLabelText("pricePolicyId", /price policy/i);
     cy.verifyLabelText("creditLimit", /credit limit/i);
     cy.verifyLabelText("currencyId", /currency/i);
     // Accounting

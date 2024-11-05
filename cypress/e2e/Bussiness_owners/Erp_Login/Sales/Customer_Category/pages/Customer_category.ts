@@ -124,16 +124,16 @@ export class CustomerCategory {
         }
       }
     );
-    cy.getFirstItemInDropDownList("priceListId").then(($priceListId) => {
-      if ($priceListId != null) {
-        cy.wrap($priceListId)
+    cy.getFirstItemInDropDownList("pricePolicyId").then(($pricePolicyId) => {
+      if ($pricePolicyId != null) {
+        cy.wrap($pricePolicyId)
           .invoke("text")
-          .then((priceListIdTxt) => {
-            cy.log("priceListIdTxt::: " + priceListIdTxt);
-            cy.wrap(priceListIdTxt).as("priceListIdTxt");
+          .then((pricePolicyIdTxt) => {
+            cy.log("pricePolicyIdTxt::: " + pricePolicyIdTxt);
+            cy.wrap(pricePolicyIdTxt).as("pricePolicyIdTxt");
           });
       } else {
-        cy.wrap("").as("priceListIdTxt");
+        cy.wrap("").as("pricePolicyIdTxt");
       }
     });
     cy.getFirstItemInDropDownList("paymentTermId").then(($paymentTermId) => {
@@ -218,16 +218,16 @@ export class CustomerCategory {
         }
       }
     );
-    cy.getLastItemInDropDownList("priceListId").then(($priceListId) => {
-      if ($priceListId != null) {
-        cy.wrap($priceListId)
+    cy.getLastItemInDropDownList("pricePolicyId").then(($pricePolicyId) => {
+      if ($pricePolicyId != null) {
+        cy.wrap($pricePolicyId)
           .invoke("text")
-          .then((priceListIdTxt) => {
-            cy.log("priceListIdTxt::: " + priceListIdTxt);
-            cy.wrap(priceListIdTxt).as("priceListIdTxt");
+          .then((pricePolicyIdTxt) => {
+            cy.log("pricePolicyIdTxt::: " + pricePolicyIdTxt);
+            cy.wrap(pricePolicyIdTxt).as("pricePolicyIdTxt");
           });
       } else {
-        cy.wrap("").as("priceListIdTxt");
+        cy.wrap("").as("pricePolicyIdTxt");
       }
     });
     cy.getLastItemInDropDownList("paymentTermId").then(($paymentTermId) => {
@@ -275,8 +275,8 @@ export class CustomerCategory {
     cy.get("@discountAccountIdTxt").then((discountAccountIdTxt1) => {
       cy.verifyFirstCellInTable(5, getWrappedString(discountAccountIdTxt1));
     });
-    cy.get("@priceListIdTxt").then((priceListIdTxt1) => {
-      cy.verifyFirstCellInTable(6, getWrappedString(priceListIdTxt1));
+    cy.get("@pricePolicyIdTxt").then((pricePolicyIdTxt1) => {
+      cy.verifyFirstCellInTable(6, getWrappedString(pricePolicyIdTxt1));
     });
     cy.get("@paymentTermIdTxt").then((paymentTermIdTxt1) => {
       cy.verifyFirstCellInTable(7, getWrappedString(paymentTermIdTxt1));

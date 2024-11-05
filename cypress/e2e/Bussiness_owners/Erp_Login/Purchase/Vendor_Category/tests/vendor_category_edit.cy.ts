@@ -20,14 +20,14 @@ describe("Vendor Category (Edit)", () => {
       /purchase return gl account/i
     );
     cy.verifyLabelText("discountAccountId", /discount gl account/i);
-    cy.verifyLabelText("priceListId", /price list/i);
+    cy.verifyLabelText("pricePolicyId", /price policy/i);
     cy.verifyLabelText("paymentTermId", /payment terms/i);
     cy.verifyLabelText("marketType", /market type/i);
     // Verify The Dimmed Code
     cy.getByTestAttribute("code").should("have.attr", "readonly");
     cy.getByTestAttribute("code").should("have.attr", "disabled");
     // Verify All Dropdown Buttons
-    cy.get('span[role="combobox"]').should("have.length", 7);
+    cy.get('div[class="content"]').find('span[role="combobox"]').should("have.length", 7);
   });
 
   it("2.Verify Submitting Editted Vendor Category", () => {

@@ -53,7 +53,7 @@ describe("Customer Definition (Add)", () => {
     CustomerDefinition.switchToFinancialTab();
     CustomerDefinition.setCurrencyId();
     CustomerDefinition.setPaymentTermId();
-    CustomerDefinition.setPriceListId();
+    CustomerDefinition.setpricePolicyId();
     CustomerDefinition.setCreditLimit(SalesData.cCreditLimit);
     // Accounting
     CustomerDefinition.switchToAccountingTab();
@@ -116,7 +116,7 @@ describe("Customer Definition (Add)", () => {
     // Financial
     CustomerDefinition.switchToFinancialTab();
     cy.verifyLabelText("paymentTermId", /payment term/i);
-    cy.verifyLabelText("priceListId", /price list/i);
+    cy.verifyLabelText("pricePolicyId", /price policy/i);
     cy.verifyLabelText("creditLimit", /credit limit/i);
     cy.verifyLabelText("currencyId", /currency/i);
     // Accounting

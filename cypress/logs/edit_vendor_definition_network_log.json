@@ -18195,7 +18195,7 @@
       },
       "vendorFinancial": {
         "paymentTermId": 2,
-        "priceListId": null,
+        "pricePolicyId": null,
         "creditLimit": "3662",
         "currencyId": 1,
         "id": 5

@@ -17,7 +17,7 @@ describe("Customer Category (Edit)", () => {
     cy.verifyLabelText("salesAccountId", /sales gl account/i);
     cy.verifyLabelText("salesReturnAccountId", /sales return gl account/i);
     cy.verifyLabelText("discountAccountId", /discount gl account/i);
-    cy.verifyLabelText("priceListId", /price list/i);
+    cy.verifyLabelText("pricePolicyId", /price policy/i);
     cy.verifyLabelText("paymentTermId", /payment terms/i);
     cy.verifyLabelText("marketType", /market type/i);
     // Verify The Dimmed Code

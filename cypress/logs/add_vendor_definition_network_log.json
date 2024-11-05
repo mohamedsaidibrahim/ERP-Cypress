@@ -5028,7 +5028,7 @@
       },
       "vendorFinancial": {
         "paymentTermId": 11,
-        "priceListId": null,
+        "pricePolicyId": null,
         "creditLimit": "3040",
         "currencyId": null
       },

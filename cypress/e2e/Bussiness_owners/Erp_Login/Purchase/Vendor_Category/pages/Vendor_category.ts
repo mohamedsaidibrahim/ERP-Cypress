@@ -7,7 +7,7 @@ export class VendorCategory {
     cy.clickAddNewButton();
   }
   static clickSaveButton() {
-    cy.getByTestAttribute("save").click({ force: true });
+    cy.contains("button", /save/i).scrollIntoView().click();
   }
   static forceNavigate() {
     cy.visit(PurchaseData.VendorCategoryUrl);
@@ -117,16 +117,16 @@ export class VendorCategory {
         }
       }
     );
-    cy.getLastItemInDropDownList("priceListId").then(($priceListId) => {
-      if ($priceListId != null) {
-        cy.wrap($priceListId)
+    cy.getLastItemInDropDownList("pricePolicyId").then(($pricePolicyId) => {
+      if ($pricePolicyId != null) {
+        cy.wrap($pricePolicyId)
           .invoke("text")
-          .then((priceListIdTxt) => {
-            cy.log("priceListIdTxt::: " + priceListIdTxt);
-            cy.wrap(priceListIdTxt).as("priceListIdTxt");
+          .then((pricePolicyIdTxt) => {
+            cy.log("pricePolicyIdTxt::: " + pricePolicyIdTxt);
+            cy.wrap(pricePolicyIdTxt).as("pricePolicyIdTxt");
           });
       } else {
-        cy.wrap("").as("priceListIdTxt");
+        cy.wrap("").as("pricePolicyIdTxt");
       }
     });
     cy.wait(1000);
@@ -176,8 +176,8 @@ export class VendorCategory {
     cy.get("@discountAccountIdTxt").then((discountAccountId) => {
       cy.verifyFirstCellInTable(5, getWrappedString(discountAccountId));
     });
-    cy.get("@priceListIdTxt").then((priceListId) => {
-      cy.verifyFirstCellInTable(6, getWrappedString(priceListId));
+    cy.get("@pricePolicyIdTxt").then((pricePolicyId) => {
+      cy.verifyFirstCellInTable(6, getWrappedString(pricePolicyId));
     });
     cy.get("@paymentTermIdTxt").then((paymentTermId) => {
       cy.verifyFirstCellInTable(7, getWrappedString(paymentTermId));

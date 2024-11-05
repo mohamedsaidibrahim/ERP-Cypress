@@ -80,7 +80,7 @@ describe("Network Log Test", () => {
     // Financial
     CustomerDefinition.switchToFinancialTab();
     CustomerDefinition.setPaymentTermId();
-    CustomerDefinition.setPriceListId();
+    CustomerDefinition.setpricePolicyId();
     CustomerDefinition.setCreditLimit(SalesData.cCreditLimit);
     CustomerDefinition.setCurrencyId();
     // Accounting

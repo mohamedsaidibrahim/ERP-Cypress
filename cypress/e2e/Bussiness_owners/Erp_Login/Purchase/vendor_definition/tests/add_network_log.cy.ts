@@ -87,7 +87,7 @@ describe("Network Log Test", () => {
     // Financial
     VendorDefinition.switchToFinancialTab();
     VendorDefinition.setPaymentTermId();
-    VendorDefinition.setPriceListId();
+    VendorDefinition.setpricePolicyId();
     VendorDefinition.setCreditLimit(PurchaseData.vCreditLimit);
     VendorDefinition.setCurrencyId();
     // Accounting

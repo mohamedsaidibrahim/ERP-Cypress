@@ -85,7 +85,7 @@ describe("Payment Methods (Add)", () => {
     cy.verifyFirstCellInTable(1, FinanceData.FCname);
   });
 
-  it.only("5.Verify Submitting new Payment Methods (Treasury) Without Commisions", () => {
+  it("5.Verify Submitting new Payment Methods (Treasury) Without Commisions", () => {
     PaymentMethods.landing();
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();

@@ -54,7 +54,7 @@ describe("Vendor Definition (Edit)", () => {
     VendorDefinition.switchToFinancialTab();
     VendorDefinition.setPaymentTermId();
     VendorDefinition.setCreditLimit(PurchaseData.vCreditLimit);
-    VendorDefinition.setPriceListId();
+    VendorDefinition.setpricePolicyId();
     VendorDefinition.setCurrencyId();
     // Accounting
     VendorDefinition.switchToAccountingTab();
@@ -122,7 +122,7 @@ describe("Vendor Definition (Edit)", () => {
     // Financial
     VendorDefinition.switchToFinancialTab();
     cy.verifyLabelText("paymentTermId", /payment term/i);
-    cy.verifyLabelText("priceListId", /price list/i);
+    cy.verifyLabelText("pricePolicyId", /price policy/i);
     cy.verifyLabelText("creditLimit", /credit limit/i);
     cy.verifyLabelText("currencyId", /currency/i);
     // Accounting

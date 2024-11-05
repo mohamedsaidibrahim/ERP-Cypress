@@ -45,7 +45,7 @@ describe("Customer Category List View", () => {
         .find("th")
         .eq(6)
         .scrollIntoView()
-        .contains(/price list/i)
+        .contains(/price policy/i)
         .should("be.visible");
       cy.wrap(table)
         .find("th")

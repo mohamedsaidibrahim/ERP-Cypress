@@ -17,14 +17,14 @@ describe("Customer Category (Add)", () => {
     cy.verifyLabelText("salesAccountId", /sales gl account/i);
     cy.verifyLabelText("salesReturnAccountId", /sales return gl account/i);
     cy.verifyLabelText("discountAccountId", /discount gl account/i);
-    cy.verifyLabelText("priceListId", /price list/i);
+    cy.verifyLabelText("pricePolicyId", /price policy/i);
     cy.verifyLabelText("paymentTermId", /payment terms/i);
     cy.verifyLabelText("marketType", /market type/i);
     // Verify The Dimmed Code
     cy.getByTestAttribute("code").should("have.attr", "readonly");
     cy.getByTestAttribute("code").should("have.attr", "disabled");
     // Verify All Dropdown Buttons
-    cy.get('span[role="combobox"]').should("have.length", 7);
+    cy.get('span[role="combobox"]').should("have.length", 11);
   });
 
   it("2.Verify Submitting new Customer Category", () => {
@@ -37,7 +37,7 @@ describe("Customer Category (Add)", () => {
     cy.getFirstItemInDropDownList("salesAccountId");
     cy.getFirstItemInDropDownList("salesReturnAccountId");
     cy.getFirstItemInDropDownList("discountAccountId");
-    cy.getFirstItemInDropDownList("priceListId");
+    cy.getFirstItemInDropDownList("pricePolicyId");
     cy.getFirstItemInDropDownList("paymentTermId");
     cy.getFirstItemInDropDownList("marketType");
     CustomerCategory.clickSaveButton();

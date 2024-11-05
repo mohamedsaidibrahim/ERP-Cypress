@@ -20,7 +20,7 @@ describe("Vendor Category (Add)", () => {
       /purchase return gl account/i
     );
     cy.verifyLabelText("discountAccountId", /discount gl account/i);
-    cy.verifyLabelText("priceListId", /price list/i);
+    cy.verifyLabelText("pricePolicyId", /price policy/i);
     cy.verifyLabelText("paymentTermId", /payment terms/i);
     cy.verifyLabelText("marketType", /market type/i);
     // Verify The Dimmed Code
@@ -40,7 +40,7 @@ describe("Vendor Category (Add)", () => {
     cy.getFirstItemInDropDownList("purchaseAccountId");
     cy.getFirstItemInDropDownList("purchaseReturnAccountId");
     cy.getFirstItemInDropDownList("discountAccountId");
-    cy.getFirstItemInDropDownList("priceListId");
+    cy.getFirstItemInDropDownList("pricePolicyId");
     cy.getFirstItemInDropDownList("paymentTermId");
     cy.getFirstItemInDropDownList("marketType");
     VendorCategory.clickSaveButton();

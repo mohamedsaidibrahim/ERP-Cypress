@@ -99,7 +99,7 @@ describe("Network Log Test", () => {
         cy.wrap("").as("paymentTermIdTxt");
       }
     });
-    VendorDefinition.setPriceListId();
+    VendorDefinition.setpricePolicyId();
     VendorDefinition.setCreditLimit(PurchaseData.vCreditLimit);
     VendorDefinition.setCurrencyId();
     // Accounting
