@@ -46,14 +46,6 @@ export class TreasuryDefinition {
     });
   }
 
-  static submitSaving() {
-    cy.get('div[role="dialog"]').then(($submissionDialog) => {
-      cy.wrap($submissionDialog)
-        .find("button")
-        .contains(/submit/i)
-        .click();
-    });
-  }
 
   static clickcancelButton() {
     cy.getByTestAttribute("cancel")
