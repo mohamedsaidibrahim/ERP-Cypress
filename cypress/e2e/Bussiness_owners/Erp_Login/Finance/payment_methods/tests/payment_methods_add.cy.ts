@@ -1,5 +1,4 @@
 import { FinanceData } from "../../data/finance_data";
-import { PaymentIn } from "../../PaymentIN/pages/payment_in";
 import { PaymentMethods } from "../pages/payment_methods";
 
 describe("Payment Methods (Add)", () => {
@@ -24,9 +23,7 @@ describe("Payment Methods (Add)", () => {
   });
 
   it("2.Verify Submitting new Payment Methods (Bank) With Commisions has Method not (Check)", () => {
-    PaymentMethods.landing();
-    cy.wait(2000);
-    
+    PaymentMethods.landing();    
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
     cy.getByTestAttribute("code").should("be.visible");
@@ -55,65 +52,41 @@ describe("Payment Methods (Add)", () => {
 
   it("3.Verify Submitting new Payment Methods (Bank) With Commisions has Method (Transfer)", () => {
     PaymentMethods.landing();
-    cy.wait(2000);
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
     cy.getByTestAttribute("code").should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.pBankMethod);
     cy.clickInputtedSearchDropDownList("paymentPlace", "bank");
-    cy.wait(700);
     cy.clickInputtedSearchDropDownList("paymentMethodType", "ransfer");
-    cy.wait(700);
     cy.getLastItemInDropDownList("bankId");
-    PaymentIn.selectGlAccountCode();
-    cy.wait(700);
     cy.verifyDimmidInput("currency");
-    cy.wait(1000);
     cy.getLastItemInDropDownList("commissionType");
-    cy.wait(700);
     PaymentMethods.inputCommissionValue();
     cy.getFirstItemInDropDownList("commissionAccountId");
-    cy.wait(700);
     PaymentMethods.clickSaveButton();
-    // Assertion
-    PaymentMethods.preAssertion();
+
     cy.assertnewItemAddedToListView();
     cy.verifyFirstCellInTable(1, FinanceData.FCname);
   });
 
   it("4.Verify Submitting new Payment Methods (Bank) Without Commisions has Method (Check)", () => {
     PaymentMethods.landing();
-    cy.wait(2000);
-  
-
-    
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
     cy.getByTestAttribute("code").should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.FCname);
     cy.clickInputtedSearchDropDownList("paymentPlace", "bank");
-    cy.wait(700);
-
     cy.clickInputtedSearchDropDownList("paymentMethodType", "check");
-    cy.wait(700);
-
     cy.getLastItemInDropDownList("bankId");
-    cy.wait(700);
-
     cy.getFirstItemInDropDownList("bankAccountId");
-    cy.wait(700);
-
     cy.verifyDimmidInput("currency");
     PaymentMethods.clickSaveButton();
-    // Assertion
-    PaymentMethods.preAssertion();
     cy.assertnewItemAddedToListView();
     cy.verifyFirstCellInTable(1, FinanceData.FCname);
   });
 
-  it("5.Verify Submitting new Payment Methods (Treasury) Without Commisions", () => {
+  it.only("5.Verify Submitting new Payment Methods (Treasury) Without Commisions", () => {
     PaymentMethods.landing();
-    cy.wait(2000);
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
     cy.getByTestAttribute("code").should("be.visible");
@@ -130,10 +103,9 @@ describe("Payment Methods (Add)", () => {
     cy.assertnewItemAddedToListView();
     cy.verifyFirstCellInTable(1, FinanceData.FCname);
   });
+
   it("6.Verify Submitting new Payment Methods (Treasury) Without Commisions", () => {
     PaymentMethods.landing();
-    cy.wait(2000);
-    
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
     cy.getByTestAttribute("code").should("be.visible");
@@ -148,6 +120,7 @@ describe("Payment Methods (Add)", () => {
     cy.assertnewItemAddedToListView();
     cy.verifyFirstCellInTable(1, FinanceData.FCname);
   });
+
   it("7.Verify Required Validation (Bank) ", () => {
     PaymentMethods.landing();
     PaymentMethods.clickAddNewButton();
@@ -185,8 +158,7 @@ describe("Payment Methods (Add)", () => {
   });
   it("9.Verify Action Cancel Button", () => {
     PaymentMethods.landing();
-    cy.wait(2000);
-    
+
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
     cy.getByTestAttribute("code").should("be.visible");

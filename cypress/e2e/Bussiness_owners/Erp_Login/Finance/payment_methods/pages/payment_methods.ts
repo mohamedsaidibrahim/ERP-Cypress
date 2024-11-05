@@ -3,12 +3,14 @@ import { FinanceData } from "../../data/finance_data";
 
 export class PaymentMethods {
   static clickAddNewButton() {
-    // cy.getByTestAttribute('save').should('be.visible').click();
     cy.clickAddNewButton();
+    cy.wait(1000);
+
   }
   static clickSaveButton() {
-    cy.contains("button",/save/i).scrollIntoView();
-    cy.contains("button",/save/i).click();
+    cy.contains("button", /save/i).scrollIntoView();
+    cy.contains("button", /save/i).click();
+    cy.wait(1500);
   }
   static clickcancelButton() {
     cy.getByTestAttribute("cancel").last().scrollIntoView();
@@ -32,6 +34,20 @@ export class PaymentMethods {
   }
   static landing() {
     cy.LandingToERPModule(FinanceData.PaymentMethodsUrl, "method");
+    cy.wait(2000);
+  }
+  static selectGlAccountCode() {
+    cy.clickInputtedSearchDropDownList(
+      "glAccountId",
+      FinanceData.glAccountCode
+    ).then(($glAccountId) => {
+      cy.wrap($glAccountId)
+        .invoke("text")
+        .then((glAccountIdTxt) => {
+          cy.log("glAccountIdTxt::: " + glAccountIdTxt);
+          cy.wrap(glAccountIdTxt).as("glAccountIdTxt");
+        });
+    });
   }
   static inputCommissionValue() {
     cy.inputText("commissionValue", FinanceData.cRate);
@@ -64,12 +80,9 @@ export class PaymentMethods {
   static confirmDeleteDialog() {
     cy.contains("button", /yes/i).click();
   }
-  static preAssertion(){
+  static preAssertion() {
     cy.wait(500);
     cy.reload();
     cy.wait(500);
-    cy.clickContinueAs();
-    cy.wait(1000);
-    cy.getInitItemsCountInListView();
   }
 }

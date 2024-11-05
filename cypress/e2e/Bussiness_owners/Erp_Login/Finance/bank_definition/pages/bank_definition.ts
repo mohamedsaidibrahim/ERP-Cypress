@@ -7,6 +7,7 @@ export class BankDefinition {
   static clickAddNewButton() {
     // cy.contains('button span',/create/i).click({ force: true });
     cy.clickAddNewButton();
+    cy.wait(1000);
   }
   static clickSaveButton() {
     cy.getByTestAttribute("save").click({ force: true });
@@ -35,6 +36,9 @@ export class BankDefinition {
   }
   static landing() {
     cy.LandingToERPModule(FinanceData.BankDefinitionUrl, "bank");
+    cy.wait(1000);
+    cy.reload();
+    cy.wait(1000);
   }
   static clickFirstDeleteButton() {
     cy.get("table").then(($table) => {

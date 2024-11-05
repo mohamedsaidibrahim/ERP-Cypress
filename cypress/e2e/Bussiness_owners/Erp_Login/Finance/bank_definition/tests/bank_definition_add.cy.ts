@@ -8,7 +8,6 @@ describe("Bank Definition (Add)", () => {
 
   it("1.Verify All components are displaying", () => {
     BankDefinition.landing();
-    cy.wait(3000);
     BankDefinition.clickAddNewButton();
     cy.zoomOut();
     cy.get("th")
@@ -48,12 +47,8 @@ describe("Bank Definition (Add)", () => {
 
   it("2.Verify Submitting new Bank Definition", () => {
     BankDefinition.landing();
-    cy.wait(2000);
     cy.getInitItemsCountInListView();
-    cy.reload();
-    cy.wait(1000);
     BankDefinition.clickAddNewButton();
-    cy.wait(1000);
     cy.getByTestAttribute("shortName").clear().type(FinanceData.shortName);
     cy.getByTestAttribute("bankAddress").clear().type(FinanceData.bankAddress);
     cy.getByTestAttribute("contactName").clear().type(FinanceData.contactName);
@@ -78,11 +73,7 @@ describe("Bank Definition (Add)", () => {
 
   it("3.Verify Required Validation and The name Field is Required", () => {
     BankDefinition.landing();
-    cy.wait(1000);
-    cy.reload();
-    cy.wait(1000);
     BankDefinition.clickAddNewButton();
-    cy.wait(1000);
     cy.contains("span", /required/i).should("not.exist");
     cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     cy.contains("span", /required/i).should("not.exist");
@@ -98,9 +89,6 @@ describe("Bank Definition (Add)", () => {
 
   it("4.Verify Inputting Invalid Bank Email Address", () => {
     BankDefinition.landing();
-    cy.wait(1000);
-    cy.reload();
-    cy.wait(1000);
     BankDefinition.clickAddNewButton();
     cy.wait(1000);
     cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
@@ -118,11 +106,7 @@ describe("Bank Definition (Add)", () => {
 
   it("5.Verify Inputting very Long Bank Short Name", () => {
     BankDefinition.landing();
-    cy.wait(1000);
-    cy.reload();
-    cy.wait(1000);
     BankDefinition.clickAddNewButton();
-    cy.wait(1000);
     cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     cy.getByTestAttribute("shortName").clear().type(FinanceData.bankName);
     cy.contains(
