@@ -68,7 +68,6 @@ export class PaymentTerm {
   static clearafterValue(row:number) {
     cy.clickCellInATable(row, 1);
     cy.get("tbody tr")
-      .last()
       .find('input[data-testid="afterValue"]')
       .last()
       .clear();
@@ -77,7 +76,6 @@ export class PaymentTerm {
   static setAfterValue(row: number, str: any) {
     cy.clickCellInATable(row, 1);
     cy.get("tbody tr")
-      .last()
       .find('input[data-testid="afterValue"]')
       .last()
       .clear()
@@ -88,7 +86,6 @@ export class PaymentTerm {
   static clearDueTermValue(row:number) {
     cy.clickCellInATable(row, 0);
     cy.get("tbody tr")
-      .last()
       .find('input[data-testid="dueTermValue"]')
       .last()
       .clear();
@@ -97,7 +94,6 @@ export class PaymentTerm {
   static setDueTermValue(row: number, str: any) {
     cy.clickCellInATable(row, 0);
     cy.get("tbody tr")
-      .last()
       .find('input[data-testid="dueTermValue"]')
       .last()
       .clear()
@@ -113,14 +109,13 @@ export class PaymentTerm {
   static setNote(row: number, str: any) {
     cy.clickCellInATable(row, 3);
     cy.get("tbody tr")
-      .last()
       .find('input[data-testid="note"]')
       .last()
       .clear()
       .type(str);
   }
   static clearNote() {
-    cy.get("tbody tr").last().find('input[data-testid="note"]').last().clear();
+    cy.get("tbody tr").find('input[data-testid="note"]').last().clear();
   }
   static verifyCode() {
     cy.get('[data-testid="code"]').should("be.visible");

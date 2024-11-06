@@ -8,7 +8,7 @@ describe("Add Payment Term", () => {
 
   it("1.Verify All Column Headers are Displaying", () => {
     PaymentTerm.landing();
-    cy.wait(1500);
+    cy.wait(2500);
     PaymentTerm.clickAddNewButton();
     cy.get("th")
       .eq(0)

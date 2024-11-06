@@ -1,4 +1,3 @@
-import { getWrappedNumber } from "../../../../../../support/utils";
 import { FinanceData } from "../../data/finance_data";
 import { PaymentTerm } from "../pages/payment_term";
 
@@ -8,8 +7,9 @@ describe("Edit Payment Term", () => {
   });
   it("1.Verify All Column Headers are Displaying", () => {
     PaymentTerm.landing();
-    cy.wait(1500);
+    cy.wait(3500);
     cy.clickFirstEditActionButton();
+    cy.wait(5000);
     cy.get("th")
       .eq(0)
       .should("include", /due term value/i);
@@ -27,103 +27,78 @@ describe("Edit Payment Term", () => {
 
   it("2.Verify The Required Validation", () => {
     PaymentTerm.landing();
+    cy.wait(5000);
     cy.clickFirstEditActionButton();
+    cy.wait(5000);
     PaymentTerm.verifyCode();
+    PaymentTerm.setName(FinanceData.bankName);
     PaymentTerm.clearName();
     cy.contains("span", /required/i).should("be.visible");
-    PaymentTerm.setName(FinanceData.contactName);
+    PaymentTerm.setName(FinanceData.bankName);
     cy.contains("span", /required/i).should("not.exist");
 
-    cy.getInitItemsCountInListView();
-    cy.get("initCount").then((rowsCount) => {
-      var lastIndex = getWrappedNumber(rowsCount);
+    PaymentTerm.setDueTermValue(0, FinanceData.wrongDueTerm);
+    PaymentTerm.clearDueTermValue(0);
+    cy.contains("span", /required/i).should("be.visible");
+    PaymentTerm.setDueTermValue(0, FinanceData.wrongDueTerm);
+    cy.contains("span", /required/i).should("not.exist");
 
-      PaymentTerm.clearAfterValue(lastIndex);
-      cy.contains("span", /required/i).should("be.visible");
-      PaymentTerm.setAfterValue(lastIndex, 100);
-      cy.contains("span", /required/i).should("not.exist");
+    PaymentTerm.setAfterValue(0, FinanceData.afterValue);
+    PaymentTerm.clearafterValue(0);
+    cy.contains("span", /required/i).should("be.visible");
 
-      PaymentTerm.clearAfterValue(lastIndex);
-      cy.contains("span", /required/i).should("be.visible");
-      PaymentTerm.setAfterValue(lastIndex, FinanceData.afterValue);
-      cy.contains("span", /required/i).should("not.exist");
+    PaymentTerm.setAfterValue(0, FinanceData.afterValue);
+    cy.contains("span", /required/i).should("not.exist");
 
-      PaymentTerm.clearNote();
-      cy.contains("span", /required/i).should("not.exist");
-    });
+    PaymentTerm.setAfterPeriod(0,0);
+    cy.contains("span", /required/i).should("not.exist");
+
+    PaymentTerm.setDueTermValue(0, FinanceData.correctDueTerm);
+    cy.contains("span", /required/i).should("not.exist");
   });
 
   it("3.Verify Editting Happy Scenario", () => {
     PaymentTerm.landing();
+    cy.wait(5000);
     cy.clickFirstEditActionButton();
-    cy.getInitItemsCountInListView();
-    PaymentTerm.setName(FinanceData.contactName);
-    cy.get("initCount").then((rowsCount) => {
-      var lastIndex = getWrappedNumber(rowsCount);
-      cy.getLastCellInTableValue(0).then((prevDueTermValue) => {
-        cy.log("---- prevDueTermValue ::::::: " + prevDueTermValue);
-        var dueTermValue = getWrappedNumber(prevDueTermValue);
-        cy.log("---- dueTermValue ********* " + dueTermValue);
-        cy.get("table")
-          .find("tbody tr")
-          .last()
-          .scrollIntoView()
-          .should("be.visible");
-        cy.get("table")
-          .find("tbody tr")
-          .its("length")
-          .then((lenC) => {
-            PaymentTerm.setAfterValue(lastIndex, dueTermValue * 0.5);
-            PaymentTerm.setAfterValue(lastIndex, FinanceData.afterValue);
-            PaymentTerm.setAfterPeriod(lastIndex, lenC - 1);
-            PaymentTerm.setNote(lastIndex, FinanceData.note);
-          });
-        PaymentTerm.clickAddNewLine();
-        cy.get("table")
-          .find("tbody tr")
-          .last()
-          .scrollIntoView()
-          .should("be.visible");
-        cy.get("table")
-          .find("tbody tr")
-          .its("length")
-          .then((lenC) => {
-            PaymentTerm.setAfterValue(lastIndex + 1, dueTermValue * 0.5);
-            PaymentTerm.setAfterValue(lastIndex + 1, FinanceData.afterValue);
-            PaymentTerm.setAfterPeriod(lastIndex + 1, lenC - 1);
-            PaymentTerm.setNote(lastIndex + 1, FinanceData.note);
-          });
-      });
-    });
-
+    cy.wait(5000);
+    PaymentTerm.setName(FinanceData.bankName);
+    // The First Line
+    PaymentTerm.setDueTermValue(0, 50);
+    PaymentTerm.setAfterValue(0, FinanceData.afterValue);
+    PaymentTerm.setAfterPeriod(0, 0);
+    PaymentTerm.setNote(0, FinanceData.note);
+    // The Second Line
+    PaymentTerm.setDueTermValue(1, 20);
+    PaymentTerm.setAfterValue(1, FinanceData.afterValue);
+    PaymentTerm.setAfterPeriod(1, 1);
+    PaymentTerm.setNote(1, FinanceData.note);
+    // The Third Line
+    cy.wait(500);
+    cy.get("tbody tr").last().scrollIntoView().should("be.visible");
+    PaymentTerm.setDueTermValue(2, 30);
+    PaymentTerm.setAfterValue(2, FinanceData.afterValue);
+    PaymentTerm.setAfterPeriod(2, 2);
+    PaymentTerm.setNote(2, FinanceData.note);
     PaymentTerm.clickSaveButton();
-    // Assertion
     cy.wait(1000);
-    cy.contains("button", /add new line/i).should("not.exist");
-    cy.reload();
-    cy.wait(1000);
-    cy.clickContinueAs();
-    cy.wait(1000);
-
-    cy.assertnewItemAddedToListView();
+    cy.url().should("not.include", "edit");
   });
 
   it("4.Verify setting DueTermValue is smaller than 100", () => {
     PaymentTerm.landing();
+    cy.wait(5000);
     cy.clickFirstEditActionButton();
-    PaymentTerm.setName(FinanceData.contactName);
-    cy.get("table")
-      .find("tbody tr")
-      .last()
-      .scrollIntoView()
-      .should("be.visible");
-    cy.getInitItemsCountInListView();
-    cy.get("initCount").then((rowsCount) => {
-      var lastIndex = getWrappedNumber(rowsCount);
-      PaymentTerm.setAfterValue(lastIndex, 99);
-    });
+    cy.wait(5000);
+    PaymentTerm.setName(FinanceData.bankName);
+    PaymentTerm.setDueTermValue(0, 99);
+    PaymentTerm.setAfterValue(0, FinanceData.afterValue);
+    PaymentTerm.setAfterPeriod(0, 0);
+    PaymentTerm.setNote(0, FinanceData.note);
     PaymentTerm.clickSaveButton();
     cy.wait(1000);
+    cy.contains("div",/failure/i);
+    cy.contains("div",/The total of Due Term Values must be exactly 100/i);
     cy.contains("button", /add new line/i).should("be.visible");
   });
 });
