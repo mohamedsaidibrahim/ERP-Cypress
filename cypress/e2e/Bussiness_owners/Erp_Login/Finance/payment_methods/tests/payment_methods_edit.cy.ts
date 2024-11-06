@@ -2,13 +2,16 @@ import { FinanceData } from "../../data/finance_data";
 import { PaymentMethods } from "../pages/payment_methods";
 
 describe("Payment Methods  (Edit)", () => {
+  
   beforeEach(() => {
     cy.visit(FinanceData.PaymentMethodsUrl);
   });
+
   it("1.Verify All components are displaying", () => {
     PaymentMethods.landing();
-    cy.wait(1500);
+    cy.wait(3000);
     cy.clickFirstEditActionButton();
+    cy.wait(6000);
     // Verify Header
     cy.verifyLabelText("code", /code/i);
     cy.verifyLabelText("name", /name/i);
@@ -25,8 +28,9 @@ describe("Payment Methods  (Edit)", () => {
 
   it('2.Verify Submitting Editted The "Commision Options" Only', () => {
     PaymentMethods.landing();
-    cy.wait(2000);
+    cy.wait(3000);
     cy.clickFirstEditActionButton();
+    cy.wait(6000);
     cy.verifyDimmidInput("code");
     cy.verifyDimmidInput("name");
     cy.verifyDimmidItemDropDownList("paymentPlace");
@@ -66,10 +70,12 @@ describe("Payment Methods  (Edit)", () => {
     PaymentMethods.clickSaveButton();
     cy.wait(1500);
   });
+
   it("3.verify all fields have the Dimed Status if the Place is Treasury OR Method is CHeck", () => {
     PaymentMethods.landing();
-    cy.wait(2000);
+    cy.wait(3000);
     cy.clickFirstEditActionButton();
+    cy.wait(6000);
     cy.verifyDimmidInput("code");
     cy.verifyDimmidInput("name");
     cy.verifyDimmidItemDropDownList("paymentPlace");

@@ -44,7 +44,7 @@ export class FinanceData {
   static bankEmail = generateRandomEmail();
   static phone = generateRandomString(7);
   static fax = generateRandomString(7);
-  static FCname = generateRandomString(5);
+  static FCname = generateRandomString(15);
   static bankTransfer = "";
   static correctCurrency = "egyptian";
   static edittedCurrency = "saud";

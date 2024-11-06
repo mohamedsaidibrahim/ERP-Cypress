@@ -5,10 +5,12 @@ describe("Payment Methods (Add)", () => {
   beforeEach(() => {
     cy.visit(FinanceData.PaymentMethodsUrl);
   });
+  
   it("1.Verify All components are displaying", () => {
     PaymentMethods.landing();
-    cy.wait(1500);
+    cy.wait(3000);
     PaymentMethods.clickAddNewButton();
+    cy.wait(5000);
     cy.verifyLabelText("code", /code/i);
     cy.verifyLabelText("name", /name/i);
     cy.verifyLabelText("paymentPlace", /payment place/i);
@@ -24,8 +26,10 @@ describe("Payment Methods (Add)", () => {
 
   it("2.Verify Submitting new Payment Methods (Bank) With Commisions has Method not (Check)", () => {
     PaymentMethods.landing();    
+    cy.wait(3000);
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
+    cy.wait(5000);
     cy.getByTestAttribute("code").should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.FCname);
     cy.clickInputtedSearchDropDownList("paymentPlace", "bank");
@@ -44,7 +48,6 @@ describe("Payment Methods (Add)", () => {
     cy.getFirstItemInDropDownList("commissionAccountId");
     cy.wait(700);
     PaymentMethods.clickSaveButton();
-    // Assertion
     PaymentMethods.preAssertion();
     cy.assertnewItemAddedToListView();
     cy.verifyFirstCellInTable(1, FinanceData.FCname);
@@ -52,8 +55,10 @@ describe("Payment Methods (Add)", () => {
 
   it("3.Verify Submitting new Payment Methods (Bank) With Commisions has Method (Transfer)", () => {
     PaymentMethods.landing();
+    cy.wait(3000);
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
+    cy.wait(5000);
     cy.getByTestAttribute("code").should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.pBankMethod);
     cy.clickInputtedSearchDropDownList("paymentPlace", "bank");
@@ -64,15 +69,16 @@ describe("Payment Methods (Add)", () => {
     PaymentMethods.inputCommissionValue();
     cy.getFirstItemInDropDownList("commissionAccountId");
     PaymentMethods.clickSaveButton();
-
     cy.assertnewItemAddedToListView();
     cy.verifyFirstCellInTable(1, FinanceData.FCname);
   });
 
   it("4.Verify Submitting new Payment Methods (Bank) Without Commisions has Method (Check)", () => {
     PaymentMethods.landing();
+    cy.wait(3000);
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
+    cy.wait(5000);
     cy.getByTestAttribute("code").should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.FCname);
     cy.clickInputtedSearchDropDownList("paymentPlace", "bank");
@@ -87,8 +93,10 @@ describe("Payment Methods (Add)", () => {
 
   it("5.Verify Submitting new Payment Methods (Treasury) Without Commisions", () => {
     PaymentMethods.landing();
+    cy.wait(3000);
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
+    cy.wait(5000);
     cy.getByTestAttribute("code").should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.pTreesuryMethod);
     cy.getFirstItemInDropDownList("paymentPlace");
@@ -106,7 +114,9 @@ describe("Payment Methods (Add)", () => {
 
   it("6.Verify Submitting new Payment Methods (Treasury) Without Commisions", () => {
     PaymentMethods.landing();
+    cy.wait(3000);
     cy.getInitItemsCountInListView();
+    cy.wait(5000);
     PaymentMethods.clickAddNewButton();
     cy.getByTestAttribute("code").should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.FCname);
@@ -123,7 +133,9 @@ describe("Payment Methods (Add)", () => {
 
   it("7.Verify Required Validation (Bank) ", () => {
     PaymentMethods.landing();
+    cy.wait(2000);
     PaymentMethods.clickAddNewButton();
+    cy.wait(5000);
     PaymentMethods.clickSaveButton();
     cy.verifyDisplayingTheRequiredValidationMsgsCount(3);
     cy.getByTestAttribute("name").clear().type(FinanceData.FCname);
@@ -143,9 +155,12 @@ describe("Payment Methods (Add)", () => {
 
     cy.verifyNotExistanceTheRequiredValidation();
   });
+
   it("8.Verify Required Validation (Treasury) ", () => {
     PaymentMethods.landing();
+    cy.wait(3000);
     PaymentMethods.clickAddNewButton();
+    cy.wait(5000);
     PaymentMethods.clickSaveButton();
     cy.verifyDisplayingTheRequiredValidationMsgsCount(3);
     // Choose Treasury
@@ -156,11 +171,13 @@ describe("Payment Methods (Add)", () => {
     cy.getByTestAttribute("name").clear().type(FinanceData.FCname);
     cy.verifyNotExistanceTheRequiredValidation();
   });
+
   it("9.Verify Action Cancel Button", () => {
     PaymentMethods.landing();
-
+    cy.wait(2000);
     cy.getInitItemsCountInListView();
     PaymentMethods.clickAddNewButton();
+    cy.wait(5000);
     cy.getByTestAttribute("code").should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.FCname);
     cy.getFirstItemInDropDownList("paymentPlace");
