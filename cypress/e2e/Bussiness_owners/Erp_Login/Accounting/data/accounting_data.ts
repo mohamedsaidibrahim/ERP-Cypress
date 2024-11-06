@@ -6,7 +6,7 @@ import {
 export class AccountingData {
   static detailAccount = "مخزن المواد الخام";
   static parentAccount = "المبيعات";
-  static accountCOde = "1101001001";
+  static accountCOde = "TestCC";
   static testParentAccountEditted = "testPEE" + getRandomNumber(1, 9999);
   static testParentAccountAddedd = "testPAA" + getRandomNumber(1, 9999);
   static testParentAccountEdittedSearch = "testPEE";
@@ -24,7 +24,7 @@ export class AccountingData {
   static periodicActiveTo = "2025-12-28";
   static currencySrch = "Saudi Riyal";
   static searchAccount = "AAA";
-  static ChartOfAccountName = "AAA" + getRandomNumber(1, 9999).toString();
+  static ChartOfAccountName = "TestCC" + getRandomNumber(1, 9999).toString();
   static edittedChartOfAccountName =
     "Editted EEE" + getRandomNumber(1, 9999).toString();
 

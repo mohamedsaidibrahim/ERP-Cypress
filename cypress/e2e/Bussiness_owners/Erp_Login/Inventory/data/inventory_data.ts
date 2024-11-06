@@ -40,7 +40,7 @@ export class InventoryData {
   static specialCare = "special Care" + getRandomNumber(1, 700).toString();
   static lineFooter = "footer" + getRandomNumber(1, 230).toString();
 
-  static pAccount = "1101001001";
+  static pAccount = "1101001005";
   static prAccount = "1101001002";
   static sAccount = "1101001003";
   static srAccount = "1101001004";

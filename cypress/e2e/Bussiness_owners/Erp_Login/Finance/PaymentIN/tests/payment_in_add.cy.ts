@@ -182,7 +182,7 @@ describe("Payment In (Add)", () => {
     cy.verifyPlaceholderValueAttr("input-text", 1, "100.0");
     PaymentIn.verifyJLFirstTypeLine(
       1,
-      1101001001,
+      1101001005,
       "100.0",
       "0.0",
       "Egyptian Pound",
@@ -327,7 +327,7 @@ describe("Payment In (Add)", () => {
 
     PaymentIn.verifyJLFirstTypeLine(
       1,
-      1101001001,
+      1101001005,
       "100.0",
       "0.0",
       "Egyptian Pound",
@@ -346,7 +346,7 @@ describe("Payment In (Add)", () => {
     );
     PaymentIn.verifyJLFollowingTypeLine(
       3,
-      1101001001,
+      1101001005,
       "0.0",
       "10.0",
       "Egyptian Pound",
@@ -364,7 +364,7 @@ describe("Payment In (Add)", () => {
     );
     PaymentIn.verifyJLFollowingTypeLine(
       5,
-      1101001001,
+      1101001005,
       "0.0",
       "0.3",
       "Egyptian Pound",

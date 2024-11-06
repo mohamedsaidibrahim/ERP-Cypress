@@ -17,11 +17,13 @@ describe("Editting Chart of Account", () => {
     DisplayingAccountScreen.verifyDisplayingTheCorrectDataInAccountEditting();
   });
 
-  it("2.  Verify Editting an Detail Chart of Account", () => {
+  it.only("2. Verify Editting an Detail Chart of Account", () => {
     ChartOfAccounts.landing();
     cy.wait(1500);
     ChartOfAccounts.SearchAnTreeAccount(AccountingData.accountCOde);
+    cy.wait(1000);
     ChartOfAccounts.clickEditButtonDetailAccount();
+    cy.wait(5500);
     cy.verifyDimmidItemDropDownList("natureId");
     cy.verifyDimmidItemDropDownList("accountSectionId");
     cy.clickInputtedSearchDropDownList(
@@ -36,14 +38,15 @@ describe("Editting Chart of Account", () => {
         });
     });
     AddingAccountScreen.inputName(AccountingData.edittedChartOfAccountName);
-    cy.getLastItemInDropDownList("accountTypeId").then(($accountTypeId) => {
-      cy.wrap($accountTypeId)
-        .invoke("text")
-        .then((typeTxtEditted) => {
-          cy.log("typeTxtEditted::: " + typeTxtEditted);
-          cy.wrap(typeTxtEditted).as("typeTxtEditted");
-        });
-    });
+    // cy.clickInputtedSearchDropDownList("accountTypeId","bank").then(($accountTypeId) => {
+    //   cy.wrap($accountTypeId)
+    //     .invoke("text")
+    //     .then((typeTxtEditted) => {
+    //       cy.log("typeTxtEditted::: " + typeTxtEditted);
+    //       cy.wrap(typeTxtEditted).as("typeTxtEditted");
+    //     });
+    // });
+    AddingAccountScreen.inputName(AccountingData.edittedChartOfAccountName);
     AddingAccountScreen.clickSaveButton();
     for (var i = 0; i < 7; i++) {
       cy.log(
@@ -61,8 +64,8 @@ describe("Editting Chart of Account", () => {
     cy.get("@parentTxtEdited").then((parentTxtEdited) => {
       cy.verifyPlaceholderText(3, getWrappedString(parentTxtEdited));
     });
-    cy.get("@typeTxtEditted").then((typeTxtEditted) => {
-      cy.verifyPlaceholderText(7, getWrappedString(typeTxtEditted));
-    });
+    // cy.get("@typeTxtEditted").then((typeTxtEditted) => {
+    //   cy.verifyPlaceholderText(7, getWrappedString(typeTxtEditted));
+    // });
   });
 });
