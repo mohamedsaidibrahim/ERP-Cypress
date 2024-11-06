@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-06T11:29:32.288Z",
+    "end": "2024-11-06T11:29:51.796Z",
+    "duration": 19508,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d941eeee-2c35-4c39-ba76-24ffc43a0267",
+      "title": "",
+      "fullFile": "cypress/e2e/Authentication/Registeration/tests/Verify_each_component_status/Phone_number.cy.ts",
+      "file": "cypress/e2e/Authentication/Registeration/tests/Verify_each_component_status/Phone_number.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a63b8fc4-34a8-4100-b95e-8b8d7f3411a1",
+          "title": "Verify Phone component Status on the Registerion page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify the presence of the red star symbol next to the label title",
+              "fullTitle": "Verify Phone component Status on the Registerion page should verify the presence of the red star symbol next to the label title",
+              "timedOut": null,
+              "duration": 4200,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visibilityOfRequiredStar('label[for=\"mobileNumber\"]');",
+              "err": {},
+              "uuid": "7a1b7c12-7092-4442-a46c-84d647738602",
+              "parentUUID": "a63b8fc4-34a8-4100-b95e-8b8d7f3411a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "En",
+              "fullTitle": "Verify Phone component Status on the Registerion page En",
+              "timedOut": null,
+              "duration": 4548,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.clickLangButton();\nregisterPage_1.RegisterationPage.checkPhoneLabel(\"Phone\");\nregisterPage_1.RegisterationPage.inputPhoneNumber(auth_data_1.AuthData.authPhone);",
+              "err": {},
+              "uuid": "261310d1-033b-4f0c-9e20-a3d06e00423a",
+              "parentUUID": "a63b8fc4-34a8-4100-b95e-8b8d7f3411a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ar",
+              "fullTitle": "Verify Phone component Status on the Registerion page Ar",
+              "timedOut": null,
+              "duration": 3934,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.checkPhoneLabel(\"الهاتف\");\nregisterPage_1.RegisterationPage.inputPhoneNumber(auth_data_1.AuthData.authPhone);",
+              "err": {},
+              "uuid": "2bcdb251-e120-46df-ba14-ae5a8e02fcda",
+              "parentUUID": "a63b8fc4-34a8-4100-b95e-8b8d7f3411a1",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "To Verify Confirm Password is Required Message ",
+              "fullTitle": "Verify Phone component Status on the Registerion page To Verify Confirm Password is Required Message ",
+              "timedOut": null,
+              "duration": 4939,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Arabic Language\n(0, is_required_message_1.checkISRequiredMsg)(\"#mobileNumber\", false);\n// English Language\nregisterPage_1.RegisterationPage.clickLangButton();\n(0, is_required_message_1.checkISRequiredMsg)(\"#mobileNumber\", true);",
+              "err": {},
+              "uuid": "8b7b4133-038b-4c44-a458-2620127ad34d",
+              "parentUUID": "a63b8fc4-34a8-4100-b95e-8b8d7f3411a1",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "7a1b7c12-7092-4442-a46c-84d647738602",
+            "261310d1-033b-4f0c-9e20-a3d06e00423a",
+            "2bcdb251-e120-46df-ba14-ae5a8e02fcda",
+            "8b7b4133-038b-4c44-a458-2620127ad34d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 17621,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

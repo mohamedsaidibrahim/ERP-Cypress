@@ -1,0 +1,143 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-06T12:03:34.919Z",
+    "end": "2024-11-06T12:04:10.427Z",
+    "duration": 35508,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ccfe14a8-f51a-4da9-abf9-bb62f40f6b15",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Displaying_all_subdomains_users.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Displaying_all_subdomains_users.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "492ff8e9-f033-418b-8605-d1c4eb434547",
+          "title": "verify Displaying All Subdomain's Users",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
+              "fullTitle": "verify Displaying All Subdomain's Users 1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
+              "timedOut": null,
+              "duration": 17234,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"table\").then(($table) => {\n    if ($table.find(\"thead tr\").is(\":visible\")) {\n        // Verify Column Headers\n        cy.get(\"tr th\").eq(0).should(\"include\", /name/i);\n        cy.get(\"tr th\").eq(1).should(\"include\", /mail/i);\n        cy.get(\"tr th\")\n            .eq(2)\n            .should(\"include\", /last login date/i);\n        cy.get(\"tr th\")\n            .eq(3)\n            .should(\"include\", /licence/i);\n        cy.get(\"tr th\")\n            .eq(4)\n            .should(\"include\", /status/i);\n        cy.get(\"tr th\")\n            .eq(5)\n            .should(\"include\", /actions/i);\n    }\n    else {\n        cy.log(\"Missing Table\");\n    }\n});",
+              "err": {},
+              "uuid": "bdad6ea7-6ba2-4c9a-8982-ca9d127b3139",
+              "parentUUID": "492ff8e9-f033-418b-8605-d1c4eb434547",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify That The screen Has Search Text Field That Enable The User To Filter or Search For Some Users.",
+              "fullTitle": "verify Displaying All Subdomain's Users 2.Verify That The screen Has Search Text Field That Enable The User To Filter or Search For Some Users.",
+              "timedOut": null,
+              "duration": 8699,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.verifySearchFunctionalityDots();",
+              "err": {},
+              "uuid": "b3f442b5-8bff-4de0-8299-a41158dc867d",
+              "parentUUID": "492ff8e9-f033-418b-8605-d1c4eb434547",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify That The User Can Resend THe Email Invitation",
+              "fullTitle": "verify Displaying All Subdomain's Users 3.Verify That The User Can Resend THe Email Invitation",
+              "timedOut": null,
+              "duration": 9315,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "//  Check That the first row in the table has Resend Button then click it\nmanage_users_1.ManageUsers.verifyDisplayingResendButton();\nmanage_users_1.ManageUsers.clickResendButton();",
+              "err": {},
+              "uuid": "34c1ed79-bbe2-4163-be18-d8dac2fb5e5e",
+              "parentUUID": "492ff8e9-f033-418b-8605-d1c4eb434547",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bdad6ea7-6ba2-4c9a-8982-ca9d127b3139",
+            "b3f442b5-8bff-4de0-8299-a41158dc867d",
+            "34c1ed79-bbe2-4163-be18-d8dac2fb5e5e"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 35248,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

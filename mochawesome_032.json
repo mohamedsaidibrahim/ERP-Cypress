@@ -1,0 +1,190 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 3,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-11-06T15:06:11.362Z",
+    "end": "2024-11-06T15:19:13.941Z",
+    "duration": 782579,
+    "testsRegistered": 5,
+    "passPercent": 60,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0583a70c-9e91-438c-b7f9-71f2b38f7182",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Financial Calender/tests/add_financial_calender.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Financial Calender/tests/add_financial_calender.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5f15f3ff-a5b4-4a1b-ae18-a43af3956a5d",
+          "title": "Financial Calender",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify All components are displaying",
+              "fullTitle": "Financial Calender 1.Verify All components are displaying",
+              "timedOut": null,
+              "duration": 121173,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "financial_calender_1.FinancialCallender.landing();\ncy.wait(1500);\nfinancial_calender_1.FinancialCallender.clickAddNewButton();\ncy.verifyLabelText(\"year\", /select year/i);\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"fromDate\", /from date/i);\ncy.verifyLabelText(\"toDate\", /to date/i);\ncy.verifyLabelText(\"name\", /name/i);",
+              "err": {},
+              "uuid": "53a4b85d-7507-4c02-875e-66f61fa0237b",
+              "parentUUID": "5f15f3ff-a5b4-4a1b-ae18-a43af3956a5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify All the Add Screen has not any casehed data After Landing",
+              "fullTitle": "Financial Calender 2.Verify All the Add Screen has not any casehed data After Landing",
+              "timedOut": null,
+              "duration": 135825,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "financial_calender_1.FinancialCallender.landing();\nfinancial_calender_1.FinancialCallender.clickAddNewButton();\n// Select Year\ncy.getByTestAttribute(\"year\").find(\".p-dropdown-label\").should(\"have.class\", \"p-dropdown-label-empty\");\ncy.getByTestAttribute(\"year\").find(\".p-dropdown-label\").should(\"have.text\", \" \");\n// Code\ncy.get('[data-testid=\"code\"]').should(\"be.visible\");\ncy.get('[data-testid=\"code\"]').should(\"be.disabled\");\ncy.get('[data-testid=\"code\"]').should(\"not.be.checked\");\n// From Date\ncy.get('input[role=\"combobox\"]').eq(0).should(\"not.have.value\");\n// To Date\ncy.get('input[role=\"combobox\"]').eq(1).should(\"not.have.value\");\n// Name\ncy.get('[data-testid=\"name\"]').should(\"be.visible\");\ncy.get('[data-testid=\"name\"]').should(\"be.enabled\");\ncy.get('[data-testid=\"name\"]').should(\"not.be.checked\");",
+              "err": {},
+              "uuid": "9acab069-b2ad-42ed-bd61-0a5aac40514f",
+              "parentUUID": "5f15f3ff-a5b4-4a1b-ae18-a43af3956a5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.should display the text of the last Year in the readonly input",
+              "fullTitle": "Financial Calender 3.should display the text of the last Year in the readonly input",
+              "timedOut": null,
+              "duration": 73713,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "financial_calender_1.FinancialCallender.landing();\nfinancial_calender_1.FinancialCallender.clickAddNewButton();\nfinancial_calender_1.FinancialCallender.clickSelectYearDropDownList();\n// Open the dropdown\nfinancial_calender_1.FinancialCallender.clickSelectYearDropDownList();\nfinancial_calender_1.FinancialCallender.verifyYearIsDisplayedInDimmedInput();",
+              "err": {},
+              "uuid": "6fcad271-e9e3-41b8-bdb6-4c8efb1a5d83",
+              "parentUUID": "5f15f3ff-a5b4-4a1b-ae18-a43af3956a5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.Verify Submitting new Financial Calender",
+              "fullTitle": "Financial Calender 4.Verify Submitting new Financial Calender",
+              "timedOut": null,
+              "duration": 119257,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "financial_calender_1.FinancialCallender.landing();\ncy.wait(3000);\ncy.getInitItemsCountInListView();\nfinancial_calender_1.FinancialCallender.clickAddNewButton();\ncy.wait(1500);\n// Select Year\nfinancial_calender_1.FinancialCallender.clickSelectYearDropDownList();\nfinancial_calender_1.FinancialCallender.clearName();\ncy.contains(\"span\", /required/i).should(\"be.visible\");\nfinancial_calender_1.FinancialCallender.inputName();\ncy.get(\"@initCount\").then((initCount) => {\n    var initCountVal = (0, utils_1.getWrappedNumber)(initCount);\n    if (initCountVal > 0) {\n        cy.log(\"**************** initCountVal > 0 111111111111111111111111******************//\");\n        financial_calender_1.FinancialCallender.inputFollowingToDate(1);\n    }\n    else {\n        cy.log(\"**************** 22222222222222222222 ******************//\");\n        financial_calender_1.FinancialCallender.inputFollowingToDate(0);\n    }\n});\n// Verify the Presence of the Required Validation\nfinancial_calender_1.FinancialCallender.clickGeneratePeriods();\nfinancial_calender_1.FinancialCallender.clickSaveButton();\n// Assertion\ncy.wait(2500);\ncy.visit(general_settings_data_1.GeneralSettingsData.FinancialCalenderUrl);\ncy.clickContinueAs();\ncy.wait(1500);\ncy.zoomOut();\ncy.zoomIn();\ncy.wait(1500);\ncy.assertnewItemAddedToListView();",
+              "err": {
+                "message": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c1539830580=\"\" type=\"undefined\" title=\"Create\" data-testid=\"save\" class=\"btn save body_b16\">...</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c3125920721=\"\" class=\"page_content\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c1539830580=\"\" type=\"undefined\" title=\"Create\" data-testid=\"save\" class=\"btn save body_b16\">...</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c3125920721=\"\" class=\"page_content\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:112762:68)\n    at ensureDescendents (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:112813:5)\n    at ensureDescendentsAndScroll (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:112819:14)\n    at ensureElIsNotCovered (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:112950:5)\n    at runAllChecks (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:113149:52)\n    at retryActionability (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:113186:16)\n    at tryCatcher (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:143587:68)\n    at <unknown> (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:143528:14)\n    at tryCatcher (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:180:0)",
+                "diff": null
+              },
+              "uuid": "000aab38-602f-40b6-b156-58e218f7f2a7",
+              "parentUUID": "5f15f3ff-a5b4-4a1b-ae18-a43af3956a5d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5.Displaying related data in ascending order based on Date from and Date To columns",
+              "fullTitle": "Financial Calender 5.Displaying related data in ascending order based on Date from and Date To columns",
+              "timedOut": null,
+              "duration": 165025,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "financial_calender_1.FinancialCallender.landing();\ncy.wait(3000);\ncy.getInitItemsCountInListView();\nfinancial_calender_1.FinancialCallender.clickAddNewButton();\ncy.wait(3000);\ncy.get(\"@initCount\").then((initCount) => {\n    var initCountVal = (0, utils_1.getWrappedNumber)(initCount);\n    if (initCountVal > 0) {\n        financial_calender_1.FinancialCallender.inputFollowingToDate(1);\n    }\n    else {\n        financial_calender_1.FinancialCallender.inputFollowingToDate(0);\n    }\n    financial_calender_1.FinancialCallender.clickGeneratePeriods();\n    // Wait for the table to update (adjust timeout as needed)\n    cy.wait(1000);\n    // Verify that the table rows are displayed correctly\n    cy.get(\"table\").should(\"be.visible\");\n    cy.get(\"table\").then(($table) => {\n        if ($table.find(\"tbody\").is(\":visible\")) {\n            cy.wrap($table)\n                .find(\"tbody\")\n                .then(($tbody) => {\n                if ($tbody.find(\"tr\").is(\":visible\")) {\n                    cy.wrap($tbody)\n                        .find(\"tr\")\n                        .then((rows) => {\n                        const dateFromValues = Cypress.$(rows)\n                            .map((i, row) => (0, utils_1.parseDate)(Cypress.$(row).find(\"td\").eq(3).text().trim(), \"yyyy-mm-dd\"))\n                            .get();\n                        const dateToValues = Cypress.$(rows)\n                            .map((i, row) => (0, utils_1.parseDate)(Cypress.$(row).find(\"td\").eq(4).text().trim(), \"yyyy-mm-dd\"))\n                            .get();\n                        // Check if both \"Date from\" and \"Date To\" columns are in ascending order\n                        expect((0, utils_1.isAscendingOrder)(dateFromValues)).to.be.true;\n                        expect((0, utils_1.isAscendingOrder)(dateToValues)).to.be.true;\n                    });\n                }\n                else {\n                    cy.log(\"No Any ROW\");\n                }\n            });\n        }\n        else {\n            cy.log(\"The Table has not body\");\n        }\n    });\n});",
+              "err": {
+                "message": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n          `<span role=\"combobox\" pautofocus=\"\" class=\"p-element p-dropdown-label p-inputtext ng-star-inserted\" aria-disabled=\"true\" aria-haspopup=\"listbox\" aria-expanded=\"false\" tabindex=\"-1\" aria-label=\"Microtec Branch\">Microte...</span>`\n\n          has CSS `pointer-events: none`, inherited from this element:\n\n`<div class=\"p-dropdown p-component p-inputwrapper p-disabled\" id=\"pn_id_25\">...</div>`\n\n          `pointer-events: none` prevents user mouse interaction.\n\n          Fix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n          `<span role=\"combobox\" pautofocus=\"\" class=\"p-element p-dropdown-label p-inputtext ng-star-inserted\" aria-disabled=\"true\" aria-haspopup=\"listbox\" aria-expanded=\"false\" tabindex=\"-1\" aria-label=\"Microtec Branch\">Microte...</span>`\n\n          has CSS `pointer-events: none`, inherited from this element:\n\n`<div class=\"p-dropdown p-component p-inputwrapper p-disabled\" id=\"pn_id_25\">...</div>`\n\n          `pointer-events: none` prevents user mouse interaction.\n\n          Fix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureElDoesNotHaveCSS (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:112703:66)\n    at ensureDescendents (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:112811:5)\n    at ensureDescendentsAndScroll (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:112819:14)\n    at ensureElIsNotCovered (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:112950:5)\n    at runAllChecks (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:113149:52)\n    at retryActionability (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:113186:16)\n    at tryCatcher (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise.attempt.Promise.try (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:4315:29)\n    at whenStable (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:143587:68)\n    at <unknown> (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:143528:14)\n    at tryCatcher (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromise0 (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1621:10)\n    at Promise._settlePromises (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1701:18)\n    at Promise._fulfill (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1645:18)\n    at <unknown> (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:5450:46)\nFrom Your Spec Code:\n    at FinancialCallender.inputFollowingToDate (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Financial Calender/pages/financial_calender.ts:76:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Financial Calender/tests/add_financial_calender.cy.ts:92:0)",
+                "diff": null
+              },
+              "uuid": "f2c71369-437d-4297-88a8-537c0dab233f",
+              "parentUUID": "5f15f3ff-a5b4-4a1b-ae18-a43af3956a5d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "53a4b85d-7507-4c02-875e-66f61fa0237b",
+            "9acab069-b2ad-42ed-bd61-0a5aac40514f",
+            "6fcad271-e9e3-41b8-bdb6-4c8efb1a5d83"
+          ],
+          "failures": [
+            "000aab38-602f-40b6-b156-58e218f7f2a7",
+            "f2c71369-437d-4297-88a8-537c0dab233f"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 614993,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

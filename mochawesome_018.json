@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-06T12:04:12.038Z",
+    "end": "2024-11-06T12:04:35.851Z",
+    "duration": 23813,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "04e465d6-6c22-4319-8a4c-619221d0464c",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Delete_existing_user.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Delete_existing_user.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3fc61ac1-b5cb-4f54-bccb-594d82402444",
+          "title": "Delete Existing User",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify That The User Can Cancel in the confirmation Pop up",
+              "fullTitle": "Delete Existing User 1.Verify That The User Can Cancel in the confirmation Pop up",
+              "timedOut": null,
+              "duration": 15608,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"table\").then(($table) => {\n    if ($table.find(\"tbody tr\").is(\":visible\")) {\n        cy.get(\"table tbody tr\")\n            .eq(0)\n            .find(\"td\")\n            .eq(1)\n            .invoke(\"text\")\n            .then((tMail) => {\n            cy.wrap(tMail.trim()).as(\"tMail1\");\n        });\n        cy.getInitItemsCountInListView();\n        manage_users_1.ManageUsers.clickDeleteOnTheLastUser();\n        //  Verify The Components of Cancel Pop up\n        // ManageUsers.verifyTheComponentsOfCancelPopup();\n        //  Click Cancel Button\n        manage_users_1.ManageUsers.cancelTheDeletePopUp();\n        //  Verify that No Data is Deleted\n        cy.get(\"@tMail1\").then((tMail1) => {\n            cy.get(\"table tbody tr\")\n                .eq(0)\n                .find(\"td\")\n                .eq(1)\n                .scrollIntoView()\n                .invoke(\"text\")\n                .then((tMail2) => {\n                expect((0, utils_1.trimText)(tMail1.toString().trim())).to.equal((0, utils_1.trimText)(tMail2));\n            });\n        });\n        cy.assertItemDeletedFromListView();\n    }\n    else {\n        cy.log(\"Table is Empty\");\n    }\n});",
+              "err": {},
+              "uuid": "d90406e8-36c8-4462-81bf-900cc60b14ed",
+              "parentUUID": "3fc61ac1-b5cb-4f54-bccb-594d82402444",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify That The User Can Delete The User From Delete Button on The User Row an Action. ",
+              "fullTitle": "Delete Existing User 2.Verify That The User Can Delete The User From Delete Button on The User Row an Action. ",
+              "timedOut": null,
+              "duration": 7968,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"table\").then(($table) => {\n    if ($table.find(\"tbody tr\").is(\":visible\")) {\n        cy.get(\"tbody tr\")\n            .last()\n            .find(\"td\")\n            .eq(1)\n            .invoke(\"text\")\n            .then((tMail) => {\n            cy.wrap(tMail.trim()).as(\"tMail1\");\n        });\n        cy.getInitItemsCountInListView();\n        manage_users_1.ManageUsers.clickDeleteOnTheLastUser();\n        cy.confirmDeletePopUp();\n        //  Verify that No Data is Deleted\n        cy.get(\"@tMail1\").then((tMail1) => {\n            cy.get(\"tbody tr\")\n                .last()\n                .find(\"td\")\n                .eq(1)\n                .scrollIntoView()\n                .invoke(\"text\")\n                .then((tMail2) => {\n                expect((0, utils_1.trimText)(tMail1.toString().trim())).not.to.equal((0, utils_1.trimText)(tMail2));\n            });\n        });\n        cy.assertItemDeletedFromListView();\n    }\n    else {\n        cy.log(\"Table is Empty\");\n    }\n});",
+              "err": {},
+              "uuid": "fc9a4157-dfd3-46b1-b10b-8fd7751c9c44",
+              "parentUUID": "3fc61ac1-b5cb-4f54-bccb-594d82402444",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d90406e8-36c8-4462-81bf-900cc60b14ed",
+            "fc9a4157-dfd3-46b1-b10b-8fd7751c9c44"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 23576,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

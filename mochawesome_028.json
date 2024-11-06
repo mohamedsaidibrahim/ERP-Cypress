@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-06T14:11:15.616Z",
+    "end": "2024-11-06T14:15:46.797Z",
+    "duration": 271181,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0b59c9e6-81f9-453f-a1e0-4896e7fc9713",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_definitions/tests/currency_definitions_listview.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_definitions/tests/currency_definitions_listview.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "59f55d2f-f07f-4739-a7eb-c9afaa3398b0",
+          "title": "Currency Definitions List View",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify all the components are displayed on the Listview",
+              "fullTitle": "Currency Definitions List View 1.Verify all the components are displayed on the Listview",
+              "timedOut": null,
+              "duration": 137115,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "currency_definition_1.CurrencyDefinitions.landing();\ncy.wait(1500);\ncy.get(\"table\").then((table) => {\n    cy.wrap(table).find(\"th\").eq(0).contains(/code/i).should(\"be.visible\");\n    cy.wrap(table).find(\"th\").eq(1).contains(/name/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/sympol/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/subunit/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(4)\n        .contains(/country/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(5)\n        .contains(/actions/i)\n        .should(\"be.visible\");\n});",
+              "err": {},
+              "uuid": "674bc894-7c16-4403-8e1f-a790fec96b2a",
+              "parentUUID": "59f55d2f-f07f-4739-a7eb-c9afaa3398b0",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.should filter the table based on search input in the first two columns",
+              "fullTitle": "Currency Definitions List View 2.should filter the table based on search input in the first two columns",
+              "timedOut": null,
+              "duration": 131981,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "currency_definition_1.CurrencyDefinitions.landing();\ncy.wait(1000);\ncy.verifySearchFunctionality();",
+              "err": {},
+              "uuid": "5c8445f3-c87b-496c-b2ce-19e30876fc0c",
+              "parentUUID": "59f55d2f-f07f-4739-a7eb-c9afaa3398b0",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "674bc894-7c16-4403-8e1f-a790fec96b2a",
+            "5c8445f3-c87b-496c-b2ce-19e30876fc0c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 269096,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

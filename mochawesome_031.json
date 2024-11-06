@@ -1,0 +1,201 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 0,
+    "pending": 0,
+    "failures": 5,
+    "start": "2024-11-06T14:41:56.458Z",
+    "end": "2024-11-06T15:06:09.751Z",
+    "duration": 1453293,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d43f56c-fb8a-4190-a076-7a6120317712",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_edit.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_edit.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2be78aa7-a3a9-4509-9458-511fd5e70763",
+          "title": "Currency Conversion (Edit)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify All components are displaying",
+              "fullTitle": "Currency Conversion (Edit) 1.Verify All components are displaying",
+              "timedOut": null,
+              "duration": 81487,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1000);\ncy.reload();\ncy.wait(500);\ncy.clickFirstEditActionButton();\ncy.wait(1500);\ncy.verifyLabelText(\"fromCurrencyId\", /from currency/i);\ncy.verifyLabelText(\"fromCurrencyRate\", /currency rate/i);\ncy.verifyLabelText(\"toCurrencyId\", /to currency/i);\ncy.verifyLabelText(\"reversedRate\", /reversed rates/i);\ncy.verifyLabelText(\"note\", /notes/i);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `table`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `table`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:111:0)",
+                "diff": null
+              },
+              "uuid": "d911c721-259c-4872-b6de-c029acdff70a",
+              "parentUUID": "2be78aa7-a3a9-4509-9458-511fd5e70763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Submitting Editted Currency Conversion",
+              "fullTitle": "Currency Conversion (Edit) 2.Verify Submitting Editted Currency Conversion",
+              "timedOut": null,
+              "duration": 118188,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.clickFirstEditActionButton();\ncy.wait(1000);\ncy.clickInputtedSearchDropDownList(\"toCurrencyId\", general_settings_data_1.GeneralSettingsData.currency2).then(($toCurrencyId) => {\n    if ($toCurrencyId != null) {\n        cy.wrap($toCurrencyId)\n            .invoke(\"text\")\n            .then((toCurrencyIdTxt) => {\n            cy.log(\"toCurrencyIdTxt::: \" + toCurrencyIdTxt);\n            cy.wrap(toCurrencyIdTxt).as(\"toCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"toCurrencyIdTxt\");\n    }\n});\ncy.wait(1000);\ncy.getByTestAttribute(\"note\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccNote);\ncy.clickInputtedSearchDropDownList(\"fromCurrencyId\", general_settings_data_1.GeneralSettingsData.newCurrencySearch).then(($fromCurrencyId) => {\n    if ($fromCurrencyId != null) {\n        cy.wrap($fromCurrencyId)\n            .invoke(\"text\")\n            .then((fromCurrencyIdTxt) => {\n            cy.log(\"fromCurrencyIdTxt::: \" + fromCurrencyIdTxt);\n            cy.wrap(fromCurrencyIdTxt).as(\"fromCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"fromCurrencyIdTxt\");\n    }\n});\ncy.getByTestAttribute(\"fromCurrencyRate\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);\ncurrency_conversion_1.CurrencyConversion.clickSaveButton();\ncurrency_conversion_1.CurrencyConversion.assertSuccesfulSaving();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=toCurrencyId]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=toCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:282:0)",
+                "diff": null
+              },
+              "uuid": "3a5395ef-107d-4f83-8cb2-46d06b9bac46",
+              "parentUUID": "2be78aa7-a3a9-4509-9458-511fd5e70763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify Rejecting Submitting Editted Currency Conversion (2 Currencies has previous Conversion relation)",
+              "fullTitle": "Currency Conversion (Edit) 3.Verify Rejecting Submitting Editted Currency Conversion (2 Currencies has previous Conversion relation)",
+              "timedOut": null,
+              "duration": 83318,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\ncy.wait(1000);\ncy.clickInputtedSearchDropDownList(\"fromCurrencyId\", general_settings_data_1.GeneralSettingsData.newCurrencySearch).then(($fromCurrencyId) => {\n    if ($fromCurrencyId != null) {\n        cy.wrap($fromCurrencyId)\n            .invoke(\"text\")\n            .then((fromCurrencyIdTxt) => {\n            cy.log(\"fromCurrencyIdTxt::: \" + fromCurrencyIdTxt);\n            cy.wrap(fromCurrencyIdTxt).as(\"fromCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"fromCurrencyIdTxt\");\n    }\n});\ncy.wait(1000);\ncy.getByTestAttribute(\"note\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccNote);\ncy.clickInputtedSearchDropDownList(\"toCurrencyId\", general_settings_data_1.GeneralSettingsData.currency2).then(($toCurrencyId) => {\n    if ($toCurrencyId != null) {\n        cy.wrap($toCurrencyId)\n            .invoke(\"text\")\n            .then((toCurrencyIdTxt) => {\n            cy.log(\"toCurrencyIdTxt::: \" + toCurrencyIdTxt);\n            cy.wrap(toCurrencyIdTxt).as(\"toCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"toCurrencyIdTxt\");\n    }\n});\ncy.getByTestAttribute(\"fromCurrencyRate\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);\ncurrency_conversion_1.CurrencyConversion.clickSaveButton();\ncy.wait(2000);\ncy.contains(\"div[role='dialog']\").should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=fromCurrencyId]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=fromCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:282:0)",
+                "diff": null
+              },
+              "uuid": "c83bf0d1-ba09-4023-8cc4-a1528fba7800",
+              "parentUUID": "2be78aa7-a3a9-4509-9458-511fd5e70763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.Verify Cancelling Editting Currency Conversion",
+              "fullTitle": "Currency Conversion (Edit) 4.Verify Cancelling Editting Currency Conversion",
+              "timedOut": null,
+              "duration": 120460,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\ncy.wait(1000);\ncy.clickInputtedSearchDropDownList(\"toCurrencyId\", general_settings_data_1.GeneralSettingsData.currency2).then(($toCurrencyId) => {\n    if ($toCurrencyId != null) {\n        cy.wrap($toCurrencyId)\n            .invoke(\"text\")\n            .then((toCurrencyIdTxt) => {\n            cy.log(\"toCurrencyIdTxt::: \" + toCurrencyIdTxt);\n            cy.wrap(toCurrencyIdTxt).as(\"toCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"toCurrencyIdTxt\");\n    }\n});\ncy.wait(1000);\ncy.getByTestAttribute(\"note\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccNote);\ncy.clickInputtedSearchDropDownList(\"fromCurrencyId\", general_settings_data_1.GeneralSettingsData.newCurrencySearch).then(($fromCurrencyId) => {\n    if ($fromCurrencyId != null) {\n        cy.wrap($fromCurrencyId)\n            .invoke(\"text\")\n            .then((fromCurrencyIdTxt) => {\n            cy.log(\"fromCurrencyIdTxt::: \" + fromCurrencyIdTxt);\n            cy.wrap(fromCurrencyIdTxt).as(\"fromCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"fromCurrencyIdTxt\");\n    }\n});\ncy.wait(1000);\ncy.getByTestAttribute(\"fromCurrencyRate\")\n    .scrollIntoView()\n    .clear()\n    .type(\"1\" + general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);\ncurrency_conversion_1.CurrencyConversion.clickcancelButton();\n// Assertion\ncy.wait(1000);\ncy.reload();\ncy.wait(1000);\ncy.clickContinueAs();\ncy.wait(1000);\ncy.verifyFirstCellInTableNotEqual(1, \"1\" + general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=toCurrencyId]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=toCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:282:0)",
+                "diff": null
+              },
+              "uuid": "5a433d2c-b0eb-4d7b-9ca6-ee01aee594b4",
+              "parentUUID": "2be78aa7-a3a9-4509-9458-511fd5e70763",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5.Verify Validation of the same From and To Currency",
+              "fullTitle": "Currency Conversion (Edit) 5.Verify Validation of the same From and To Currency",
+              "timedOut": null,
+              "duration": 140179,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.clickFirstEditActionButton();\ncy.wait(1500);\ncy.clickInputtedSearchDropDownList(\"fromCurrencyId\", general_settings_data_1.GeneralSettingsData.currency2).then(($fromCurrencyId) => {\n    if ($fromCurrencyId != null) {\n        cy.wrap($fromCurrencyId)\n            .invoke(\"text\")\n            .then((fromCurrencyIdTxt) => {\n            cy.log(\"fromCurrencyIdTxt::: \" + fromCurrencyIdTxt);\n            cy.wrap(fromCurrencyIdTxt).as(\"fromCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"fromCurrencyIdTxt\");\n    }\n});\ncy.wait(1000);\ncy.getByTestAttribute(\"note\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccNote);\ncy.clickInputtedSearchDropDownList(\"toCurrencyId\", general_settings_data_1.GeneralSettingsData.currency2).then(($toCurrencyId) => {\n    if ($toCurrencyId != null) {\n        cy.wrap($toCurrencyId)\n            .invoke(\"text\")\n            .then((toCurrencyIdTxt) => {\n            cy.log(\"toCurrencyIdTxt::: \" + toCurrencyIdTxt);\n            cy.wrap(toCurrencyIdTxt).as(\"toCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"toCurrencyIdTxt\");\n    }\n});\ncy.getByTestAttribute(\"fromCurrencyRate\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);\n// CurrencyConversion.clickSaveButton();\ncy.contains(\"div\", /different/i)\n    .first()\n    .scrollIntoView()\n    .should(\"be.visible\");\ncy.contains(\"div\", /different/i)\n    .last()\n    .scrollIntoView()\n    .should(\"be.visible\");",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=fromCurrencyId]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=fromCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:282:0)",
+                "diff": null
+              },
+              "uuid": "bbfa4b6a-3dfa-4e4b-9b10-f5a6ad5510ec",
+              "parentUUID": "2be78aa7-a3a9-4509-9458-511fd5e70763",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "d911c721-259c-4872-b6de-c029acdff70a",
+            "3a5395ef-107d-4f83-8cb2-46d06b9bac46",
+            "c83bf0d1-ba09-4023-8cc4-a1528fba7800",
+            "5a433d2c-b0eb-4d7b-9ca6-ee01aee594b4",
+            "bbfa4b6a-3dfa-4e4b-9b10-f5a6ad5510ec"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 543632,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

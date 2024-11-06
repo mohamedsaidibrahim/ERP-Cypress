@@ -1,0 +1,236 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 7,
+    "passes": 3,
+    "pending": 0,
+    "failures": 4,
+    "start": "2024-11-06T11:31:04.560Z",
+    "end": "2024-11-06T11:36:23.158Z",
+    "duration": 318598,
+    "testsRegistered": 7,
+    "passPercent": 42.857142857142854,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "7da3fef8-51de-40f4-836b-209070b7ff72",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ee110a9f-bec1-414e-a2fd-98b54c262db5",
+          "title": "Add Domain Space",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify Adding Subdomain",
+              "fullTitle": "Add Domain Space 1.Verify Adding Subdomain",
+              "timedOut": null,
+              "duration": 35313,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "my_subscriptions_page_1.MySubscriptionsPage.clickAddDomainSpaceBtn();\n// implement Add SubDomain and Monthly\nadd_domain_space_1.AddDomainSpace.implementAddSubDomain(sub_domain_data_1.SubDomainData.count, sub_domain_data_1.SubDomainData.subDomainName);\nadd_domain_space_1.AddDomainSpace.clickAddToCartButton();\ncy.wait(30000);\n// Verify That The Saved Data is Stored and Displayed Successfully\nadd_domain_space_1.AddDomainSpace.validateNewCardIsAddedOnTheGrid(sub_domain_data_1.SubDomainData.subDomainName, sub_domain_data_1.SubDomainData.count, sub_domain_data_1.SubDomainData.isMonthly);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"new_domain\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"new_domain\"]`, but never found it.\n    at AddDomainSpace.validateAvailableDomainSpace (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/pages/add_domain_space.ts:82:0)\n    at AddDomainSpace.implementAddSubDomain (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/pages/add_domain_space.ts:154:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:15:0)",
+                "diff": null
+              },
+              "uuid": "e895a4d4-86dd-4a6e-811f-d9da3da531ef",
+              "parentUUID": "ee110a9f-bec1-414e-a2fd-98b54c262db5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify That The System Correctly Calculate The Price Monthly and Yearly",
+              "fullTitle": "Add Domain Space 2.Verify That The System Correctly Calculate The Price Monthly and Yearly",
+              "timedOut": null,
+              "duration": 11193,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.clickContinueAs();\nmy_subscriptions_page_1.MySubscriptionsPage.clickAddDomainSpaceBtn();\nadd_domain_space_1.AddDomainSpace.inputeCount(sub_domain_data_1.SubDomainData.count);\nadd_domain_space_1.AddDomainSpace.validateYearlyCount(sub_domain_data_1.SubDomainData.count);\nadd_domain_space_1.AddDomainSpace.clickMonthly();\nadd_domain_space_1.AddDomainSpace.validateMonthlyCount(sub_domain_data_1.SubDomainData.count);",
+              "err": {},
+              "uuid": "446011fb-f3c7-48a5-8731-3aeca38a508e",
+              "parentUUID": "ee110a9f-bec1-414e-a2fd-98b54c262db5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify That The Count Can't be Greater Than 12 or Less Than 1",
+              "fullTitle": "Add Domain Space 3.Verify That The Count Can't be Greater Than 12 or Less Than 1",
+              "timedOut": null,
+              "duration": 34159,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "var count = 13;\nmy_subscriptions_page_1.MySubscriptionsPage.clickAddDomainSpaceBtn();\nadd_domain_space_1.AddDomainSpace.clickMonthly();\nadd_domain_space_1.AddDomainSpace.inputeCount(count);\nadd_domain_space_1.AddDomainSpace.clickDialoge();\nadd_domain_space_1.AddDomainSpace.verifyValidSubDomainCount(count);\ncount = 0;\nadd_domain_space_1.AddDomainSpace.inputeCount(count);\nadd_domain_space_1.AddDomainSpace.clickDialoge();\nadd_domain_space_1.AddDomainSpace.verifyValidSubDomainCount(count);",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div.new_domain`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div.new_domain`, but never found it.\n    at AddDomainSpace.clickDialoge (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/pages/add_domain_space.ts:19:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:35:0)",
+                "diff": null
+              },
+              "uuid": "320c9a37-8b70-400d-9c91-1ecc83b4a50c",
+              "parentUUID": "ee110a9f-bec1-414e-a2fd-98b54c262db5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.Verify That The Count accepts Numbers",
+              "fullTitle": "Add Domain Space 4.Verify That The Count accepts Numbers",
+              "timedOut": null,
+              "duration": 9466,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "my_subscriptions_page_1.MySubscriptionsPage.clickAddDomainSpaceBtn();\nvar count = \"A\";\nadd_domain_space_1.AddDomainSpace.validateStringCount(count);",
+              "err": {},
+              "uuid": "a9b46793-2969-4fb1-87c1-62a85847ca0c",
+              "parentUUID": "ee110a9f-bec1-414e-a2fd-98b54c262db5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5.Verify That The System Can't Accept The Existing Domain Space Name",
+              "fullTitle": "Add Domain Space 5.Verify That The System Can't Accept The Existing Domain Space Name",
+              "timedOut": null,
+              "duration": 34843,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "my_subscriptions_page_1.MySubscriptionsPage.clickAddDomainSpaceBtn();\nadd_domain_space_1.AddDomainSpace.inputeCount(3);\nadd_domain_space_1.AddDomainSpace.inputeYourDomainSpace(sub_domain_data_1.SubDomainData.subDomainName);\nadd_domain_space_1.AddDomainSpace.validateDublicatedDomainSpace();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"new_domain\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"new_domain\"]`, but never found it.\n    at AddDomainSpace.validateDublicatedDomainSpace (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/pages/add_domain_space.ts:71:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:51:0)",
+                "diff": null
+              },
+              "uuid": "ab3c82ac-f691-49f1-964a-8007a9d3f56a",
+              "parentUUID": "ee110a9f-bec1-414e-a2fd-98b54c262db5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "6.Verify That form validate all the required components before submitting",
+              "fullTitle": "Add Domain Space 6.Verify That form validate all the required components before submitting",
+              "timedOut": null,
+              "duration": 10892,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "my_subscriptions_page_1.MySubscriptionsPage.clickAddDomainSpaceBtn();\nadd_domain_space_1.AddDomainSpace.clearCount();\nadd_domain_space_1.AddDomainSpace.inputeYourDomainSpace(sub_domain_data_1.SubDomainData.subDomainName);\nadd_domain_space_1.AddDomainSpace.validateRequiredComponents(1);\nadd_domain_space_1.AddDomainSpace.inputeCount(7);\nadd_domain_space_1.AddDomainSpace.inputeYourDomainSpace(sub_domain_data_1.SubDomainData.subDomainName);\nadd_domain_space_1.AddDomainSpace.validateRequiredComponentsMsgRemoval();",
+              "err": {},
+              "uuid": "0231f882-0666-47f0-aef4-f61649b6e2c9",
+              "parentUUID": "ee110a9f-bec1-414e-a2fd-98b54c262db5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "7.Verify Adding Subdomain has Special Characters, Prevent Submission",
+              "fullTitle": "Add Domain Space 7.Verify Adding Subdomain has Special Characters, Prevent Submission",
+              "timedOut": null,
+              "duration": 36709,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const subDomainNameSpecial = \"****/***lowerdomain\" + sub_domain_data_1.SubDomainData.subDomainName;\nmy_subscriptions_page_1.MySubscriptionsPage.clickAddDomainSpaceBtn();\nadd_domain_space_1.AddDomainSpace.implementAddSubDomain(sub_domain_data_1.SubDomainData.count, subDomainNameSpecial);\nadd_domain_space_1.AddDomainSpace.clickAddToCartButton();\ncy.wait(300);\nadd_domain_space_1.AddDomainSpace.verifyDialogPresistance();\n// Verify That  Special Charachters Not Allowed Displayed Successfully\nadd_domain_space_1.AddDomainSpace.validationSpecialCharacters();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"new_domain\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"new_domain\"]`, but never found it.\n    at AddDomainSpace.validateAvailableDomainSpace (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/pages/add_domain_space.ts:82:0)\n    at AddDomainSpace.implementAddSubDomain (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/pages/add_domain_space.ts:154:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:65:0)",
+                "diff": null
+              },
+              "uuid": "33675523-b6c2-4222-b08c-11fe972afcde",
+              "parentUUID": "ee110a9f-bec1-414e-a2fd-98b54c262db5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "446011fb-f3c7-48a5-8731-3aeca38a508e",
+            "a9b46793-2969-4fb1-87c1-62a85847ca0c",
+            "0231f882-0666-47f0-aef4-f61649b6e2c9"
+          ],
+          "failures": [
+            "e895a4d4-86dd-4a6e-811f-d9da3da531ef",
+            "320c9a37-8b70-400d-9c91-1ecc83b4a50c",
+            "ab3c82ac-f691-49f1-964a-8007a9d3f56a",
+            "33675523-b6c2-4222-b08c-11fe972afcde"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 172575,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

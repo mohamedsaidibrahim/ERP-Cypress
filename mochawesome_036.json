@@ -1,0 +1,132 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 0,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-11-06T15:46:21.261Z",
+    "end": "2024-11-06T15:54:04.456Z",
+    "duration": 463195,
+    "testsRegistered": 2,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1f495f8c-2309-43aa-9ea6-5ea983c21afb",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Edit_Chart_Of_account.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Edit_Chart_Of_account.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a82765c2-5659-487e-a2a4-139783908c88",
+          "title": "Editting Chart of Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.  Verify All Components are displaying in their correct states",
+              "fullTitle": "Editting Chart of Account 1.  Verify All Components are displaying in their correct states",
+              "timedOut": null,
+              "duration": 77831,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.accountCOde);\ncharts_of_accounts_1.ChartOfAccounts.clickEditButtonDetailAccount();\ndisplaying_account_screen_1.DisplayingAccountScreen.verifyDisplayingTheCorrectDataInAccountEditting();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.action`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.action`, but never found it.\n    at ChartOfAccounts.clickEditButtonDetailAccount (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/charts_of_accounts.ts:54:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Edit_Chart_Of_account.cy.ts:16:0)",
+                "diff": null
+              },
+              "uuid": "6653262f-2231-407a-bc6b-2129dce6ae3b",
+              "parentUUID": "a82765c2-5659-487e-a2a4-139783908c88",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.  Verify Editting an Detail Chart of Account",
+              "fullTitle": "Editting Chart of Account 2.  Verify Editting an Detail Chart of Account",
+              "timedOut": null,
+              "duration": 111339,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.accountCOde);\ncharts_of_accounts_1.ChartOfAccounts.clickEditButtonDetailAccount();\ncy.verifyDimmidItemDropDownList(\"natureId\");\ncy.verifyDimmidItemDropDownList(\"accountSectionId\");\ncy.clickInputtedSearchDropDownList(\"parentId\", accounting_data_1.AccountingData.testParentAccountEdittedSearch).then(($parentId) => {\n    cy.wrap($parentId)\n        .invoke(\"text\")\n        .then((parentTxtEdited) => {\n        cy.log(\"parentTxtEdited::: \" + parentTxtEdited);\n        cy.wrap(parentTxtEdited).as(\"parentTxtEdited\");\n    });\n});\nadding_account_screen_1.AddingAccountScreen.inputName(accounting_data_1.AccountingData.edittedChartOfAccountName);\ncy.getLastItemInDropDownList(\"accountTypeId\").then(($accountTypeId) => {\n    cy.wrap($accountTypeId)\n        .invoke(\"text\")\n        .then((typeTxtEditted) => {\n        cy.log(\"typeTxtEditted::: \" + typeTxtEditted);\n        cy.wrap(typeTxtEditted).as(\"typeTxtEditted\");\n    });\n});\nadding_account_screen_1.AddingAccountScreen.clickSaveButton();\nfor (var i = 0; i < 7; i++) {\n    cy.log(\"<<<<<***** Viewing ***** Viewing ***** Viewing ***** Viewing *****>>>\");\n}\ncy.wait(2000);\ncy.log(\"<<<<<***** Verification in Tree View *****>>>>>>\");\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.edittedChartOfAccountName);\ncy.get(\"span#label_tree.ng-star-inserted\").last().scrollIntoView().click();\ncy.wait(1000);\ncy.verifyPlaceholderText(2, accounting_data_1.AccountingData.edittedChartOfAccountName);\ncy.get(\"@parentTxtEdited\").then((parentTxtEdited) => {\n    cy.verifyPlaceholderText(3, (0, utils_1.getWrappedString)(parentTxtEdited));\n});\ncy.get(\"@typeTxtEditted\").then((typeTxtEditted) => {\n    cy.verifyPlaceholderText(7, (0, utils_1.getWrappedString)(typeTxtEditted));\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.action`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.action`, but never found it.\n    at ChartOfAccounts.clickEditButtonDetailAccount (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/charts_of_accounts.ts:54:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Edit_Chart_Of_account.cy.ts:23:0)",
+                "diff": null
+              },
+              "uuid": "234a0c50-99fc-4e88-817a-d859cfda7d5c",
+              "parentUUID": "a82765c2-5659-487e-a2a4-139783908c88",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "6653262f-2231-407a-bc6b-2129dce6ae3b",
+            "234a0c50-99fc-4e88-817a-d859cfda7d5c"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 189170,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

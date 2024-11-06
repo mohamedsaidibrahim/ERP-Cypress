@@ -1,0 +1,152 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-11-06T15:55:54.047Z",
+    "end": "2024-11-06T16:08:46.021Z",
+    "duration": 771974,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "06deef65-6a34-4c5d-9545-9d8bf6429758",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "c8c97540-4577-4e11-a223-b422caceb773",
+          "title": "Displaying List View Chart of Account",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Verify All Components are displaying in their correct states",
+              "fullTitle": "Displaying List View Chart of Account 1. Verify All Components are displaying in their correct states",
+              "timedOut": null,
+              "duration": 142959,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1500);\ncy.clickContinueAs();\ncy.wait(1500);\ndisplaying_main_screen_1.DisplayingMainScreen.verifyEmptyViewPanal();\ndisplaying_main_screen_1.DisplayingMainScreen.verifyTHeTreeHeaders();\ndisplaying_main_screen_1.DisplayingMainScreen.verifySearchTextField();\ndisplaying_main_screen_1.DisplayingMainScreen.verifyTheMainParentAccounts();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: expected '[ <button.btn_tree_item.btn_add.pi.pi-plus>, 5 more... ]' to have class 'pi-expand'",
+                "estack": "AssertionError: Timed out retrying after 25000ms: expected '[ <button.btn_tree_item.btn_add.pi.pi-plus>, 5 more... ]' to have class 'pi-expand'\n    at DisplayingMainScreen.verifyTHeTreeHeaders (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/displaying_main_screen.ts:29:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts:19:0)",
+                "diff": null
+              },
+              "uuid": "a61d7d04-297a-4f80-8238-324fb6fe51e3",
+              "parentUUID": "c8c97540-4577-4e11-a223-b422caceb773",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Verify Shiftting between Tree and List view",
+              "fullTitle": "Displaying List View Chart of Account 2. Verify Shiftting between Tree and List view",
+              "timedOut": null,
+              "duration": 92842,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncharts_of_accounts_1.ChartOfAccounts.switchingToListView();\ncharts_of_accounts_1.ChartOfAccounts.switchingToTreeView();",
+              "err": {},
+              "uuid": "41989130-1e40-41e7-9a50-1b033423178c",
+              "parentUUID": "c8c97540-4577-4e11-a223-b422caceb773",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3. Verify Tree and List views have the same data",
+              "fullTitle": "Displaying List View Chart of Account 3. Verify Tree and List views have the same data",
+              "timedOut": null,
+              "duration": 106413,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1500);\ncy.clickContinueAs();\ncy.wait(1500);\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.accountCOde);\ncy.wait(1000);\ncy.get('div[class=\"description\"]').last().scrollIntoView().click();\ncy.wait(1000);\ncy.wrapDisabledPlaceholderValue(0).then((codeT) => {\n    cy.wrap(codeT).as(\"codeT\");\n});\ncy.wrapDisabledPlaceholderValue(2).then((nameText) => {\n    cy.wrap(nameText).as(\"nameText\");\n});\ncy.wrapDisabledPlaceholderValue(5).then((natureTxt) => {\n    cy.wrap(natureTxt).as(\"natureTxt\");\n});\ncy.wrapDisabledPlaceholderValue(6).then((sectionTxt) => {\n    cy.wrap(sectionTxt).as(\"sectionTxt\");\n});\ncy.wrapDisabledPlaceholderValue(7).then((typeText) => {\n    cy.wrap(typeText).as(\"typeText\");\n});\ncy.wait(2000);\ncharts_of_accounts_1.ChartOfAccounts.switchingToListView();\ncharts_of_accounts_1.ChartOfAccounts.SearchAListAccount(accounting_data_1.AccountingData.accountCOde);\ncy.wait(2000);\ncy.get(\"@codeT\").then((codeT) => {\n    cy.verifyFirstCellInTable(0, (0, utils_1.getWrappedString)(codeT));\n});\ncy.get(\"@nameText\").then((nameText) => {\n    cy.verifyFirstCellInTable(1, (0, utils_1.getWrappedString)(nameText));\n});\ncy.get(\"@sectionTxt\").then((sectionTxt) => {\n    cy.verifyFirstCellInTable(3, (0, utils_1.getWrappedString)(sectionTxt));\n});\ncy.get(\"@typeText\").then((typeText) => {\n    cy.verifyFirstCellInTable(4, (0, utils_1.getWrappedString)(typeText));\n});\ncy.get(\"@natureTxt\").then((natureTxt) => {\n    cy.verifyFirstCellInTable(5, (0, utils_1.getWrappedString)(natureTxt));\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"description\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"description\"]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts:37:0)",
+                "diff": null
+              },
+              "uuid": "2f045930-e858-40af-b7e6-8ce0f242952b",
+              "parentUUID": "c8c97540-4577-4e11-a223-b422caceb773",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "41989130-1e40-41e7-9a50-1b033423178c"
+          ],
+          "failures": [
+            "a61d7d04-297a-4f80-8238-324fb6fe51e3",
+            "2f045930-e858-40af-b7e6-8ce0f242952b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 342214,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

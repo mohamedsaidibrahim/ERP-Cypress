@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-06T12:53:44.019Z",
+    "end": "2024-11-06T12:59:33.145Z",
+    "duration": 349126,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "f3b636c3-7a05-4007-a39b-6fabf0d26d71",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Group/tests/Add_taxes_group.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Group/tests/Add_taxes_group.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "85f03b49-8712-4be7-843d-2eaa4652c2a4",
+          "title": "Add New Taxs Group",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify all the components are displayed on the Add New Tax Group",
+              "fullTitle": "Add New Taxs Group 1.Verify all the components are displayed on the Add New Tax Group",
+              "timedOut": null,
+              "duration": 134371,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1000);\nTaxsGroup_1.TaxsGroup.clickAddNewButton();\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"name\", /name/i);",
+              "err": {},
+              "uuid": "079d15ef-0229-4a90-9187-72a79e7f5852",
+              "parentUUID": "85f03b49-8712-4be7-843d-2eaa4652c2a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Displaying Of Required Messsages",
+              "fullTitle": "Add New Taxs Group 2.Verify Displaying Of Required Messsages",
+              "timedOut": null,
+              "duration": 53029,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(2000);\nTaxsGroup_1.TaxsGroup.clickAddNewButton();\nTaxsGroup_1.TaxsGroup.submitDialog();\nTaxsGroup_1.TaxsGroup.verifyRequiredMessages(\"2\");\ncy.get(\".pop_up_footer\").invoke(\"hide\");\nTaxsGroup_1.TaxsGroup.inputCode(\"123\");\nTaxsGroup_1.TaxsGroup.verifyRequiredMessages(\"1\");\nTaxsGroup_1.TaxsGroup.inputName(\"name\");\nTaxsGroup_1.TaxsGroup.verifyInExistenceOfRequiredMessage();",
+              "err": {},
+              "uuid": "102e9be4-4448-4b7b-b80c-f83927a3e040",
+              "parentUUID": "85f03b49-8712-4be7-843d-2eaa4652c2a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify canceling Adding New Taxes Group",
+              "fullTitle": "Add New Taxs Group 3.Verify canceling Adding New Taxes Group",
+              "timedOut": null,
+              "duration": 17739,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\nTaxsGroup_1.TaxsGroup.clickAddNewButton();\nTaxsGroup_1.TaxsGroup.inputCode(general_settings_data_1.GeneralSettingsData.taxesGroupCode);\nTaxsGroup_1.TaxsGroup.inputName(general_settings_data_1.GeneralSettingsData.taxesGroupName);\nTaxsGroup_1.TaxsGroup.cancelDialog();\ncy.wait(1000);\ncy.assertAfterItemEditedInListView();",
+              "err": {},
+              "uuid": "da48086c-23a6-4bb2-981b-9f27cc68ef77",
+              "parentUUID": "85f03b49-8712-4be7-843d-2eaa4652c2a4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.Verify Adding New Taxes Group",
+              "fullTitle": "Add New Taxs Group 4.Verify Adding New Taxes Group",
+              "timedOut": null,
+              "duration": 19106,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\nTaxsGroup_1.TaxsGroup.clickAddNewButton();\nTaxsGroup_1.TaxsGroup.inputCode(general_settings_data_1.GeneralSettingsData.taxesGroupCode);\nTaxsGroup_1.TaxsGroup.inputName(general_settings_data_1.GeneralSettingsData.taxesGroupName);\nTaxsGroup_1.TaxsGroup.submitDialog();\ncy.wait(1000);\ncy.assertnewItemAddedToListView();\ncy.verifyFirstCellInTable(0, general_settings_data_1.GeneralSettingsData.taxesGroupCode);\ncy.verifyFirstCellInTable(1, general_settings_data_1.GeneralSettingsData.taxesGroupName);",
+              "err": {},
+              "uuid": "6ad8e38e-0bf8-40ee-aefb-a602b2470587",
+              "parentUUID": "85f03b49-8712-4be7-843d-2eaa4652c2a4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "079d15ef-0229-4a90-9187-72a79e7f5852",
+            "102e9be4-4448-4b7b-b80c-f83927a3e040",
+            "da48086c-23a6-4bb2-981b-9f27cc68ef77",
+            "6ad8e38e-0bf8-40ee-aefb-a602b2470587"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 224245,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

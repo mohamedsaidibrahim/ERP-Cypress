@@ -1,0 +1,194 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 5,
+    "passes": 2,
+    "pending": 0,
+    "failures": 3,
+    "start": "2024-11-06T13:25:32.440Z",
+    "end": "2024-11-06T13:43:11.919Z",
+    "duration": 1059479,
+    "testsRegistered": 5,
+    "passPercent": 40,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4a00a9f8-04ea-435a-9e9d-d877073d4f81",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Edit_taxes_definitions.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Edit_taxes_definitions.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "30849b4c-8862-41df-893d-d439623952ac",
+          "title": "Edit Existing Taxs Definitions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify all the components are displayed on the Edit Existing Tax Definitions",
+              "fullTitle": "Edit Existing Taxs Definitions 1.Verify all the components are displayed on the Edit Existing Tax Definitions",
+              "timedOut": null,
+              "duration": 117516,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\n// Code Label\ncy.get('label[for=\"code\"]').contains(/code/i).should(\"be.visible\");\n// Code Input\ncy.getByTestAttribute(\"code\").should(\"be.visible\");\n// Name Label\ncy.get('label[for=\"name\"]').contains(/name/i).should(\"be.visible\");\n// Name Input\ncy.getByTestAttribute(\"name\").should(\"be.visible\");\n// ratio Label\ncy.get('label[for=\"ratio\"]').contains(/ratio/i).should(\"be.visible\");\n// ratio Input\ncy.getByTestAttribute(\"ratio\").should(\"be.visible\");\n// accountId Label\ncy.get('label[for=\"accountId\"]')\n    .scrollIntoView()\n    .contains(/gl account/i)\n    .should(\"be.visible\");\n// accountId Input\ncy.getByTestAttribute(\"accountId\").should(\"be.visible\");\n// taxGroupId Label\ncy.get('label[for=\"taxGroupId\"]')\n    .scrollIntoView()\n    .contains(/tax group/i)\n    .should(\"be.visible\");\n// taxGroupId Input",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `label[for=\"code\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `label[for=\"code\"]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Edit_taxes_definitions.cy.ts:15:0)",
+                "diff": null
+              },
+              "uuid": "57a71d5e-0d52-42f0-8da8-ea3780ca036c",
+              "parentUUID": "30849b4c-8862-41df-893d-d439623952ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Displaying Of Required Messsages",
+              "fullTitle": "Edit Existing Taxs Definitions 2.Verify Displaying Of Required Messsages",
+              "timedOut": null,
+              "duration": 76893,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\nTaxs_Definitions_1.TaxsDefinitions.clearName();\nTaxs_Definitions_1.TaxsDefinitions.verifyRequiredMessages(\"1\");\nTaxs_Definitions_1.TaxsDefinitions.inputName(\"name\");\nTaxs_Definitions_1.TaxsDefinitions.verifyAbsenceRequiredMessages();\nTaxs_Definitions_1.TaxsDefinitions.clearRatio();\nTaxs_Definitions_1.TaxsDefinitions.verifyRequiredMessages(\"1\");\nTaxs_Definitions_1.TaxsDefinitions.inputRatio(general_settings_data_1.GeneralSettingsData.taxesDefinitionsRatio);\nTaxs_Definitions_1.TaxsDefinitions.verifyAbsenceRequiredMessages();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=name]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=name]`, but never found it.\n    at TaxsDefinitions.clearName (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/pages/Taxs Definitions.ts:137:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Edit_taxes_definitions.cy.ts:44:0)",
+                "diff": null
+              },
+              "uuid": "2b9407de-4bf7-4cdb-8a0f-a1baaa38131e",
+              "parentUUID": "30849b4c-8862-41df-893d-d439623952ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify canceling Editting Existing Taxes Definitions",
+              "fullTitle": "Edit Existing Taxs Definitions 3.Verify canceling Editting Existing Taxes Definitions",
+              "timedOut": null,
+              "duration": 101856,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1500);\nTaxs_Definitions_1.TaxsDefinitions.preActions();\ncy.clickFirstEditActionButton();\n// TaxsDefinitions.inputCode(GeneralSettingsData.taxesDefinitionsCode);\nTaxs_Definitions_1.TaxsDefinitions.inputName(general_settings_data_1.GeneralSettingsData.taxesDefinitionsName);\nTaxs_Definitions_1.TaxsDefinitions.inputRatio(general_settings_data_1.GeneralSettingsData.taxesDefinitionsRatio);\nTaxs_Definitions_1.TaxsDefinitions.selectFirstAccountId();\nTaxs_Definitions_1.TaxsDefinitions.selectLastTaxGroupId();\nTaxs_Definitions_1.TaxsDefinitions.cancelDialog();\nTaxs_Definitions_1.TaxsDefinitions.assertNotSaving();",
+              "err": {},
+              "uuid": "8244e98a-23f6-479d-97c9-ed067377155d",
+              "parentUUID": "30849b4c-8862-41df-893d-d439623952ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.Verify Editting Existing Taxes Definitions",
+              "fullTitle": "Edit Existing Taxs Definitions 4.Verify Editting Existing Taxes Definitions",
+              "timedOut": null,
+              "duration": 82053,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1500);\nTaxs_Definitions_1.TaxsDefinitions.preActions();\ncy.clickFirstEditActionButton();\n// TaxsDefinitions.inputCode(GeneralSettingsData.taxesDefinitionsCode);\nTaxs_Definitions_1.TaxsDefinitions.inputName(general_settings_data_1.GeneralSettingsData.taxesDefinitionsName);\nTaxs_Definitions_1.TaxsDefinitions.inputRatio(general_settings_data_1.GeneralSettingsData.taxesDefinitionsRatio);\nTaxs_Definitions_1.TaxsDefinitions.selectFirstAccountId();\nTaxs_Definitions_1.TaxsDefinitions.selectLastTaxGroupId();\nTaxs_Definitions_1.TaxsDefinitions.submitDialog();\nTaxs_Definitions_1.TaxsDefinitions.assertSuccessfulSubmission(true);",
+              "err": {},
+              "uuid": "39a75afc-bc32-4fe4-ad56-5483b497521c",
+              "parentUUID": "30849b4c-8862-41df-893d-d439623952ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5.Verify That the  Editting Dialog has the correct Data after Landing",
+              "fullTitle": "Edit Existing Taxs Definitions 5.Verify That the  Editting Dialog has the correct Data after Landing",
+              "timedOut": null,
+              "duration": 97415,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1500);\ncy.getFirstCellInTableValue(0).then((code1) => {\n    cy.wrap(code1).as(\"code1\");\n});\ncy.getFirstCellInTableValue(1).then((name1) => {\n    cy.wrap(name1).as(\"name1\");\n});\ncy.getFirstCellInTableValue(2).then((ratio1) => {\n    cy.wrap(ratio1).as(\"ratio1\");\n});\ncy.getFirstCellInTableValue(3).then((account1) => {\n    cy.wrap(account1).as(\"account1\");\n});\ncy.getFirstCellInTableValue(4).then((taxGroup1) => {\n    cy.wrap(taxGroup1).as(\"taxGroup1\");\n});\ncy.clickFirstEditActionButton();\ncy.get(\"@code1\").then((code1) => {\n    cy.getByTestAttribute(\"code\")\n        .invoke(\"val\")\n        .then((codeText) => {\n        expect(codeText).to.equal((0, utils_1.getWrappedString)(code1));\n    });\n});\ncy.get(\"@name1\").then((name1) => {\n    cy.getByTestAttribute(\"name\")\n        .invoke(\"val\")\n        .then((nameText) => {\n        expect(nameText).to.equal((0, utils_1.removeSpacesBetween)((0, utils_1.getWrappedString)(name1)));\n    });\n});\ncy.get(\"@ratio1\").then((ratio1) => {\n    cy.getByTestAttribute(\"ratio\")\n        .invoke(\"val\")\n        .then((ratioTxt) => {\n        expect(ratioTxt).to.equal((0, utils_1.removeSpacesBetween)((0, utils_1.getWrappedString)(ratio1)));\n    });\n});\ncy.get('span[role=\"combobox\"]').eq(1).scrollIntoView();\ncy.get(\"@account1\").then((account1) => {\n    var expextedTxt = (0, utils_1.removeSpacesBetween)((0, utils_1.getWrappedString)(account1));\n    cy.get('span[role=\"combobox\"]')\n        .eq(1)\n        .invoke(\"attr\", \"aria-label\")\n        .then((ariaLabel) => {\n        expect((0, utils_1.removeSpacesBetween)(ariaLabel)).to.equal(expextedTxt); // Replace 'expected value' with the value you expect\n    });\n});\ncy.get('span[role=\"combobox\"]').eq(2).scrollIntoView();\ncy.get(\"@taxGroup1\").then((taxGroup1) => {\n    var expextedTxt = (0, utils_1.removeSpacesBetween)((0, utils_1.getWrappedString)(taxGroup1));\n    cy.get('span[role=\"combobox\"]')\n        .eq(2)\n        .should(\"have.attr\", \"aria-label\", expextedTxt);\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=code]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=code]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:282:0)",
+                "diff": null
+              },
+              "uuid": "8431c51c-c85e-44e8-b354-a30a8b99f29b",
+              "parentUUID": "30849b4c-8862-41df-893d-d439623952ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "8244e98a-23f6-479d-97c9-ed067377155d",
+            "39a75afc-bc32-4fe4-ad56-5483b497521c"
+          ],
+          "failures": [
+            "57a71d5e-0d52-42f0-8da8-ea3780ca036c",
+            "2b9407de-4bf7-4cdb-8a0f-a1baaa38131e",
+            "8431c51c-c85e-44e8-b354-a30a8b99f29b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 475733,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

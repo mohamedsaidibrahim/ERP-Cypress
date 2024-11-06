@@ -1,0 +1,168 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 1,
+    "failures": 0,
+    "start": "2024-11-06T11:51:01.249Z",
+    "end": "2024-11-06T11:52:35.132Z",
+    "duration": 93883,
+    "testsRegistered": 4,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 25,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "02070ac4-6e52-41d1-8e22-2b1d1795c72e",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/Company_list.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/Company_list.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f60cca5c-502f-41f6-9235-7929e735450c",
+          "title": "Company List",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
+              "fullTitle": "Company List 1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
+              "timedOut": null,
+              "duration": 15102,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.get(\"table thead tr th\").eq(0).should(\"include\", /Code/i);\ncy.get(\"table thead tr th\")\n    .eq(1)\n    .should(\"include\", /Companies Name/i);\ncy.get(\"table thead tr th\")\n    .eq(2)\n    .should(\"include\", /Companies Type/i);\ncy.get(\"table thead tr th\")\n    .eq(3)\n    .should(\"include\", /Tax ID/i);\ncy.get(\"table thead tr th\")\n    .eq(4)\n    .should(\"include\", /Commercial ID/i);\ncy.get(\"table thead tr th\").eq(5).should(\"include\", /Phone/i);\ncy.get(\"table thead tr th\")\n    .eq(6)\n    .should(\"include\", /Status/i);\ncy.get(\"table thead tr th\")\n    .eq(7)\n    .should(\"include\", /Actions/i);",
+              "err": {},
+              "uuid": "1c424663-898d-4ff5-bb72-c11aaf5ba53d",
+              "parentUUID": "f60cca5c-502f-41f6-9235-7929e735450c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify That The Cells Under Status Column is Actionable (Radio Button)",
+              "fullTitle": "Company List 2.Verify That The Cells Under Status Column is Actionable (Radio Button)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "pending",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": true,
+              "context": null,
+              "code": "cy.wait(2000);\ncy.get(\"table\").then(($table) => {\n    cy.wrap($table)\n        .find(\"tbody tr\")\n        .last()\n        .find(\"td\")\n        .eq(6)\n        .scrollIntoView()\n        .then(($lastActions) => {\n        if ($lastActions\n            .find('p[class=\"inactive body_b16 ng-star-inserted\"]')\n            .is(\":visible\")) {\n            cy.wrap(\"inactive\").as(\"initStatus\");\n        }\n        else if ($lastActions\n            .find('p[class=\"active body_b16 ng-star-inserted\"]')\n            .is(\":visible\")) {\n            cy.wrap(\"active\").as(\"initStatus\");\n        }\n        else {\n            cy.log(\"No Actions are Visible\");\n        }\n    });\n    company_list_1.CompanyList.clickLastActivationSliderListView();\n    company_list_1.CompanyList.confirmChangeStatusPopUp();\n    editCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\n    cy.get('div[class=\"edit_company_page\"]').then(($EditScreen) => {\n        if ($EditScreen\n            .find('p[class=\"inactive body_b16 ng-star-inserted\"]')\n            .is(\":visible\")) {\n            cy.wrap(\"inactive\").as(\"finalStatus\");\n        }\n        else if ($EditScreen\n            .find('p[class=\"active body_b16 ng-star-inserted\"]')\n            .is(\":visible\")) {\n            cy.wrap(\"active\").as(\"finalStatus\");\n        }\n        else {\n            cy.log(\"No Activation is Visible in Edit Screen\");\n        }\n    });\n    cy.get(\"@initStatus\").then((initStatus) => {\n        cy.get(\"@finalStatus\").then((finalStatus) => {\n            expect((0, utils_1.getWrappedString)(initStatus)).not.to.equal((0, utils_1.getWrappedString)(finalStatus));\n        });\n    });\n});",
+              "err": {},
+              "uuid": "61f70cd1-8544-4259-b2e1-f6b99f648dec",
+              "parentUUID": "f60cca5c-502f-41f6-9235-7929e735450c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify That The Edit is navigate To The Edit Company of The Company Represent on This Row.",
+              "fullTitle": "Company List 3.Verify That The Edit is navigate To The Edit Company of The Company Represent on This Row.",
+              "timedOut": null,
+              "duration": 34414,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "company_list_1.CompanyList.clickToNavigateCompanyEdit();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `span.pi.pi-pencil.p-button-icon.ng-star-inserted`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `span.pi.pi-pencil.p-button-icon.ng-star-inserted`, but never found it.\n    at CompanyList.clickToNavigateCompanyEdit (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/company_list.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/Company_list.cy.ts:86:0)",
+                "diff": null
+              },
+              "uuid": "b673f8d3-4eda-4a15-857b-f8e8e70e907e",
+              "parentUUID": "f60cca5c-502f-41f6-9235-7929e735450c",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.Verify That The Paginator is Successfully Displayed.",
+              "fullTitle": "Company List 4.Verify That The Paginator is Successfully Displayed.",
+              "timedOut": null,
+              "duration": 9322,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "company_list_1.CompanyList.CheckPaginator();",
+              "err": {},
+              "uuid": "19614a60-4df0-4465-8daa-d4e72d19be6b",
+              "parentUUID": "f60cca5c-502f-41f6-9235-7929e735450c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1c424663-898d-4ff5-bb72-c11aaf5ba53d",
+            "19614a60-4df0-4465-8daa-d4e72d19be6b"
+          ],
+          "failures": [
+            "b673f8d3-4eda-4a15-857b-f8e8e70e907e"
+          ],
+          "pending": [
+            "61f70cd1-8544-4259-b2e1-f6b99f648dec"
+          ],
+          "skipped": [],
+          "duration": 58838,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-06T11:30:26.132Z",
+    "end": "2024-11-06T11:30:40.413Z",
+    "duration": 14281,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "c97a6cf4-fbdc-4198-8c0d-5ba8eb2c4a45",
+      "title": "",
+      "fullFile": "cypress/e2e/Authentication/Login/tests/Verify_alll_components_displaying.cy.ts",
+      "file": "cypress/e2e/Authentication/Login/tests/Verify_alll_components_displaying.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5aeb43a0-676b-4cad-99ea-43152c2b5a0d",
+          "title": "Verify that all the components exist on the Login page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "En",
+              "fullTitle": "Verify that all the components exist on the Login page En",
+              "timedOut": null,
+              "duration": 5766,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage_1.LoginPage.visit();\nloginPage_1.LoginPage.getPageHeader(\"Login\");\nloginPage_1.LoginPage.getPageSecHeader();\nloginPage_1.LoginPage.checkUserNameLabel(\"Email Or Phone*\");\nloginPage_1.LoginPage.inputEmail(auth_data_1.AuthData.loginMail);\nloginPage_1.LoginPage.checkPasswordLabel(\"Password\");\nloginPage_1.LoginPage.inputPassword(auth_data_1.AuthData.pass);\nloginPage_1.LoginPage.checkUserForgetPasswordLink();\nloginPage_1.LoginPage.checkDoNotHaveAccountLink(\"Don't have an account?\");\nloginPage_1.LoginPage.checkLangButton();\nloginPage_1.LoginPage.checkLoginButton(\"Login\");",
+              "err": {},
+              "uuid": "82f1c9ad-8e9c-48b9-962d-209016a8a765",
+              "parentUUID": "5aeb43a0-676b-4cad-99ea-43152c2b5a0d",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Ar",
+              "fullTitle": "Verify that all the components exist on the Login page Ar",
+              "timedOut": null,
+              "duration": 8267,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "loginPage_1.LoginPage.visit();\nloginPage_1.LoginPage.clickLangButton();\ncy.wait(1500);\nloginPage_1.LoginPage.getPageHeader(\"تسجيل الدخول\");\nloginPage_1.LoginPage.getPageSecHeader();\nloginPage_1.LoginPage.checkUserNameLabel(\"البريد الالكتروني او رقم الهاتف*\");\nloginPage_1.LoginPage.inputEmail(auth_data_1.AuthData.loginMail);\nloginPage_1.LoginPage.checkPasswordLabel(\"كلمة المرور\");\nloginPage_1.LoginPage.inputPassword(auth_data_1.AuthData.pass);\nloginPage_1.LoginPage.checkUserForgetPasswordLink();\nloginPage_1.LoginPage.checkDoNotHaveAccountLink(\"ليس لديك حساب؟\");\nloginPage_1.LoginPage.checkLoginButton(\"تسجيل الدخول\");",
+              "err": {},
+              "uuid": "ca182f31-6e37-4255-90fb-510111ca7b73",
+              "parentUUID": "5aeb43a0-676b-4cad-99ea-43152c2b5a0d",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82f1c9ad-8e9c-48b9-962d-209016a8a765",
+            "ca182f31-6e37-4255-90fb-510111ca7b73"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 14033,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

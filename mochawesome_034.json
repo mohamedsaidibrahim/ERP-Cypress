@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 5,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-06T15:25:43.010Z",
+    "end": "2024-11-06T15:38:44.843Z",
+    "duration": 781833,
+    "testsRegistered": 6,
+    "passPercent": 83.33333333333334,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "1e1308bd-e7d3-4dbd-ad65-aa1487ad286a",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Configuration.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Configuration.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "171ce260-5114-417d-939f-7b08094eedce",
+          "title": "Configurations of Charts of Accounts",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify Submitting Add A New Line ",
+              "fullTitle": "Configurations of Charts of Accounts 1.Verify Submitting Add A New Line ",
+              "timedOut": null,
+              "duration": 121302,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const c = (0, utils_1.getRandomNumber)(10, 100);\ncharts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1000);\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.wait(1000);\ncy.get(\".pop_up_footer\").invoke(\"hide\");\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"tbody\")\n    .find(\"tr\")\n    .its(\"length\")\n    .then((linesCountInit) => {\n    cy.wrap(linesCountInit).as(\"linesCountInit\");\n});\n_0_configuration_1.ChartOfAccountsConfigurations.clickAddNewLine();\ncy.get(\"tbody\").then(($tbody) => {\n    if ($tbody.find(\"tr\").is(\":visible\")) {\n        cy.wait(500);\n        cy.wrap($tbody).find(\"tr\").last().scrollIntoView().should(\"be.visible\");\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(0).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(0)\n            .find(\"input\")\n            .clear()\n            .type(\"\" + c);\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(1).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(1)\n            .find(\"input\")\n            .clear()\n            .type(\"Level \" + c);\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(2).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(2)\n            .find(\"input\")\n            .clear()\n            .type(\"\" + c);\n    }\n});\ncy.get(\".pop_up_footer\").invoke(\"css\", \"display\", \"block\");\n_0_configuration_1.ChartOfAccountsConfigurations.clickSaveButton();\ncy.wait(1000);\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.wait(1000);\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"@linesCountInit\").then((linesCountInit) => {\n    cy.get(\".pop_up_footer\").invoke(\"hide\");\n    cy.wait(1000);\n    cy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\n    cy.get(\"tbody\")\n        .find(\"tr\")\n        .its(\"length\")\n        .then((linesCountFinal) => {\n        expect(linesCountFinal).to.equal(parseInt((0, utils_1.trimText)(linesCountInit.toString().trim())) + 1);\n    });\n});",
+              "err": {},
+              "uuid": "d25c4660-3b39-4cd8-a854-c53a190354a0",
+              "parentUUID": "171ce260-5114-417d-939f-7b08094eedce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify cancel Add New Line ",
+              "fullTitle": "Configurations of Charts of Accounts 2.Verify cancel Add New Line ",
+              "timedOut": null,
+              "duration": 131033,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const c = (0, utils_1.getRandomNumber)(10, 100);\ncharts_of_accounts_1.ChartOfAccounts.landing();\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.wait(1000);\ncy.get(\".pop_up_footer\").invoke(\"hide\");\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"tbody\")\n    .find(\"tr\")\n    .its(\"length\")\n    .then((linesCountInit) => {\n    cy.wrap(linesCountInit).as(\"linesCountInit\");\n});\n_0_configuration_1.ChartOfAccountsConfigurations.clickAddNewLine();\ncy.get(\"tbody\").then(($tbody) => {\n    if ($tbody.find(\"tr\").is(\":visible\")) {\n        cy.wait(500);\n        cy.wrap($tbody).find(\"tr\").last().scrollIntoView().should(\"be.visible\");\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(0).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(0)\n            .find(\"input\")\n            .clear()\n            .type(\"\" + c);\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(1).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(1)\n            .find(\"input\")\n            .clear()\n            .type(\"Level \" + c);\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(2).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(2)\n            .find(\"input\")\n            .clear()\n            .type(\"\" + c);\n    }\n});\n_0_configuration_1.ChartOfAccountsConfigurations.clickcancelButton();\ncy.wait(1000);\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.wait(1000);\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"@linesCountInit\").then((linesCountInit) => {\n    cy.get(\".pop_up_footer\").invoke(\"hide\");\n    cy.wait(1000);\n    cy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\n    cy.get(\"tbody\")\n        .find(\"tr\")\n        .its(\"length\")\n        .then((linesCountFinal) => {\n        expect(linesCountFinal).to.equal(parseInt((0, utils_1.trimText)(linesCountInit.toString().trim())));\n    });\n});",
+              "err": {},
+              "uuid": "4f94b46c-1c92-4b4c-9365-0cf041dc710e",
+              "parentUUID": "171ce260-5114-417d-939f-7b08094eedce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify Submitting Add multiple New Lines ",
+              "fullTitle": "Configurations of Charts of Accounts 3.Verify Submitting Add multiple New Lines ",
+              "timedOut": null,
+              "duration": 102712,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const c = (0, utils_1.getRandomNumber)(10, 100);\ncharts_of_accounts_1.ChartOfAccounts.landing();\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.wait(1000);\ncy.get(\".pop_up_footer\").invoke(\"hide\");\ncy.wait(1000);\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"tbody\")\n    .find(\"tr\")\n    .its(\"length\")\n    .then((linesCountInit) => {\n    cy.wrap(linesCountInit).as(\"linesCountInit\");\n});\nfor (var i = 0; i < 5; i++) {\n    var m = c + i;\n    _0_configuration_1.ChartOfAccountsConfigurations.clickAddNewLine();\n    cy.get(\"tbody\").then(($tbody) => {\n        if ($tbody.find(\"tr\").is(\":visible\")) {\n            cy.wait(500);\n            cy.wrap($tbody)\n                .find(\"tr\")\n                .last()\n                .scrollIntoView()\n                .should(\"be.visible\");\n            cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(0).click();\n            cy.wrap($tbody)\n                .find(\"tr\")\n                .last()\n                .find(\"td\")\n                .eq(0)\n                .find(\"input\")\n                .clear()\n                .type(\"\" + m);\n            cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(1).click();\n            cy.wrap($tbody)\n                .find(\"tr\")\n                .last()\n                .find(\"td\")\n                .eq(1)\n                .find(\"input\")\n                .clear()\n                .type(\"Level \" + m);\n            cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(2).click();\n            cy.wrap($tbody)\n                .find(\"tr\")\n                .last()\n                .find(\"td\")\n                .eq(2)\n                .find(\"input\")\n                .clear()\n                .type(\"\" + m);\n        }\n    });\n}\ncy.get(\".pop_up_footer\").invoke(\"css\", \"display\", \"block\");\n_0_configuration_1.ChartOfAccountsConfigurations.clickSaveButton();\ncy.wait(1000);\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.wait(1000);\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"@linesCountInit\").then((linesCountInit) => {\n    cy.get(\".pop_up_footer\").invoke(\"hide\");\n    cy.wait(1000);\n    cy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\n    cy.get(\"tbody\")\n        .find(\"tr\")\n        .its(\"length\")\n        .then((linesCountFinal) => {\n        expect(linesCountFinal).to.equal(parseInt((0, utils_1.trimText)(linesCountInit.toString().trim())) + 5);\n    });\n});",
+              "err": {
+                "message": "AssertionError: expected 61 to equal 66",
+                "estack": "AssertionError: expected 61 to equal 66\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Configuration.cy.ts:215:0)",
+                "diff": "- 61\n+ 66\n"
+              },
+              "uuid": "bc48d969-05b7-48d0-a369-f7019b6d5623",
+              "parentUUID": "171ce260-5114-417d-939f-7b08094eedce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.Verify All Components are displaying in their correct states",
+              "fullTitle": "Configurations of Charts of Accounts 4.Verify All Components are displaying in their correct states",
+              "timedOut": null,
+              "duration": 75608,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\n// Verify the main Headers\ncy.contains(\".add_line\", /add new line/i).should(\"be.visible\");\ncy.get(\".add_line > .icon\")\n    .should(\"be.visible\")\n    .should(\"have.class\", \"fa-plus\");\n// Verify the Column Headers\ncy.get(\".p-datatable-thead > .ng-star-inserted > :nth-child(1)\")\n    .should(\"be.visible\")\n    .should(\"have.text\", \"level Number\");\ncy.get(\".p-datatable-thead > .ng-star-inserted > :nth-child(2)\")\n    .should(\"be.visible\")\n    .should(\"have.text\", \"level Name\");\ncy.get(\".p-datatable-thead > .ng-star-inserted > :nth-child(3)\")\n    .should(\"be.visible\")\n    .should(\"have.text\", \"Number Of Digits\");\ncy.get(\"tbody\").then(($tbody) => {\n    if ($tbody.find(\"tr\").is(\":visible\")) {\n        for (var i = 0; i < 5; i++) {\n            var d = i == 4 ? 4 : i + 1;\n            cy.wait(500);\n            cy.wrap($tbody)\n                .find(\"tr\")\n                .eq(i)\n                .find(\"td\")\n                .eq(0)\n                .should(\"be.visible\")\n                .should(\"have.text\", \" \" + (i + 1) + \" \");\n            cy.wrap($tbody)\n                .find(\"tr\")\n                .eq(i)\n                .find(\"td\")\n                .eq(1)\n                .should(\"be.visible\")\n                .should(\"have.text\", \" Level\" + \" \" + (i + 1) + \" \");\n            cy.wrap($tbody)\n                .find(\"tr\")\n                .eq(i)\n                .find(\"td\")\n                .eq(2)\n                .should(\"be.visible\")\n                .should(\"have.text\", \" \" + d + \" \");\n        }\n    }\n});\ncy.getByTestAttribute(\"cancel\").scrollIntoView();\ncy.getByTestAttribute(\"cancel\").scrollIntoView().click();",
+              "err": {},
+              "uuid": "a8720d6b-e86f-4b94-b009-710289bf8c5f",
+              "parentUUID": "171ce260-5114-417d-939f-7b08094eedce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "5.Verify that he System can edit the Level that is not used in accounts these are parents or enters in Transaction",
+              "fullTitle": "Configurations of Charts of Accounts 5.Verify that he System can edit the Level that is not used in accounts these are parents or enters in Transaction",
+              "timedOut": null,
+              "duration": 45129,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const c = (0, utils_1.getRandomNumber)(10, 100);\nconst l = \"Editted Level \" + c;\nconst v = c + 1;\ncharts_of_accounts_1.ChartOfAccounts.landing();\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.wait(1000);\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\"tbody\").then(($tbody) => {\n    if ($tbody.find(\"tr\").is(\":visible\")) {\n        cy.wait(500);\n        cy.wrap($tbody).find(\"tr\").last().scrollIntoView().should(\"be.visible\");\n        cy.wrap($tbody).find(\"tr\").last().scrollIntoView().should(\"be.visible\");\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(0).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(0)\n            .find(\"input\")\n            .clear()\n            .type(\"\" + c);\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(1).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(1)\n            .find(\"input\")\n            .clear()\n            .type(l);\n        cy.wrap($tbody).find(\"tr\").last().find(\"td\").eq(2).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(2)\n            .find(\"input\")\n            .clear()\n            .type(\"\" + v);\n    }\n});\ncy.get(\".pop_up_footer\").invoke(\"css\", \"display\", \"block\");\n_0_configuration_1.ChartOfAccountsConfigurations.clickSaveButton();\ncy.wait(1000);\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.wait(1000);\ncy.get(\"tbody\").find(\"tr\").last().scrollIntoView();\ncy.get(\".pop_up_footer\").invoke(\"hide\");\ncy.get(\"tbody\").then(($tbody) => {\n    if ($tbody.find(\"tr\").is(\":visible\")) {\n        cy.wait(500);\n        cy.wrap($tbody).find(\"tr\").last().scrollIntoView().should(\"be.visible\");\n        cy.wrap($tbody).find(\"tr\").last().scrollIntoView().should(\"be.visible\");\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(0)\n            .find(\"p-celleditor\")\n            .invoke(\"text\")\n            .then((tdTxt1) => {\n            expect(tdTxt1).to.contain(c.toString());\n        });\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(1)\n            .find(\"p-celleditor\")\n            .invoke(\"text\")\n            .then((tdTxt2) => {\n            expect(tdTxt2).to.contain(l.toString());\n        });\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(2)\n            .find(\"p-celleditor\")\n            .invoke(\"text\")\n            .then((tdTxt3) => {\n            expect(tdTxt3).to.contain(v.toString());\n        });\n    }\n});",
+              "err": {},
+              "uuid": "ba4bbd60-32af-4a8f-a3c2-f62cc751811e",
+              "parentUUID": "171ce260-5114-417d-939f-7b08094eedce",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "6.Verify that he System prevents editting the Level that is used in accounts these are parents or enters in Transaction",
+              "fullTitle": "Configurations of Charts of Accounts 6.Verify that he System prevents editting the Level that is used in accounts these are parents or enters in Transaction",
+              "timedOut": null,
+              "duration": 93489,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const c = (0, utils_1.getRandomNumber)(10, 100);\nconst l = \"Editted Level \" + c;\nconst v = c + 1;\ncharts_of_accounts_1.ChartOfAccounts.landing();\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.get(\"tbody\").then(($tbody) => {\n    if ($tbody.find(\"tr\").is(\":visible\")) {\n        cy.wait(500);\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .first()\n            .scrollIntoView()\n            .should(\"be.visible\");\n        cy.wrap($tbody).find(\"tr\").first().find(\"td\").eq(0).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .first()\n            .find(\"td\")\n            .eq(0)\n            .find(\"input\")\n            .clear()\n            .type(\"\" + c);\n        cy.wrap($tbody).find(\"tr\").first().find(\"td\").eq(1).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .first()\n            .find(\"td\")\n            .eq(1)\n            .find(\"input\")\n            .clear()\n            .type(l);\n        cy.wrap($tbody).find(\"tr\").first().find(\"td\").eq(2).click();\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .first()\n            .find(\"td\")\n            .eq(2)\n            .find(\"input\")\n            .clear()\n            .type(\"\" + v);\n    }\n});\ncy.get(\".pop_up_footer\").invoke(\"css\", \"display\", \"block\");\n_0_configuration_1.ChartOfAccountsConfigurations.clickSaveButton();\ncy.wait(1000);\n_0_configuration_1.ChartOfAccountsConfigurations.clickConfigurationButtonOnDisplayScreen();\ncy.get(\".pop_up_footer\").invoke(\"hide\");\ncy.get(\"tbody\").then(($tbody) => {\n    if ($tbody.find(\"tr\").is(\":visible\")) {\n        cy.wait(500);\n        cy.wrap($tbody).find(\"tr\").last().scrollIntoView().should(\"be.visible\");\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(0)\n            .find(\"p-celleditor\")\n            .invoke(\"text\")\n            .then((tdTxt1) => {\n            expect(tdTxt1).not.to.contain(c.toString());\n        });\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(1)\n            .find(\"p-celleditor\")\n            .invoke(\"text\")\n            .then((tdTxt2) => {\n            expect(tdTxt2).not.to.contain(l.toString());\n        });\n        cy.wrap($tbody)\n            .find(\"tr\")\n            .last()\n            .find(\"td\")\n            .eq(2)\n            .find(\"p-celleditor\")\n            .invoke(\"text\")\n            .then((tdTxt3) => {\n            expect(tdTxt3).not.to.contain(v.toString());\n        });\n    }\n});",
+              "err": {},
+              "uuid": "cefc0605-59e0-4b1f-904f-2f3dbb5b5fb3",
+              "parentUUID": "171ce260-5114-417d-939f-7b08094eedce",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d25c4660-3b39-4cd8-a854-c53a190354a0",
+            "4f94b46c-1c92-4b4c-9365-0cf041dc710e",
+            "a8720d6b-e86f-4b94-b009-710289bf8c5f",
+            "ba4bbd60-32af-4a8f-a3c2-f62cc751811e",
+            "cefc0605-59e0-4b1f-904f-2f3dbb5b5fb3"
+          ],
+          "failures": [
+            "bc48d969-05b7-48d0-a369-f7019b6d5623"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 569273,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

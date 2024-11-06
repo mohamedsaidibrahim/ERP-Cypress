@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 4,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-11-06T11:28:01.584Z",
+    "end": "2024-11-06T11:28:25.269Z",
+    "duration": 23685,
+    "testsRegistered": 4,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "aa4c2d96-dc03-41c2-a227-5f8095433d60",
+      "title": "",
+      "fullFile": "cypress/e2e/Authentication/Registeration/tests/Verify_each_component_status/Email.cy.ts",
+      "file": "cypress/e2e/Authentication/Registeration/tests/Verify_each_component_status/Email.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "35cc9d7d-c7ec-4bbe-8594-d9097041696e",
+          "title": "Verify Email component Status on the Registerion page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "To Verify Email is Required Message",
+              "fullTitle": "Verify Email component Status on the Registerion page To Verify Email is Required Message",
+              "timedOut": null,
+              "duration": 5857,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Arabic\n(0, is_required_message_1.checkISRequiredMsg)(\"#FullName\", false);\n// English\nregisterPage_1.RegisterationPage.clickLangButton();\n(0, is_required_message_1.checkISRequiredMsg)(\"#FullName\", true);",
+              "err": {},
+              "uuid": "6ff3a868-5099-4b2a-bc98-b3591dc6a887",
+              "parentUUID": "35cc9d7d-c7ec-4bbe-8594-d9097041696e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checkEmailRegExFormatEn",
+              "fullTitle": "Verify Email component Status on the Registerion page checkEmailRegExFormatEn",
+              "timedOut": null,
+              "duration": 5473,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.clickLangButton();\nregisterPage_1.RegisterationPage.checkEmailLabel(\"Email\");\nregisterPage_1.RegisterationPage.inputEmail();",
+              "err": {},
+              "uuid": "101e96de-f506-467c-a875-28adb394136e",
+              "parentUUID": "35cc9d7d-c7ec-4bbe-8594-d9097041696e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checkEmailRegExFormatAr",
+              "fullTitle": "Verify Email component Status on the Registerion page checkEmailRegExFormatAr",
+              "timedOut": null,
+              "duration": 4832,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.checkEmailLabel(\"البريد الالكترونى\");\nregisterPage_1.RegisterationPage.inputEmail();",
+              "err": {},
+              "uuid": "24ad835a-4568-4f18-9d07-993ed58ba362",
+              "parentUUID": "35cc9d7d-c7ec-4bbe-8594-d9097041696e",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "checkRegisterationWithUsedEmail",
+              "fullTitle": "Verify Email component Status on the Registerion page checkRegisterationWithUsedEmail",
+              "timedOut": null,
+              "duration": 5420,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.clickLangButton();\nregisterPage_1.RegisterationPage.checkEmailLabel(\"Email\");\nregisterPage_1.RegisterationPage.inputEmail();",
+              "err": {},
+              "uuid": "05fcaf42-679d-42c9-a8b1-2a15c2206c12",
+              "parentUUID": "35cc9d7d-c7ec-4bbe-8594-d9097041696e",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "6ff3a868-5099-4b2a-bc98-b3591dc6a887",
+            "101e96de-f506-467c-a875-28adb394136e",
+            "24ad835a-4568-4f18-9d07-993ed58ba362",
+            "05fcaf42-679d-42c9-a8b1-2a15c2206c12"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 21582,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

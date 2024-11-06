@@ -1,0 +1,243 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 8,
+    "passes": 7,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-06T11:28:47.774Z",
+    "end": "2024-11-06T11:29:30.674Z",
+    "duration": 42900,
+    "testsRegistered": 8,
+    "passPercent": 87.5,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "180d9d91-9b64-4c5c-a011-219e94ab1b40",
+      "title": "",
+      "fullFile": "cypress/e2e/Authentication/Registeration/tests/Verify_each_component_status/Password_component_status.cy.ts",
+      "file": "cypress/e2e/Authentication/Registeration/tests/Verify_each_component_status/Password_component_status.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+          "title": "Verify Password component Status on the Registerion page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "CheckLabelsEn",
+              "fullTitle": "Verify Password component Status on the Registerion page CheckLabelsEn",
+              "timedOut": null,
+              "duration": 4841,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.clickLangButton();\nregisterPage_1.RegisterationPage.checkPasswordLabel(\"Password\");\nregisterPage_1.RegisterationPage.checkConfirmPasswordLabel(\"Confirm Password\");",
+              "err": {},
+              "uuid": "5c21bf0a-4326-4703-9259-34cf5adbffd7",
+              "parentUUID": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "CheckLabelsAr",
+              "fullTitle": "Verify Password component Status on the Registerion page CheckLabelsAr",
+              "timedOut": null,
+              "duration": 3650,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.checkPasswordLabel(\"الرقم السرى\");\nregisterPage_1.RegisterationPage.checkConfirmPasswordLabel(\"اعادة كتابة الرقم السرى\");",
+              "err": {},
+              "uuid": "53e7d45a-2469-49ec-a95e-d298d2836487",
+              "parentUUID": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Check Is Required Message is Successfully displayed",
+              "fullTitle": "Verify Password component Status on the Registerion page Check Is Required Message is Successfully displayed",
+              "timedOut": null,
+              "duration": 5787,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// To Verify Password is Required Message  Arabic\n(0, is_required_message_1.checkISRequiredMsg)(\"#inputPassword\", false);\n// To Verify Confirm Password is Required Message  Arabic\n(0, is_required_message_1.checkISRequiredMsg)(\"#inputConfirmPassword\", false);\n// To Verify Password is Required Message English\nregisterPage_1.RegisterationPage.clickLangButton();\n(0, is_required_message_1.checkISRequiredMsg)(\"#inputPassword\", true);\n// To Verify Confirm Password is Required Message English\n(0, is_required_message_1.checkISRequiredMsg)(\"#inputConfirmPassword\", true);",
+              "err": {},
+              "uuid": "191bf7fa-703b-4f66-8cf6-0b737c20e400",
+              "parentUUID": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify the presence of a lock icon in the text field",
+              "fullTitle": "Verify Password component Status on the Registerion page should verify the presence of a lock icon in the text field",
+              "timedOut": null,
+              "duration": 3738,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.checkImageVisibilityBySrc(\"/assets/img/login/iconly_light_lock.webp\");",
+              "err": {
+                "message": "Error: Syntax error, unrecognized expression: img[src=/assets/img/login/iconly_light_lock.webp]",
+                "estack": "Error: Syntax error, unrecognized expression: img[src=/assets/img/login/iconly_light_lock.webp]\n    at Sizzle.error (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:8442:8)\n    at Sizzle.tokenize (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:9098:11)\n    at Sizzle.select (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:9525:20)\n    at Function.Sizzle [as find] (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:7746:9)\n    at jQuery.fn.init.find (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:9778:11)\n    at new jQuery.fn.init (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:9893:40)\n    at Object.query (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:35110:10)\n    at $Cy.$$ (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:139893:57)\n    at <unknown> (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:131823:18)\n    at Object.subjectFn (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:143709:16)\n    at $Cy.verifyUpcomingAssertions (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:143048:31)\n    at onRetry (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:143700:15)\n    at retryQuery (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:143713:10)\n    at <unknown> (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:143866:17)\n    at tryCatcher (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:1807:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:1519:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:1576:18)\n    at Promise._settlePromiseCtx (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:1613:10)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:2411:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:2400:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:2416:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2004/__cypress/runner/cypress_runner.js:2286:14)",
+                "diff": null
+              },
+              "uuid": "0854d34a-1a0c-4085-865b-8c787d852d62",
+              "parentUUID": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify password complexity requirements",
+              "fullTitle": "Verify Password component Status on the Registerion page should verify password complexity requirements",
+              "timedOut": null,
+              "duration": 5516,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.verifyPasswordCompatibility();",
+              "err": {},
+              "uuid": "209f2f57-c37e-4555-87e5-6a046acdd482",
+              "parentUUID": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify that password and confirm password fields match",
+              "fullTitle": "Verify Password component Status on the Registerion page should verify that password and confirm password fields match",
+              "timedOut": null,
+              "duration": 4466,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.inputPassword(auth_data_1.AuthData.pass);\nregisterPage_1.RegisterationPage.inputConfirmPassword(auth_data_1.AuthData.pass);\nregisterPage_1.RegisterationPage.verifyPasswordAndConfirmPasswordEquality();",
+              "err": {},
+              "uuid": "0668cc18-9bc0-47f5-9a98-0462feeda385",
+              "parentUUID": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify the appearance of a message if confirm password is different",
+              "fullTitle": "Verify Password component Status on the Registerion page should verify the appearance of a message if confirm password is different",
+              "timedOut": null,
+              "duration": 4433,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.inputPassword(auth_data_1.AuthData.pass);\nregisterPage_1.RegisterationPage.inputConfirmPassword(auth_data_1.AuthData.inCorrectPass5);\nregisterPage_1.RegisterationPage.validatePassordAndConfirmPasswordDifference();",
+              "err": {},
+              "uuid": "d0cf7334-f673-429f-ac83-178dd797b460",
+              "parentUUID": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify that the password is encrypted when entered",
+              "fullTitle": "Verify Password component Status on the Registerion page should verify that the password is encrypted when entered",
+              "timedOut": null,
+              "duration": 4432,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "registerPage_1.RegisterationPage.verifyEncryptedPassword(\"#inputPassword\");\nregisterPage_1.RegisterationPage.verifyEncryptedPassword(\"#inputConfirmPassword\");",
+              "err": {},
+              "uuid": "38ffa068-9832-4364-8011-7011a80f7900",
+              "parentUUID": "f6c09f8a-1787-4ff9-9075-91cb1e13b2cc",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "5c21bf0a-4326-4703-9259-34cf5adbffd7",
+            "53e7d45a-2469-49ec-a95e-d298d2836487",
+            "191bf7fa-703b-4f66-8cf6-0b737c20e400",
+            "209f2f57-c37e-4555-87e5-6a046acdd482",
+            "0668cc18-9bc0-47f5-9a98-0462feeda385",
+            "d0cf7334-f673-429f-ac83-178dd797b460",
+            "38ffa068-9832-4364-8011-7011a80f7900"
+          ],
+          "failures": [
+            "0854d34a-1a0c-4085-865b-8c787d852d62"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 36863,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

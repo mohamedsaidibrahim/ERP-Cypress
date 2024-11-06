@@ -1,0 +1,171 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 2,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-11-06T13:17:26.754Z",
+    "end": "2024-11-06T13:25:30.828Z",
+    "duration": 484074,
+    "testsRegistered": 4,
+    "passPercent": 50,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d205587b-e44d-4891-9811-4e79fff106f5",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Add_taxes_definitions.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Add_taxes_definitions.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b8c05ea9-66bd-4dac-bf13-8b2067646490",
+          "title": "Add New Taxs Definitions",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify all the components are displayed on the Add New Tax Definitions",
+              "fullTitle": "Add New Taxs Definitions 1.Verify all the components are displayed on the Add New Tax Definitions",
+              "timedOut": null,
+              "duration": 121615,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1500);\nTaxs_Definitions_1.TaxsDefinitions.clickAddNewButton();\n// Code Label\ncy.get('label[for=\"code\"]').contains(/code/i).should(\"be.visible\");\n// Code Input\ncy.getByTestAttribute(\"code\").should(\"be.visible\");\n// Name Label\ncy.get('label[for=\"name\"]').contains(/name/i).should(\"be.visible\");\n// Name Input\ncy.getByTestAttribute(\"name\").should(\"be.visible\");\n// ratio Label\ncy.get('label[for=\"ratio\"]').contains(/ratio/i).should(\"be.visible\");\n// ratio Input\ncy.getByTestAttribute(\"ratio\").should(\"be.visible\");\n// accountId Label\ncy.get('label[for=\"accountId\"]')\n    .scrollIntoView()\n    .contains(/gl account/i)\n    .should(\"be.visible\");\n// accountId Input\ncy.getByTestAttribute(\"accountId\").should(\"be.visible\");\n// taxGroupId Label\ncy.get('label[for=\"taxGroupId\"]')\n    .scrollIntoView()\n    .contains(/tax group/i)\n    .should(\"be.visible\");\n// taxGroupId Input\ncy.getByTestAttribute(\"taxGroupId\").should(\"be.visible\");",
+              "err": {},
+              "uuid": "52d61cae-d0f0-41dc-b5e6-2506c04e79d8",
+              "parentUUID": "b8c05ea9-66bd-4dac-bf13-8b2067646490",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Displaying Of Required Messsages",
+              "fullTitle": "Add New Taxs Definitions 2.Verify Displaying Of Required Messsages",
+              "timedOut": null,
+              "duration": 98136,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\nTaxs_Definitions_1.TaxsDefinitions.clickAddNewButton();\nTaxs_Definitions_1.TaxsDefinitions.submitDialog();\nTaxs_Definitions_1.TaxsDefinitions.verifyRequiredMessages(\"5\");\nTaxs_Definitions_1.TaxsDefinitions.inputCode(\"123\");\nTaxs_Definitions_1.TaxsDefinitions.verifyRequiredMessages(\"4\");\nTaxs_Definitions_1.TaxsDefinitions.inputName(\"name\");\nTaxs_Definitions_1.TaxsDefinitions.verifyRequiredMessages(\"3\");\nTaxs_Definitions_1.TaxsDefinitions.inputRatio(general_settings_data_1.GeneralSettingsData.taxesDefinitionsRatio);\nTaxs_Definitions_1.TaxsDefinitions.verifyRequiredMessages(\"2\");\nTaxs_Definitions_1.TaxsDefinitions.selectLastAccountId();\nTaxs_Definitions_1.TaxsDefinitions.verifyRequiredMessages(\"1\");\nTaxs_Definitions_1.TaxsDefinitions.verifySlectTaxGroupId();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Not enough elements found. Found '4', expected '5'.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Not enough elements found. Found '4', expected '5'.\n    at TaxsDefinitions.verifyRequiredMessages (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/pages/Taxs Definitions.ts:143:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Add_taxes_definitions.cy.ts:44:0)",
+                "diff": "- 4\n+ 5\n"
+              },
+              "uuid": "e0a27e8d-544c-419d-aa90-90f89ce40940",
+              "parentUUID": "b8c05ea9-66bd-4dac-bf13-8b2067646490",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify canceling Adding New Taxes Definitions",
+              "fullTitle": "Add New Taxs Definitions 3.Verify canceling Adding New Taxes Definitions",
+              "timedOut": null,
+              "duration": 62102,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1000);\ncy.getInitItemsCountInListView();\nTaxs_Definitions_1.TaxsDefinitions.clickAddNewButton();\nTaxs_Definitions_1.TaxsDefinitions.inputCode(general_settings_data_1.GeneralSettingsData.taxesDefinitionsCode);\nTaxs_Definitions_1.TaxsDefinitions.inputName(general_settings_data_1.GeneralSettingsData.taxesDefinitionsName);\nTaxs_Definitions_1.TaxsDefinitions.inputRatio(general_settings_data_1.GeneralSettingsData.taxesDefinitionsRatio);\nTaxs_Definitions_1.TaxsDefinitions.selectLastAccountId();\nTaxs_Definitions_1.TaxsDefinitions.selectLastTaxGroupId();\nTaxs_Definitions_1.TaxsDefinitions.cancelDialog();\ncy.wait(1000);\ncy.assertAfterItemEditedInListView();",
+              "err": {},
+              "uuid": "65b11cfc-2234-45d9-aca8-e66eef542962",
+              "parentUUID": "b8c05ea9-66bd-4dac-bf13-8b2067646490",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "4.Verify Adding New Taxes Definitions",
+              "fullTitle": "Add New Taxs Definitions 4.Verify Adding New Taxes Definitions",
+              "timedOut": null,
+              "duration": 103183,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1000);\ncy.getInitItemsCountInListView();\nTaxs_Definitions_1.TaxsDefinitions.clickAddNewButton();\nTaxs_Definitions_1.TaxsDefinitions.inputCode(general_settings_data_1.GeneralSettingsData.taxesDefinitionsCode);\nTaxs_Definitions_1.TaxsDefinitions.inputName(general_settings_data_1.GeneralSettingsData.taxesDefinitionsName);\nTaxs_Definitions_1.TaxsDefinitions.inputRatio(general_settings_data_1.GeneralSettingsData.taxesDefinitionsRatio);\nTaxs_Definitions_1.TaxsDefinitions.selectLastAccountId();\nTaxs_Definitions_1.TaxsDefinitions.selectLastTaxGroupId();\nTaxs_Definitions_1.TaxsDefinitions.submitDialog();\nTaxs_Definitions_1.TaxsDefinitions.assertSuccessfulSubmission(false);",
+              "err": {
+                "message": "AssertionError: expected 2 to equal 3",
+                "estack": "AssertionError: expected 2 to equal 3\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:195:0)",
+                "diff": "- 2\n+ 3\n"
+              },
+              "uuid": "1108fc2d-1282-4170-b049-d1d7c99e5726",
+              "parentUUID": "b8c05ea9-66bd-4dac-bf13-8b2067646490",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "52d61cae-d0f0-41dc-b5e6-2506c04e79d8",
+            "65b11cfc-2234-45d9-aca8-e66eef542962"
+          ],
+          "failures": [
+            "e0a27e8d-544c-419d-aa90-90f89ce40940",
+            "1108fc2d-1282-4170-b049-d1d7c99e5726"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 385036,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

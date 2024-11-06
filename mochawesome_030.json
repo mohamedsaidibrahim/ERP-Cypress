@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 2,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-06T14:31:20.056Z",
+    "end": "2024-11-06T14:41:54.851Z",
+    "duration": 634795,
+    "testsRegistered": 3,
+    "passPercent": 66.66666666666666,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "57b81ba3-e73a-4284-9898-ce33ee254890",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_listview.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_listview.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "67a64107-b549-4ba3-809a-c9c66d564b0b",
+          "title": "Currency Conversion List View",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify all the components are displayed on the Listview",
+              "fullTitle": "Currency Conversion List View 1.Verify all the components are displayed on the Listview",
+              "timedOut": null,
+              "duration": 93883,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.get(\"table\").then((table) => {\n    // Verify Table Column Headers\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(0)\n        .contains(/from currency/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(1)\n        .contains(/currency rate/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/to currency/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/reversed rate/i)\n        .should(\"be.visible\");\n    cy.wrap(table).find(\"th\").eq(4).contains(/notes/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(5)\n        .scrollIntoView()\n        .contains(/actions/i)\n        .should(\"be.visible\");\n});",
+              "err": {},
+              "uuid": "76bf5084-1cb9-4323-896e-ffcfaec38e96",
+              "parentUUID": "67a64107-b549-4ba3-809a-c9c66d564b0b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.should filter the table based on search input in the first two columns",
+              "fullTitle": "Currency Conversion List View 2.should filter the table based on search input in the first two columns",
+              "timedOut": null,
+              "duration": 132204,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.verifySearchFunctionality();",
+              "err": {},
+              "uuid": "775a7e5f-8ad9-4609-b866-8513350330ef",
+              "parentUUID": "67a64107-b549-4ba3-809a-c9c66d564b0b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3.Verify Deleting A Currency Conversion",
+              "fullTitle": "Currency Conversion List View 3.Verify Deleting A Currency Conversion",
+              "timedOut": null,
+              "duration": 160839,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncy.clickFirstDeleteActionButton();\ncy.confirmDeletePopUp();\n// Assertion\ncy.wait(1000);\ncy.assertItemDeletedFromListView();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[role=\"dialog\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[role=\"dialog\"]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:240:0)",
+                "diff": null
+              },
+              "uuid": "a8e72636-8a08-4886-a531-40947ced74d6",
+              "parentUUID": "67a64107-b549-4ba3-809a-c9c66d564b0b",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "76bf5084-1cb9-4323-896e-ffcfaec38e96",
+            "775a7e5f-8ad9-4609-b866-8513350330ef"
+          ],
+          "failures": [
+            "a8e72636-8a08-4886-a531-40947ced74d6"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 386926,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
