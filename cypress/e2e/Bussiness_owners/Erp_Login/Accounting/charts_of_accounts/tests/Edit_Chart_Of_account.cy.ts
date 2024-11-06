@@ -17,7 +17,7 @@ describe("Editting Chart of Account", () => {
     DisplayingAccountScreen.verifyDisplayingTheCorrectDataInAccountEditting();
   });
 
-  it.only("2. Verify Editting an Detail Chart of Account", () => {
+  it("2. Verify Editting an Detail Chart of Account", () => {
     ChartOfAccounts.landing();
     cy.wait(1500);
     ChartOfAccounts.SearchAnTreeAccount(AccountingData.accountCOde);

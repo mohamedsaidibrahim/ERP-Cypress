@@ -44,7 +44,7 @@ describe("Editing Cost Center", () => {
         cy.contains("span", /required/i).should("not.exist");
     });
 
-    it.only("4.Edit An Existing Cost Center For Cost Center That does not have a related parent account or Transaction", () => {
+    it("4.Edit An Existing Cost Center For Cost Center That does not have a related parent account or Transaction", () => {
         CostCenter.landing();
         cy.wait(3000);
         ChartOfAccounts.SearchAnTreeAccount(AccountingData.detailCostCenterSrch);
