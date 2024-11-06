@@ -1,6 +1,8 @@
 import { NavigatesToSideModule } from "../../../../functions/navigates_to_side_module";
 import { SalesData } from "../../data/sales_data";
 import { getWrappedString } from "../../../../../../support/utils";
+
+
 export class CustomerCategory {
   static clickAddNewButton() {
     cy.clickAddNewButton();
@@ -161,8 +163,10 @@ export class CustomerCategory {
       }
     });
   }
-  static InputAllFieldsEdit() {
+  static InputNameEdit() {
     cy.getByTestAttribute("name").clear().type(SalesData.cName);
+  }
+  static InputReceivableAccountIdEdit() {
     cy.getLastItemInDropDownList("receivableAccountId").then(
       ($receivableAccountId) => {
         if ($receivableAccountId != null) {
@@ -177,6 +181,8 @@ export class CustomerCategory {
         }
       }
     );
+  }
+  static InputSalesAccountIdEdit() {
     cy.getLastItemInDropDownList("salesAccountId").then(($salesAccountId) => {
       if ($salesAccountId != null) {
         cy.wrap($salesAccountId)
@@ -190,6 +196,8 @@ export class CustomerCategory {
       }
     });
 
+  }
+  static InputSalesReturnAccountIdEdit() {
     cy.getLastItemInDropDownList("salesReturnAccountId").then(
       ($salesReturnAccountId) => {
         if ($salesReturnAccountId != null) {
@@ -204,6 +212,9 @@ export class CustomerCategory {
         }
       }
     );
+  }
+
+  static InputDiscountAccountIdEdit() {
     cy.getLastItemInDropDownList("discountAccountId").then(
       ($discountAccountId) => {
         if ($discountAccountId != null) {
@@ -218,6 +229,8 @@ export class CustomerCategory {
         }
       }
     );
+  }
+  static InputPricePolicyIdEdit() {
     cy.getLastItemInDropDownList("pricePolicyId").then(($pricePolicyId) => {
       if ($pricePolicyId != null) {
         cy.wrap($pricePolicyId)
@@ -230,6 +243,9 @@ export class CustomerCategory {
         cy.wrap("").as("pricePolicyIdTxt");
       }
     });
+  }
+
+  static InputPaymentTermIdEdit() {
     cy.getLastItemInDropDownList("paymentTermId").then(($paymentTermId) => {
       if ($paymentTermId != null) {
         cy.wrap($paymentTermId)
@@ -242,6 +258,9 @@ export class CustomerCategory {
         cy.wrap("").as("paymentTermIdTxt");
       }
     });
+  }
+
+  static InputMarketTypeEdit() {
     cy.getLastItemInDropDownList("marketType").then(($marketType) => {
       if ($marketType != null) {
         cy.wrap($marketType)

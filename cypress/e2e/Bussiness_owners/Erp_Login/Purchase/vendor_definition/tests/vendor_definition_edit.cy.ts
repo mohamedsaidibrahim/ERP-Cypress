@@ -9,20 +9,14 @@ describe("Vendor Definition (Edit)", () => {
 
   it("1.Verify Editing Existing Vendor Definition (All fields are filled)", () => {
     VendorDefinition.landing();
-    cy.wait(1500);
-    
     cy.getInitItemsCountInListView();
     cy.clickFirstEditActionButton();
+    cy.wait(5500);
     // Essential Header Data
     VendorDefinition.setName(PurchaseData.vName);
     cy.wait(750);
     VendorDefinition.setVendorCategoryId();
     cy.wait(750);
-    VendorDefinition.setBirthDate();
-    // cy.wait(750);
-    // VendorDefinition.unCheckAllVendorTagIds();
-    cy.wait(750);
-    // VendorDefinition.uploadAttachment(PurchaseData.attachPath);
     // Information Tab
     VendorDefinition.setContactMobileCountryCode();
     VendorDefinition.setContactMobile(PurchaseData.vContactMobil);
@@ -62,9 +56,11 @@ describe("Vendor Definition (Edit)", () => {
     VendorDefinition.setPurchaseAccountId();
     VendorDefinition.setPurchaseReturnAccountId();
     VendorDefinition.setDiscountAccountId();
-
+    cy.wait(750);
+    VendorDefinition.setBirthDate("08/09/2001");
+    cy.wait(750);
     VendorDefinition.clickSaveButton();
-    
+    cy.wait(4000);
     cy.assertAfterItemEditedInListView();
     cy.verifyFirstCellInTable(1, PurchaseData.vName);
     cy.verifyFirstCellInTable(3, PurchaseData.vContactEmail);
@@ -76,8 +72,8 @@ describe("Vendor Definition (Edit)", () => {
 
   it("2.Verify Requird Validation", () => {
     VendorDefinition.landing();
-    cy.wait(1000);
     cy.clickFirstEditActionButton();
+    cy.wait(5000);
     cy.get('span[class="errorMessage ng-star-inserted"]').should("not.exist");
     VendorDefinition.clearName();
     cy.get('span[class="errorMessage ng-star-inserted"]').should("be.visible");
@@ -87,8 +83,8 @@ describe("Vendor Definition (Edit)", () => {
 
   it("3.Verify Labels", () => {
     VendorDefinition.landing();
-    cy.wait(1000);
     cy.clickFirstEditActionButton();
+    cy.wait(5000);
     // Information Tab
     cy.verifyLabelText("code", /vendor code/i);
     cy.verifyLabelText("name", /vendor name/i);

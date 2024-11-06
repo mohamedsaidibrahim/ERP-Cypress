@@ -29,21 +29,19 @@ describe("Customer Category (Add)", () => {
 
   it("2.Verify Submitting new Customer Category", () => {
     CustomerCategory.landing();
-    
     cy.getInitItemsCountInListView();
     CustomerCategory.clickAddNewButton();
     cy.getByTestAttribute("name").clear().type(generateRandomString(7));
     cy.getFirstItemInDropDownList("receivableAccountId");
     cy.getFirstItemInDropDownList("salesAccountId");
     cy.getFirstItemInDropDownList("salesReturnAccountId");
-    cy.getFirstItemInDropDownList("discountAccountId");
     cy.getFirstItemInDropDownList("pricePolicyId");
     cy.getFirstItemInDropDownList("paymentTermId");
     cy.getFirstItemInDropDownList("marketType");
+    cy.getFirstItemInDropDownList("discountAccountId");
     CustomerCategory.clickSaveButton();
     // Assertion
     cy.wait(1000);
-    
     cy.assertnewItemAddedToListView();
   });
 

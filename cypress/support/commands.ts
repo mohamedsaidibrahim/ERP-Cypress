@@ -238,6 +238,7 @@ Cypress.Commands.add("clickAddNewLine", () => {
     .scrollIntoView()
     .click();
 });
+
 declare namespace Cypress {
   interface Chainable<Subject> {
     clickFirstEditActionButton(): Chainable<any>;
@@ -257,6 +258,7 @@ Cypress.Commands.add("clickFirstEditActionButton", () => {
     }
   });
 });
+
 declare namespace Cypress {
   interface Chainable<Subject> {
     clickLastDeleteActionButton(): Chainable<any>;

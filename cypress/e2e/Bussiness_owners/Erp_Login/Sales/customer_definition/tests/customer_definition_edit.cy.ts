@@ -5,17 +5,20 @@ describe("Customer Definition (Edit)", () => {
   beforeEach(() => {
     cy.visit(SalesData.CustomerDefinitionUrl);
   });
+
   it("1.Verify Editing Existing Customer Definition (All fields are filled)", () => {
     CustomerDefinition.landing();
-    CustomerDefinition.prepare();
     cy.clickFirstEditActionButton();
+    // cy.wait(1500);
+    // cy.reload();
+    cy.wait(5000);
     // Essential Header Data
     CustomerDefinition.setName(SalesData.cName);
-    cy.wait(750);
+    // cy.wait(750);
     CustomerDefinition.setCustomerCategoryId();
     cy.wait(750);
-    CustomerDefinition.setBirthDate();
-    cy.wait(750);
+    // CustomerDefinition.setCustomerTagIds();
+    // CustomerDefinition.uploadAttachment(SalesData.attachPath);
     // Information Tab
     CustomerDefinition.setContactMobileCountryCode();
     CustomerDefinition.setContactMobile(SalesData.cContactMobil);
@@ -27,6 +30,7 @@ describe("Customer Definition (Edit)", () => {
     CustomerDefinition.setContactPersonalMobileCountryCode();
     CustomerDefinition.setContactPersonMobile(SalesData.cContactPersonMobile);
     CustomerDefinition.setContactPersonPhone(SalesData.cContactPersonPhone);
+    // CustomerDefinition.setContactPersonEmail();
     // Address Tab
     CustomerDefinition.switchToAddressTab();
     CustomerDefinition.setCountryId();
@@ -44,20 +48,21 @@ describe("Customer Definition (Edit)", () => {
     CustomerDefinition.setTaxId(SalesData.cTaxId);
     // Financial
     CustomerDefinition.switchToFinancialTab();
+    CustomerDefinition.setCurrencyId();
     CustomerDefinition.setPaymentTermId();
     CustomerDefinition.setpricePolicyId();
     CustomerDefinition.setCreditLimit(SalesData.cCreditLimit);
-    CustomerDefinition.setCurrencyId();
     // Accounting
     CustomerDefinition.switchToAccountingTab();
     CustomerDefinition.setReceivableAccountId();
     CustomerDefinition.setSalesAccountId();
     CustomerDefinition.setSalesReturnAccountId();
     CustomerDefinition.setDiscountAccountId();
+    cy.wait(750);
+    CustomerDefinition.setBirthDate("02/02/2020");
+    cy.wait(750);
     CustomerDefinition.clickSaveButton();
-    cy.reload();
-    cy.wait(1000);
-    cy.clickContinueAs();
+    cy.wait(2000);
     cy.verifyFirstCellInTable(1, SalesData.cName);
     cy.verifyFirstCellInTable(3, SalesData.cContactEmail);
     cy.verifyFirstCellInTable(6, SalesData.cCreditLimit);
@@ -65,8 +70,10 @@ describe("Customer Definition (Edit)", () => {
 
   it("2.Verify Requird Validation", () => {
     CustomerDefinition.landing();
-    cy.wait(1000);
     cy.clickFirstEditActionButton();
+    // cy.wait(1500);
+    // cy.reload();
+    cy.wait(5000);
     cy.verifyNotExistanceTheRequiredValidation();
     CustomerDefinition.clearName();
     cy.verifyDisplayingTheRequiredValidationMsgsCount(1);
@@ -76,9 +83,9 @@ describe("Customer Definition (Edit)", () => {
 
   it("3.Verify Labels", () => {
     CustomerDefinition.landing();
-    cy.wait(1000);
     cy.clickFirstEditActionButton();
-    // Information Tab
+    cy.wait(3500);
+    // Information Tab00
     cy.verifyLabelText("code", /Customer code/i);
     cy.verifyLabelText("name", /Customer name/i);
     cy.verifyLabelText("categoryId", /category/i);

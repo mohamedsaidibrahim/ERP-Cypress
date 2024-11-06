@@ -6,6 +6,7 @@ describe("Customer Category (Edit)", () => {
   beforeEach(() => {
     cy.visit(SalesData.customerCategoryUrl);
   });
+
   it("1.Verify All components are displaying", () => {
     CustomerCategory.landing();
     cy.wait(1500);
@@ -24,15 +25,24 @@ describe("Customer Category (Edit)", () => {
     cy.getByTestAttribute("code").should("have.attr", "readonly");
     cy.getByTestAttribute("code").should("have.attr", "disabled");
     // Verify All Dropdown Buttons
-    cy.get('span[role="combobox"]').should("have.length", 7);
+    cy.get('span[role="combobox"]').should("have.length", 11);
   });
 
   it("2.Verify Submitting Editted Customer Category", () => {
     CustomerCategory.landing();
+    CustomerCategory.reloadAgain();
     cy.clickFirstEditActionButton();
-    CustomerCategory.InputAllFieldsEdit();
+    cy.wait(1000);
+    CustomerCategory.InputNameEdit();
+    CustomerCategory.InputReceivableAccountIdEdit();
+    CustomerCategory.InputSalesAccountIdEdit();
+    CustomerCategory.InputSalesReturnAccountIdEdit();
+    CustomerCategory.InputDiscountAccountIdEdit();
+    CustomerCategory.InputPricePolicyIdEdit();
+    CustomerCategory.InputPaymentTermIdEdit();
+    CustomerCategory.InputMarketTypeEdit();
+    CustomerCategory.InputNameEdit();
     CustomerCategory.clickSaveButton();
-    // Assertion
     CustomerCategory.assertSuccesfulSaving();
   });
 

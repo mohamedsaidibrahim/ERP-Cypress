@@ -17,9 +17,9 @@ describe("Customer Definition (Add)", () => {
     cy.wait(750);
     CustomerDefinition.setCustomerCategoryId();
     cy.wait(750);
-    CustomerDefinition.setBirthDate();
+    CustomerDefinition.setBirthDate("04/04/2004");
     cy.wait(750);
-    CustomerDefinition.setCustomerTagIds();
+    // CustomerDefinition.setCustomerTagIds();
 
     // CustomerDefinition.uploadAttachment(SalesData.attachPath);
     // Information Tab

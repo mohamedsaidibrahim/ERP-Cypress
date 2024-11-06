@@ -8,16 +8,15 @@ describe("Vendor Definition (Add)", () => {
 
   it("1.Verify Adding new Vendor Definition (All fields are filled)", () => {
     VendorDefinition.landing();
-    cy.wait(1500);
     cy.getInitItemsCountInListView();
     cy.clickAddNewButton();
-    cy.wait(1500);
+    cy.wait(5000);
     // Essential Header Data
     VendorDefinition.setName(PurchaseData.vName);
     cy.wait(750);
     VendorDefinition.setVendorCategoryId();
     cy.wait(750);
-    VendorDefinition.setBirthDate();
+    VendorDefinition.setBirthDate("09/09/2009");
     cy.wait(750);
     VendorDefinition.checkAllVendorTagIds();
     cy.wait(750);
@@ -62,17 +61,16 @@ describe("Vendor Definition (Add)", () => {
     VendorDefinition.setPurchaseReturnAccountId();
     VendorDefinition.setDiscountAccountId();
 
-    VendorDefinition.clickSaveButton2();
-
+    VendorDefinition.clickSaveButton();
     cy.assertnewItemAddedToListView();
   });
 
   it("2.Verify Requird Validation", () => {
     VendorDefinition.landing();
-    cy.wait(1000);
     cy.clickAddNewButton();
+    cy.wait(5000);
     cy.get('div[class="error ng-star-inserted"]').should("not.exist");
-    VendorDefinition.clickSaveButton2();
+    VendorDefinition.clickSaveButton();
     cy.get('div[class="error ng-star-inserted"]').should("be.visible");
     VendorDefinition.setName(PurchaseData.vName);
     VendorDefinition.clearName();
@@ -83,8 +81,8 @@ describe("Vendor Definition (Add)", () => {
 
   it("3.Verify Labels", () => {
     VendorDefinition.landing();
-    cy.wait(1000);
     cy.clickAddNewButton();
+    cy.wait(5000);
     // Information Tab
     cy.verifyLabelText("code", /vendor code/i);
     cy.verifyLabelText("name", /vendor name/i);

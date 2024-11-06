@@ -8,7 +8,6 @@ describe("Customer Definition (Delete)", () => {
 
   it("1.Verify all the components are displayed on the Listview", () => {
     CustomerDefinition.landing();
-    cy.wait(1500);
     cy.zoomOut();
     cy.get("table").then((table) => {
       cy.wrap(table)
@@ -60,8 +59,8 @@ describe("Customer Definition (Delete)", () => {
 
   it("3.Verify Deleting An Existing Customer Definition (All fields are filled)", () => {
     CustomerDefinition.landing();
-    CustomerDefinition.prepare();
     cy.clickFirstDeleteActionButton();
+    cy.wait(2000);
     cy.confirmDeletePopUp();
     CustomerDefinition.assertSuccessfulDeletion();
   });

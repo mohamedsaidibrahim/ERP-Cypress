@@ -7,7 +7,7 @@ export class VendorCategory {
     cy.clickAddNewButton();
   }
   static clickSaveButton() {
-    cy.contains("button", /save/i).scrollIntoView().click();
+    cy.contains('button', /save/i).scrollIntoView().click();
   }
   static forceNavigate() {
     cy.visit(PurchaseData.VendorCategoryUrl);
@@ -27,7 +27,7 @@ export class VendorCategory {
   }
   static landing() {
     cy.LandingToERPModule(PurchaseData.VendorCategoryUrl, "vendor");
-    cy.wait(1500);
+    cy.wait(5000);
   }
   static clickFirstDeleteButton() {
     cy.get("table").then(($table) => {

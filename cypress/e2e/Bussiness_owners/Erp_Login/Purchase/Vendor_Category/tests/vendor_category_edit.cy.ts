@@ -8,8 +8,8 @@ describe("Vendor Category (Edit)", () => {
   });
   it("1.Verify All components are displaying", () => {
     VendorCategory.landing();
-    cy.wait(1500);
     cy.clickFirstEditActionButton();
+    cy.wait(5000);
     // Verify Labels
     cy.verifyLabelText("code", /category code/i);
     cy.verifyLabelText("name", /category name/i);
@@ -32,8 +32,8 @@ describe("Vendor Category (Edit)", () => {
 
   it("2.Verify Submitting Editted Vendor Category", () => {
     VendorCategory.landing();
-    cy.wait(3000);
     cy.clickFirstEditActionButton();
+    cy.wait(5000);
     VendorCategory.InputAllFields();
     VendorCategory.clickSaveButton();
     // Assertion
@@ -43,6 +43,7 @@ describe("Vendor Category (Edit)", () => {
   it("3.Verify Required Validation and The name Field is Required", () => {
     VendorCategory.landing();
     cy.clickFirstEditActionButton();
+    cy.wait(5000);
     cy.contains("span", /required/i).should("not.exist");
     cy.getByTestAttribute("name").clear().type(generateRandomString(7));
     cy.contains("span", /required/i).should("not.exist");

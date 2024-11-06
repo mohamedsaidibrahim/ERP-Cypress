@@ -7,54 +7,17 @@ export class VendorDefinition {
     cy.clickAddNewButton();
   }
   static clickSaveButton() {
-    cy.zoomOut();
-    cy.wait(1000);
-    cy.getByTestAttribute("save").scrollIntoView().click();
-    cy.wait(2000);
-    cy.url().then((url) => {
-      if (url.includes("add")) {
-        cy.getByTestAttribute("save").scrollIntoView().click({ force: true });
-      } else {
-        cy.log("Done");
-      }
-    });
-    cy.wait(2000);
+    cy.contains('button',/save/i).scrollIntoView().click();
   }
-  static clickSaveButton2() {
-    cy.zoomOut();
-    cy.wait(1000);
-    cy.get('button[type="submit"]').scrollIntoView().click();
-    cy.wait(2000);
-    cy.url().then((url) => {
-      if (url.includes("add")) {
-        cy.get('button[type="submit"]').scrollIntoView().click({ force: true });
-      } else {
-        cy.log("Done");
-      }
-    });
-    cy.wait(2000);
-  }
+
   static clickSCancelButton() {
     cy.getByTestAttribute("cancel").scrollIntoView().click();
   }
-  static forceNavigate() {
-    cy.visit(PurchaseData.VendorDefinitionUrl);
-    cy.reload();
-    cy.clickContinueAs();
-    cy.url().then((currentUrl) => {
-      if (currentUrl.includes("vendor")) {
-        cy.log("You Are In ..");
-      } else {
-        NavigatesToSideModule.navigatesToAnAppinSubdomain(/purchase/i);
-        NavigatesToSideModule.navigatesToTheModule(
-          PurchaseData.VendorDefinitionUrl,
-          1
-        );
-      }
-    });
-  }
+
+
   static landing() {
     cy.LandingToERPModule(PurchaseData.VendorDefinitionUrl, "vendor");
+    cy.wait(6500);
   }
   static clickFirstDeleteButton() {
     cy.get("table").then(($table) => {
@@ -181,8 +144,8 @@ export class VendorDefinition {
       }
     );
   }
-  static setBirthDate() {
-    cy.get('input[role="combobox"]').last().type("08/09/2000");
+  static setBirthDate(str: string) {
+    cy.getByTestAttribute("birthDate").find('input').clear().last().type(str);
   }
 
   static setContactPersonEmail() {
