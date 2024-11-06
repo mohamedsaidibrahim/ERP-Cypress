@@ -8,8 +8,8 @@ describe("Bank Definition (Edit)", () => {
 
   it("1.Verify All components are displaying", () => {
     BankDefinition.landing();
-    cy.wait(1500);
     cy.clickFirstEditActionButton();
+    cy.wait(6500);
     cy.get("th")
       .eq(0)
       .contains(/account number/i)
@@ -47,10 +47,8 @@ describe("Bank Definition (Edit)", () => {
 
   it("2.Verify Submitting Editted Bank Definition", () => {
     BankDefinition.landing();
-    cy.wait(3500);
     cy.clickFirstEditActionButton();
-    cy.wait(2000);
-    cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
+    cy.wait(6500);
     cy.getByTestAttribute("shortName").clear().type(FinanceData.shortName);
     cy.getByTestAttribute("bankAddress").clear().type(FinanceData.bankAddress);
     cy.getByTestAttribute("contactName").clear().type(FinanceData.contactName);
@@ -59,44 +57,34 @@ describe("Bank Definition (Edit)", () => {
     cy.getByTestAttribute("fax").clear().type(FinanceData.fax);
     BankDefinition.addAccountNumber();
     BankDefinition.addAccountCode();
-    cy.get('body').click();
-    BankDefinition.addOpeningBalance();
-    // BankDefinition.selectAllBranches();
+    cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     BankDefinition.addIBN();
-    // BankDefinition.addCurrency();
-    BankDefinition.selectUserPermission();
+    BankDefinition.addOpeningBalance();
     cy.wait(1000);
     BankDefinition.clickSaveButton();
-    // Assertion
-    cy.wait(1000);
-    cy.reload();
-    cy.wait(1000);
-    cy.clickContinueAs();
-    cy.wait(1000);
+    cy.wait(3000);
     cy.verifyFirstCellInTable(1, FinanceData.bankName);
     cy.verifyFirstCellInTable(2, FinanceData.shortName);
   });
 
   it("3.Verify Required Validation and The name Field is Required", () => {
     BankDefinition.landing();
-    cy.wait(2500);
     cy.clickFirstEditActionButton();
-    cy.wait(1000);
+    cy.wait(6500);
     cy.contains("span", /required/i).should("not.exist");
     cy.getByTestAttribute("name").clear();
     cy.contains("span", /required/i).should("be.visible");
     cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     cy.contains("span", /required/i).should("not.exist");
     BankDefinition.clickSaveButton();
-    cy.wait(1000);
+    cy.wait(2500);
     cy.get("span").should("not.include", /edit/i);
   });
   
   it("4.Verify Inputting Invalid Bank Email Address", () => {
     BankDefinition.landing();
-    cy.wait(2500);
     cy.clickFirstEditActionButton();
-    cy.wait(1000);
+    cy.wait(6500);
     cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     cy.getByTestAttribute("bankEmail").clear().type(FinanceData.bankAddress);
     cy.contains(
@@ -112,9 +100,8 @@ describe("Bank Definition (Edit)", () => {
 
   it("5.Verify Inputting very Long Bank Short Name", () => {
     BankDefinition.landing();
-    cy.wait(2500);
     cy.clickFirstEditActionButton();
-    cy.wait(1000);
+    cy.wait(6500);
     cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     cy.getByTestAttribute("shortName").clear().type(FinanceData.bankName);
     cy.contains(

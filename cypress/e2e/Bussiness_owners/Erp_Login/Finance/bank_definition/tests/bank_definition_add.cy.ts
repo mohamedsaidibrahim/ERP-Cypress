@@ -57,17 +57,12 @@ describe("Bank Definition (Add)", () => {
     cy.getByTestAttribute("fax").clear().type(FinanceData.fax);
     BankDefinition.addAccountNumber();
     BankDefinition.addAccountCode();
-    // BankDefinition.selectAllBranches();
     cy.getByTestAttribute("name").clear().type(FinanceData.bankName);
     BankDefinition.addIBN();
-    // BankDefinition.addCurrency();
     BankDefinition.addOpeningBalance();
-    // BankDefinition.selectUserPermission();
     cy.wait(1000);
     BankDefinition.clickSaveButton();
-    // Assertion
     cy.wait(3000);
-
     cy.assertnewItemAddedToListView();
   });
 

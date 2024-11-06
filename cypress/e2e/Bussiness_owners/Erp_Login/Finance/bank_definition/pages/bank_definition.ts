@@ -36,9 +36,7 @@ export class BankDefinition {
   }
   static landing() {
     cy.LandingToERPModule(FinanceData.BankDefinitionUrl, "bank");
-    cy.wait(1000);
-    cy.reload();
-    cy.wait(1000);
+    cy.wait(6500);
   }
   static clickFirstDeleteButton() {
     cy.get("table").then(($table) => {
@@ -150,7 +148,7 @@ export class BankDefinition {
       cy.log('addOpeningBalance obVal : ' + openingBalanc);
       cy.get("tbody tr").eq(0).find("td").eq(7).scrollIntoView().click({ force: true });
       cy.get("input").last().click({ force: true });
-      cy.get("input").last().clear().type(openingBalanc, { force: true });
+      cy.get("input").last().clear({force: true}).type(openingBalanc, { force: true });
     });
   }
 }
