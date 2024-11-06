@@ -1465,7 +1465,7 @@ declare namespace Cypress {
 }
 
 Cypress.Commands.add("checkImageVisibilityBySrc", (imgSrc) => {
-  cy.get("img[src="+imgSrc+"]").should("be.visible");
+  cy.get("img[src=" + imgSrc + "]").should("be.visible");
 });
 
 declare namespace Cypress {
@@ -1990,6 +1990,39 @@ Cypress.Commands.add("clickContinueAs", () => {
       } else {
         cy.log("Continue As Button is not visible, retrying");
       }
+    }
+  });
+});
+
+
+declare namespace Cypress {
+  interface Chainable<Subject> {
+    getCellValueWhenCondition(targetCol: number, conditionCol: number, conditionValue: string): Chainable<any>;
+  }
+}
+
+Cypress.Commands.add("getCellValueWhenCondition", (targetCol: number, conditionCol: number, conditionValue: string) => {
+  cy.get("table").should("be.visible");
+  cy.get("table").then(($table: any) => {
+    if ($table.find("tbody tr").is(":visible")) {
+      // Locate the table rows and find the row where the "Type" column equals "Detail"
+      cy.get('table tbody tr').then(($rows) => {
+        for (var i = 0; i < $rows.length; i++) {
+          var $row = $rows[i];
+          // Find the "Type" column within this row (e.g., assuming it's the 2nd column)
+          cy.wrap($row).find('td').eq(conditionCol).then(($typeCell) => {
+            if ($typeCell.text().trim().includes(conditionValue) ) {
+              // Get the text of the first column (e.g., assuming it's the 1st column)
+              cy.wrap($row).find('td').eq(targetCol).invoke('text').then((firstColumnText) => {
+                cy.wrap(firstColumnText).as("firstColumnText");
+                i=$rows.length;
+              });
+            }
+          });
+        }
+      });
+    } else {
+      cy.log("Table is Empty");
     }
   });
 });

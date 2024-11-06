@@ -41,8 +41,7 @@ export class CostCenter {
     cy.get('input[class="p-inputtext p-component p-element ng-star-inserted"]').clear().type(txt);
   }
   static clickParentDropDown() {
-    cy.get('span[role="combobox"]').should('be.visible');
-    cy.get('span[role="combobox"]').click();
+    cy.getFirstItemInDropDownList("parentId");
   }
   static selectTheFirstOption() {
     cy.get('li[role="option"]').should('be.visible');
@@ -50,7 +49,6 @@ export class CostCenter {
   }
   static clickIsDetail() {
     cy.get('#isDetail').uncheck();
-
   }
   static clickSaveButton() {
     cy.contains('.btn', /save/i).should('be.visible');
@@ -356,10 +354,8 @@ export class CostCenter {
     });
   }
 
-  static verifySaveButton() {
-    cy.get(".btn").should("be.visible");
-    cy.get(".btn").should("be.enabled");
-    cy.get(".btn").should("have.text", " save\n");
+  static clickCancelButton() {
+    cy.contains("button",/cancel/i).scrollIntoView().click();
   }
 
   static verifyCostCenterCode() {
@@ -408,7 +404,7 @@ export class CostCenter {
   }
 
   static verifyParentCodeDropDownNotEmpty() {
-    cy.get('span[role="combobox"]').click();
+    cy.getByTestAttribute("parentId").find('span[role="combobox"]').click();
     cy.get(".p-dropdown-filter").should("be.visible");
     cy.get(".p-dropdown-filter").should("be.enabled");
     cy.get(".p-dropdown-filter").should("not.be.checked");

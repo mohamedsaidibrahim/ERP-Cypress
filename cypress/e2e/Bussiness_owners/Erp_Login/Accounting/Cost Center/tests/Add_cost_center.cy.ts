@@ -8,9 +8,7 @@ describe("Adding Cost Center", () => {
 
   it("1.Verify Empty Data Cost Center", () => {
     CostCenter.landing();
-    cy.wait(1500);
-    cy.reload();
-    cy.wait(1000);
+    cy.wait(5500);
     cy.get(".p-tree").should("be.visible");
     cy.get(".p-tree").should("have.class", "p-tree");
   });
@@ -29,12 +27,11 @@ describe("Adding Cost Center", () => {
   it("3.Validate The Cost Center Name Required Message", () => {
     CostCenter.landing();
     cy.wait(2000);
-
     CostCenter.clickLastTreeAddButton();
     CostCenter.clickSaveButton();
     cy.contains("span", /required/i).should("be.visible");
 
-    CostCenter.inputCostCenterName(AccountingData.costCenterName);
+    CostCenter.inputCostCenterName(AccountingData.parentCostCenterName);
     cy.contains("span", /required/i).should("not.exist");
 
     CostCenter.clickSaveButton();
@@ -44,9 +41,8 @@ describe("Adding Cost Center", () => {
   it("4.Verify Adding Parent Cost Centre On The Tree", () => {
     CostCenter.landing();
     cy.wait(2000);
-
     CostCenter.clickLastTreeAddButton();
-    CostCenter.inputCostCenterName(AccountingData.costCenterName);
+    CostCenter.inputCostCenterName(AccountingData.parentCostCenterName);
     CostCenter.clickSaveButton();
     CostCenter.verifyDialogeDisappears();
     cy.reload();
@@ -54,7 +50,7 @@ describe("Adding Cost Center", () => {
     cy.clickContinueAs();
     CostCenter.switchingToListMode();
     cy.navigateToTheLatestScreen();
-    cy.verifyFirstCellInTable(1, AccountingData.costCenterName);
+    cy.verifyFirstCellInTable(1, AccountingData.parentCostCenterName);
     cy.verifyLastCellParagraoghInTable(3, /main/i);
   });
 
@@ -62,7 +58,7 @@ describe("Adding Cost Center", () => {
     CostCenter.landing();
     cy.wait(2000);
     CostCenter.clickLastTreeAddButton();
-    CostCenter.inputCostCenterName(AccountingData.costCenterName);
+    CostCenter.inputCostCenterName(AccountingData.detailCostCenterName);
     CostCenter.clickIsDetailCheckBox();
     CostCenter.clickSaveButton();
     CostCenter.verifyDialogeDisappears();
@@ -71,7 +67,7 @@ describe("Adding Cost Center", () => {
     cy.clickContinueAs();
     CostCenter.switchingToListMode();
     cy.navigateToTheLatestScreen();
-    cy.verifyFirstCellInTable(1, AccountingData.costCenterName);
+    cy.verifyFirstCellInTable(1, AccountingData.detailCostCenterName);
     cy.verifyLastCellParagraoghInTable(3, /detail/i);
   });
 
@@ -79,7 +75,7 @@ describe("Adding Cost Center", () => {
     CostCenter.landing();
     cy.wait(2000);
     CostCenter.clickLastTreeAddButton();
-    CostCenter.inputCostCenterName(AccountingData.costCenterName);
+    CostCenter.inputCostCenterName(AccountingData.detailCostCenterName);
     CostCenter.selectParent();
     CostCenter.clickIsDetailCheckBox();
     CostCenter.clickSaveButton();
@@ -89,7 +85,7 @@ describe("Adding Cost Center", () => {
     cy.clickContinueAs();
     CostCenter.switchingToListMode();
     cy.navigateToTheLatestScreen();
-    cy.verifyFirstCellInTable(1, AccountingData.costCenterName);
+    cy.verifyFirstCellInTable(1, AccountingData.detailCostCenterName);
     cy.verifyLastCellParagraoghInTable(3, /detail/i);
   });
 });

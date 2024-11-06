@@ -11,7 +11,10 @@ export class AccountingData {
   static testParentAccountAddedd = "testPAA" + getRandomNumber(1, 9999);
   static testParentAccountEdittedSearch = "testPEE";
   static testParentAccountAddedSearch = "testPAA";
-  static costCenterName = "CC_" + generateRandomString(5);
+  static parentCostCenterSrch = "PCC_";
+  static parentCostCenterName = "PCC_" + generateRandomString(5);
+  static detailCostCenterSrch = "DCC_";
+  static detailCostCenterName = "DCC_" + generateRandomString(5);
   static ChartOfAccountsLink =
     "https://mohamed.microtecdev.com:2050/accounting/masterdata/chartofaccounts";
   static CostCenterLink =
