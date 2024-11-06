@@ -49,7 +49,7 @@ export class FinanceData {
   static correctCurrency = "egyptian";
   static edittedCurrency = "saud";
   static wrongCurrency = "eur";
-  static edittedAccount = "غرامة تأخير مناقصة";
+  static edittedAccount = "صندوق 4";
   static fromDate = "01/01/2021";
   static correctToDate = "01/01/2022";
   static WrongToDate = "01/01/2020";

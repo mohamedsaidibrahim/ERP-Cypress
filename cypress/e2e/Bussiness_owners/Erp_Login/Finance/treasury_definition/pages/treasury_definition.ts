@@ -8,7 +8,7 @@ export class TreasuryDefinition {
   }
 
   static inputOpeningBalance() {
-    cy.get('input[data-testid="accountBalance"]')
+    cy.get('input[data-testid="openingBalance"]')
       .invoke("val")
       .then((text: any) => {
         var openingBalanc = "50000";
@@ -44,6 +44,7 @@ export class TreasuryDefinition {
         cy.getByTestAttribute("save").last().click({ force: true });
       }
     });
+    cy.wait(3500);
   }
 
 
@@ -73,6 +74,7 @@ export class TreasuryDefinition {
 
   static landing() {
     cy.LandingToERPModule(FinanceData.TreasuryDefinitionUrl, "reasury");
+    cy.wait(5000);
   }
 
   static clickFirstDeleteButton() {

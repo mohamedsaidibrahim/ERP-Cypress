@@ -9,7 +9,6 @@ describe("Treasury Definition (Add)", () => {
 
   it("1.Verify All components are displaying", () => {
     TreasuryDefinition.landing();
-    cy.wait(2000);
     TreasuryDefinition.clickAddNewButton();
     cy.verifyDimmidInput("code");
     // Verify Labels
@@ -28,7 +27,6 @@ describe("Treasury Definition (Add)", () => {
 
   it("2.Verify Submitting new Treasury Definition", () => {
     TreasuryDefinition.landing();
-    cy.wait(2000);
     cy.getInitItemsCountInListView();
     TreasuryDefinition.clickAddNewButton();
     cy.zoomOut();
@@ -50,7 +48,6 @@ describe("Treasury Definition (Add)", () => {
 
   it("3.Verify Required Validation and The name Field is Required", () => {
     TreasuryDefinition.landing();
-    cy.wait(2000);
     TreasuryDefinition.clickAddNewButton();
     cy.wait(1000);
     cy.zoomOut();
@@ -76,7 +73,6 @@ describe("Treasury Definition (Add)", () => {
 
   it("4.Verify Different Currency Validation", () => {
     TreasuryDefinition.landing();
-    cy.wait(2000);
     TreasuryDefinition.clickAddNewButton();
     cy.wait(1000);
     cy.zoomOut();
@@ -93,7 +89,6 @@ describe("Treasury Definition (Add)", () => {
 
   it("5.Verify Different openingBalance Confirmation", () => {
     TreasuryDefinition.landing();
-    cy.wait(2000);
     cy.getInitItemsCountInListView();
     TreasuryDefinition.clickAddNewButton();
     cy.zoomOut();
