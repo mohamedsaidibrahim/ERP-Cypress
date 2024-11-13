@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-06T11:52:36.758Z",
-    "end": "2024-11-06T11:53:51.554Z",
-    "duration": 74796,
+    "start": "2024-11-13T11:44:04.292Z",
+    "end": "2024-11-13T11:45:21.088Z",
+    "duration": 76796,
     "testsRegistered": 6,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "64810896-2611-4c3a-8966-0fbf1dae6dfc",
+      "uuid": "5f06b948-2b08-473e-8c88-c440eb38a6bd",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Add_branch_dialoge.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Add_branch_dialoge.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "78e57cae-7e9a-40c1-8318-62484c799379",
+          "uuid": "a235b6ee-03ab-485f-995a-333f569ff87f",
           "title": "Add Branch Dialoge",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1. Check The Labels",
               "fullTitle": "Add Branch Dialoge 1. Check The Labels",
               "timedOut": null,
-              "duration": 34753,
+              "duration": 34715,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.checkLabels();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Branch Dialoge`",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Branch Dialoge`\n    at EditCompanyScreen.clickFirstCompanyToEdit (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:25:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Add_branch_dialoge.cy.ts:15:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Branch Dialoge`",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Branch Dialoge`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Add_branch_dialoge.cy.ts:14:0)",
                 "diff": null
               },
-              "uuid": "0f9deb64-ecf7-4399-aec4-eeaa55488e89",
-              "parentUUID": "78e57cae-7e9a-40c1-8318-62484c799379",
+              "uuid": "b38b8f0c-ac74-464f-b9b6-d01fa91de799",
+              "parentUUID": "a235b6ee-03ab-485f-995a-333f569ff87f",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.clickCancelIcon();\ncy.get(\"body\").then(($body) => {\n    if ($body.find(branches_managment__data_1.BranchesManagmentData.deleteActionButton).length < 2) {\n        cy.wrap($body).find(branches_managment__data_1.BranchesManagmentData.deleteActionButton).click();\n        branches_management_1.BranchesManagment.ConfirmDeleteBranchDialog();\n    }\n    else {\n        cy.log(\"There Are many Branches \");\n    }\n});",
               "err": {},
-              "uuid": "f3a44d37-9972-4e03-8962-14a4e84396fb",
-              "parentUUID": "78e57cae-7e9a-40c1-8318-62484c799379",
+              "uuid": "3bd6eeda-3766-463f-88fd-7df90a869165",
+              "parentUUID": "a235b6ee-03ab-485f-995a-333f569ff87f",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "cy.wait(1000);\ncy.getInitItemsCountInListView();\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.inputBranchName(branchName);\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.inputBranchRegion(\"region\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.inputBranchCity(\"city\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.inputBranchEmail((0, utils_1.generateRandomEmail)());\nbranches_management_1.BranchesManagment.inputBranchAddress(\"address\" + (0, utils_1.getRandomNumber)(1, 1000));\ncy.hideDialogFooter();\nbranches_management_1.BranchesManagment.selectMobileCode();\nbranches_management_1.BranchesManagment.inputMobileNumber();\ncy.displayDialogFooter();\nbranches_management_1.BranchesManagment.clickSaveButton();\nbranches_management_1.BranchesManagment.verifySuccessAlertVisibility();\ncy.assertnewItemAddedToListView();",
               "err": {},
-              "uuid": "b5077eef-ecd4-4f11-8a75-f4bc3e56e815",
-              "parentUUID": "78e57cae-7e9a-40c1-8318-62484c799379",
+              "uuid": "1b2aaa46-79dd-429b-b05a-283bd76dd7c5",
+              "parentUUID": "a235b6ee-03ab-485f-995a-333f569ff87f",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.inputBranchName(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfRequiredMessage(1);\n// Type In Region Text field without Selecting Country\nbranches_management_1.BranchesManagment.inputBranchRegion(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfRequiredMessage(1);\nbranches_management_1.BranchesManagment.clickSaveButton();\nbranches_management_1.BranchesManagment.checKVisibilityOfRequiredMessage(2);\nbranches_management_1.BranchesManagment.inputBranchName(\"branch\" + (0, utils_1.getRandomNumber)(1, 1000) + \"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfRequiredMessage(1);\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.verifyRemovingRequiredMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"@test.com\");\nbranches_management_1.BranchesManagment.inputBranchRegion(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email\");\nbranches_management_1.BranchesManagment.inputBranchCity(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email@test\");\nbranches_management_1.BranchesManagment.inputBranchAddress(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email.com\");\nbranches_management_1.BranchesManagment.inputBranchCity(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email@test.co\");\nbranches_management_1.BranchesManagment.checKLackingOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email@test.com\");\nbranches_management_1.BranchesManagment.checKLackingOfInvalidEmailMessage();",
               "err": {},
-              "uuid": "332ab30b-dd02-4ba5-ac6b-35b48f5c7864",
-              "parentUUID": "78e57cae-7e9a-40c1-8318-62484c799379",
+              "uuid": "64e3f98f-4d0e-462f-bf8b-a1d0bd6caf6a",
+              "parentUUID": "a235b6ee-03ab-485f-995a-333f569ff87f",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.clickCancelIcon();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.clickCancelButton();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();",
               "err": {},
-              "uuid": "f577361b-baa3-46d0-80ea-dafd09b921fe",
-              "parentUUID": "78e57cae-7e9a-40c1-8318-62484c799379",
+              "uuid": "9af0a84d-edc0-4f5a-8566-909f2c3095f2",
+              "parentUUID": "a235b6ee-03ab-485f-995a-333f569ff87f",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.clickCancelIcon();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();\ncy.getLastCellInTableValue(1).as(\"name\");\nbranches_management_1.BranchesManagment.clickAddNewButton();\ncy.get(\".p-inputtext\").eq(0).should(\"be.visible\");\ncy.get(\"@name\").then((brName) => {\n    cy.log(\"brName var : \" + brName);\n    cy.log(\"branchName var : \" + branchName);\n    expect((0, utils_1.trimText)(brName.toString().trim())).to.equal((0, utils_1.trimText)(branchName.toString().trim()));\n    branches_management_1.BranchesManagment.inputBranchName(branchName);\n});\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.inputBranchRegion(\"region\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.inputBranchCity(\"city\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.inputBranchEmail((0, utils_1.generateRandomEmail)());\nbranches_management_1.BranchesManagment.inputBranchAddress(\"address\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.selectMobileCode();\nbranches_management_1.BranchesManagment.inputMobileNumber();\nbranches_management_1.BranchesManagment.clickSaveButton();\nbranches_management_1.BranchesManagment.verifySuccessAlertInVisibility();",
               "err": {},
-              "uuid": "7ba7a454-9fcb-4fde-a3a3-dd8812a51e1b",
-              "parentUUID": "78e57cae-7e9a-40c1-8318-62484c799379",
+              "uuid": "605fd82c-9b11-4a7f-8f41-8ba7895eb525",
+              "parentUUID": "a235b6ee-03ab-485f-995a-333f569ff87f",
               "isHook": false,
               "skipped": true
             }
@@ -150,17 +150,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "0f9deb64-ecf7-4399-aec4-eeaa55488e89"
+            "b38b8f0c-ac74-464f-b9b6-d01fa91de799"
           ],
           "pending": [],
           "skipped": [
-            "f3a44d37-9972-4e03-8962-14a4e84396fb",
-            "b5077eef-ecd4-4f11-8a75-f4bc3e56e815",
-            "332ab30b-dd02-4ba5-ac6b-35b48f5c7864",
-            "f577361b-baa3-46d0-80ea-dafd09b921fe",
-            "7ba7a454-9fcb-4fde-a3a3-dd8812a51e1b"
+            "3bd6eeda-3766-463f-88fd-7df90a869165",
+            "1b2aaa46-79dd-429b-b05a-283bd76dd7c5",
+            "64e3f98f-4d0e-462f-bf8b-a1d0bd6caf6a",
+            "9af0a84d-edc0-4f5a-8566-909f2c3095f2",
+            "605fd82c-9b11-4a7f-8f41-8ba7895eb525"
           ],
-          "duration": 34753,
+          "duration": 34715,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

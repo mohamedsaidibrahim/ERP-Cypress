@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-11-06T11:30:42.025Z",
-    "end": "2024-11-06T11:31:02.970Z",
-    "duration": 20945,
+    "start": "2024-11-13T11:31:20.068Z",
+    "end": "2024-11-13T11:31:44.132Z",
+    "duration": 24064,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5ebddf23-a624-4426-8bb3-2427b4615af7",
+      "uuid": "5a328230-de81-412d-8f44-be089d9453c0",
       "title": "",
       "fullFile": "cypress/e2e/Authentication/Login/tests/Verify_happy_scenario.cy.ts",
       "file": "cypress/e2e/Authentication/Login/tests/Verify_happy_scenario.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3fc4c20f-1c89-47b7-a035-e77d43b995e2",
+          "uuid": "332d9909-50bc-4ee1-baa6-c40c73e31c06",
           "title": "Verify The Happy Scenario on the Login page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "LoginAndSaveAccessTokenEn",
               "fullTitle": "Verify The Happy Scenario on the Login page LoginAndSaveAccessTokenEn",
               "timedOut": null,
-              "duration": 10547,
+              "duration": 13314,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "loginPage_1.LoginPage.inputEmail(auth_data_1.AuthData.loginMail);\nloginPage_1.LoginPage.inputPassword(auth_data_1.AuthData.pass);\nloginPage_1.LoginPage.clickLoginButton();\ncy.wait(1000);\n(0, validateLogin_1.validateLogin)();",
               "err": {},
-              "uuid": "8230921c-14cf-4738-8ccc-8ad57fb3afa3",
-              "parentUUID": "3fc4c20f-1c89-47b7-a035-e77d43b995e2",
+              "uuid": "dce87ea9-c727-4650-a4c0-7a11abb83d1b",
+              "parentUUID": "332d9909-50bc-4ee1-baa6-c40c73e31c06",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "LoginAndSaveAccessTokenAr",
               "fullTitle": "Verify The Happy Scenario on the Login page LoginAndSaveAccessTokenAr",
               "timedOut": null,
-              "duration": 10149,
+              "duration": 10523,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "loginPage_1.LoginPage.clickLangButton();\nloginPage_1.LoginPage.inputEmail(auth_data_1.AuthData.loginMail);\nloginPage_1.LoginPage.inputPassword(auth_data_1.AuthData.pass);\nloginPage_1.LoginPage.clickLoginButton();\ncy.wait(1000);\n(0, validateLogin_1.validateLogin)();",
               "err": {},
-              "uuid": "1f39cd57-f852-452f-8f38-a5854b040744",
-              "parentUUID": "3fc4c20f-1c89-47b7-a035-e77d43b995e2",
+              "uuid": "68809de4-6fcb-42fb-b87e-a9e7d2eb480f",
+              "parentUUID": "332d9909-50bc-4ee1-baa6-c40c73e31c06",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "8230921c-14cf-4738-8ccc-8ad57fb3afa3",
-            "1f39cd57-f852-452f-8f38-a5854b040744"
+            "dce87ea9-c727-4650-a4c0-7a11abb83d1b",
+            "68809de4-6fcb-42fb-b87e-a9e7d2eb480f"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20696,
+          "duration": 23837,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

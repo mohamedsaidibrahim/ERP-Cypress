@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 3,
-    "passes": 3,
+    "tests": 2,
+    "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-11-06T12:03:34.919Z",
-    "end": "2024-11-06T12:04:10.427Z",
-    "duration": 35508,
+    "failures": 1,
+    "start": "2024-11-13T11:55:30.431Z",
+    "end": "2024-11-13T11:57:34.061Z",
+    "duration": 123630,
     "testsRegistered": 3,
-    "passPercent": 100,
+    "passPercent": 33.33333333333333,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 1,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "ccfe14a8-f51a-4da9-abf9-bb62f40f6b15",
+      "uuid": "85c4c7b4-0de6-4702-989e-0200aa331d65",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Displaying_all_subdomains_users.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Displaying_all_subdomains_users.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "492ff8e9-f033-418b-8605-d1c4eb434547",
+          "uuid": "eee402fd-c04d-4f02-a46d-3ebaf25c91ed",
           "title": "verify Displaying All Subdomain's Users",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
               "fullTitle": "verify Displaying All Subdomain's Users 1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
               "timedOut": null,
-              "duration": 17234,
+              "duration": 11108,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "cy.get(\"table\").then(($table) => {\n    if ($table.find(\"thead tr\").is(\":visible\")) {\n        // Verify Column Headers\n        cy.get(\"tr th\").eq(0).should(\"include\", /name/i);\n        cy.get(\"tr th\").eq(1).should(\"include\", /mail/i);\n        cy.get(\"tr th\")\n            .eq(2)\n            .should(\"include\", /last login date/i);\n        cy.get(\"tr th\")\n            .eq(3)\n            .should(\"include\", /licence/i);\n        cy.get(\"tr th\")\n            .eq(4)\n            .should(\"include\", /status/i);\n        cy.get(\"tr th\")\n            .eq(5)\n            .should(\"include\", /actions/i);\n    }\n    else {\n        cy.log(\"Missing Table\");\n    }\n});",
               "err": {},
-              "uuid": "bdad6ea7-6ba2-4c9a-8982-ca9d127b3139",
-              "parentUUID": "492ff8e9-f033-418b-8605-d1c4eb434547",
+              "uuid": "b6b7410c-b9c1-427e-bf07-f7d264d0c69e",
+              "parentUUID": "eee402fd-c04d-4f02-a46d-3ebaf25c91ed",
               "isHook": false,
               "skipped": false
             },
@@ -56,17 +56,21 @@
               "title": "2.Verify That The screen Has Search Text Field That Enable The User To Filter or Search For Some Users.",
               "fullTitle": "verify Displaying All Subdomain's Users 2.Verify That The screen Has Search Text Field That Enable The User To Filter or Search For Some Users.",
               "timedOut": null,
-              "duration": 8699,
-              "state": "passed",
-              "speed": "medium",
-              "pass": true,
-              "fail": false,
+              "duration": 34615,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.verifySearchFunctionalityDots();",
-              "err": {},
-              "uuid": "b3f442b5-8bff-4de0-8299-a41158dc867d",
-              "parentUUID": "492ff8e9-f033-418b-8605-d1c4eb434547",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `verify Displaying All Subdo...`",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `verify Displaying All Subdo...`\n    at ManageUsers.clickFirstManageUsers (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Displaying_all_subdomains_users.cy.ts:10:0)",
+                "diff": null
+              },
+              "uuid": "7b0796e1-f12a-4d2d-b774-ba09b0bfc359",
+              "parentUUID": "eee402fd-c04d-4f02-a46d-3ebaf25c91ed",
               "isHook": false,
               "skipped": false
             },
@@ -74,31 +78,33 @@
               "title": "3.Verify That The User Can Resend THe Email Invitation",
               "fullTitle": "verify Displaying All Subdomain's Users 3.Verify That The User Can Resend THe Email Invitation",
               "timedOut": null,
-              "duration": 9315,
-              "state": "passed",
-              "speed": "medium",
-              "pass": true,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "//  Check That the first row in the table has Resend Button then click it\nmanage_users_1.ManageUsers.verifyDisplayingResendButton();\nmanage_users_1.ManageUsers.clickResendButton();",
               "err": {},
-              "uuid": "34c1ed79-bbe2-4163-be18-d8dac2fb5e5e",
-              "parentUUID": "492ff8e9-f033-418b-8605-d1c4eb434547",
+              "uuid": "b7d7c66f-7c0b-469e-9bd6-f1a5160a1e11",
+              "parentUUID": "eee402fd-c04d-4f02-a46d-3ebaf25c91ed",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [
-            "bdad6ea7-6ba2-4c9a-8982-ca9d127b3139",
-            "b3f442b5-8bff-4de0-8299-a41158dc867d",
-            "34c1ed79-bbe2-4163-be18-d8dac2fb5e5e"
+            "b6b7410c-b9c1-427e-bf07-f7d264d0c69e"
           ],
-          "failures": [],
+          "failures": [
+            "7b0796e1-f12a-4d2d-b774-ba09b0bfc359"
+          ],
           "pending": [],
-          "skipped": [],
-          "duration": 35248,
+          "skipped": [
+            "b7d7c66f-7c0b-469e-9bd6-f1a5160a1e11"
+          ],
+          "duration": 45723,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

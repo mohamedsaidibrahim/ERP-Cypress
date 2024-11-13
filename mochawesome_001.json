@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-11-06T11:27:36.681Z",
-    "end": "2024-11-06T11:27:59.951Z",
-    "duration": 23270,
+    "start": "2024-11-13T11:28:05.807Z",
+    "end": "2024-11-13T11:28:29.336Z",
+    "duration": 23529,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "bde24c49-c658-4344-8e24-7c29f4a3b234",
+      "uuid": "4613efed-b273-4e6f-9986-865ab4470cd9",
       "title": "",
       "fullFile": "cypress/e2e/Authentication/Registeration/tests/Verify_all_components_displaying.cy.ts",
       "file": "cypress/e2e/Authentication/Registeration/tests/Verify_all_components_displaying.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "98c43257-7beb-4571-ba7a-623f2f01552a",
+          "uuid": "c70d220e-8517-433a-b152-816aee911a1e",
           "title": "Verify that all the components exist on the Register page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "En",
               "fullTitle": "Verify that all the components exist on the Register page En",
               "timedOut": null,
-              "duration": 9174,
+              "duration": 9328,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "registerPage_1.RegisterationPage.clickLangButton();\nregisterPage_1.RegisterationPage.getPageHeader(\"Register\");\nregisterPage_1.RegisterationPage.getPageHeaderPara(\"Sign Up A new Account for the first time\");\nregisterPage_1.RegisterationPage.getPageSecHeader();\nregisterPage_1.RegisterationPage.checkFullNameLabel(\"Full Name\");\nregisterPage_1.RegisterationPage.typeFullName(auth_data_1.AuthData.fullName);\nregisterPage_1.RegisterationPage.inputEmail();\nregisterPage_1.RegisterationPage.checkCountryLabel(\"Country\");\nregisterPage_1.RegisterationPage.clickDropDownCountryList();\nregisterPage_1.RegisterationPage.inputCountry(auth_data_1.AuthData.country);\n// cy.checkImageVisibilityBySrc(AuthData.face_img);\n// cy.checkImageVisibilityBySrc(AuthData.mail_img);\n// cy.checkImageVisibilityBySrc(AuthData.google_img);\n// cy.checkImageVisibilityBySrc(AuthData.apple_img);\nregisterPage_1.RegisterationPage.checkPasswordLabel(\"Password\");\nregisterPage_1.RegisterationPage.inputPassword(auth_data_1.AuthData.pass);\nregisterPage_1.RegisterationPage.checkConfirmPasswordLabel(\"Confirm Password\");\nregisterPage_1.RegisterationPage.inputConfirmPassword(auth_data_1.AuthData.pass);\nregisterPage_1.RegisterationPage.checkPhoneLabel(\"Phone\");\nregisterPage_1.RegisterationPage.inputPhoneNumber(auth_data_1.AuthData.authPhone);\nregisterPage_1.RegisterationPage.checkCountryCode(auth_data_1.AuthData.code);\nregisterPage_1.RegisterationPage.checkRegisterationButton(\"Register Now\");\nregisterPage_1.RegisterationPage.checkAgreeStatementLabel(\"I agree the Terms and Conditions\");\nregisterPage_1.RegisterationPage.checkHaveAnAccount(\"have an account?\");\nregisterPage_1.RegisterationPage.checkSignInButton(\"Sign In\");\nregisterPage_1.RegisterationPage.confirmCheckBox();\nregisterPage_1.RegisterationPage.checkRegisterationButton(\"Register Now\");",
               "err": {},
-              "uuid": "97132ab3-d319-4f8f-9f71-50dde42407d8",
-              "parentUUID": "98c43257-7beb-4571-ba7a-623f2f01552a",
+              "uuid": "6dc9235a-c002-49de-9981-f53bb9f52874",
+              "parentUUID": "c70d220e-8517-433a-b152-816aee911a1e",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Ar",
               "fullTitle": "Verify that all the components exist on the Register page Ar",
               "timedOut": null,
-              "duration": 11351,
+              "duration": 11932,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "registerPage_1.RegisterationPage.visit();\nregisterPage_1.RegisterationPage.getPageHeader(\"تسجيل مستخدم\");\nregisterPage_1.RegisterationPage.getPageHeaderPara(\"قم بانشاء حساب جديد لاول مرة\");\nregisterPage_1.RegisterationPage.getPageSecHeader();\nregisterPage_1.RegisterationPage.checkFullNameLabel(\"الاسم بالكامل\");\nregisterPage_1.RegisterationPage.typeFullName(auth_data_1.AuthData.fullName);\nregisterPage_1.RegisterationPage.checkEmailLabel(\"البريد الالكترونى\");\nregisterPage_1.RegisterationPage.inputEmail();\nregisterPage_1.RegisterationPage.checkCountryLabel(\"الدولة\");\nregisterPage_1.RegisterationPage.clickDropDownCountryList();\nregisterPage_1.RegisterationPage.inputCountry(auth_data_1.AuthData.country);\n// cy.checkImageVisibilityBySrc(AuthData.face_img);\n// cy.checkImageVisibilityBySrc(AuthData.mail_img);\n// cy.checkImageVisibilityBySrc(AuthData.google_img);\n// cy.checkImageVisibilityBySrc(AuthData.apple_img);\nregisterPage_1.RegisterationPage.checkPasswordLabel(\"الرقم السرى\");\nregisterPage_1.RegisterationPage.inputPassword(auth_data_1.AuthData.pass);\nregisterPage_1.RegisterationPage.checkConfirmPasswordLabel(\"اعادة كتابة الرقم السرى\");\nregisterPage_1.RegisterationPage.inputConfirmPassword(auth_data_1.AuthData.pass);\nregisterPage_1.RegisterationPage.checkPhoneLabel(\"الهاتف\");\nregisterPage_1.RegisterationPage.inputPhoneNumber(auth_data_1.AuthData.authPhone);\nregisterPage_1.RegisterationPage.checkCountryCode(auth_data_1.AuthData.code);\nregisterPage_1.RegisterationPage.checkSignInButton(\"تسجل دخول\");\nregisterPage_1.RegisterationPage.checkAgreeStatementLabel(\"انا موافق على القواعد والشروط\");\nregisterPage_1.RegisterationPage.checkHaveAnAccount(\"هل لديك حساب ؟\");\nregisterPage_1.RegisterationPage.confirmCheckBox();\nregisterPage_1.RegisterationPage.checkRegisterationButton(\"سجل الان\");",
               "err": {},
-              "uuid": "f74878e1-c116-48fa-9ae6-26b36df5c2be",
-              "parentUUID": "98c43257-7beb-4571-ba7a-623f2f01552a",
+              "uuid": "c81cb2e3-add0-49f0-a5c5-ddb279c16308",
+              "parentUUID": "c70d220e-8517-433a-b152-816aee911a1e",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "97132ab3-d319-4f8f-9f71-50dde42407d8",
-            "f74878e1-c116-48fa-9ae6-26b36df5c2be"
+            "6dc9235a-c002-49de-9981-f53bb9f52874",
+            "c81cb2e3-add0-49f0-a5c5-ddb279c16308"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 20525,
+          "duration": 21260,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

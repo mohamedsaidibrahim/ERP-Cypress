@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 2,
-    "start": "2024-11-06T11:24:52.973Z",
-    "end": "2024-11-06T11:27:34.991Z",
-    "duration": 162018,
+    "start": "2024-11-13T11:25:20.640Z",
+    "end": "2024-11-13T11:28:04.028Z",
+    "duration": 163388,
     "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "82a7cf80-ab74-42a5-8fad-4f03676ab1c6",
+      "uuid": "86cafd75-876e-4533-893e-2e6c6cd95796",
       "title": "",
       "fullFile": "cypress/e2e/Authentication/Registeration/tests/Verify_happy_scenario.cy.ts",
       "file": "cypress/e2e/Authentication/Registeration/tests/Verify_happy_scenario.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "4f7b4412-1320-43c6-81fc-92d40e520638",
+          "uuid": "3ef018f8-c112-4a97-a486-88fcb9402886",
           "title": "Verify Happy Scenario Registeration",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "VerifyHappyScenarioRegisterationTestAr",
               "fullTitle": "Verify Happy Scenario Registeration VerifyHappyScenarioRegisterationTestAr",
               "timedOut": null,
-              "duration": 33774,
+              "duration": 33327,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: 'تم ارسال ايميل التاكيد' within the element: <h4> but never did.\n    at RegisterationPage.validateRegisteration (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Authentication/Registeration/pages/registerPage.ts:158:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Authentication/Registeration/tests/Verify_happy_scenario.cy.ts:11:0)",
                 "diff": null
               },
-              "uuid": "1e9c3eab-6f8d-46a5-9902-a6bb5dc91a36",
-              "parentUUID": "4f7b4412-1320-43c6-81fc-92d40e520638",
+              "uuid": "3162ac48-10bb-49e6-b6ae-acb723a7b2a7",
+              "parentUUID": "3ef018f8-c112-4a97-a486-88fcb9402886",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "VerifyHappyScenarioRegisterationTestEN",
               "fullTitle": "Verify Happy Scenario Registeration VerifyHappyScenarioRegisterationTestEN",
               "timedOut": null,
-              "duration": 34416,
+              "duration": 34805,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/Verification Email Sent/i' within the element: <h4> but never did.\n    at RegisterationPage.validateRegisteration (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Authentication/Registeration/pages/registerPage.ts:158:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Authentication/Registeration/tests/Verify_happy_scenario.cy.ts:16:0)",
                 "diff": null
               },
-              "uuid": "7cc8f124-52c3-43a2-a4e2-84140a62038b",
-              "parentUUID": "4f7b4412-1320-43c6-81fc-92d40e520638",
+              "uuid": "fcc01203-8428-44e1-9671-da1ff8dcae23",
+              "parentUUID": "3ef018f8-c112-4a97-a486-88fcb9402886",
               "isHook": false,
               "skipped": false
             }
@@ -82,12 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "1e9c3eab-6f8d-46a5-9902-a6bb5dc91a36",
-            "7cc8f124-52c3-43a2-a4e2-84140a62038b"
+            "3162ac48-10bb-49e6-b6ae-acb723a7b2a7",
+            "fcc01203-8428-44e1-9671-da1ff8dcae23"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 68190,
+          "duration": 68132,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 3,
+    "tests": 1,
     "passes": 0,
-    "pending": 1,
-    "failures": 2,
-    "start": "2024-11-06T11:36:24.840Z",
-    "end": "2024-11-06T11:40:14.748Z",
-    "duration": 229908,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-11-13T11:40:05.635Z",
+    "end": "2024-11-13T11:41:23.692Z",
+    "duration": 78057,
     "testsRegistered": 4,
     "passPercent": 0,
-    "pendingPercent": 25,
-    "other": 1,
-    "hasOther": true,
-    "skipped": 0,
-    "hasSkipped": false
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "41328e5d-ea16-4eca-981e-437fa8e04c81",
+      "uuid": "02c44999-959a-41c3-b012-47a710368106",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9cdc5bb3-5e20-4f61-a236-0fa482fd161f",
+          "uuid": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
           "title": "Add Company Dialoge",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1) Verify Happy Scenario The User Add The Required Data and Save and Back to The Previous Page..",
               "fullTitle": "Add Company Dialoge 1) Verify Happy Scenario The User Add The Required Data and Save and Back to The Previous Page..",
               "timedOut": null,
-              "duration": 38007,
+              "duration": 35790,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "cy.wait(1500);\ncy.navigateToTheLatestScreen();\ncy.wait(1000);\ncy.getInitItemsCountInListView();\nAddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.inputCompanyName(company_data_1.CompanyData.companyName);\nAddCompanyDialoge_1.AddCompanyDialog.inputBranchName(company_data_1.CompanyData.branchName);\ncy.get(\"@initialCount\").then((initialCount) => {\n    AddCompanyDialoge_1.AddCompanyDialog.selectCompanyType(initialCount);\n});\nAddCompanyDialoge_1.AddCompanyDialog.clickSaveButton();\nAddCompanyDialoge_1.AddCompanyDialog.dialogNotExist();\ncy.assertnewItemAddedToListView();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button span' but never did.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button span' but never did.\n    at AddCompanyDialog.clickAddCompanyButton (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/AddCompanyDialoge.ts:41:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts:20:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Company Dialoge`",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Company Dialoge`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts:13:0)",
                 "diff": null
               },
-              "uuid": "3b2b4ae9-3e4c-414b-b207-62b4380e0268",
-              "parentUUID": "9cdc5bb3-5e20-4f61-a236-0fa482fd161f",
+              "uuid": "5e9945f9-38a7-41ab-95f3-93590404140b",
+              "parentUUID": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
               "isHook": false,
               "skipped": false
             },
@@ -61,76 +61,68 @@
               "fullTitle": "Add Company Dialoge 2.Verify That The Save and Edit button Save The Action and Navigates To The Edit Screen.",
               "timedOut": null,
               "duration": 0,
-              "state": "pending",
+              "state": "skipped",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": true,
+              "pending": false,
               "context": null,
               "code": "cy.wait(1500);\ncy.navigateToTheLatestScreen();\ncy.wait(1000);\ncy.increaseScreenItemsMaxCount(100);\nAddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.inputCompanyName(company_data_1.CompanyData.companyName);\nAddCompanyDialoge_1.AddCompanyDialog.inputBranchName(company_data_1.CompanyData.branchName);\nAddCompanyDialoge_1.AddCompanyDialog.clickSaveAndEditBtn();\nAddCompanyDialoge_1.AddCompanyDialog.dialogNotExist();\ncy.url().should(\"contains\", \"edit\");",
               "err": {},
-              "uuid": "6201d8e5-7741-42b2-8583-638edfb6c5f0",
-              "parentUUID": "9cdc5bb3-5e20-4f61-a236-0fa482fd161f",
+              "uuid": "0eaffd4f-97f7-45a4-bedc-294c71e73147",
+              "parentUUID": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "3.Verify That All Components are Blank When The Add New Company list is Open.",
               "fullTitle": "Add Company Dialoge 3.Verify That All Components are Blank When The Add New Company list is Open.",
               "timedOut": null,
-              "duration": 34280,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "AddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.verifyElementsWithoutValues();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button span' but never did.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button span' but never did.\n    at AddCompanyDialog.clickAddCompanyButton (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/AddCompanyDialoge.ts:41:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts:43:0)",
-                "diff": null
-              },
-              "uuid": "722ccfcf-4bb3-43b3-9f75-bf6132ca4f2d",
-              "parentUUID": "9cdc5bb3-5e20-4f61-a236-0fa482fd161f",
+              "err": {},
+              "uuid": "f476c37d-37e8-4579-9d01-22645c14f7ac",
+              "parentUUID": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "4.Verify That The Form can not Submit if any of the required fields is empty",
               "fullTitle": "Add Company Dialoge 4.Verify That The Form can not Submit if any of the required fields is empty",
               "timedOut": null,
-              "duration": 38421,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.wait(1500);\ncy.navigateToTheLatestScreen();\ncy.wait(1000);\ncy.getInitItemsCountInListView();\nAddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.clickSaveButton();\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(3);\n    }\n    else {\n        cy.validateRequiredComponents(2);\n    }\n});\nAddCompanyDialoge_1.AddCompanyDialog.inputCompanyName(company_data_1.CompanyData.companyName);\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(2);\n    }\n    else {\n        cy.validateRequiredComponents(1);\n    }\n});\nAddCompanyDialoge_1.AddCompanyDialog.inputBranchName(company_data_1.CompanyData.BranchNameTh);\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(1);\n    }\n    else {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n});\ncy.get(\"@initialCount\").then((initialCount) => {\n    AddCompanyDialoge_1.AddCompanyDialog.selectCompanyType(initialCount);\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n    else {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button span' but never did.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button span' but never did.\n    at AddCompanyDialog.clickAddCompanyButton (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/AddCompanyDialoge.ts:41:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts:51:0)",
-                "diff": null
-              },
-              "uuid": "f891888c-783c-4f53-ade3-fa49aa0a6d67",
-              "parentUUID": "9cdc5bb3-5e20-4f61-a236-0fa482fd161f",
+              "err": {},
+              "uuid": "7b2285d9-f2d0-4baf-a9f0-534ad6f96446",
+              "parentUUID": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "3b2b4ae9-3e4c-414b-b207-62b4380e0268",
-            "722ccfcf-4bb3-43b3-9f75-bf6132ca4f2d",
-            "f891888c-783c-4f53-ade3-fa49aa0a6d67"
+            "5e9945f9-38a7-41ab-95f3-93590404140b"
           ],
-          "pending": [
-            "6201d8e5-7741-42b2-8583-638edfb6c5f0"
+          "pending": [],
+          "skipped": [
+            "0eaffd4f-97f7-45a4-bedc-294c71e73147",
+            "f476c37d-37e8-4579-9d01-22645c14f7ac",
+            "7b2285d9-f2d0-4baf-a9f0-534ad6f96446"
           ],
-          "skipped": [],
-          "duration": 110708,
+          "duration": 35790,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

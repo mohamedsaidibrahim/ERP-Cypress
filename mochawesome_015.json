@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-06T11:55:09.665Z",
-    "end": "2024-11-06T11:56:24.735Z",
-    "duration": 75070,
+    "start": "2024-11-13T11:46:41.380Z",
+    "end": "2024-11-13T11:48:02.791Z",
+    "duration": 81411,
     "testsRegistered": 6,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "e4afd29a-f4c5-46ec-8412-c940fe0d6d2c",
+      "uuid": "7d35d788-fded-412b-a608-9c14569aff2f",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Display_all_branches_list.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Display_all_branches_list.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d79dab3d-ec04-4d48-aeef-902f29c2d7e0",
+          "uuid": "19c9b2c3-ab0e-4e2a-8273-db25155e71c9",
           "title": "Display All Branches",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1. Verift that all the table COLUMNS Headers ARE Successfully displayed",
               "fullTitle": "Display All Branches 1. Verift that all the table COLUMNS Headers ARE Successfully displayed",
               "timedOut": null,
-              "duration": 34921,
+              "duration": 39923,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Display All Branches`\n    at EditCompanyScreen.clickFirstCompanyToEdit (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:25:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Display_all_branches_list.cy.ts:14:0)",
                 "diff": null
               },
-              "uuid": "7aa3f7e2-0c1f-402d-94f9-f5a1ce3b5fed",
-              "parentUUID": "d79dab3d-ec04-4d48-aeef-902f29c2d7e0",
+              "uuid": "0f62329d-5fd9-4612-b982-5ac1302d6c5c",
+              "parentUUID": "19c9b2c3-ab0e-4e2a-8273-db25155e71c9",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.get(\"table\").then((table) => {\n    cy.wrap(table).find(\"th\").eq(0).contains(/code/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(1)\n        .contains(/branch name/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/branch region/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/branch city/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(4)\n        .contains(/branch address/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(5)\n        .scrollIntoView()\n        .contains(/phone/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(6)\n        .scrollIntoView()\n        .contains(/branch email/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(7)\n        .scrollIntoView()\n        .contains(/status/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(8)\n        .scrollIntoView()\n        .contains(/actions/i)\n        .should(\"be.visible\");\n});",
               "err": {},
-              "uuid": "f6a1d6cb-3d0c-4032-966f-81d987644c3d",
-              "parentUUID": "d79dab3d-ec04-4d48-aeef-902f29c2d7e0",
+              "uuid": "4e65db7c-4e6c-4933-ab5c-977d2ceaff6f",
+              "parentUUID": "19c9b2c3-ab0e-4e2a-8273-db25155e71c9",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "cy.logMsg(\"Before Submission\");\ncy.scrollToLastElement();\ncy.getInitItemsCountInListView();\ncy.get(\"table tbody tr\")\n    .last()\n    .find(\"td\")\n    .eq(1)\n    .invoke(\"text\")\n    .then((tName1) => {\n    cy.wrap(tName1.trim()).as(\"tName1\");\n});\ncy.get(\"table tbody tr\")\n    .last()\n    .find(\"td\")\n    .eq(2)\n    .invoke(\"text\")\n    .then((tRegion1) => {\n    cy.wrap(tRegion1.trim()).as(\"tRegion1\");\n});\ncy.get(\"table tbody tr\")\n    .last()\n    .find(\"td\")\n    .eq(3)\n    .invoke(\"text\")\n    .then((tCity1) => {\n    cy.wrap(tCity1.trim()).as(\"tCity1\");\n});\ncy.get(\"table tbody tr\")\n    .last()\n    .find(\"td\")\n    .eq(4)\n    .invoke(\"text\")\n    .then((tAddress1) => {\n    cy.wrap(tAddress1.trim()).as(\"tAddress1\");\n});\ncy.get(\"table tbody tr\")\n    .last()\n    .find(\"td\")\n    .eq(5)\n    .invoke(\"text\")\n    .then((tPhone1) => {\n    cy.wrap(tPhone1.trim()).as(\"tPhone1\");\n});\ncy.get(\"table tbody tr\")\n    .last()\n    .find(\"td\")\n    .eq(6)\n    .invoke(\"text\")\n    .then((tMail1) => {\n    cy.wrap(tMail1.trim()).as(\"tMail1\");\n});\n//  Submit A new Branch\nbranches_management_1.BranchesManagment.implementAddNewBranch();\nbranches_management_1.BranchesManagment.clickSaveButton();\n//  After Submission\ncy.wait(500);\ncy.reload();\ncy.wait(500);\ncy.scrollToLastElement();\ncy.get(\"@tName1\").then((tName1) => {\n    cy.get(\"table tbody tr\")\n        .last()\n        .find(\"td\")\n        .eq(1)\n        .scrollIntoView()\n        .invoke(\"text\")\n        .then((tName2) => {\n        expect((0, utils_1.trimText)(tName1.toString().trim())).not.to.equal((0, utils_1.trimText)(tName2));\n    });\n});\ncy.get(\"@tRegion1\").then((tRegion1) => {\n    cy.get(\"table tbody tr\")\n        .last()\n        .find(\"td\")\n        .eq(2)\n        .scrollIntoView()\n        .invoke(\"text\")\n        .then((tRegion2) => {\n        expect((0, utils_1.trimText)(tRegion1.toString().trim())).not.to.equal((0, utils_1.trimText)(tRegion2));\n    });\n});\ncy.get(\"@tCity1\").then((tCity1) => {\n    cy.get(\"table tbody tr\")\n        .last()\n        .find(\"td\")\n        .eq(3)\n        .scrollIntoView()\n        .invoke(\"text\")\n        .then((tCity2) => {\n        expect((0, utils_1.trimText)(tCity1.toString().trim())).not.to.equal((0, utils_1.trimText)(tCity2));\n    });\n});\ncy.get(\"@tAddress1\").then((tAddress1) => {\n    cy.get(\"table tbody tr\")\n        .last()\n        .find(\"td\")\n        .eq(1)\n        .scrollIntoView()\n        .invoke(\"text\")\n        .then((tAddress2) => {\n        expect((0, utils_1.trimText)(tAddress1.toString().trim())).not.to.equal((0, utils_1.trimText)(tAddress2));\n    });\n});\ncy.get(\"@tPhone1\").then((tPhone1) => {\n    cy.get(\"table tbody tr\")\n        .last()\n        .find(\"td\")\n        .eq(1)\n        .scrollIntoView()\n        .invoke(\"text\")\n        .then((tPhone2) => {\n        expect((0, utils_1.trimText)(tPhone1.toString().trim())).not.to.equal((0, utils_1.trimText)(tPhone2));\n    });\n});\ncy.get(\"@tMail1\").then((tMail1) => {\n    cy.get(\"table tbody tr\")\n        .last()\n        .find(\"td\")\n        .eq(1)\n        .scrollIntoView()\n        .invoke(\"text\")\n        .then((tMail2) => {\n        expect((0, utils_1.trimText)(tMail1.toString().trim())).not.to.equal((0, utils_1.trimText)(tMail2));\n    });\n});\ncy.assertnewItemAddedToListView();",
               "err": {},
-              "uuid": "4f7a391b-3d25-43bf-b206-609f01bafafa",
-              "parentUUID": "d79dab3d-ec04-4d48-aeef-902f29c2d7e0",
+              "uuid": "55c44b19-917e-4e7f-b00f-87d2c0e478c7",
+              "parentUUID": "19c9b2c3-ab0e-4e2a-8273-db25155e71c9",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "cy.verifyFirstCellInTable(1, branches_managment__data_1.BranchesManagmentData.branchName);\ncy.verifyFirstCellInTable(2, branches_managment__data_1.BranchesManagmentData.branchRegion);\ncy.verifyFirstCellInTable(3, branches_managment__data_1.BranchesManagmentData.branchCity);\ncy.verifyFirstCellInTable(4, branches_managment__data_1.BranchesManagmentData.branchAddress);\ncy.verifyFirstCellInTable(5, branches_managment__data_1.BranchesManagmentData.mobileNumber);\ncy.verifyFirstCellInTable(6, branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.checkVisibilityOfEditIcon();\nbranches_management_1.BranchesManagment.checkVisibilityOfDeleteIcon();",
               "err": {},
-              "uuid": "004451eb-73a2-4452-b2ee-34687821ab8f",
-              "parentUUID": "d79dab3d-ec04-4d48-aeef-902f29c2d7e0",
+              "uuid": "4f9e90ee-23ce-411c-b6a5-24d4f0975efe",
+              "parentUUID": "19c9b2c3-ab0e-4e2a-8273-db25155e71c9",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "branches_management_1.BranchesManagment.clickDeleteTheLastItem();\nbranches_management_1.BranchesManagment.CancelDeleteBranchDialog();",
               "err": {},
-              "uuid": "6a940764-77da-47f4-940e-d122d7b0f297",
-              "parentUUID": "d79dab3d-ec04-4d48-aeef-902f29c2d7e0",
+              "uuid": "faaf73ba-ba6e-4256-b5e5-bdd47ab52d56",
+              "parentUUID": "19c9b2c3-ab0e-4e2a-8273-db25155e71c9",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "cy.wait(1000);\ncy.getInitItemsCountInListView();\n//  Perform Delete Branch\nbranches_management_1.BranchesManagment.clickDeleteTheLastItem();\nbranches_management_1.BranchesManagment.ConfirmDeleteBranchDialog();\ncy.reload();\ncy.get(\"table tbody tr\").should(\"be.visible\");\ncy.assertItemDeletedFromListView();",
               "err": {},
-              "uuid": "800c705c-7b9b-4d68-953c-4d2553b0393a",
-              "parentUUID": "d79dab3d-ec04-4d48-aeef-902f29c2d7e0",
+              "uuid": "cf612ebb-3997-46c1-a8e8-f20eef8a0d7b",
+              "parentUUID": "19c9b2c3-ab0e-4e2a-8273-db25155e71c9",
               "isHook": false,
               "skipped": true
             }
@@ -150,17 +150,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "7aa3f7e2-0c1f-402d-94f9-f5a1ce3b5fed"
+            "0f62329d-5fd9-4612-b982-5ac1302d6c5c"
           ],
           "pending": [],
           "skipped": [
-            "f6a1d6cb-3d0c-4032-966f-81d987644c3d",
-            "4f7a391b-3d25-43bf-b206-609f01bafafa",
-            "004451eb-73a2-4452-b2ee-34687821ab8f",
-            "6a940764-77da-47f4-940e-d122d7b0f297",
-            "800c705c-7b9b-4d68-953c-4d2553b0393a"
+            "4e65db7c-4e6c-4933-ab5c-977d2ceaff6f",
+            "55c44b19-917e-4e7f-b00f-87d2c0e478c7",
+            "4f9e90ee-23ce-411c-b6a5-24d4f0975efe",
+            "faaf73ba-ba6e-4256-b5e5-bdd47ab52d56",
+            "cf612ebb-3997-46c1-a8e8-f20eef8a0d7b"
           ],
-          "duration": 34921,
+          "duration": 39923,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

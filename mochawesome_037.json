@@ -1,15 +1,15 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 3,
     "passes": 1,
     "pending": 0,
-    "failures": 0,
-    "start": "2024-11-06T15:54:06.142Z",
-    "end": "2024-11-06T15:55:52.374Z",
-    "duration": 106232,
-    "testsRegistered": 1,
-    "passPercent": 100,
+    "failures": 2,
+    "start": "2024-11-13T17:05:48.211Z",
+    "end": "2024-11-13T17:15:47.342Z",
+    "duration": 599131,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,49 +18,96 @@
   },
   "results": [
     {
-      "uuid": "7878b287-5466-4c55-929c-e47f3c2a891c",
+      "uuid": "3bcca3d1-ec02-4d9a-80e8-08a12952c11b",
       "title": "",
-      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_account_screen.cy.ts",
-      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_account_screen.cy.ts",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "5ba6d207-b9e1-4fcf-8232-3210c083a3bf",
-          "title": "Acount View Displaying Chart of Account",
+          "uuid": "b16969ff-55fe-4911-b693-8571add0e824",
+          "title": "Displaying List View Chart of Account",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Verify All Components are displaying in their correct states",
-              "fullTitle": "Acount View Displaying Chart of Account Verify All Components are displaying in their correct states",
+              "title": "1. Verify All Components are displaying in their correct states",
+              "fullTitle": "Displaying List View Chart of Account 1. Verify All Components are displaying in their correct states",
               "timedOut": null,
-              "duration": 106008,
+              "duration": 105296,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1500);\ncy.clickContinueAs();\ncy.wait(1500);\ndisplaying_main_screen_1.DisplayingMainScreen.verifyEmptyViewPanal();\ndisplaying_main_screen_1.DisplayingMainScreen.verifyTHeTreeHeaders();\ndisplaying_main_screen_1.DisplayingMainScreen.verifySearchTextField();\ndisplaying_main_screen_1.DisplayingMainScreen.verifyTheMainParentAccounts();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.md\\:col-8`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.md\\:col-8`, but never found it.\n    at DisplayingMainScreen.verifyEmptyViewPanal (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/displaying_main_screen.ts:22:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts:18:0)",
+                "diff": null
+              },
+              "uuid": "5804020e-c274-4da3-861d-130b777381e9",
+              "parentUUID": "b16969ff-55fe-4911-b693-8571add0e824",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Verify Shiftting between Tree and List view",
+              "fullTitle": "Displaying List View Chart of Account 2. Verify Shiftting between Tree and List view",
+              "timedOut": null,
+              "duration": 98271,
               "state": "passed",
               "speed": "slow",
               "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
-              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.get('div[class=\"description\"]').last().scrollIntoView().click();\ncy.wait(1000);\ndisplaying_account_screen_1.DisplayingAccountScreen.verifyDisplayingTheCorrectDataInAccountView();",
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncharts_of_accounts_1.ChartOfAccounts.switchingToListView();\ncharts_of_accounts_1.ChartOfAccounts.switchingToTreeView();",
               "err": {},
-              "uuid": "3577e83a-f569-4981-9120-fac4fd07efc2",
-              "parentUUID": "5ba6d207-b9e1-4fcf-8232-3210c083a3bf",
+              "uuid": "dfa9533f-d4ec-45df-af86-8fb896a2d302",
+              "parentUUID": "b16969ff-55fe-4911-b693-8571add0e824",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "3. Verify Tree and List views have the same data",
+              "fullTitle": "Displaying List View Chart of Account 3. Verify Tree and List views have the same data",
+              "timedOut": null,
+              "duration": 86838,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1500);\ncy.clickContinueAs();\ncy.wait(1500);\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.accountCOde);\ncy.wait(1000);\ncy.get('div[class=\"description\"]').last().scrollIntoView().click();\ncy.wait(1000);\ncy.wrapDisabledPlaceholderValue(0).then((codeT) => {\n    cy.wrap(codeT).as(\"codeT\");\n});\ncy.wrapDisabledPlaceholderValue(2).then((nameText) => {\n    cy.wrap(nameText).as(\"nameText\");\n});\ncy.wrapDisabledPlaceholderValue(5).then((natureTxt) => {\n    cy.wrap(natureTxt).as(\"natureTxt\");\n});\ncy.wrapDisabledPlaceholderValue(6).then((sectionTxt) => {\n    cy.wrap(sectionTxt).as(\"sectionTxt\");\n});\ncy.wrapDisabledPlaceholderValue(7).then((typeText) => {\n    cy.wrap(typeText).as(\"typeText\");\n});\ncy.wait(2000);\ncharts_of_accounts_1.ChartOfAccounts.switchingToListView();\ncharts_of_accounts_1.ChartOfAccounts.SearchAListAccount(accounting_data_1.AccountingData.accountCOde);\ncy.wait(2000);\ncy.get(\"@codeT\").then((codeT) => {\n    cy.verifyFirstCellInTable(0, (0, utils_1.getWrappedString)(codeT));\n});\ncy.get(\"@nameText\").then((nameText) => {\n    cy.verifyFirstCellInTable(1, (0, utils_1.getWrappedString)(nameText));\n});\ncy.get(\"@sectionTxt\").then((sectionTxt) => {\n    cy.verifyFirstCellInTable(3, (0, utils_1.getWrappedString)(sectionTxt));\n});\ncy.get(\"@typeText\").then((typeText) => {\n    cy.verifyFirstCellInTable(4, (0, utils_1.getWrappedString)(typeText));\n});\ncy.get(\"@natureTxt\").then((natureTxt) => {\n    cy.verifyFirstCellInTable(5, (0, utils_1.getWrappedString)(natureTxt));\n});",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.p-tree-filter`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.p-tree-filter`, but never found it.\n    at ChartOfAccounts.SearchAnTreeAccount (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/charts_of_accounts.ts:49:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts:35:0)",
+                "diff": null
+              },
+              "uuid": "b2b78a55-5286-4e85-b518-6265d6e06156",
+              "parentUUID": "b16969ff-55fe-4911-b693-8571add0e824",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "3577e83a-f569-4981-9120-fac4fd07efc2"
+            "dfa9533f-d4ec-45df-af86-8fb896a2d302"
           ],
-          "failures": [],
+          "failures": [
+            "5804020e-c274-4da3-861d-130b777381e9",
+            "b2b78a55-5286-4e85-b518-6265d6e06156"
+          ],
           "pending": [],
           "skipped": [],
-          "duration": 106008,
+          "duration": 290405,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
