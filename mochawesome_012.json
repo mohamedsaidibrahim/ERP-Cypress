@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 0,
-    "pending": 0,
-    "failures": 1,
-    "start": "2024-11-13T11:42:45.767Z",
-    "end": "2024-11-13T11:44:02.477Z",
-    "duration": 76710,
+    "tests": 2,
+    "passes": 1,
+    "pending": 1,
+    "failures": 0,
+    "start": "2024-11-20T11:44:02.304Z",
+    "end": "2024-11-20T11:46:04.728Z",
+    "duration": 122424,
     "testsRegistered": 4,
-    "passPercent": 0,
-    "pendingPercent": 0,
-    "other": 0,
-    "hasOther": false,
-    "skipped": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 25,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 1,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "74f10cba-152d-4111-9426-db2a3c5466b6",
+      "uuid": "4b6cfcbb-1aad-4038-91bb-93f11f1d29de",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/Company_list.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/Company_list.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "dab42bc2-c38b-47a1-bfbf-c5208922d2f5",
+          "uuid": "65ed4aef-7007-4959-a24c-6f30d828f75e",
           "title": "Company List",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,17 @@
               "title": "1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
               "fullTitle": "Company List 1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
               "timedOut": null,
-              "duration": 34313,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 15418,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get(\"table thead tr th\").eq(0).should(\"include\", /Code/i);\ncy.get(\"table thead tr th\")\n    .eq(1)\n    .should(\"include\", /Companies Name/i);\ncy.get(\"table thead tr th\")\n    .eq(2)\n    .should(\"include\", /Companies Type/i);\ncy.get(\"table thead tr th\")\n    .eq(3)\n    .should(\"include\", /Tax ID/i);\ncy.get(\"table thead tr th\")\n    .eq(4)\n    .should(\"include\", /Commercial ID/i);\ncy.get(\"table thead tr th\").eq(5).should(\"include\", /Phone/i);\ncy.get(\"table thead tr th\")\n    .eq(6)\n    .should(\"include\", /Status/i);\ncy.get(\"table thead tr th\")\n    .eq(7)\n    .should(\"include\", /Actions/i);",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Company List`",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Company List`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/Company_list.cy.ts:12:0)",
-                "diff": null
-              },
-              "uuid": "c540dc58-1e81-4178-918c-f60c51678762",
-              "parentUUID": "dab42bc2-c38b-47a1-bfbf-c5208922d2f5",
+              "err": {},
+              "uuid": "42252f12-2e5f-4506-9f06-8d14d9bb7537",
+              "parentUUID": "65ed4aef-7007-4959-a24c-6f30d828f75e",
               "isHook": false,
               "skipped": false
             },
@@ -61,36 +57,40 @@
               "fullTitle": "Company List 2.Verify That The Cells Under Status Column is Actionable (Radio Button)",
               "timedOut": null,
               "duration": 0,
-              "state": "skipped",
+              "state": "pending",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": false,
+              "pending": true,
               "context": null,
               "code": "cy.wait(2000);\ncy.get(\"table\").then(($table) => {\n    cy.wrap($table)\n        .find(\"tbody tr\")\n        .last()\n        .find(\"td\")\n        .eq(6)\n        .scrollIntoView()\n        .then(($lastActions) => {\n        if ($lastActions\n            .find('p[class=\"inactive body_b16 ng-star-inserted\"]')\n            .is(\":visible\")) {\n            cy.wrap(\"inactive\").as(\"initStatus\");\n        }\n        else if ($lastActions\n            .find('p[class=\"active body_b16 ng-star-inserted\"]')\n            .is(\":visible\")) {\n            cy.wrap(\"active\").as(\"initStatus\");\n        }\n        else {\n            cy.log(\"No Actions are Visible\");\n        }\n    });\n    company_list_1.CompanyList.clickLastActivationSliderListView();\n    company_list_1.CompanyList.confirmChangeStatusPopUp();\n    editCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\n    cy.get('div[class=\"edit_company_page\"]').then(($EditScreen) => {\n        if ($EditScreen\n            .find('p[class=\"inactive body_b16 ng-star-inserted\"]')\n            .is(\":visible\")) {\n            cy.wrap(\"inactive\").as(\"finalStatus\");\n        }\n        else if ($EditScreen\n            .find('p[class=\"active body_b16 ng-star-inserted\"]')\n            .is(\":visible\")) {\n            cy.wrap(\"active\").as(\"finalStatus\");\n        }\n        else {\n            cy.log(\"No Activation is Visible in Edit Screen\");\n        }\n    });\n    cy.get(\"@initStatus\").then((initStatus) => {\n        cy.get(\"@finalStatus\").then((finalStatus) => {\n            expect((0, utils_1.getWrappedString)(initStatus)).not.to.equal((0, utils_1.getWrappedString)(finalStatus));\n        });\n    });\n});",
               "err": {},
-              "uuid": "07792a20-79ed-490c-bc02-f945299e3517",
-              "parentUUID": "dab42bc2-c38b-47a1-bfbf-c5208922d2f5",
+              "uuid": "3ffb4c14-c1cd-4e36-bf73-37759f7e33b7",
+              "parentUUID": "65ed4aef-7007-4959-a24c-6f30d828f75e",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "3.Verify That The Edit is navigate To The Edit Company of The Company Represent on This Row.",
               "fullTitle": "Company List 3.Verify That The Edit is navigate To The Edit Company of The Company Represent on This Row.",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 33445,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "company_list_1.CompanyList.clickToNavigateCompanyEdit();",
-              "err": {},
-              "uuid": "e6e6214d-1c2b-4b4b-b371-192f8e94750b",
-              "parentUUID": "dab42bc2-c38b-47a1-bfbf-c5208922d2f5",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Company List`",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Company List`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/Company_list.cy.ts:12:0)",
+                "diff": null
+              },
+              "uuid": "8f701fbb-9862-407a-a1ea-4886c5faa070",
+              "parentUUID": "65ed4aef-7007-4959-a24c-6f30d828f75e",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "4.Verify That The Paginator is Successfully Displayed.",
@@ -105,24 +105,26 @@
               "context": null,
               "code": "company_list_1.CompanyList.CheckPaginator();",
               "err": {},
-              "uuid": "4a1a6ef7-cb99-444b-a074-781af100781e",
-              "parentUUID": "dab42bc2-c38b-47a1-bfbf-c5208922d2f5",
+              "uuid": "aff19ea4-6ea3-4834-b8f5-932ffbaf3736",
+              "parentUUID": "65ed4aef-7007-4959-a24c-6f30d828f75e",
               "isHook": false,
               "skipped": true
             }
           ],
           "suites": [],
-          "passes": [],
+          "passes": [
+            "42252f12-2e5f-4506-9f06-8d14d9bb7537"
+          ],
           "failures": [
-            "c540dc58-1e81-4178-918c-f60c51678762"
+            "8f701fbb-9862-407a-a1ea-4886c5faa070"
           ],
-          "pending": [],
+          "pending": [
+            "3ffb4c14-c1cd-4e36-bf73-37759f7e33b7"
+          ],
           "skipped": [
-            "07792a20-79ed-490c-bc02-f945299e3517",
-            "e6e6214d-1c2b-4b4b-b371-192f8e94750b",
-            "4a1a6ef7-cb99-444b-a074-781af100781e"
+            "aff19ea4-6ea3-4834-b8f5-932ffbaf3736"
           ],
-          "duration": 34313,
+          "duration": 48863,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

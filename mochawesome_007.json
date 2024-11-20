@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-11-13T11:31:04.526Z",
-    "end": "2024-11-13T11:31:18.433Z",
-    "duration": 13907,
+    "start": "2024-11-20T11:31:16.720Z",
+    "end": "2024-11-20T11:31:29.900Z",
+    "duration": 13180,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "333bc734-989b-4206-a784-58c85a9d3c13",
+      "uuid": "c66866ea-65d7-4462-92f0-feb8f822d778",
       "title": "",
       "fullFile": "cypress/e2e/Authentication/Login/tests/Verify_alll_components_displaying.cy.ts",
       "file": "cypress/e2e/Authentication/Login/tests/Verify_alll_components_displaying.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "c310fbfd-74e8-4221-8786-726ce0261c44",
+          "uuid": "c69f7e07-c94a-4022-b19d-b05f314222b0",
           "title": "Verify that all the components exist on the Login page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "En",
               "fullTitle": "Verify that all the components exist on the Login page En",
               "timedOut": null,
-              "duration": 6181,
+              "duration": 5903,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "loginPage_1.LoginPage.visit();\nloginPage_1.LoginPage.getPageHeader(\"Login\");\nloginPage_1.LoginPage.getPageSecHeader();\nloginPage_1.LoginPage.checkUserNameLabel(\"Email Or Phone*\");\nloginPage_1.LoginPage.inputEmail(auth_data_1.AuthData.loginMail);\nloginPage_1.LoginPage.checkPasswordLabel(\"Password\");\nloginPage_1.LoginPage.inputPassword(auth_data_1.AuthData.pass);\nloginPage_1.LoginPage.checkUserForgetPasswordLink();\nloginPage_1.LoginPage.checkDoNotHaveAccountLink(\"Don't have an account?\");\nloginPage_1.LoginPage.checkLangButton();\nloginPage_1.LoginPage.checkLoginButton(\"Login\");",
               "err": {},
-              "uuid": "31d6fba8-7d1c-4be5-89f4-c49c5c912c5c",
-              "parentUUID": "c310fbfd-74e8-4221-8786-726ce0261c44",
+              "uuid": "6f8da4cb-9abb-45ef-9c8f-3879a8ecf9de",
+              "parentUUID": "c69f7e07-c94a-4022-b19d-b05f314222b0",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "Ar",
               "fullTitle": "Verify that all the components exist on the Login page Ar",
               "timedOut": null,
-              "duration": 7455,
+              "duration": 7020,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "loginPage_1.LoginPage.visit();\nloginPage_1.LoginPage.clickLangButton();\ncy.wait(1500);\nloginPage_1.LoginPage.getPageHeader(\"تسجيل الدخول\");\nloginPage_1.LoginPage.getPageSecHeader();\nloginPage_1.LoginPage.checkUserNameLabel(\"البريد الالكتروني او رقم الهاتف*\");\nloginPage_1.LoginPage.inputEmail(auth_data_1.AuthData.loginMail);\nloginPage_1.LoginPage.checkPasswordLabel(\"كلمة المرور\");\nloginPage_1.LoginPage.inputPassword(auth_data_1.AuthData.pass);\nloginPage_1.LoginPage.checkUserForgetPasswordLink();\nloginPage_1.LoginPage.checkDoNotHaveAccountLink(\"ليس لديك حساب؟\");\nloginPage_1.LoginPage.checkLoginButton(\"تسجيل الدخول\");",
               "err": {},
-              "uuid": "10e132f9-e910-487e-866f-9090eec41956",
-              "parentUUID": "c310fbfd-74e8-4221-8786-726ce0261c44",
+              "uuid": "ceb0466d-9354-4a79-b516-c1433a128dde",
+              "parentUUID": "c69f7e07-c94a-4022-b19d-b05f314222b0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "31d6fba8-7d1c-4be5-89f4-c49c5c912c5c",
-            "10e132f9-e910-487e-866f-9090eec41956"
+            "6f8da4cb-9abb-45ef-9c8f-3879a8ecf9de",
+            "ceb0466d-9354-4a79-b516-c1433a128dde"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 13636,
+          "duration": 12923,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

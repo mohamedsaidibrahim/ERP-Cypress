@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-13T11:40:05.635Z",
-    "end": "2024-11-13T11:41:23.692Z",
-    "duration": 78057,
+    "start": "2024-11-20T11:40:05.161Z",
+    "end": "2024-11-20T11:41:30.102Z",
+    "duration": 84941,
     "testsRegistered": 4,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "02c44999-959a-41c3-b012-47a710368106",
+      "uuid": "372c8923-747f-472f-ada9-2ed61a27913e",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
+          "uuid": "91a0b0e7-c195-46f2-81d2-106c9641b080",
           "title": "Add Company Dialoge",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1) Verify Happy Scenario The User Add The Required Data and Save and Back to The Previous Page..",
               "fullTitle": "Add Company Dialoge 1) Verify Happy Scenario The User Add The Required Data and Save and Back to The Previous Page..",
               "timedOut": null,
-              "duration": 35790,
+              "duration": 34223,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Company Dialoge`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts:13:0)",
                 "diff": null
               },
-              "uuid": "5e9945f9-38a7-41ab-95f3-93590404140b",
-              "parentUUID": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
+              "uuid": "462d593c-10df-423e-bc86-e33485ed321a",
+              "parentUUID": "91a0b0e7-c195-46f2-81d2-106c9641b080",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.wait(1500);\ncy.navigateToTheLatestScreen();\ncy.wait(1000);\ncy.increaseScreenItemsMaxCount(100);\nAddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.inputCompanyName(company_data_1.CompanyData.companyName);\nAddCompanyDialoge_1.AddCompanyDialog.inputBranchName(company_data_1.CompanyData.branchName);\nAddCompanyDialoge_1.AddCompanyDialog.clickSaveAndEditBtn();\nAddCompanyDialoge_1.AddCompanyDialog.dialogNotExist();\ncy.url().should(\"contains\", \"edit\");",
               "err": {},
-              "uuid": "0eaffd4f-97f7-45a4-bedc-294c71e73147",
-              "parentUUID": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
+              "uuid": "106bea64-c791-4064-8353-57ab477f6fbe",
+              "parentUUID": "91a0b0e7-c195-46f2-81d2-106c9641b080",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "AddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.verifyElementsWithoutValues();",
               "err": {},
-              "uuid": "f476c37d-37e8-4579-9d01-22645c14f7ac",
-              "parentUUID": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
+              "uuid": "7d70e120-2a6c-48be-b0c3-f1c85237bba4",
+              "parentUUID": "91a0b0e7-c195-46f2-81d2-106c9641b080",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "cy.wait(1500);\ncy.navigateToTheLatestScreen();\ncy.wait(1000);\ncy.getInitItemsCountInListView();\nAddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.clickSaveButton();\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(3);\n    }\n    else {\n        cy.validateRequiredComponents(2);\n    }\n});\nAddCompanyDialoge_1.AddCompanyDialog.inputCompanyName(company_data_1.CompanyData.companyName);\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(2);\n    }\n    else {\n        cy.validateRequiredComponents(1);\n    }\n});\nAddCompanyDialoge_1.AddCompanyDialog.inputBranchName(company_data_1.CompanyData.BranchNameTh);\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(1);\n    }\n    else {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n});\ncy.get(\"@initialCount\").then((initialCount) => {\n    AddCompanyDialoge_1.AddCompanyDialog.selectCompanyType(initialCount);\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n    else {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n});",
               "err": {},
-              "uuid": "7b2285d9-f2d0-4baf-a9f0-534ad6f96446",
-              "parentUUID": "97aa93da-3c31-4431-9a59-a40c948ca5ed",
+              "uuid": "71f2dfc5-a345-4049-b691-51a1f7557dea",
+              "parentUUID": "91a0b0e7-c195-46f2-81d2-106c9641b080",
               "isHook": false,
               "skipped": true
             }
@@ -114,15 +114,15 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "5e9945f9-38a7-41ab-95f3-93590404140b"
+            "462d593c-10df-423e-bc86-e33485ed321a"
           ],
           "pending": [],
           "skipped": [
-            "0eaffd4f-97f7-45a4-bedc-294c71e73147",
-            "f476c37d-37e8-4579-9d01-22645c14f7ac",
-            "7b2285d9-f2d0-4baf-a9f0-534ad6f96446"
+            "106bea64-c791-4064-8353-57ab477f6fbe",
+            "7d70e120-2a6c-48be-b0c3-f1c85237bba4",
+            "71f2dfc5-a345-4049-b691-51a1f7557dea"
           ],
-          "duration": 35790,
+          "duration": 34223,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

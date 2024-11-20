@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 7,
-    "start": "2024-11-13T11:31:45.775Z",
-    "end": "2024-11-13T11:40:03.907Z",
-    "duration": 498132,
+    "start": "2024-11-20T11:31:54.960Z",
+    "end": "2024-11-20T11:40:03.352Z",
+    "duration": 488392,
     "testsRegistered": 7,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "84b9ec79-8129-4d2c-8e5f-0066366ec0e6",
+      "uuid": "9bf8bdb0-a946-49cb-a653-b703615006e4",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "897e3d86-8bd1-49e5-9285-4cbbf4488a25",
+          "uuid": "7c40b64d-2b34-4bb7-a35d-a8c7e7a6386a",
           "title": "Add Domain Space",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify Adding Subdomain",
               "fullTitle": "Add Domain Space 1.Verify Adding Subdomain",
               "timedOut": null,
-              "duration": 34306,
+              "duration": 33417,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"plan_header\"] button`, but never found it.\n    at MySubscriptionsPage.clickAddDomainSpaceBtn (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/My_subscriptions_page/pages/my-subscriptions_page.ts:7:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:13:0)",
                 "diff": null
               },
-              "uuid": "67efcac3-01de-4c7b-9de6-0d957d97f310",
-              "parentUUID": "897e3d86-8bd1-49e5-9285-4cbbf4488a25",
+              "uuid": "cb3e2912-cdbd-4642-936f-0e238781dc2b",
+              "parentUUID": "7c40b64d-2b34-4bb7-a35d-a8c7e7a6386a",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "2.Verify That The System Correctly Calculate The Price Monthly and Yearly",
               "fullTitle": "Add Domain Space 2.Verify That The System Correctly Calculate The Price Monthly and Yearly",
               "timedOut": null,
-              "duration": 36751,
+              "duration": 35785,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"plan_header\"] button`, but never found it.\n    at MySubscriptionsPage.clickAddDomainSpaceBtn (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/My_subscriptions_page/pages/my-subscriptions_page.ts:7:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:24:0)",
                 "diff": null
               },
-              "uuid": "4d929279-5cc3-4e8a-9e7c-4ca389bbb192",
-              "parentUUID": "897e3d86-8bd1-49e5-9285-4cbbf4488a25",
+              "uuid": "d19f40e6-0ae0-4fe9-9af5-918e180996d6",
+              "parentUUID": "7c40b64d-2b34-4bb7-a35d-a8c7e7a6386a",
               "isHook": false,
               "skipped": false
             },
@@ -82,7 +82,7 @@
               "title": "3.Verify That The Count Can't be Greater Than 12 or Less Than 1",
               "fullTitle": "Add Domain Space 3.Verify That The Count Can't be Greater Than 12 or Less Than 1",
               "timedOut": null,
-              "duration": 38034,
+              "duration": 37100,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -95,8 +95,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div.new_domain`, but never found it.\n    at AddDomainSpace.clickDialoge (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/pages/add_domain_space.ts:19:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:35:0)",
                 "diff": null
               },
-              "uuid": "b625dbf0-d139-4d88-89f7-3e46dbe59a2c",
-              "parentUUID": "897e3d86-8bd1-49e5-9285-4cbbf4488a25",
+              "uuid": "efef1477-990c-4a99-93a7-56e6b435536d",
+              "parentUUID": "7c40b64d-2b34-4bb7-a35d-a8c7e7a6386a",
               "isHook": false,
               "skipped": false
             },
@@ -104,7 +104,7 @@
               "title": "4.Verify That The Count accepts Numbers",
               "fullTitle": "Add Domain Space 4.Verify That The Count accepts Numbers",
               "timedOut": null,
-              "duration": 34094,
+              "duration": 33594,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -117,8 +117,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"plan_header\"] button`, but never found it.\n    at MySubscriptionsPage.clickAddDomainSpaceBtn (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/My_subscriptions_page/pages/my-subscriptions_page.ts:7:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:43:0)",
                 "diff": null
               },
-              "uuid": "d5698d15-cb2a-4c54-b884-68ec84476f83",
-              "parentUUID": "897e3d86-8bd1-49e5-9285-4cbbf4488a25",
+              "uuid": "3611e6db-0774-4420-9c05-5b19d9edecc7",
+              "parentUUID": "7c40b64d-2b34-4bb7-a35d-a8c7e7a6386a",
               "isHook": false,
               "skipped": false
             },
@@ -126,7 +126,7 @@
               "title": "5.Verify That The System Can't Accept The Existing Domain Space Name",
               "fullTitle": "Add Domain Space 5.Verify That The System Can't Accept The Existing Domain Space Name",
               "timedOut": null,
-              "duration": 34419,
+              "duration": 33624,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -139,8 +139,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"plan_header\"] button`, but never found it.\n    at MySubscriptionsPage.clickAddDomainSpaceBtn (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/My_subscriptions_page/pages/my-subscriptions_page.ts:7:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:48:0)",
                 "diff": null
               },
-              "uuid": "816b4acb-a0c0-47ef-99f6-7459f1316508",
-              "parentUUID": "897e3d86-8bd1-49e5-9285-4cbbf4488a25",
+              "uuid": "86cd8a58-451c-4ea2-aff2-7025f574a2ea",
+              "parentUUID": "7c40b64d-2b34-4bb7-a35d-a8c7e7a6386a",
               "isHook": false,
               "skipped": false
             },
@@ -148,7 +148,7 @@
               "title": "6.Verify That form validate all the required components before submitting",
               "fullTitle": "Add Domain Space 6.Verify That form validate all the required components before submitting",
               "timedOut": null,
-              "duration": 34419,
+              "duration": 33669,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -161,8 +161,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"plan_header\"] button`, but never found it.\n    at MySubscriptionsPage.clickAddDomainSpaceBtn (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/My_subscriptions_page/pages/my-subscriptions_page.ts:7:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:54:0)",
                 "diff": null
               },
-              "uuid": "1cd49c22-6097-4f6b-8d1d-64a3b39ff684",
-              "parentUUID": "897e3d86-8bd1-49e5-9285-4cbbf4488a25",
+              "uuid": "52e0d15d-c639-48cd-8262-37fe0632979b",
+              "parentUUID": "7c40b64d-2b34-4bb7-a35d-a8c7e7a6386a",
               "isHook": false,
               "skipped": false
             },
@@ -170,7 +170,7 @@
               "title": "7.Verify Adding Subdomain has Special Characters, Prevent Submission",
               "fullTitle": "Add Domain Space 7.Verify Adding Subdomain has Special Characters, Prevent Submission",
               "timedOut": null,
-              "duration": 34019,
+              "duration": 33348,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -183,8 +183,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"plan_header\"] button`, but never found it.\n    at MySubscriptionsPage.clickAddDomainSpaceBtn (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/My_subscriptions_page/pages/my-subscriptions_page.ts:7:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Add_domain_space/tests/Add_domain_space.cy.ts:64:0)",
                 "diff": null
               },
-              "uuid": "d15a52e1-52c5-4935-9959-928cd4e6b330",
-              "parentUUID": "897e3d86-8bd1-49e5-9285-4cbbf4488a25",
+              "uuid": "8b1bc003-8ab5-461c-a0ec-a90ab24c18cf",
+              "parentUUID": "7c40b64d-2b34-4bb7-a35d-a8c7e7a6386a",
               "isHook": false,
               "skipped": false
             }
@@ -192,17 +192,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "67efcac3-01de-4c7b-9de6-0d957d97f310",
-            "4d929279-5cc3-4e8a-9e7c-4ca389bbb192",
-            "b625dbf0-d139-4d88-89f7-3e46dbe59a2c",
-            "d5698d15-cb2a-4c54-b884-68ec84476f83",
-            "816b4acb-a0c0-47ef-99f6-7459f1316508",
-            "1cd49c22-6097-4f6b-8d1d-64a3b39ff684",
-            "d15a52e1-52c5-4935-9959-928cd4e6b330"
+            "cb3e2912-cdbd-4642-936f-0e238781dc2b",
+            "d19f40e6-0ae0-4fe9-9af5-918e180996d6",
+            "efef1477-990c-4a99-93a7-56e6b435536d",
+            "3611e6db-0774-4420-9c05-5b19d9edecc7",
+            "86cd8a58-451c-4ea2-aff2-7025f574a2ea",
+            "52e0d15d-c639-48cd-8262-37fe0632979b",
+            "8b1bc003-8ab5-461c-a0ec-a90ab24c18cf"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 246042,
+          "duration": 240537,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

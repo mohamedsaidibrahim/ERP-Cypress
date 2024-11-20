@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-13T11:45:22.842Z",
-    "end": "2024-11-13T11:46:39.595Z",
-    "duration": 76753,
+    "start": "2024-11-20T11:47:32.033Z",
+    "end": "2024-11-20T11:48:50.409Z",
+    "duration": 78376,
     "testsRegistered": 4,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2ab56598-a241-4624-8022-7fdba22da494",
+      "uuid": "4da63fd1-513c-4763-8d78-5709c7c1203e",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Edit_branch_dialoge.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Edit_branch_dialoge.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "0f59b760-2609-4ea5-9be1-c6f4e9fb73fd",
+          "uuid": "11b1c22d-83db-4348-a3fd-62de4bda39de",
           "title": "Edit Branch Dialoge",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1. Verify That The Edit Branch Dialoge Has All Labels.",
               "fullTitle": "Edit Branch Dialoge 1. Verify That The Edit Branch Dialoge Has All Labels.",
               "timedOut": null,
-              "duration": 34336,
+              "duration": 34796,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Branch Dialoge`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Edit_branch_dialoge.cy.ts:14:0)",
                 "diff": null
               },
-              "uuid": "481695a1-2aba-470c-a545-b95bfbd60093",
-              "parentUUID": "0f59b760-2609-4ea5-9be1-c6f4e9fb73fd",
+              "uuid": "218d6dee-d2c2-4baf-a73e-fb366955e879",
+              "parentUUID": "11b1c22d-83db-4348-a3fd-62de4bda39de",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "branches_management_1.BranchesManagment.clickEditBranch();\nbranches_management_1.BranchesManagment.inputBranchName(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchName);\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.inputBranchRegion(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchRegion);\nbranches_management_1.BranchesManagment.inputBranchCity(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchCity);\nbranches_management_1.BranchesManagment.inputBranchEmail(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.inputBranchAddress(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchAddress);\nbranches_management_1.BranchesManagment.selectMobileCode();\nbranches_management_1.BranchesManagment.inputMobileNumber();\nbranches_management_1.BranchesManagment.cancelEditBranchDialog();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();",
               "err": {},
-              "uuid": "66658391-4fa2-4fa4-ba89-9fd10d331160",
-              "parentUUID": "0f59b760-2609-4ea5-9be1-c6f4e9fb73fd",
+              "uuid": "79ad4a5a-7e5e-4c66-abcd-779e8daa05b5",
+              "parentUUID": "11b1c22d-83db-4348-a3fd-62de4bda39de",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "branches_management_1.BranchesManagment.clickEditBranch();\nbranches_management_1.BranchesManagment.inputBranchName(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchName);\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.inputBranchRegion(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchRegion);\nbranches_management_1.BranchesManagment.inputBranchCity(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchCity);\nbranches_management_1.BranchesManagment.inputBranchEmail(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.inputBranchAddress(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchAddress);\nbranches_management_1.BranchesManagment.selectMobileCode();\nbranches_management_1.BranchesManagment.inputMobileNumber();\nbranches_management_1.BranchesManagment.submitEditBranchDialog();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();\ncy.wait(1000);\n// Verify Data is Displaying in the Table\ncy.verifyFirstCellInTable(1, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchName);\ncy.verifyFirstCellInTable(2, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchRegion);\ncy.verifyFirstCellInTable(3, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchCity);\ncy.verifyFirstCellInTable(4, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchAddress);\ncy.verifyFirstCellInTable(5, company_data_1.CompanyData.branchMobileNumber);\ncy.verifyFirstCellInTable(6, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.clickEditBranch();\n// Verify Data is Displaying in the Editting Dialog\nbranches_management_1.BranchesManagment.verifyBranchRegion(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchRegion);\nbranches_management_1.BranchesManagment.verifyBranchCity(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchCity);\nbranches_management_1.BranchesManagment.verifyBranchEmail(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.verifyBranchAddress(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchAddress);",
               "err": {},
-              "uuid": "1fd77d5c-0cdf-4904-9fe7-992aae5be175",
-              "parentUUID": "0f59b760-2609-4ea5-9be1-c6f4e9fb73fd",
+              "uuid": "8e6e3199-4991-4d08-9d38-79eb0ae2bb61",
+              "parentUUID": "11b1c22d-83db-4348-a3fd-62de4bda39de",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "cy.wait(2000);\ncy.getFirstCellInTableValue(1).then((nameT) => {\n    cy.wrap(nameT).as(\"nameT\");\n});\ncy.getFirstCellInTableValue(2).then((regionT) => {\n    cy.wrap(regionT).as(\"regionT\");\n});\ncy.getFirstCellInTableValue(3).then((cityT) => {\n    cy.wrap(cityT).as(\"cityT\");\n});\ncy.getFirstCellInTableValue(4).then((addressT) => {\n    cy.wrap(addressT).as(\"addressT\");\n});\ncy.getFirstCellInTableValue(5).then((phoneT) => {\n    cy.wrap(phoneT).as(\"phoneT\");\n});\ncy.getFirstCellInTableValue(6).then((emailT) => {\n    cy.wrap(emailT).as(\"emailT\");\n});\nbranches_management_1.BranchesManagment.clickEditBranch();\ncy.wait(2000);\ncy.get(\"@nameT\").then((nameT) => {\n    branches_management_1.BranchesManagment.verifyBranchName((0, utils_1.getWrappedString)(nameT));\n});\ncy.get(\"@regionT\").then((regionT) => {\n    branches_management_1.BranchesManagment.verifyBranchRegion((0, utils_1.getWrappedString)(regionT));\n});\ncy.get(\"@cityT\").then((cityT) => {\n    branches_management_1.BranchesManagment.verifyBranchCity((0, utils_1.getWrappedString)(cityT));\n});\ncy.get(\"@addressT\").then((addressT) => {\n    branches_management_1.BranchesManagment.verifyBranchAddress((0, utils_1.getWrappedString)(addressT));\n});\ncy.get(\"@phoneT\").then(() => {\n    branches_management_1.BranchesManagment.verifyMobileNumber();\n});\ncy.get(\"@emailT\").then((emailT) => {\n    branches_management_1.BranchesManagment.verifyBranchEmail((0, utils_1.getWrappedString)(emailT));\n});",
               "err": {},
-              "uuid": "2b139239-a4c4-4439-bd26-b12f8bd641d2",
-              "parentUUID": "0f59b760-2609-4ea5-9be1-c6f4e9fb73fd",
+              "uuid": "81fc1462-cd3b-4fca-a34c-83551716e7a9",
+              "parentUUID": "11b1c22d-83db-4348-a3fd-62de4bda39de",
               "isHook": false,
               "skipped": true
             }
@@ -114,15 +114,15 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "481695a1-2aba-470c-a545-b95bfbd60093"
+            "218d6dee-d2c2-4baf-a73e-fb366955e879"
           ],
           "pending": [],
           "skipped": [
-            "66658391-4fa2-4fa4-ba89-9fd10d331160",
-            "1fd77d5c-0cdf-4904-9fe7-992aae5be175",
-            "2b139239-a4c4-4439-bd26-b12f8bd641d2"
+            "79ad4a5a-7e5e-4c66-abcd-779e8daa05b5",
+            "8e6e3199-4991-4d08-9d38-79eb0ae2bb61",
+            "81fc1462-cd3b-4fca-a34c-83551716e7a9"
           ],
-          "duration": 34336,
+          "duration": 34796,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

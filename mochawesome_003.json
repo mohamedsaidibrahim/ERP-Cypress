@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 0,
-    "start": "2024-11-13T11:28:58.858Z",
-    "end": "2024-11-13T11:29:19.149Z",
-    "duration": 20291,
+    "start": "2024-11-20T11:29:22.146Z",
+    "end": "2024-11-20T11:29:41.396Z",
+    "duration": 19250,
     "testsRegistered": 3,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "5ca2a913-bad9-441d-890b-b733ad93e146",
+      "uuid": "b39eb695-3fae-4883-832a-86d020e6c318",
       "title": "",
       "fullFile": "cypress/e2e/Authentication/Registeration/tests/Verify_each_component_status/Full_name.cy.ts",
       "file": "cypress/e2e/Authentication/Registeration/tests/Verify_each_component_status/Full_name.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "2aaaf1db-48bd-4216-bd8a-781c6758fd2f",
+          "uuid": "590e3c0e-013d-449b-b2dd-3c754a1448c4",
           "title": "Verify Full Name component Status on the Registerion page",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "To Verify FullName is Required Message",
               "fullTitle": "Verify Full Name component Status on the Registerion page To Verify FullName is Required Message",
               "timedOut": null,
-              "duration": 6265,
+              "duration": 5848,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "// Arabic\n(0, is_required_message_1.checkISRequiredMsg)(\"#FullName\", false);\n// English\nregisterPage_1.RegisterationPage.clickLangButton();\n(0, is_required_message_1.checkISRequiredMsg)(\"#FullName\", true);",
               "err": {},
-              "uuid": "49572cce-8165-45f0-86a8-dfa2cae521e0",
-              "parentUUID": "2aaaf1db-48bd-4216-bd8a-781c6758fd2f",
+              "uuid": "d791f65b-0478-4abc-85ce-1c3f0fb40442",
+              "parentUUID": "590e3c0e-013d-449b-b2dd-3c754a1448c4",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "En",
               "fullTitle": "Verify Full Name component Status on the Registerion page En",
               "timedOut": null,
-              "duration": 6367,
+              "duration": 6017,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "registerPage_1.RegisterationPage.clickLangButton();\nregisterPage_1.RegisterationPage.checkFullNameLabel(\"Full Name\");\nregisterPage_1.RegisterationPage.typeFullName(auth_data_1.AuthData.fullNameLower);\nregisterPage_1.RegisterationPage.typeFullName(auth_data_1.AuthData.fullNameUpper);\nregisterPage_1.RegisterationPage.typeFullName(auth_data_1.AuthData.fullNameE100);",
               "err": {},
-              "uuid": "f5626fad-7fc8-407a-99e1-e57eafce7d7a",
-              "parentUUID": "2aaaf1db-48bd-4216-bd8a-781c6758fd2f",
+              "uuid": "291abdeb-f05e-46c4-a1d3-f7ffa83c0397",
+              "parentUUID": "590e3c0e-013d-449b-b2dd-3c754a1448c4",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "Ar",
               "fullTitle": "Verify Full Name component Status on the Registerion page Ar",
               "timedOut": null,
-              "duration": 5694,
+              "duration": 5526,
               "state": "passed",
               "speed": "medium",
               "pass": true,
@@ -83,22 +83,22 @@
               "context": null,
               "code": "registerPage_1.RegisterationPage.checkFullNameLabel(\"الاسم بالكامل\");\nregisterPage_1.RegisterationPage.typeFullName(auth_data_1.AuthData.fullNameLower);\nregisterPage_1.RegisterationPage.typeFullName(auth_data_1.AuthData.fullNameUpper);\nregisterPage_1.RegisterationPage.typeFullName(auth_data_1.AuthData.fullNameE100);",
               "err": {},
-              "uuid": "f502485a-3347-41a1-9441-c92c9980bd3c",
-              "parentUUID": "2aaaf1db-48bd-4216-bd8a-781c6758fd2f",
+              "uuid": "e9a7eff0-ec16-4407-894f-2d1b4352fdd5",
+              "parentUUID": "590e3c0e-013d-449b-b2dd-3c754a1448c4",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "49572cce-8165-45f0-86a8-dfa2cae521e0",
-            "f5626fad-7fc8-407a-99e1-e57eafce7d7a",
-            "f502485a-3347-41a1-9441-c92c9980bd3c"
+            "d791f65b-0478-4abc-85ce-1c3f0fb40442",
+            "291abdeb-f05e-46c4-a1d3-f7ffa83c0397",
+            "e9a7eff0-ec16-4407-894f-2d1b4352fdd5"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 18326,
+          "duration": 17391,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,14 +1,14 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 2,
     "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2024-11-13T17:00:05.984Z",
-    "end": "2024-11-13T17:05:46.528Z",
-    "duration": 340544,
-    "testsRegistered": 1,
+    "failures": 2,
+    "start": "2024-11-20T16:37:14.605Z",
+    "end": "2024-11-20T16:45:28.916Z",
+    "duration": 494311,
+    "testsRegistered": 2,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
@@ -18,41 +18,63 @@
   },
   "results": [
     {
-      "uuid": "70b02ff5-4054-4a2a-a354-86ccf9c43ca3",
+      "uuid": "cca2e6d2-e704-4f09-82e8-d01310b23870",
       "title": "",
-      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_account_screen.cy.ts",
-      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_account_screen.cy.ts",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Edit_Chart_Of_account.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Edit_Chart_Of_account.cy.ts",
       "beforeHooks": [],
       "afterHooks": [],
       "tests": [],
       "suites": [
         {
-          "uuid": "98b517ba-f31e-494f-a5fe-1ec21f6c9bf6",
-          "title": "Acount View Displaying Chart of Account",
+          "uuid": "87bb7e92-2c7d-46e8-b527-932b5a69bfa6",
+          "title": "Editting Chart of Account",
           "fullFile": "",
           "file": "",
           "beforeHooks": [],
           "afterHooks": [],
           "tests": [
             {
-              "title": "Verify All Components are displaying in their correct states",
-              "fullTitle": "Acount View Displaying Chart of Account Verify All Components are displaying in their correct states",
+              "title": "1.  Verify All Components are displaying in their correct states",
+              "fullTitle": "Editting Chart of Account 1.  Verify All Components are displaying in their correct states",
               "timedOut": null,
-              "duration": 102585,
+              "duration": 100517,
               "state": "failed",
               "speed": null,
               "pass": false,
               "fail": true,
               "pending": false,
               "context": null,
-              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.get('div[class=\"description\"]').last().scrollIntoView().click();\ncy.wait(1000);\ndisplaying_account_screen_1.DisplayingAccountScreen.verifyDisplayingTheCorrectDataInAccountView();",
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.accountCOde);\ncharts_of_accounts_1.ChartOfAccounts.clickEditButtonDetailAccount();\ndisplaying_account_screen_1.DisplayingAccountScreen.verifyDisplayingTheCorrectDataInAccountEditting();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"description\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[class=\"description\"]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_account_screen.cy.ts:13:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.action`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.action`, but never found it.\n    at ChartOfAccounts.clickEditButtonDetailAccount (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/charts_of_accounts.ts:54:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Edit_Chart_Of_account.cy.ts:16:0)",
                 "diff": null
               },
-              "uuid": "2cf99bba-bd61-46f3-8a45-e08a4d77c1e1",
-              "parentUUID": "98b517ba-f31e-494f-a5fe-1ec21f6c9bf6",
+              "uuid": "031a2259-799a-4edf-b5e4-3ebba7f26d0f",
+              "parentUUID": "87bb7e92-2c7d-46e8-b527-932b5a69bfa6",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Verify Editting an Detail Chart of Account",
+              "fullTitle": "Editting Chart of Account 2. Verify Editting an Detail Chart of Account",
+              "timedOut": null,
+              "duration": 83029,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.accountCOde);\ncy.wait(1000);\ncharts_of_accounts_1.ChartOfAccounts.clickEditButtonDetailAccount();\ncy.wait(5500);\ncy.verifyDimmidItemDropDownList(\"natureId\");\ncy.verifyDimmidItemDropDownList(\"accountSectionId\");\ncy.clickInputtedSearchDropDownList(\"parentId\", accounting_data_1.AccountingData.testParentAccountEdittedSearch).then(($parentId) => {\n    cy.wrap($parentId)\n        .invoke(\"text\")\n        .then((parentTxtEdited) => {\n        cy.log(\"parentTxtEdited::: \" + parentTxtEdited);\n        cy.wrap(parentTxtEdited).as(\"parentTxtEdited\");\n    });\n});\nadding_account_screen_1.AddingAccountScreen.inputName(accounting_data_1.AccountingData.edittedChartOfAccountName);\n// cy.clickInputtedSearchDropDownList(\"accountTypeId\",\"bank\").then(($accountTypeId) => {\n//   cy.wrap($accountTypeId)\n//     .invoke(\"text\")\n//     .then((typeTxtEditted) => {\n//       cy.log(\"typeTxtEditted::: \" + typeTxtEditted);\n//       cy.wrap(typeTxtEditted).as(\"typeTxtEditted\");\n//     });\n// });\nadding_account_screen_1.AddingAccountScreen.inputName(accounting_data_1.AccountingData.edittedChartOfAccountName);\nadding_account_screen_1.AddingAccountScreen.clickSaveButton();\nfor (var i = 0; i < 7; i++) {\n    cy.log(\"<<<<<***** Viewing ***** Viewing ***** Viewing ***** Viewing *****>>>\");\n}\ncy.wait(2000);\ncy.log(\"<<<<<***** Verification in Tree View *****>>>>>>\");\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.edittedChartOfAccountName);\ncy.get(\"span#label_tree.ng-star-inserted\").last().scrollIntoView().click();\ncy.wait(1000);\ncy.verifyPlaceholderText(2, accounting_data_1.AccountingData.edittedChartOfAccountName);\ncy.get(\"@parentTxtEdited\").then((parentTxtEdited) => {\n    cy.verifyPlaceholderText(3, (0, utils_1.getWrappedString)(parentTxtEdited));\n});\n// cy.get(\"@typeTxtEditted\").then((typeTxtEditted) => {\n//   cy.verifyPlaceholderText(7, getWrappedString(typeTxtEditted));\n// });",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.action`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.action`, but never found it.\n    at ChartOfAccounts.clickEditButtonDetailAccount (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/charts_of_accounts.ts:54:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Edit_Chart_Of_account.cy.ts:24:0)",
+                "diff": null
+              },
+              "uuid": "445fad32-74a0-49c6-817d-93d88ac2f8e1",
+              "parentUUID": "87bb7e92-2c7d-46e8-b527-932b5a69bfa6",
               "isHook": false,
               "skipped": false
             }
@@ -60,11 +82,12 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "2cf99bba-bd61-46f3-8a45-e08a4d77c1e1"
+            "031a2259-799a-4edf-b5e4-3ebba7f26d0f",
+            "445fad32-74a0-49c6-817d-93d88ac2f8e1"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 102585,
+          "duration": 183546,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
