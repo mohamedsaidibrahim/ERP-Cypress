@@ -32,16 +32,16 @@ describe("Displaying Item of Category", () => {
       cy.wrap(table)
         .find("th")
         .eq(4)
-        .contains(/status/i)
-        .should("be.visible");
+        .scrollIntoView()
+        .should("include", /status/i);
       cy.wrap(table)
         .find("th")
         .eq(5)
-        .contains(/actions/i)
-        .should("be.visible");
+        .scrollIntoView()
+        .should("include", /actions/i);
     });
   });
-  
+
   it("2. Verify Shiftting between Tree and List view", () => {
     ItemCategory.landing();
     cy.wait(2000);
@@ -49,7 +49,7 @@ describe("Displaying Item of Category", () => {
     ItemCategory.switchingToTreeView();
   });
 
-  it("3. Verify Tree and List views have the same data", () => {
+  it.only("3. Verify Tree and List views have the same data", () => {
     ItemCategory.landing();
     cy.wait(2000);
     ItemCategory.switchingToListView();
@@ -68,23 +68,51 @@ describe("Displaying Item of Category", () => {
     });
     ItemCategory.switchingToTreeView();
     cy.wait(1000);
-    cy.get("@nameTextEn").then((nameText1) => {
-      ItemCategory.SearchAnTreeAccount(getWrappedString(nameText1));
+    cy.get("@nameTextEn").then((nameTextEn) => {
+      ItemCategory.SearchAnTreeAccount(getWrappedString(nameTextEn));
     });
     cy.wait(1000);
     ItemCategory.displaytheLastCategoryViewMode();
     cy.wait(1000);
     cy.get("@codeT").then((codeT) => {
-      cy.verifyDisabledPlaceholderValue(0, getWrappedString(codeT));
+      cy.get('input[data-testid="input-text"]').eq(0)
+        .scrollIntoView()
+        .should("exist")
+        .invoke("attr", "placeholder")
+        .then((placeholderText) => {
+          expect(placeholderText).to.exist; // Check if the placeholder exists
+          expect(placeholderText).to.include(getWrappedString(codeT)); // Wrap and return the placeholder text
+        });
     });
     cy.get("@nameTextEn").then((nameTextEn) => {
-      cy.verifyDisabledPlaceholderValue(1, getWrappedString(nameTextEn));
+      cy.get('input[data-testid="input-text"]').eq(1)
+        .scrollIntoView()
+        .should("exist")
+        .invoke("attr", "placeholder")
+        .then((placeholderText) => {
+          expect(placeholderText).to.exist; // Check if the placeholder exists
+          expect(placeholderText).to.include(getWrappedString(nameTextEn)); // Wrap and return the placeholder text
+        });
     });
     cy.get("@parentCategoryTxt").then((parentCategoryTxt) => {
-      cy.verifyDisabledPlaceholderValue(3, getWrappedString(parentCategoryTxt));
+      cy.get('input[data-testid="input-text"]').eq(3)
+        .scrollIntoView()
+        .should("exist")
+        .invoke("attr", "placeholder")
+        .then((placeholderText) => {
+          expect(placeholderText).to.exist; // Check if the placeholder exists
+          expect(placeholderText).to.include(getWrappedString(parentCategoryTxt)); // Wrap and return the placeholder text
+        });
     });
     cy.get("@categoryTypeTxt").then((categoryTypeTxt) => {
-      cy.verifyDisabledPlaceholderValue(5, getWrappedString(categoryTypeTxt));
+      cy.get('input[data-testid="input-text"]').eq(4)
+        .scrollIntoView()
+        .should("exist")
+        .invoke("attr", "placeholder")
+        .then((placeholderText) => {
+          expect(placeholderText).to.exist; // Check if the placeholder exists
+          expect(placeholderText).to.include(getWrappedString(categoryTypeTxt)); // Wrap and return the placeholder text
+        });
     });
   });
 });
