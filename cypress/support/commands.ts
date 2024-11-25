@@ -2130,30 +2130,24 @@ Cypress.Commands.add(
     cy.implementLogin();
     // Visit the ERP page
     cy.visit(Cypress.env("domain"));
-
     // Ensure the new URL contains '2050'
     cy.url().should("include", "2050");
-
     // Wait for APP modal to be visible and click it
-    cy.get(".modal-card").eq(appIndex).should("be.visible").click();
+    cy.get(".modal-card").eq(appIndex).should("be.visible");
+    cy.get(".modal-card").eq(appIndex).click();
     cy.reload();
     // Click on the next elements, ensuring each is visible
     // Click the Side Slider
     cy.wait(1000);
-    // cy.get("html").then(($html) => {
-    //   if ($html.find("body").is(":visible")) {
-    cy.get(".flex > .pi").should("be.visible").click();
+    cy.get('div[class="sidebar close"] div i:nth-child(1)').should('be.visible');
+    cy.get('div[class="sidebar close"] div i:nth-child(1)').click();
     // Click Master Data DropDown Arrow
     cy.get("#parent0 > .arrow").click({ force: true });
     // Select The Fourth Module
-    cy.get("a.ng-star-inserted").eq(moduleIndex).should("be.visible").click();
+    cy.get("a.ng-star-inserted").eq(moduleIndex).should('be.visible');
+    cy.get("a.ng-star-inserted").eq(moduleIndex).click();
     // Verify the final element is visible
     cy.get("[data-testid]").should("be.visible");
-    //   } else {
-    //     cy.NavigateToAPPModule(appIndex, moduleIndex);
-    //   }
-    // });
-
   }
 );
 
