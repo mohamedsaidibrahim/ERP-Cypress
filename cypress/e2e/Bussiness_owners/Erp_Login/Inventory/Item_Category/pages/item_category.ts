@@ -41,7 +41,7 @@ export class ItemCategory {
       }
     );
   }
-  static getFirstParentCategoryInTheListView(){
+  static getFirstParentCategoryInTheListView() {
     cy.LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute().then(
       (out) => {
         var parents = out["parents"];
@@ -60,9 +60,9 @@ export class ItemCategory {
   }
   static getDetailedCategoryInTheListViewMissing() {
     cy.LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute().then((out) => {
-        var childs = out["childs"];
-        cy.wrap(childs[0]).as("detailedCategory") ;
-      }
+      var childs = out["childs"];
+      cy.wrap(childs[0]).as("detailedCategory");
+    }
     );
   }
 

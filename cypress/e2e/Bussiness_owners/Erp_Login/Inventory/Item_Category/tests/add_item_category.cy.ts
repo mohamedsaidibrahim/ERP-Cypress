@@ -54,6 +54,7 @@ describe("Adding Item of Category", () => {
   });
 
   it("3.Verify Adding new Parent Item of Category HAS PARENT", () => {
+    cy.wait(1500);
     ItemCategory.landing();
     cy.wait(1500);
     ItemCategory.switchingToListView();
@@ -84,7 +85,7 @@ describe("Adding Item of Category", () => {
     cy.wait(1000);
     cy.getInitItemsCountInListView();
     cy.wait(1000);
-    ItemCategory.verifyTheListViewMissingTheDetailedCategory(InventoryData.itemCategoryNameEn+ "TC4");
+    ItemCategory.verifyTheListViewMissingTheDetailedCategory(InventoryData.itemCategoryNameEn + "TC4");
     ItemCategory.switchingToTreeView();
     cy.wait(1000);
     AddingCategoryScreen.clickAddNewButton();
@@ -102,7 +103,7 @@ describe("Adding Item of Category", () => {
     cy.wait(1500);
     ItemCategory.switchingToListView();
     cy.assertnewItemAddedToListView();
-    ItemCategory.verifyTheListViewHasTheDetailedCategory(InventoryData.itemCategoryNameEn+ "TC4");
+    ItemCategory.verifyTheListViewHasTheDetailedCategory(InventoryData.itemCategoryNameEn + "TC4");
   });
 
   it("5. Verify Required Validation", () => {
