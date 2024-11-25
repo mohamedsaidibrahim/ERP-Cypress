@@ -63,7 +63,7 @@ describe("Editting Item of Category", () => {
   });
 
   it("3. Verify Editting an Detailed Item of Category", () => {
-    cy.wait(3000);
+    cy.wait(2000);
     ItemCategory.landing();
     cy.wait(2000);
     ItemCategory.switchingToListView();
@@ -152,7 +152,7 @@ describe("Editting Item of Category", () => {
     );
   });
 
-  it.only("5. Verify The Required Validation", () => {
+  it("5. Verify The Required Validation", () => {
     ItemCategory.landing();
     cy.wait(2000);
     ItemCategory.switchingToListView();
@@ -160,12 +160,6 @@ describe("Editting Item of Category", () => {
     ItemCategory.getFirstParentCategoryInTheListView();
     cy.get("@parentCategory").then((parentCategory) => {
       ItemCategory.SearchAListAccount(getWrappedString(parentCategory));
-    });
-    cy.getFirstCellInTableValue(0).then((codeTxt1) => {
-      cy.wrap(codeTxt1).as("codeTxt1");
-    });
-    cy.getFirstCellInTableValue(1).then((nameTextEn1) => {
-      cy.wrap(nameTextEn1).as("nameTextEn1");
     });
     ItemCategory.switchingToTreeView();
     cy.wait(1000);
@@ -175,66 +169,26 @@ describe("Editting Item of Category", () => {
     cy.wait(1000);
     ItemCategory.clickEditButtonDetailAccount();
     cy.wait(1000);
-    AddingCategoryScreen.verifyCodeFieldISReadOnly();
     AddingCategoryScreen.selectParentCategory();
+    AddingCategoryScreen.clearNameEn();
+    AddingCategoryScreen.clearNameAr();
+    cy.verifyDisplayingTheRequiredValidationMsgsCount(2);
     AddingCategoryScreen.inputNameEn(InventoryData.itemCategoryNameEn);
+    cy.verifyDisplayingTheRequiredValidationMsgsCount(1);
     AddingCategoryScreen.inputNameAr(InventoryData.itemCategoryNameAr);
+    cy.verifyNotExistanceTheRequiredValidation();
     ItemCategory.clickISDetailedSwitch();
+    AddingCategoryScreen.clickSaveButton();
+    cy.wait(1000);
+    cy.verifyDisplayingTheRequiredValidationMsgsCount(1);
     AddingCategoryScreen.selectCostOfGoodSoldAccount();
     AddingCategoryScreen.selectCategoryType();
     AddingCategoryScreen.verifyCancelButton();
-    AddingCategoryScreen.selectpurchaseAccount();
-    AddingCategoryScreen.clickSaveButton();
-    cy.wait(1500);
-    ItemCategory.switchingToListView();
-    ItemCategory.verifyTheListViewHasTheDetailedCategory(
-      InventoryData.itemCategoryNameEn
-    );
+    cy.wait(1000);
+    AddingCategoryScreen.selectCategoryType();
+    cy.wait(1000);
+    cy.verifyNotExistanceTheRequiredValidation();
   });
 
-  it("6. Verify Editting an Detailed Item of Category", () => {
-    cy.wait(3000);
-    ItemCategory.landing();
-    cy.wait(2000);
-    ItemCategory.switchingToListView();
-    cy.wait(1000);
-    ItemCategory.getDetailedCategoryInTheListViewMissing();
-    cy.get("@detailedCategory").then((detailedCategory) => {
-      ItemCategory.SearchAListAccount(getWrappedString(detailedCategory));
-    });
-    cy.getFirstCellInTableValue(0).then((codeTxt1) => {
-      cy.wrap(codeTxt1).as("codeTxt1");
-    });
-    cy.getFirstCellInTableValue(1).then((nameTextEn1) => {
-      cy.wrap(nameTextEn1).as("nameTextEn1");
-    });
-    ItemCategory.switchingToTreeView();
-    cy.wait(1000);
-    cy.get("@detailedCategory").then((detailedCategory) => {
-      ItemCategory.SearchAnTreeAccount(getWrappedString(detailedCategory));
-    });
-    cy.wait(1000);
-    ItemCategory.clickEditButtonDetailAccount();
-    cy.wait(1000);
-    AddingCategoryScreen.verifyCodeFieldISReadOnly();
-    cy.get("@detailedCategory").then((detailedCategory) => {
-      AddingCategoryScreen.inputNameEn(
-        getWrappedString(detailedCategory) + "_En"
-      );
-      AddingCategoryScreen.inputNameAr(
-        getWrappedString(detailedCategory) + "_Ar"
-      );
-    });
-    AddingCategoryScreen.verifyCancelButton();
-    AddingCategoryScreen.clickSaveButton();
-    cy.wait(2500);
-    ItemCategory.switchingToListView();
-    cy.wait(1000);
-    cy.get("@detailedCategory").then((detailedCategory) => {
-      ItemCategory.SearchAListAccount(getWrappedString(detailedCategory) + "_En");
-      ItemCategory.verifyTheListViewHasTheDetailedCategory(
-        getWrappedString(detailedCategory) + "_En"
-      );
-    });
-  });
+
 });

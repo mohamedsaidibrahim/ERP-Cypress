@@ -8,8 +8,14 @@ export class AddingCategoryScreen {
   static verifyCodeFieldISReadOnly() {
     cy.verifyDimmidInput("code");
   }
+  static clearNameEn() {
+    cy.getByTestAttribute("nameEn").invoke("removeAttr", "disabled").scrollIntoView().clear();
+  }
   static inputNameEn(txt: string) {
     cy.getByTestAttribute("nameEn").invoke("removeAttr", "disabled").scrollIntoView().clear().type(txt);
+  }
+  static clearNameAr() {
+    cy.getByTestAttribute("nameAr").invoke("removeAttr", "disabled").scrollIntoView().clear();
   }
   static inputNameAr(txt: string) {
     cy.getByTestAttribute("nameAr").invoke("removeAttr", "disabled").scrollIntoView().clear().type(txt);

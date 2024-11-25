@@ -2136,18 +2136,24 @@ Cypress.Commands.add(
 
     // Wait for APP modal to be visible and click it
     cy.get(".modal-card").eq(appIndex).should("be.visible").click();
-
+    cy.reload();
     // Click on the next elements, ensuring each is visible
     // Click the Side Slider
     cy.wait(1000);
+    // cy.get("html").then(($html) => {
+    //   if ($html.find("body").is(":visible")) {
     cy.get(".flex > .pi").should("be.visible").click();
     // Click Master Data DropDown Arrow
     cy.get("#parent0 > .arrow").click({ force: true });
     // Select The Fourth Module
     cy.get("a.ng-star-inserted").eq(moduleIndex).should("be.visible").click();
-
     // Verify the final element is visible
     cy.get("[data-testid]").should("be.visible");
+    //   } else {
+    //     cy.NavigateToAPPModule(appIndex, moduleIndex);
+    //   }
+    // });
+
   }
 );
 
