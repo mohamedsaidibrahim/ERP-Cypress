@@ -206,15 +206,6 @@ export default defineConfig({
       "cypress/e2e/Bussiness_owners/Erp_Login/Purchase/vendor_definition/tests/vendor_definition_listview.cy.ts",
 
       // // Inventory  Inventory  Inventory  Inventory  Inventory  Inventory  Inventory
-      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_add_quick.cy.ts",
-      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_continue.cy.ts",
-      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_edit.cy.ts",
-      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_listview.cy.ts",
-
-      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Operation_Tags/tests/operation_tags_add.cy.ts",
-      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Operation_Tags/tests/operation_tags_edit.cy.ts",
-      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Operation_Tags/tests/operation_tags_listview.cy.ts",
-
 
       "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Item_Category/tests/add_item_category.cy.ts",
       "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Item_Category/tests/Displaying_Item_category_screen.cy.ts",
@@ -228,6 +219,15 @@ export default defineConfig({
       "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_add.cy.ts",
       "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_edit.cy.ts",
       "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_listview.cy.ts",
+
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_add_quick.cy.ts",
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_continue.cy.ts",
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_edit.cy.ts",
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_listview.cy.ts",
+
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Operation_Tags/tests/operation_tags_add.cy.ts",
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Operation_Tags/tests/operation_tags_edit.cy.ts",
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Operation_Tags/tests/operation_tags_listview.cy.ts",
 
       // "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Item_definition/tests/item_definition_add_quick.cy.ts",
       // "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Item_definition/tests/item_definition_add_continue.cy.ts",
@@ -246,8 +246,8 @@ export default defineConfig({
 
       // // PERFORMANCE  PERFORMANCE  PERFORMANCE  PERFORMANCE  PERFORMANCE
       // 'cypress/e2e/Global_tests/PERFORMANCE/page_load_time/auth/page_load_time.cy.ts',
-      // 'cypress/e2e/Global_tests/PERFORMANCE/page_load_time/page_load_time.cy.ts'
-      "cypress/e2e/Global_tests/Accessbility/Archive/all_urls/version1_generate-accessibility-report.cy.js"
+      // 'cypress/e2e/Global_tests/PERFORMANCE/page_load_time/page_load_time.cy.ts',
+      // "cypress/e2e/Global_tests/Accessbility/Archive/all_urls/version1_generate-accessibility-report.cy.js"
     ],
   },
   viewportWidth: 1920,
