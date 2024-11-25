@@ -49,7 +49,7 @@ describe("Displaying Item of Category", () => {
     ItemCategory.switchingToTreeView();
   });
 
-  it("3. Verify Tree and List views have the same data", () => {
+  it("3. Verify Tree and List views have the same data (Parent Category)", () => {
     cy.wait(2000);
     ItemCategory.landing();
     cy.wait(2000);
