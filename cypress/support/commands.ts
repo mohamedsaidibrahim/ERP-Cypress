@@ -2,6 +2,7 @@
 
 // List of All Customized Generated Commands [index]
 /*
+catchUnCaughtException
 checkAllOptions
 clickExportIconButton
 clickAddNewButton
@@ -75,6 +76,62 @@ verifyPlaceholderValueAttr
 */
 // cypress/support/commands.ts
 // cypress/support/commands.ts
+
+declare namespace Cypress {
+  interface Chainable<Subject> {
+    LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute(): Chainable<any>;
+  }
+}
+
+Cypress.Commands.add(
+  "LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute",
+  () => {
+    // Arrays to store parent and child texts
+    const parents: string[] = [];
+    const childs: string[] = [];
+    let mapOut = {};
+
+    // Selector for the table
+    const tableSelector = "table"; // Adjust the selector to match your table
+
+    // Check if the table is visible
+    cy.get(tableSelector)
+      .should("be.visible")
+      .within(() => {
+        // Get all rows in the table body
+        cy.get("tbody tr").each(($row) => {
+          // Access the fourth column's checkbox
+          const checkboxSelector = 'td:nth-child(4) input[type="checkbox"]';
+          const secondTdSelector = "td:nth-child(2)";
+
+          cy.wrap($row)
+            .find(checkboxSelector)
+            .then(($checkbox) => {
+              // Get the value of aria-checked attribute
+              const isChecked = $checkbox.attr("aria-checked");
+              // Get the text in the second column
+              cy.wrap($row)
+                .find(secondTdSelector)
+                .invoke("text")
+                .then((text) => {
+                  const trimmedText = text.trim(); // Trim whitespace
+                  if (isChecked === "true") {
+                    // Add to parents list
+                    childs.push(trimmedText);
+                  } else if (isChecked === "false") {
+                    // Add to childs list
+                    parents.push(trimmedText);
+                  }
+                });
+            });
+        });
+      })
+      .then(() => {
+        mapOut = { parents: parents, childs: childs };
+        cy.wrap(mapOut).as("mapOut");
+      });
+  }
+);
 
 declare namespace Cypress {
   interface Chainable<Subject = any> {
@@ -246,6 +303,7 @@ declare namespace Cypress {
 }
 
 Cypress.Commands.add("clickFirstEditActionButton", () => {
+  cy.catchUnCaughtException();
   cy.get("table").should("be.visible");
   cy.get("table").then(($table: any) => {
     if ($table.find("tbody tr").is(":visible")) {
@@ -267,6 +325,7 @@ declare namespace Cypress {
 
 Cypress.Commands.add("clickLastDeleteActionButton", () => {
   cy.wait(1500);
+  cy.catchUnCaughtException();
   cy.get("table").then(($table: any) => {
     if ($table.find("tbody tr").is(":visible")) {
       cy.getByTestAttribute("table_button_delete").last().scrollIntoView();
@@ -285,6 +344,7 @@ declare namespace Cypress {
 
 Cypress.Commands.add("clickFirstDeleteActionButton", () => {
   cy.wait(1500);
+  cy.catchUnCaughtException();
   cy.get("table").then(($table: any) => {
     if ($table.find("tbody tr").is(":visible")) {
       cy.getByTestAttribute("table_button_delete").first().scrollIntoView();
@@ -356,7 +416,9 @@ declare namespace Cypress {
   }
 }
 Cypress.Commands.add("clickAddNewButton", () => {
-  cy.contains("button", /create/i).scrollIntoView().click();
+  cy.contains("button", /create/i)
+    .scrollIntoView()
+    .click();
 });
 
 declare namespace Cypress {
@@ -538,7 +600,9 @@ Cypress.Commands.add(
         labelText.includes(text)
       );
       if (!expectedText) {
-        cy.log("Error: Label text " + labelText + " not found in expected list");
+        cy.log(
+          "Error: Label text " + labelText + " not found in expected list"
+        );
       }
       const labelElement = $label[0];
       if (
@@ -1643,11 +1707,6 @@ Cypress.Commands.add("verifySearchFunctionalityDots", () => {
     }
   });
 });
-declare namespace Cypress {
-  interface Chainable<Subject> {
-    verifySearchFunctionality(): Chainable<any>;
-  }
-}
 
 declare namespace Cypress {
   interface Chainable<Subject> {
@@ -1687,8 +1746,8 @@ declare namespace Cypress {
 Cypress.Commands.add(
   "clickInputtedSearchDropDownList",
   (attrName: string, srch: string) => {
-    cy.getByTestAttribute(attrName).scrollIntoView();
-    cy.getByTestAttribute(attrName).click();
+    cy.getByTestAttribute(attrName).last().scrollIntoView();
+    cy.getByTestAttribute(attrName).last().click();
     cy.get('input[role="searchbox"]').last().click();
     cy.get('input[role="searchbox"]').last().clear().type(srch);
     cy.wait(1500);
@@ -1843,8 +1902,8 @@ declare namespace Cypress {
   }
 }
 Cypress.Commands.add("getLastItemInDropDownList", (attrName: string) => {
-  cy.getByTestAttribute(attrName).scrollIntoView().should("be.visible");
-  cy.getByTestAttribute(attrName).find('[role="combobox"]').click();
+  cy.getByTestAttribute(attrName).last().scrollIntoView().should("be.visible");
+  cy.getByTestAttribute(attrName).last().find('[role="combobox"]').click();
   cy.get('[role="listbox"]').then(($listbox) => {
     if (
       $listbox
@@ -1926,12 +1985,32 @@ declare namespace Cypress {
 }
 Cypress.Commands.add("loginSession", () => {
   // Clear cookies and local storage before each test
+  cy.clearAllCookies();
+  cy.clearAllLocalStorage();
+  cy.clearAllSessionStorage();
   cy.session("userSession", () => {
     cy.login();
   });
 });
 
-// cypress/support/commands.ts
+declare namespace Cypress {
+  interface Chainable<Subject> {
+    catchUnCaughtException(): Chainable<any>;
+  }
+}
+Cypress.Commands.add("catchUnCaughtException", () => {
+  // Catch uncaught exceptions specific to the "children" error
+  Cypress.on("uncaught:exception", (err) => {
+    if (
+      err.message.includes(
+        "Cannot read properties of null (reading 'children')"
+      )
+    ) {
+      return false;
+    }
+    return true;
+  });
+});
 
 declare namespace Cypress {
   interface Chainable<Subject> {
@@ -1940,18 +2019,12 @@ declare namespace Cypress {
 }
 
 Cypress.Commands.add("LandingToERPModule", (urlStr, keywordStr) => {
-  // Catch uncaught exceptions specific to the "children" error
-  Cypress.on('uncaught:exception', (err) => {
-    if (err.message.includes("Cannot read properties of null (reading 'children')")) {
-      return false;
-    }
-    return true;
-  });
+  cy.catchUnCaughtException();
 
   cy.viewport(1920, 1080);
   cy.visit(urlStr);
 
-  cy.wait(3000); // Initial wait for page load
+  cy.wait(7000); // Initial wait for page load
 
   cy.url().then((currentUrl) => {
     if (currentUrl.includes(keywordStr)) {
@@ -1963,6 +2036,8 @@ Cypress.Commands.add("LandingToERPModule", (urlStr, keywordStr) => {
       cy.LandingToERPModule(urlStr, keywordStr); // Retry if not on the correct page
     }
   });
+
+  cy.catchUnCaughtException();
 });
 
 declare namespace Cypress {
@@ -1994,48 +2069,96 @@ Cypress.Commands.add("clickContinueAs", () => {
   });
 });
 
-
 declare namespace Cypress {
   interface Chainable<Subject> {
-    getCellValueWhenCondition(targetCol: number, conditionCol: number, conditionValue: string): Chainable<any>;
+    getCellValueWhenCondition(
+      targetCol: number,
+      conditionCol: number,
+      conditionValue: string
+    ): Chainable<any>;
   }
 }
 
-Cypress.Commands.add("getCellValueWhenCondition", (targetCol: number, conditionCol: number, conditionValue: string) => {
-  cy.get("table").should("be.visible");
-  cy.get("table").then(($table: any) => {
-    if ($table.find("tbody tr").is(":visible")) {
-      // Locate the table rows and find the row where the "Type" column equals "Detail"
-      cy.get('table tbody tr').then(($rows) => {
-        for (var i = 0; i < $rows.length; i++) {
-          var $row = $rows[i];
-          // Find the "Type" column within this row (e.g., assuming it's the 2nd column)
-          cy.wrap($row).find('td').eq(conditionCol).then(($typeCell) => {
-            if ($typeCell.text().trim().includes(conditionValue) ) {
-              // Get the text of the first column (e.g., assuming it's the 1st column)
-              cy.wrap($row).find('td').eq(targetCol).invoke('text').then((firstColumnText) => {
-                cy.wrap(firstColumnText).as("firstColumnText");
-                i=$rows.length;
+Cypress.Commands.add(
+  "getCellValueWhenCondition",
+  (targetCol: number, conditionCol: number, conditionValue: string) => {
+    cy.get("table").should("be.visible");
+    cy.get("table").then(($table: any) => {
+      if ($table.find("tbody tr").is(":visible")) {
+        // Locate the table rows and find the row where the "Type" column equals "Detail"
+        cy.get("table tbody tr").then(($rows) => {
+          for (var i = 0; i < $rows.length; i++) {
+            var $row = $rows[i];
+            // Find the "Type" column within this row (e.g., assuming it's the 2nd column)
+            cy.wrap($row)
+              .find("td")
+              .eq(conditionCol)
+              .then(($typeCell) => {
+                if ($typeCell.text().trim().includes(conditionValue)) {
+                  // Get the text of the first column (e.g., assuming it's the 1st column)
+                  cy.wrap($row)
+                    .find("td")
+                    .eq(targetCol)
+                    .invoke("text")
+                    .then((firstColumnText) => {
+                      cy.wrap(firstColumnText).as("firstColumnText");
+                      i = $rows.length;
+                    });
+                }
               });
-            }
-          });
-        }
-      });
-    } else {
-      cy.log("Table is Empty");
-    }
-  });
-});
+          }
+        });
+      } else {
+        cy.log("Table is Empty");
+      }
+    });
+  }
+);
+
+declare namespace Cypress {
+  interface Chainable<Subject> {
+    NavigateToAPPModule(appIndex: number, moduleIndex: number): Chainable<any>;
+  }
+}
+
+Cypress.Commands.add(
+  "NavigateToAPPModule",
+  (appIndex: number, moduleIndex: number) => {
+    cy.visit(Cypress.env("loginUrl"));
+    cy.wait(3000);
+    // Fill in credentials
+    cy.implementLogin();
+    // Visit the ERP page
+    cy.visit(Cypress.env("domain"));
+
+    // Ensure the new URL contains '2050'
+    cy.url().should("include", "2050");
+
+    // Wait for APP modal to be visible and click it
+    cy.get(".modal-card").eq(appIndex).should("be.visible").click();
+
+    // Click on the next elements, ensuring each is visible
+    // Click the Side Slider
+    cy.get(".flex > .pi").should("be.visible").click();
+    // Click Master Data DropDown Arrow
+    cy.get("#parent0 > .arrow").click({ force: true });
+    // Select The Fourth Module
+    cy.get("a.ng-star-inserted").eq(moduleIndex).should("be.visible").click();
+
+    // Verify the final element is visible
+    cy.get("[data-testid]").should("be.visible");
+  }
+);
 
 declare namespace Cypress {
   interface Chainable<Subject> {
     implementLogin(): Chainable<any>;
   }
 }
+
 Cypress.Commands.add("implementLogin", () => {
-  // Check for the visibility of the email and password fields
-  cy.get("body").then(($body) => {
-    if ($body.find("#Email").is(":visible")) {
+  cy.url().then((url) => {
+    if (url.includes("onnect")) {
       // Handle email field input
       cy.get("#Email")
         .should("be.visible")
@@ -2058,8 +2181,6 @@ Cypress.Commands.add("implementLogin", () => {
 
       // Submit the form
       cy.get('button[type="submit"]').last().should("be.visible").click();
-    } else {
-      cy.log("Login form is not visible.");
     }
   });
 });

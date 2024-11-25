@@ -100,7 +100,7 @@ export class LoginPage {
     cy.get('a[class="lang-btn"]').click();
   }
   static checkRememberMe() {
-    cy.get('#RememberMe').check();
+    cy.get('#RememberMe').click();;
   }
 
   static checkLoginButton(loginStr: string) {

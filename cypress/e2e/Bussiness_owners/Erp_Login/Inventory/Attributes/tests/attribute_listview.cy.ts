@@ -7,19 +7,20 @@ describe("Attribute (Listview)", () => {
   });
 
   it("1.Verify all the components are displayed on the Listview", () => {
+    cy.wait(2000);
     Attribute.landing();
-    cy.wait(3000);
+    cy.wait(1000);
     cy.zoomOut();
     cy.get("table").then((table) => {
       cy.wrap(table)
         .find("th")
         .eq(0)
-        .contains(/name ar/i)
+        .contains(/Attribute/i)
         .should("be.visible");
       cy.wrap(table)
         .find("th")
         .eq(1)
-        .contains(/Name en/i)
+        .contains(/value/i)
         .should("be.visible");
       cy.wrap(table)
         .find("th")
@@ -37,16 +38,15 @@ describe("Attribute (Listview)", () => {
   it("2.should filter the table based on search input in the first two columns", () => {
     Attribute.landing();
     cy.wait(3000);
-    cy.verifySearchFunctionalityDots();
+    Attribute.verifySearchFunctionality();
   });
+
   it("3.Verify Deleting An Existing Attribute (All fields are filled)", () => {
     Attribute.landing();
     cy.wait(3000);
-    
     cy.getInitItemsCountInListView();
-    cy.clickFirstDeleteActionButton();
+    Attribute.clickFirstListViewDeleteButton();
     cy.confirmDeletePopUp();
-    
     cy.assertItemDeletedFromListView();
   });
 });

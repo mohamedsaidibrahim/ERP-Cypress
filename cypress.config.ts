@@ -225,9 +225,9 @@ export default defineConfig({
       "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Attributes/tests/attribute_edit.cy.ts",
       "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Attributes/tests/attribute_listview.cy.ts",
 
-      // "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_add.cy.ts",
-      // "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_edit.cy.ts",
-      // "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_listview.cy.ts",
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_add.cy.ts",
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_edit.cy.ts",
+      "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_listview.cy.ts",
 
       // "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Item_definition/tests/item_definition_add_quick.cy.ts",
       // "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Item_definition/tests/item_definition_add_continue.cy.ts",
@@ -247,6 +247,7 @@ export default defineConfig({
       // // PERFORMANCE  PERFORMANCE  PERFORMANCE  PERFORMANCE  PERFORMANCE
       // 'cypress/e2e/Global_tests/PERFORMANCE/page_load_time/auth/page_load_time.cy.ts',
       // 'cypress/e2e/Global_tests/PERFORMANCE/page_load_time/page_load_time.cy.ts'
+      "cypress/e2e/Global_tests/Accessbility/Archive/all_urls/version1_generate-accessibility-report.cy.js"
     ],
   },
   viewportWidth: 1920,

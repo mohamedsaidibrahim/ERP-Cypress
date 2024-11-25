@@ -70,7 +70,6 @@ describe("Display All Branches", () => {
 
   it.skip("3. Checks if a row row has right data is inserted and the table  increases by one after submitting new data", () => {
     cy.logMsg("Before Submission");
-    cy.scrollToLastElement();
     
     cy.getInitItemsCountInListView();
     cy.get("table tbody tr")
@@ -128,7 +127,6 @@ describe("Display All Branches", () => {
     cy.wait(500);
     cy.reload();
     cy.wait(500);
-    cy.scrollToLastElement();
     cy.get("@tName1").then((tName1) => {
       cy.get("table tbody tr")
         .last()

@@ -19,8 +19,9 @@ export class ItemDefinition {
   }
 
   static landing() {
-    cy.LandingToERPModule(InventoryData.ItemDefinitionUrl, "definition");
+    cy.NavigateToAPPModule(6, 0);
   }
+
   static clickFirstDeleteButton() {
     cy.get("table").then(($table) => {
       if ($table.find("tbody tr").is(":visible")) {

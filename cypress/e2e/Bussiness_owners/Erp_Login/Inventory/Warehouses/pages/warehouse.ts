@@ -19,7 +19,7 @@ export class Warehouse {
   }
 
   static landing() {
-    cy.LandingToERPModule(InventoryData.WarehouseUrl, "definition");
+    cy.NavigateToAPPModule(6, 1);
   }
   static clickFirstDeleteButton() {
     cy.get("table").then(($table) => {

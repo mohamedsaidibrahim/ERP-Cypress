@@ -1,25 +1,6 @@
-import { NavigatesToSideModule } from "../../../../functions/navigates_to_side_module";
-import { InventoryData } from "../../data/inventory_data";
-
 export class ItemCategory {
-  static forceNavigate() {
-    cy.visit(InventoryData.ItemCategoryUrl);
-    cy.reload();
-    cy.clickContinueAs();
-    cy.url().then((currentUrl) => {
-      if (currentUrl.includes("chart")) {
-        cy.log("You Are In ..");
-      } else {
-        NavigatesToSideModule.navigatesToAnAppinSubdomain(/accounting/i);
-        NavigatesToSideModule.navigatesToTheModule(
-          InventoryData.ItemCategoryUrl,
-          1
-        );
-      }
-    });
-  }
   static landing() {
-    cy.LandingToERPModule(InventoryData.ItemCategoryUrl, "ategory");
+    cy.NavigateToAPPModule(6, 2);
   }
 
   static shifttingToSiteMap() {
@@ -33,23 +14,76 @@ export class ItemCategory {
   }
   static switchingToTreeView() {
     cy.get("table").should("be.visible");
-
     cy.get('i[class="pi pi-sitemap"]').should("be.visible");
     cy.get('i[class="pi pi-sitemap"]').click();
     cy.get("table").should("not.exist");
   }
+
   static switchingToListView() {
     cy.get("table").should("not.exist");
     cy.get('i[class="pi pi-bars"]').should("be.visible");
     cy.get('i[class="pi pi-bars"]').click();
     cy.get("table").should("be.visible");
   }
+
   static SearchAListAccount(txt: string) {
     cy.get('input[placeholder="Search"]').should("be.visible");
     cy.get('input[placeholder="Search"]')
       .clear()
       .type(txt + "{enter}");
   }
+
+  static verifyTheListViewHasTheDetailedCategory(str: string) {
+    cy.LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute().then(
+      (out) => {
+        var childs = out["childs"];
+        expect(childs).deep.include(str);
+      }
+    );
+  }
+  static getFirstParentCategoryInTheListView(){
+    cy.LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute().then(
+      (out) => {
+        var parents = out["parents"];
+        cy.wrap(parents[0]).as("parentCategory");
+      }
+    );
+  }
+
+  static verifyTheListViewHasTheParentCategory(str: string) {
+    cy.LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute().then(
+      (out) => {
+        var parents = out["parents"];
+        expect(parents).deep.include(str);
+      }
+    );
+  }
+  static getDetailedCategoryInTheListViewMissing() {
+    cy.LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute().then((out) => {
+        var childs = out["childs"];
+        cy.wrap(childs[0]).as("detailedCategory") ;
+      }
+    );
+  }
+
+  static verifyTheListViewMissingTheDetailedCategory(str: string) {
+    cy.LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute().then(
+      (out) => {
+        var childs = out["childs"];
+        expect(childs).not.include(str);
+      }
+    );
+  }
+
+  static verifyTheListViewMissingTheParentCategory(str: string) {
+    cy.LoopsThroughTableRowsAndProcessesBasedOnCheckboxAttribute().then(
+      (out) => {
+        var parents = out["parents"];
+        expect(parents).not.include(str);
+      }
+    );
+  }
+
   static displaytheLastCategoryViewMode() {
     cy.get('div[class="description"]').last().scrollIntoView().click();
   }
@@ -58,6 +92,14 @@ export class ItemCategory {
     cy.get(".p-tree-filter").clear();
     cy.get(".p-tree-filter").type(account + "{enter}");
   }
+  static clickISDetailedSwitch() {
+    cy.getByTestAttribute("input-switch").last().scrollIntoView().click();
+  }
+
+  static clickActivationStatus() {
+    cy.getByTestAttribute("input-switch").first().scrollIntoView().click();
+  }
+
   static clickEditButtonDetailAccount() {
     cy.get(".action")
       .last()

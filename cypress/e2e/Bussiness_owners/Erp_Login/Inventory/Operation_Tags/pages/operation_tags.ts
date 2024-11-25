@@ -3,7 +3,7 @@ import { getWrappedString } from "../../../../../../support/utils";
 
 export class OperationTags {
   static landing() {
-    cy.LandingToERPModule(InventoryData.operationalTag, "operation");
+    cy.NavigateToAPPModule(6, 5);
   }
   static clickSaveButton() {
     cy.contains("button", /save/i).scrollIntoView().click();

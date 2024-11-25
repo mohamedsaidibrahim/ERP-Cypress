@@ -66,7 +66,7 @@ describe("Adding Cost Center", () => {
     cy.wait(1500);
     cy.clickContinueAs();
     CostCenter.switchingToListMode();
-    cy.navigateToTheLatestScreen();
+    CostCenter.inputSearchList(AccountingData.detailCostCenterName);
     cy.verifyFirstCellInTable(1, AccountingData.detailCostCenterName);
     cy.verifyLastCellParagraoghInTable(3, /detail/i);
   });
@@ -84,7 +84,7 @@ describe("Adding Cost Center", () => {
     cy.wait(1500);
     cy.clickContinueAs();
     CostCenter.switchingToListMode();
-    cy.navigateToTheLatestScreen();
+    CostCenter.inputSearchList(AccountingData.detailCostCenterName);
     cy.verifyFirstCellInTable(1, AccountingData.detailCostCenterName);
     cy.verifyLastCellParagraoghInTable(3, /detail/i);
   });

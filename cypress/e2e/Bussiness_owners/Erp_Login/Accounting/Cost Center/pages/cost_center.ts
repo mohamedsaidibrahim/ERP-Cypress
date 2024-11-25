@@ -37,8 +37,8 @@ export class CostCenter {
     cy.get('input[type="search"]').clear().type(txt + "{enter}")
   }
   static inputcostCenterNameInDialog(txt: string) {
-    cy.get('input[class="p-inputtext p-component p-element ng-star-inserted"]').should('be.visible');
-    cy.get('input[class="p-inputtext p-component p-element ng-star-inserted"]').clear().type(txt);
+    cy.get('[data-testid="name"]').should('be.visible');
+    cy.get('[data-testid="name"]').clear().type(txt);
   }
   static clickParentDropDown() {
     cy.getFirstItemInDropDownList("parentId");
@@ -336,7 +336,7 @@ export class CostCenter {
 
   static clickIsDetailCheckBox() {
     cy.get("#isDetail").should("be.visible");
-    cy.get("#isDetail").check();
+    cy.get("#isDetail").click();
   }
 
   static selectParent() {
@@ -360,45 +360,45 @@ export class CostCenter {
 
   static verifyCostCenterCode() {
     cy.get(
-      ":nth-child(1) > lib-form-group > .group > lib-text-input > .p-inputtext"
+      "input[disabled]"
     ).should("be.visible");
     cy.get(
-      ":nth-child(1) > lib-form-group > .group > lib-text-input > .p-inputtext"
+      "input[disabled]"
     ).should("be.disabled");
     cy.get(
-      ":nth-child(1) > lib-form-group > .group > lib-text-input > .p-inputtext"
+      "input[disabled]"
     ).should("not.be.checked");
     // cy.get(
-    //   ":nth-child(1) > lib-form-group > .group > lib-text-input > .p-inputtext"
+    //   "input[disabled]"
     // ).should("have.class", "read");
   }
   static verifyCostCenterName() {
     cy.get(
-      'input[class="p-inputtext p-component p-element ng-star-inserted"]'
+      '[data-testid="name"]'
     ).should("be.visible");
     cy.get(
-      'input[class="p-inputtext p-component p-element ng-star-inserted"]'
+      '[data-testid="name"]'
     ).should("be.enabled");
     cy.get(
-      'input[class="p-inputtext p-component p-element ng-star-inserted"]'
+      '[data-testid="name"]'
     ).should("not.be.checked");
   }
   static clearCostCenterName() {
     cy.get(
-      'input[class="p-inputtext p-component p-element ng-star-inserted"]'
+      '[data-testid="name"]'
     ).should("be.visible");
-    cy.get('input[class="p-inputtext p-component p-element ng-star-inserted"]')
+    cy.get('[data-testid="name"]')
       .first()
       .clear();
   }
   static inputCostCenterName(txt: string) {
     cy.get(
-      'input[class="p-inputtext p-component p-element ng-star-inserted"]'
+      '[data-testid="name"]'
     ).should("be.visible");
-    cy.get('input[class="p-inputtext p-component p-element ng-star-inserted"]')
+    cy.get('[data-testid="name"]')
       .first()
       .clear();
-    cy.get('input[class="p-inputtext p-component p-element ng-star-inserted"]')
+    cy.get('[data-testid="name"]')
       .first()
       .type(txt);
   }

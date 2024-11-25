@@ -179,7 +179,7 @@ export class RegisterationPage {
     cy.get("span").contains(stri);
   }
   static confirmCheckBox() {
-    cy.get("input#termsBox").check().should("be.checked");
+    cy.get("input#termsBox").click();.should("be.checked");
   }
 
   static checkSignInButton(label: string) {

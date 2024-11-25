@@ -17,31 +17,26 @@ describe("Displaying Item of Category", () => {
       cy.wrap(table)
         .find("th")
         .eq(1)
-        .contains(/nameen/i)
+        .contains(/name/i)
         .should("be.visible");
       cy.wrap(table)
         .find("th")
         .eq(2)
-        .contains(/namear/i)
-        .should("be.visible");
-      cy.wrap(table)
-        .find("th")
-        .eq(3)
         .contains(/parent category/i)
         .should("be.visible");
       cy.wrap(table)
         .find("th")
+        .eq(3)
+        .contains(/detail/i)
+        .should("be.visible");
+      cy.wrap(table)
+        .find("th")
         .eq(4)
-        .contains(/is detail/i)
+        .contains(/status/i)
         .should("be.visible");
       cy.wrap(table)
         .find("th")
         .eq(5)
-        .contains(/category type/i)
-        .should("be.visible");
-      cy.wrap(table)
-        .find("th")
-        .eq(6)
         .contains(/actions/i)
         .should("be.visible");
     });
@@ -65,10 +60,7 @@ describe("Displaying Item of Category", () => {
     cy.getFirstCellInTableValue(1).then((nameTextEn) => {
       cy.wrap(nameTextEn).as("nameTextEn");
     });
-    cy.getFirstCellInTableValue(2).then((nameTextAr) => {
-      cy.wrap(nameTextAr).as("nameTextAr");
-    });
-    cy.getFirstCellInTableValue(3).then((parentCategoryTxt) => {
+    cy.getFirstCellInTableValue(2).then((parentCategoryTxt) => {
       cy.wrap(parentCategoryTxt).as("parentCategoryTxt");
     });
     cy.getFirstCellInTableValue(5).then((categoryTypeTxt) => {
@@ -87,9 +79,6 @@ describe("Displaying Item of Category", () => {
     });
     cy.get("@nameTextEn").then((nameTextEn) => {
       cy.verifyDisabledPlaceholderValue(1, getWrappedString(nameTextEn));
-    });
-    cy.get("@nameTextAr").then((nameTextAr) => {
-      cy.verifyDisabledPlaceholderValue(2, getWrappedString(nameTextAr));
     });
     cy.get("@parentCategoryTxt").then((parentCategoryTxt) => {
       cy.verifyDisabledPlaceholderValue(3, getWrappedString(parentCategoryTxt));

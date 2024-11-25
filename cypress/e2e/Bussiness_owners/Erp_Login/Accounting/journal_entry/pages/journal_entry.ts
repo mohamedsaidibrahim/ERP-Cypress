@@ -615,7 +615,7 @@ export class JournalEntry {
   }
 
   static inputEditReferenceNumber(i: number) {
-    cy.get('input[class="p-inputtext p-component p-element ng-star-inserted"]')
+    cy.get('[data-testid="name"]')
       .eq(0)
       .invoke("removeAttr", "disabled") // Remove the disabled attribute if present
       .invoke("removeAttr", "readonly") // Remove the readonly attribute
@@ -623,7 +623,7 @@ export class JournalEntry {
       .type("5" + i);
   }
   static inputEditDescription(i: number) {
-    cy.get('input[class="p-inputtext p-component p-element ng-star-inserted"]')
+    cy.get('[data-testid="name"]')
       .eq(2)
       .invoke("removeAttr", "disabled") // Remove the disabled attribute if present
       .invoke("removeAttr", "readonly") // Remove the readonly attribute

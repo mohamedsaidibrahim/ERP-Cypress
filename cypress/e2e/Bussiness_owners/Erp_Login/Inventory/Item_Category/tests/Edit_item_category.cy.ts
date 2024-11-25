@@ -1,18 +1,76 @@
-import { getWrappedString } from "../../../../../../support/utils";
 import { InventoryData } from "../../data/inventory_data";
 import { AddingCategoryScreen } from "../pages/adding_item_category_screen";
 import { ItemCategory } from "../pages/item_category";
+import { getWrappedString } from "../../../../../../support/utils";
 
 describe("Editting Item of Category", () => {
   beforeEach("Navigates to Item of Category", () => {
     cy.visit(InventoryData.ItemCategoryUrl);
   });
 
-  it("Verify Editting an Item of Category", () => {
+  it("1.Verify All Labels in Detailed Category", () => {
     ItemCategory.landing();
     cy.wait(2000);
     ItemCategory.switchingToListView();
     cy.wait(1000);
+    ItemCategory.getDetailedCategoryInTheListViewMissing();
+    ItemCategory.switchingToTreeView();
+    cy.get("@detailedCategory").then((detailedCategory) => {
+      ItemCategory.SearchAnTreeAccount(getWrappedString(detailedCategory));
+    });
+    cy.wait(1000);
+    ItemCategory.clickEditButtonDetailAccount();
+    cy.wait(1500);
+    cy.contains("span", /Main/i).should("be.visible");
+    cy.verifyLabelText("code", /code/i);
+    cy.verifyLabelText("nameEn", /nameEn/i);
+    cy.verifyLabelText("nameAr", /nameAr/i);
+    cy.verifyLabelText("isDetailed", /is Detailed/i);
+    cy.contains("span", /Parent Category/i).should("be.visible");
+    cy.verifyLabelText("parentCategoryId", /Parent Category/i);
+    cy.contains("span", /Activation/i).should("be.visible");
+    cy.verifyLabelText("categoryType", /Category Type/i);
+    cy.contains("span", /account/i).should("be.visible");
+    // Deactivate
+    ItemCategory.clickActivationStatus();
+    cy.verifyLabelText("purchaseAccountId", /Purchase Account/i);
+    // Activate Again
+    ItemCategory.clickActivationStatus();
+    cy.verifyLabelText("costOfGoodSoldAccountId", /Cost Of Goods Sold/i);
+  });
+
+  it("2.Verify All Labels in Parent Category", () => {
+    ItemCategory.landing();
+    cy.wait(2000);
+    ItemCategory.switchingToListView();
+    cy.wait(1000);
+    ItemCategory.getFirstParentCategoryInTheListView();
+    ItemCategory.switchingToTreeView();
+    cy.get("@parentCategory").then((parentCategory) => {
+      ItemCategory.SearchAnTreeAccount(getWrappedString(parentCategory));
+    });
+    cy.wait(1000);
+    ItemCategory.clickEditButtonDetailAccount();
+    cy.wait(1500);
+    cy.contains("span", /Main/i).should("be.visible");
+    cy.verifyLabelText("code", /code/i);
+    cy.verifyLabelText("nameEn", /nameEn/i);
+    cy.verifyLabelText("nameAr", /nameAr/i);
+    cy.verifyLabelText("isDetailed", /is Detailed/i);
+    cy.contains("span", /Parent Category/i).should("be.visible");
+    cy.verifyLabelText("parentCategoryId", /Parent Category/i);
+    cy.contains("span", /Activation/i).should("be.visible");
+  });
+
+  it("3. Verify Editting an Detailed Item of Category", () => {
+    ItemCategory.landing();
+    cy.wait(2000);
+    ItemCategory.switchingToListView();
+    cy.wait(1000);
+    ItemCategory.getDetailedCategoryInTheListViewMissing();
+    cy.get("@detailedCategory").then((detailedCategory) => {
+      ItemCategory.SearchAListAccount(getWrappedString(detailedCategory));
+    });
     cy.getFirstCellInTableValue(0).then((codeTxt1) => {
       cy.wrap(codeTxt1).as("codeTxt1");
     });
@@ -21,44 +79,112 @@ describe("Editting Item of Category", () => {
     });
     ItemCategory.switchingToTreeView();
     cy.wait(1000);
-    cy.get("@nameTextEn1").then((nameTextEn1) => {
-      ItemCategory.SearchAnTreeAccount(getWrappedString(nameTextEn1));
+    cy.get("@detailedCategory").then((detailedCategory) => {
+      ItemCategory.SearchAnTreeAccount(getWrappedString(detailedCategory));
     });
     cy.wait(1000);
     ItemCategory.clickEditButtonDetailAccount();
     cy.wait(1000);
     AddingCategoryScreen.verifyCodeFieldISReadOnly();
-    AddingCategoryScreen.selectCategoryTypeEdit();
-    AddingCategoryScreen.inputNameEn(InventoryData.itemCategoryNameEn);
-    AddingCategoryScreen.selectGLAccountd();
-    AddingCategoryScreen.inputNameAr(InventoryData.itemCategoryNameAr);
-    AddingCategoryScreen.selectCashSalesAccountId();
-    AddingCategoryScreen.selectCreditSalesAccountId();
-    AddingCategoryScreen.selectSalesReturnAccountId();
-    AddingCategoryScreen.dePurchaseAccountId();
-    AddingCategoryScreen.selectSalesCostAccountId();
-    AddingCategoryScreen.clickDiscountAccountId();
-    AddingCategoryScreen.selectEvaluationAccountId();
-    AddingCategoryScreen.selectAdjustmentAccountId();
-    AddingCategoryScreen.selectGoodsInTransitAccountId();
+    AddingCategoryScreen.selectParentCategoryEdit();
+    AddingCategoryScreen.verifyCodeFieldISReadOnly();
+    cy.get("@detailedCategory").then((detailedCategory) => {
+      AddingCategoryScreen.inputNameEn(
+        getWrappedString(detailedCategory) + "_En"
+      );
+      AddingCategoryScreen.inputNameAr(
+        getWrappedString(detailedCategory) + "_Ar"
+      );
+    });
+    ItemCategory.clickISDetailedSwitch();
     AddingCategoryScreen.verifyCancelButton();
     AddingCategoryScreen.clickSaveButton();
-    cy.logMsg(
-      "<<<<<***** Viewing ***** Viewing ***** Viewing ***** Viewing *****>>>"
-    );
+    cy.wait(1500);
+    ItemCategory.switchingToListView();
+    cy.get("@detailedCategory").then((detailedCategory) => {
+      ItemCategory.verifyTheListViewHasTheParentCategory(
+        getWrappedString(detailedCategory) + "_En"
+      );
+    });
+  });
+
+  it("4. Verify Editting an Parent Item of Category", () => {
+    ItemCategory.landing();
     cy.wait(2000);
-    cy.logMsg("<<<<<***** Verification in Tree View *****>>>>>>");
-    ItemCategory.SearchAnTreeAccount(InventoryData.itemCategoryNameEn);
+    ItemCategory.switchingToListView();
     cy.wait(1000);
-    ItemCategory.displaytheLastCategoryViewMode();
+    ItemCategory.getFirstParentCategoryInTheListView();
+    cy.get("@parentCategory").then((parentCategory) => {
+      ItemCategory.SearchAListAccount(getWrappedString(parentCategory));
+    });
+    cy.getFirstCellInTableValue(0).then((codeTxt1) => {
+      cy.wrap(codeTxt1).as("codeTxt1");
+    });
+    cy.getFirstCellInTableValue(1).then((nameTextEn1) => {
+      cy.wrap(nameTextEn1).as("nameTextEn1");
+    });
+    ItemCategory.switchingToTreeView();
     cy.wait(1000);
-    cy.get("@codeTxt1").then((codeTxt1) => {
-      cy.verifyDisabledPlaceholderValue(0, getWrappedString(codeTxt1));
+    cy.get("@parentCategory").then((parentCategory) => {
+      ItemCategory.SearchAnTreeAccount(getWrappedString(parentCategory));
     });
-    cy.verifyDisabledPlaceholderValue(1, InventoryData.itemCategoryNameEn);
-    cy.verifyDisabledPlaceholderValue(2, InventoryData.itemCategoryNameAr);
-    cy.get("@categoryTypeTxt").then((categoryTypeTxt) => {
-      cy.verifyDisabledPlaceholderValue(5, getWrappedString(categoryTypeTxt));
+    cy.wait(1000);
+    ItemCategory.clickEditButtonDetailAccount();
+    cy.wait(1000);
+    AddingCategoryScreen.verifyCodeFieldISReadOnly();
+    AddingCategoryScreen.selectParentCategory();
+    AddingCategoryScreen.inputNameEn(InventoryData.itemCategoryNameEn);
+    AddingCategoryScreen.inputNameAr(InventoryData.itemCategoryNameAr);
+    ItemCategory.clickISDetailedSwitch();
+    AddingCategoryScreen.selectCostOfGoodSoldAccount();
+    AddingCategoryScreen.selectCategoryType();
+    AddingCategoryScreen.verifyCancelButton();
+    AddingCategoryScreen.selectpurchaseAccount();
+    AddingCategoryScreen.clickSaveButton();
+    cy.wait(1500);
+    ItemCategory.switchingToListView();
+    ItemCategory.verifyTheListViewHasTheDetailedCategory(
+      InventoryData.itemCategoryNameEn
+    );
+  });
+
+  it("5. Verify The Required Validation", () => {
+    ItemCategory.landing();
+    cy.wait(2000);
+    ItemCategory.switchingToListView();
+    cy.wait(1000);
+    ItemCategory.getFirstParentCategoryInTheListView();
+    cy.get("@parentCategory").then((parentCategory) => {
+      ItemCategory.SearchAListAccount(getWrappedString(parentCategory));
     });
+    cy.getFirstCellInTableValue(0).then((codeTxt1) => {
+      cy.wrap(codeTxt1).as("codeTxt1");
+    });
+    cy.getFirstCellInTableValue(1).then((nameTextEn1) => {
+      cy.wrap(nameTextEn1).as("nameTextEn1");
+    });
+    ItemCategory.switchingToTreeView();
+    cy.wait(1000);
+    cy.get("@parentCategory").then((parentCategory) => {
+      ItemCategory.SearchAnTreeAccount(getWrappedString(parentCategory));
+    });
+    cy.wait(1000);
+    ItemCategory.clickEditButtonDetailAccount();
+    cy.wait(1000);
+    AddingCategoryScreen.verifyCodeFieldISReadOnly();
+    AddingCategoryScreen.selectParentCategory();
+    AddingCategoryScreen.inputNameEn(InventoryData.itemCategoryNameEn);
+    AddingCategoryScreen.inputNameAr(InventoryData.itemCategoryNameAr);
+    ItemCategory.clickISDetailedSwitch();
+    AddingCategoryScreen.selectCostOfGoodSoldAccount();
+    AddingCategoryScreen.selectCategoryType();
+    AddingCategoryScreen.verifyCancelButton();
+    AddingCategoryScreen.selectpurchaseAccount();
+    AddingCategoryScreen.clickSaveButton();
+    cy.wait(1500);
+    ItemCategory.switchingToListView();
+    ItemCategory.verifyTheListViewHasTheDetailedCategory(
+      InventoryData.itemCategoryNameEn
+    );
   });
 });

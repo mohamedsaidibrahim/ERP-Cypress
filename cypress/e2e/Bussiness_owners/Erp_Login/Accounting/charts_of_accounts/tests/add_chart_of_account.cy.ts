@@ -61,7 +61,7 @@ describe("Adding Chart of Account", () => {
       .should("be.visible");
     // Verift the name Text Field
     cy.get(
-      'input[class="p-inputtext p-component p-element ng-star-inserted"]'
+      '[data-testid="name"]'
     ).should("have.length", 1);
     cy.get(
       'span[class="p-element p-dropdown-label p-inputtext p-dropdown-label-empty ng-star-inserted"]'

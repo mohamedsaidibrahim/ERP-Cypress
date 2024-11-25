@@ -36,6 +36,7 @@
     "broken_links_csv": "npx cypress run --browser chrome --spec 'cypress/e2e/Broken_Links/tests/erp_broken_links_csv.cy.ts'",
     "broken_links_json": "npx cypress run --browser chrome --spec 'cypress/e2e/Broken_Links/tests/erp_broken_links_json.cy.ts'",
     "page:load_time": "npx cypress run --browser chrome --spec 'cypress/e2e/Global_tests/PERFORMANCE/page_load_time/page_load_time.cy.ts'",
+    "axa": "npx cypress run --browser chrome --spec 'cypress/e2e/Global_tests/Accessbility/Archive/all_urls/version1_generate-accessibility-report.cy.js'",
     "cy:access": "npx cypress run --browser chrome --spec 'cypress/e2e/Global_tests/Accessbility/tests/accessibility-test.cy.js'",
     "v1:access": "npx cypress run --browser chrome --spec 'cypress/e2e/Global_tests/Accessbility/Archive/Version1/accessibility-test.cy.js'",
     "build:image": "docker build -t erp_microtec_cypress .",
