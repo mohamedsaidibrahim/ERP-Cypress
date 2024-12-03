@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:19:35.755Z",
+    "end": "2024-12-03T08:19:39.125Z",
+    "duration": 3370,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "87dd8c25-ab5c-4bd7-8196-8c1578c0c426",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Attributes/tests/attribute_add.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Attributes/tests/attribute_add.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "30995eb5-e11f-448c-998e-7c424c72bbb5",
+          "title": "Attribute (Add )",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify Labels",
+              "fullTitle": "Attribute (Add ) 1.Verify Labels",
+              "timedOut": null,
+              "duration": 1618,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\nattribute_1.Attribute.landing();\ncy.wait(1500);\ncy.clickAddNewButton();\ncy.wait(1000);\ncy.verifyDimmidInput(\"attributeId\");\ncy.contains(\"label\", /ID/i).should(\"be.visible\");\ncy.contains(\"label\", /Attribute Name English/i).should(\"be.visible\");\ncy.contains(\"label\", /Attribute Name Arabic/i).should(\"be.visible\");\ncy.zoomOut();\ncy.get(\"table th\").eq(0).contains(/Value English/i).should(\"be.visible\");\ncy.get(\"table th\").eq(1).contains(/Value Arabic/i).should(\"be.visible\");\ncy.get(\"table th\").eq(2).contains(/Status/i).should(\"be.visible\");\ncy.get(\"table th\").eq(3).contains(/action/i).should(\"be.visible\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "604a8a06-d2e0-4c09-a9cd-c7f23dd43bb9",
+              "parentUUID": "30995eb5-e11f-448c-998e-7c424c72bbb5",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Adding new Attribute With One Value Line(Save Button) ",
+              "fullTitle": "Attribute (Add ) 2.Verify Adding new Attribute With One Value Line(Save Button) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "attribute_1.Attribute.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncy.clickAddNewButton();\nattribute_1.Attribute.inputAttributtNameEnglish(inventory_data_1.InventoryData.nameEn);\nattribute_1.Attribute.inputAttributeNameArabic(inventory_data_1.InventoryData.nameAr);\nattribute_1.Attribute.clickAddNewLineButton();\nattribute_1.Attribute.inputValueEnglish(inventory_data_1.InventoryData.nameHEn);\nattribute_1.Attribute.inputValueArabic(inventory_data_1.InventoryData.nameHAr);\nattribute_1.Attribute.clickSaveButton();\ncy.assertnewItemAddedToListView();",
+              "err": {},
+              "uuid": "a56532cf-44e6-4ab6-845a-79bf29052358",
+              "parentUUID": "30995eb5-e11f-448c-998e-7c424c72bbb5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.Verify Cancel Adding new Attribute With One Value Line(Save Button) ",
+              "fullTitle": "Attribute (Add ) 3.Verify Cancel Adding new Attribute With One Value Line(Save Button) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "attribute_1.Attribute.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncy.clickAddNewButton();\nattribute_1.Attribute.inputAttributtNameEnglish(inventory_data_1.InventoryData.nameEn);\nattribute_1.Attribute.inputAttributeNameArabic(inventory_data_1.InventoryData.nameAr);\nattribute_1.Attribute.clickAddNewLineButton();\nattribute_1.Attribute.inputValueEnglish(inventory_data_1.InventoryData.nameHEn);\nattribute_1.Attribute.inputValueArabic(inventory_data_1.InventoryData.nameHAr);\nattribute_1.Attribute.clickSCancelButton();\ncy.assertAfterItemEditedInListView();",
+              "err": {},
+              "uuid": "9bdaa29a-1436-4329-b73d-e2dcec1c0a19",
+              "parentUUID": "30995eb5-e11f-448c-998e-7c424c72bbb5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4.Verify Adding new Attribute Multiple Lines Values",
+              "fullTitle": "Attribute (Add ) 4.Verify Adding new Attribute Multiple Lines Values",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "attribute_1.Attribute.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncy.clickAddNewButton();\nattribute_1.Attribute.inputAttributtNameEnglish(inventory_data_1.InventoryData.nameEn + \"Multi\");\nattribute_1.Attribute.inputAttributeNameArabic(inventory_data_1.InventoryData.nameAr + \"Multi\");\nattribute_1.Attribute.clickAddNewLineButton();\nattribute_1.Attribute.inputValueEnglish(inventory_data_1.InventoryData.nameHEn + \"Multi\");\nattribute_1.Attribute.inputValueArabic(inventory_data_1.InventoryData.nameHAr + \"Multi\");\nattribute_1.Attribute.clickAddNewLineButton();\nattribute_1.Attribute.inputValueEnglish(inventory_data_1.InventoryData.nameBEn + \"Multi\");\nattribute_1.Attribute.inputValueArabic(inventory_data_1.InventoryData.nameBAr + \"Multi\");\nattribute_1.Attribute.clickAddNewLineButton();\nattribute_1.Attribute.inputValueEnglish(inventory_data_1.InventoryData.vName + \"Multi\");\nattribute_1.Attribute.inputValueArabic(inventory_data_1.InventoryData.itemName + \"Multi\");\nattribute_1.Attribute.clickSaveButton();\ncy.assertnewItemAddedToListView();",
+              "err": {},
+              "uuid": "71ce898f-ff26-473b-896b-703e3e8b2ad7",
+              "parentUUID": "30995eb5-e11f-448c-998e-7c424c72bbb5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "5.Verify Adding new Attribute Without Values",
+              "fullTitle": "Attribute (Add ) 5.Verify Adding new Attribute Without Values",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "attribute_1.Attribute.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncy.clickAddNewButton();\nattribute_1.Attribute.inputAttributtNameEnglish(inventory_data_1.InventoryData.nameEn);\nattribute_1.Attribute.inputAttributeNameArabic(inventory_data_1.InventoryData.nameAr);\nattribute_1.Attribute.clickSaveButton();\ncy.url().should(\"include\", \"add\");",
+              "err": {},
+              "uuid": "8a87d3df-18eb-476c-8dd9-cb886545e5bb",
+              "parentUUID": "30995eb5-e11f-448c-998e-7c424c72bbb5",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "6.Verify Required Validation Messages",
+              "fullTitle": "Attribute (Add ) 6.Verify Required Validation Messages",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "attribute_1.Attribute.landing();\ncy.wait(1500);\ncy.clickAddNewButton();\nattribute_1.Attribute.clickSaveButton();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\nattribute_1.Attribute.inputAttributtNameEnglish(inventory_data_1.InventoryData.nameEn);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\nattribute_1.Attribute.inputAttributeNameArabic(inventory_data_1.InventoryData.nameAr);\ncy.verifyNotExistanceTheRequiredValidation();\nattribute_1.Attribute.clickAddNewLineButton();\nattribute_1.Attribute.clickSaveButton();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\nattribute_1.Attribute.inputValueEnglish(inventory_data_1.InventoryData.nameHEn);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\nattribute_1.Attribute.inputValueArabic(inventory_data_1.InventoryData.nameHAr);\ncy.verifyNotExistanceTheRequiredValidation();",
+              "err": {},
+              "uuid": "6ed0f033-942d-4a5d-adfb-6db4e544ce28",
+              "parentUUID": "30995eb5-e11f-448c-998e-7c424c72bbb5",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "604a8a06-d2e0-4c09-a9cd-c7f23dd43bb9"
+          ],
+          "pending": [],
+          "skipped": [
+            "a56532cf-44e6-4ab6-845a-79bf29052358",
+            "9bdaa29a-1436-4329-b73d-e2dcec1c0a19",
+            "71ce898f-ff26-473b-896b-703e3e8b2ad7",
+            "8a87d3df-18eb-476c-8dd9-cb886545e5bb",
+            "6ed0f033-942d-4a5d-adfb-6db4e544ce28"
+          ],
+          "duration": 1618,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

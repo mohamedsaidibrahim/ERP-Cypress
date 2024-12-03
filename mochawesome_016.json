@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 4,
-    "start": "2024-11-26T04:00:07.150Z",
-    "end": "2024-11-26T04:18:53.093Z",
-    "duration": 1125943,
+    "start": "2024-12-03T05:05:27.400Z",
+    "end": "2024-12-03T05:21:56.903Z",
+    "duration": 989503,
     "testsRegistered": 4,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a7eaecd4-8c8f-4659-a1ce-eead7a3eb864",
+      "uuid": "801babff-1f9f-4dd0-a6dd-6b27d24bb0a1",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Group/tests/Edit_taxes_group.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Group/tests/Edit_taxes_group.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "75715c39-0667-4670-8ef7-150114948a82",
+          "uuid": "5c45c0d4-e51b-4ec1-be88-a2026de36f3c",
           "title": "Edit New Taxs Group",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify all the components are displayed on the Edit New Tax Group",
               "fullTitle": "Edit New Taxs Group 1.Verify all the components are displayed on the Edit New Tax Group",
               "timedOut": null,
-              "duration": 98913,
+              "duration": 117824,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `table`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:156:0)",
                 "diff": null
               },
-              "uuid": "2ad5f893-1bda-41f2-8055-91ed655c72fd",
-              "parentUUID": "75715c39-0667-4670-8ef7-150114948a82",
+              "uuid": "1f8b730a-db1c-4ea8-9ba6-6d4fcae74305",
+              "parentUUID": "5c45c0d4-e51b-4ec1-be88-a2026de36f3c",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "2.Verify Displaying Of Required Messsages",
               "fullTitle": "Edit New Taxs Group 2.Verify Displaying Of Required Messsages",
               "timedOut": null,
-              "duration": 85966,
+              "duration": 86569,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=name]`, but never found it.\n    at TaxsGroup.clearName (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Group/pages/TaxsGroup.ts:54:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Group/tests/Edit_taxes_group.cy.ts:31:0)",
                 "diff": null
               },
-              "uuid": "6b51cb35-7db6-405f-afe7-952ddd7b82f8",
-              "parentUUID": "75715c39-0667-4670-8ef7-150114948a82",
+              "uuid": "502b7100-d2d6-4cc7-af3b-895c324e4748",
+              "parentUUID": "5c45c0d4-e51b-4ec1-be88-a2026de36f3c",
               "isHook": false,
               "skipped": false
             },
@@ -82,7 +82,7 @@
               "title": "3.Verify Editting New Taxes Group",
               "fullTitle": "Edit New Taxs Group 3.Verify Editting New Taxes Group",
               "timedOut": null,
-              "duration": 148314,
+              "duration": 129865,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -91,12 +91,12 @@
               "context": null,
               "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ncy.getLastCellInTableValue(0).then((code1) => {\n    cy.wrap(code1).as(\"code1\");\n});\ncy.getLastCellInTableValue(1).then((name1) => {\n    cy.wrap(name1).as(\"name1\");\n});\ncy.reload();\ncy.wait(1000);\ncy.clickFirstEditActionButton();\ncy.get(\"@name1\").then((name1) => {\n    TaxsGroup_1.TaxsGroup.inputName(\"Editted_\" + (0, utils_1.getWrappedString)(name1));\n});\nTaxsGroup_1.TaxsGroup.submitDialog();\ncy.wait(1000);\ncy.assertAfterItemEditedInListView();\ncy.get(\"@code1\").then((code1) => {\n    cy.verifyFirstCellInTable(0, (0, utils_1.getWrappedString)(code1));\n});\ncy.get(\"@name1\").then((name1) => {\n    cy.verifyFirstCellInTable(1, \"Editted_\" + (0, utils_1.getWrappedString)(name1));\n});",
               "err": {
-                "message": "AssertionError: expected '2244' to equal '7430'",
-                "estack": "AssertionError: expected '2244' to equal '7430'\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:642:0)",
-                "diff": "- '2244'\n+ '7430'\n"
+                "message": "AssertionError: expected '4663' to equal '7430'",
+                "estack": "AssertionError: expected '4663' to equal '7430'\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:642:0)",
+                "diff": "- '4663'\n+ '7430'\n"
               },
-              "uuid": "b796895f-90dc-49ee-b873-db6e6627213b",
-              "parentUUID": "75715c39-0667-4670-8ef7-150114948a82",
+              "uuid": "f0df1280-84af-45fc-894a-4b97e4ed0935",
+              "parentUUID": "5c45c0d4-e51b-4ec1-be88-a2026de36f3c",
               "isHook": false,
               "skipped": false
             },
@@ -104,7 +104,7 @@
               "title": "4.Verify canceling Editting New Taxes Group",
               "fullTitle": "Edit New Taxs Group 4.Verify canceling Editting New Taxes Group",
               "timedOut": null,
-              "duration": 149306,
+              "duration": 112029,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -113,12 +113,12 @@
               "context": null,
               "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ncy.getLastCellInTableValue(0).then((code1) => {\n    cy.wrap(code1).as(\"code1\");\n});\ncy.getLastCellInTableValue(1).then((name1) => {\n    cy.wrap(name1).as(\"name1\");\n});\ncy.reload();\ncy.wait(1000);\ncy.clickFirstEditActionButton();\ncy.get(\"@name1\").then((name1) => {\n    TaxsGroup_1.TaxsGroup.inputName(\"Editted_\" + (0, utils_1.getWrappedString)(name1));\n});\nTaxsGroup_1.TaxsGroup.cancelDialog();\ncy.wait(1000);\ncy.assertAfterItemEditedInListView();\ncy.get(\"@code1\").then((code1) => {\n    cy.verifyFirstCellInTable(0, (0, utils_1.getWrappedString)(code1));\n});\ncy.get(\"@name1\").then((name1) => {\n    cy.verifyFirstCellInTable(1, (0, utils_1.getWrappedString)(name1));\n});",
               "err": {
-                "message": "AssertionError: expected '2244' to equal '7430'",
-                "estack": "AssertionError: expected '2244' to equal '7430'\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:642:0)",
-                "diff": "- '2244'\n+ '7430'\n"
+                "message": "AssertionError: expected '4663' to equal '7430'",
+                "estack": "AssertionError: expected '4663' to equal '7430'\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:642:0)",
+                "diff": "- '4663'\n+ '7430'\n"
               },
-              "uuid": "3a2cc068-262d-45f2-b214-183cb92017ec",
-              "parentUUID": "75715c39-0667-4670-8ef7-150114948a82",
+              "uuid": "58f19718-2e6f-4ba6-a452-967a4b47a6b4",
+              "parentUUID": "5c45c0d4-e51b-4ec1-be88-a2026de36f3c",
               "isHook": false,
               "skipped": false
             }
@@ -126,14 +126,14 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "2ad5f893-1bda-41f2-8055-91ed655c72fd",
-            "6b51cb35-7db6-405f-afe7-952ddd7b82f8",
-            "b796895f-90dc-49ee-b873-db6e6627213b",
-            "3a2cc068-262d-45f2-b214-183cb92017ec"
+            "1f8b730a-db1c-4ea8-9ba6-6d4fcae74305",
+            "502b7100-d2d6-4cc7-af3b-895c324e4748",
+            "f0df1280-84af-45fc-894a-4b97e4ed0935",
+            "58f19718-2e6f-4ba6-a452-967a4b47a6b4"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 482499,
+          "duration": 446287,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

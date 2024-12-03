@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
+    "tests": 1,
     "passes": 0,
-    "pending": 1,
+    "pending": 0,
     "failures": 1,
-    "start": "2024-11-26T02:50:28.691Z",
-    "end": "2024-11-26T02:53:46.348Z",
-    "duration": 197657,
+    "start": "2024-12-03T02:55:12.550Z",
+    "end": "2024-12-03T02:57:03.262Z",
+    "duration": 110712,
     "testsRegistered": 4,
     "passPercent": 0,
-    "pendingPercent": 25,
-    "other": 1,
-    "hasOther": true,
-    "skipped": 1,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "bb7af186-4e42-4dec-82f4-fb899ac7ec22",
+      "uuid": "b65d23c2-e6ef-4d79-8a42-94d79d6bd9e7",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "3a10c69b-35f3-4fee-b4bf-d679d568f37b",
+          "uuid": "e1949dff-d03e-4aa4-a02f-ca4746aae493",
           "title": "Add Company Dialoge",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1) Verify Happy Scenario The User Add The Required Data and Save and Back to The Previous Page..",
               "fullTitle": "Add Company Dialoge 1) Verify Happy Scenario The User Add The Required Data and Save and Back to The Previous Page..",
               "timedOut": null,
-              "duration": 56606,
+              "duration": 59070,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "cy.wait(1500);\ncy.navigateToTheLatestScreen();\ncy.wait(1000);\ncy.getInitItemsCountInListView();\nAddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.inputCompanyName(company_data_1.CompanyData.companyName);\nAddCompanyDialoge_1.AddCompanyDialog.inputBranchName(company_data_1.CompanyData.branchName);\ncy.get(\"@initialCount\").then((initialCount) => {\n    AddCompanyDialoge_1.AddCompanyDialog.selectCompanyType(initialCount);\n});\nAddCompanyDialoge_1.AddCompanyDialog.clickSaveButton();\nAddCompanyDialoge_1.AddCompanyDialog.dialogNotExist();\ncy.assertnewItemAddedToListView();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button span' but never did.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button span' but never did.\n    at AddCompanyDialog.clickAddCompanyButton (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/AddCompanyDialoge.ts:41:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts:20:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Company Dialoge`",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Company Dialoge`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts:13:0)",
                 "diff": null
               },
-              "uuid": "7d85e98f-0140-4d82-814b-f0b31668c8ad",
-              "parentUUID": "3a10c69b-35f3-4fee-b4bf-d679d568f37b",
+              "uuid": "13b32524-1173-4ad9-866e-68a40a3c7677",
+              "parentUUID": "e1949dff-d03e-4aa4-a02f-ca4746aae493",
               "isHook": false,
               "skipped": false
             },
@@ -61,40 +61,36 @@
               "fullTitle": "Add Company Dialoge 2.Verify That The Save and Edit button Save The Action and Navigates To The Edit Screen.",
               "timedOut": null,
               "duration": 0,
-              "state": "pending",
+              "state": "skipped",
               "speed": null,
               "pass": false,
               "fail": false,
-              "pending": true,
+              "pending": false,
               "context": null,
               "code": "cy.wait(1500);\ncy.navigateToTheLatestScreen();\ncy.wait(1000);\ncy.increaseScreenItemsMaxCount(100);\nAddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.inputCompanyName(company_data_1.CompanyData.companyName);\nAddCompanyDialoge_1.AddCompanyDialog.inputBranchName(company_data_1.CompanyData.branchName);\nAddCompanyDialoge_1.AddCompanyDialog.clickSaveAndEditBtn();\nAddCompanyDialoge_1.AddCompanyDialog.dialogNotExist();\ncy.url().should(\"contains\", \"edit\");",
               "err": {},
-              "uuid": "01a21484-04cd-4379-8289-74256d662119",
-              "parentUUID": "3a10c69b-35f3-4fee-b4bf-d679d568f37b",
+              "uuid": "c61bf4a0-6138-42ea-98bb-0823822e794e",
+              "parentUUID": "e1949dff-d03e-4aa4-a02f-ca4746aae493",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "3.Verify That All Components are Blank When The Add New Company list is Open.",
               "fullTitle": "Add Company Dialoge 3.Verify That All Components are Blank When The Add New Company list is Open.",
               "timedOut": null,
-              "duration": 35763,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "AddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.verifyElementsWithoutValues();",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Company Dialoge`",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Company Dialoge`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/AddCompanyDialoge.cy.ts:13:0)",
-                "diff": null
-              },
-              "uuid": "9130fa59-cbaa-4dfa-b3eb-853ec2278fdb",
-              "parentUUID": "3a10c69b-35f3-4fee-b4bf-d679d568f37b",
+              "err": {},
+              "uuid": "8d540c71-f830-44fd-8ac5-31baf23fca42",
+              "parentUUID": "e1949dff-d03e-4aa4-a02f-ca4746aae493",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "4.Verify That The Form can not Submit if any of the required fields is empty",
@@ -109,8 +105,8 @@
               "context": null,
               "code": "cy.wait(1500);\ncy.navigateToTheLatestScreen();\ncy.wait(1000);\ncy.getInitItemsCountInListView();\nAddCompanyDialoge_1.AddCompanyDialog.clickAddCompanyButton();\nAddCompanyDialoge_1.AddCompanyDialog.clickSaveButton();\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(3);\n    }\n    else {\n        cy.validateRequiredComponents(2);\n    }\n});\nAddCompanyDialoge_1.AddCompanyDialog.inputCompanyName(company_data_1.CompanyData.companyName);\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(2);\n    }\n    else {\n        cy.validateRequiredComponents(1);\n    }\n});\nAddCompanyDialoge_1.AddCompanyDialog.inputBranchName(company_data_1.CompanyData.BranchNameTh);\ncy.get(\"@initialCount\").then((initialCount) => {\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.validateRequiredComponents(1);\n    }\n    else {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n});\ncy.get(\"@initialCount\").then((initialCount) => {\n    AddCompanyDialoge_1.AddCompanyDialog.selectCompanyType(initialCount);\n    if ((0, utils_1.getWrappedNumber)(initialCount) > 0) {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n    else {\n        cy.get(\"span.errorMessage.ng-star-inserted\").should(\"not.exist\");\n    }\n});",
               "err": {},
-              "uuid": "fc5edc02-7571-4d65-b585-6fa56a63ccb2",
-              "parentUUID": "3a10c69b-35f3-4fee-b4bf-d679d568f37b",
+              "uuid": "4b80a1a4-ecd5-4f26-b5bd-30ad8bb50ec4",
+              "parentUUID": "e1949dff-d03e-4aa4-a02f-ca4746aae493",
               "isHook": false,
               "skipped": true
             }
@@ -118,16 +114,15 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "7d85e98f-0140-4d82-814b-f0b31668c8ad",
-            "9130fa59-cbaa-4dfa-b3eb-853ec2278fdb"
+            "13b32524-1173-4ad9-866e-68a40a3c7677"
           ],
-          "pending": [
-            "01a21484-04cd-4379-8289-74256d662119"
-          ],
+          "pending": [],
           "skipped": [
-            "fc5edc02-7571-4d65-b585-6fa56a63ccb2"
+            "c61bf4a0-6138-42ea-98bb-0823822e794e",
+            "8d540c71-f830-44fd-8ac5-31baf23fca42",
+            "4b80a1a4-ecd5-4f26-b5bd-30ad8bb50ec4"
           ],
-          "duration": 92369,
+          "duration": 59070,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

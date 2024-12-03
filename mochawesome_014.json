@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 2,
-    "passes": 1,
+    "tests": 8,
+    "passes": 2,
     "pending": 1,
-    "failures": 0,
-    "start": "2024-11-26T03:41:01.597Z",
-    "end": "2024-11-26T03:49:57.590Z",
-    "duration": 535993,
+    "failures": 5,
+    "start": "2024-12-03T03:51:45.580Z",
+    "end": "2024-12-03T04:56:16.076Z",
+    "duration": 3870496,
     "testsRegistered": 9,
-    "passPercent": 12.5,
+    "passPercent": 25,
     "pendingPercent": 11.11111111111111,
     "other": 1,
     "hasOther": true,
-    "skipped": 6,
-    "hasSkipped": true
+    "skipped": 0,
+    "hasSkipped": false
   },
   "results": [
     {
-      "uuid": "ad4453e2-9a7f-43e8-bf96-d2b2f6a16636",
+      "uuid": "d08bbde3-d81f-46b4-81a6-448b3d02faa9",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Tags/tests/tags.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Tags/tests/tags.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+          "uuid": "4176aa40-9168-4647-8fcf-51fb26742f35",
           "title": "General Setting",
           "fullFile": "",
           "file": "",
@@ -47,8 +47,8 @@
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ncy.wait(2500);\ngeneral_setting_1.GeneralSetting.clickShifttingButton();\ngeneral_setting_1.GeneralSetting.shiftToAnotherApp(\"Accounting\");\ncy.wait(500);\ngeneral_setting_1.GeneralSetting.verifyNavigatingToAnotherApp(\"accounting\");\ngeneral_setting_1.GeneralSetting.clickShifttingButton();\ngeneral_setting_1.GeneralSetting.shiftToAnotherApp(\"purchase\");\ncy.wait(1000);\ngeneral_setting_1.GeneralSetting.verifyNavigatingToAnotherApp(\"purchase\");",
               "err": {},
-              "uuid": "3152b360-599c-48a5-a84e-ad1e72f933e6",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "uuid": "f90f713e-5da8-4a96-9756-541d3b9eeff5",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "2.Verify that all components of taglist are exist successfully",
               "fullTitle": "General Setting 2.Verify that all components of taglist are exist successfully",
               "timedOut": null,
-              "duration": 444879,
+              "duration": 198503,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ngeneral_setting_1.GeneralSetting.verifyColumnHeaders();",
               "err": {},
-              "uuid": "023cdf6f-c0d3-4267-a6fa-cb6d86fc8eeb",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "uuid": "fbab93b0-ca8d-4f0d-8c05-f07707ad6ba7",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "3.Verify Required Validations",
               "fullTitle": "General Setting 3.Verify Required Validations",
               "timedOut": null,
-              "duration": 30178,
+              "duration": 141362,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -83,12 +83,12 @@
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ncy.wait(2000);\ngeneral_setting_1.GeneralSetting.clickAddNewButton();\ngeneral_setting_1.GeneralSetting.clickDialogSaveButton();\ngeneral_setting_1.GeneralSetting.inputTagName(general_settings_data_1.GeneralSettingsData.tagName);\ngeneral_setting_1.GeneralSetting.validatePressenceRequiredMessage();\ncy.checkAllMultiSelect(0);\ngeneral_setting_1.GeneralSetting.validateNoRequiredMessage();\ngeneral_setting_1.GeneralSetting.clearTagName();\ngeneral_setting_1.GeneralSetting.validatePressenceRequiredMessage();\ngeneral_setting_1.GeneralSetting.inputTagName(general_settings_data_1.GeneralSettingsData.tagName);\ngeneral_setting_1.GeneralSetting.validateNoRequiredMessage();\ngeneral_setting_1.GeneralSetting.clickDialogSaveButton();\ngeneral_setting_1.GeneralSetting.verifyAddNewTagDisAppearing();",
               "err": {
-                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/login?culture=en\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ETIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `General Setting`",
-                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/login?culture=en\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: ETIMEDOUT\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `General Setting`\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at LoginPage.visit (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Authentication/Login/pages/loginPage.ts:15:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Tags/tests/tags.cy.ts:9:0)\n\nFrom Node.js Internals:\n  Error: ETIMEDOUT\n      at Timeout.<anonymous> (<embedded>:290:108821)\n      at listOnTimeout (node:internal/timers:569:17)\n      at process.processTimers (node:internal/timers:512:7)",
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.ts` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.ts` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130509:64)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130983:16)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:4209:41)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1282:0)",
                 "diff": null
               },
-              "uuid": "6cea277f-17e3-45f4-8e29-60af1e714720",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "uuid": "0dc197e1-7b61-4488-993b-081dd534adff",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
               "skipped": false
             },
@@ -96,130 +96,149 @@
               "title": "4.Verify that cancel Button cancel all changes in Add a new tag Dialog",
               "fullTitle": "General Setting 4.Verify that cancel Button cancel all changes in Add a new tag Dialog",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 212170,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ngeneral_setting_1.GeneralSetting.clickAddNewButton();\ncy.wait(500);\ncy.checkAllMultiSelect(0);\ncy.wait(750);\ngeneral_setting_1.GeneralSetting.inputTagName(general_settings_data_1.GeneralSettingsData.tagName);\ngeneral_setting_1.GeneralSetting.clickDialogcancelButton();\ncy.assertAfterItemEditedInListView();\ngeneral_setting_1.GeneralSetting.verifyThatNewTagNameIsNOTAddedtotheTable(general_settings_data_1.GeneralSettingsData.tagName);",
-              "err": {},
-              "uuid": "98023bbc-2467-49d2-ab1f-91cad1e4a04a",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "err": {
+                "message": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"Create\" data-testid=\"save\" class=\"btn save body_b16\">...</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c3125920721=\"\" class=\"page_content\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"Create\" data-testid=\"save\" class=\"btn save body_b16\">...</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c3125920721=\"\" class=\"page_content\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112785:68)\n    at ensureDescendents (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112836:5)\n    at ensureDescendentsAndScroll (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112842:14)\n    at ensureElIsNotCovered (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112973:5)\n    at runAllChecks (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113172:52)\n    at retryActionability (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113209:16)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:4338:29)\n    at whenStable (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143614:68)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143555:14)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1724:18)\n    at Promise._fulfill (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1668:18)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:5473:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:229:0)",
+                "diff": null
+              },
+              "uuid": "fec3d2a1-13b5-4a37-a133-b1713922fc95",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "5.Verify that the user can Add a new tag",
               "fullTitle": "General Setting 5.Verify that the user can Add a new tag",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 249365,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ngeneral_setting_1.GeneralSetting.clickAddNewButton();\ncy.checkAllMultiSelect(0);\ngeneral_setting_1.GeneralSetting.inputTagName(general_settings_data_1.GeneralSettingsData.tagName);\ngeneral_setting_1.GeneralSetting.clickDialogSaveButton();\ncy.assertnewItemAddedToListView();\ncy.verifyFirstCellInTable(1, general_settings_data_1.GeneralSettingsData.tagName);",
-              "err": {},
-              "uuid": "51ae61e3-ae0f-4544-853b-0154a6a93222",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "err": {
+                "message": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"Create\" data-testid=\"save\" class=\"btn save body_b16\">...</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c3125920721=\"\" class=\"page_content\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"Create\" data-testid=\"save\" class=\"btn save body_b16\">...</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c3125920721=\"\" class=\"page_content\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112785:68)\n    at ensureDescendents (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112836:5)\n    at ensureDescendentsAndScroll (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112842:14)\n    at ensureElIsNotCovered (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112973:5)\n    at runAllChecks (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113172:52)\n    at retryActionability (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113209:16)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:4338:29)\n    at whenStable (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143614:68)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143555:14)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1724:18)\n    at Promise._fulfill (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1668:18)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:5473:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:229:0)",
+                "diff": null
+              },
+              "uuid": "2f84b1cc-3472-4b9b-8aa0-dfa6d33608b3",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "6.Verify that cancel Button cancels all changes in Edit tag Dialog",
               "fullTitle": "General Setting 6.Verify that cancel Button cancels all changes in Edit tag Dialog",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 316230,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ncy.getFirstCellInTableValue(0).then((codeT1) => {\n    cy.wrap(codeT1).as(\"codeT1\");\n});\ncy.getFirstCellInTableValue(1).then((nameT1) => {\n    cy.wrap(nameT1).as(\"nameT1\");\n});\ncy.clickFirstEditActionButton();\ncy.wait(1000);\ncy.get('timescircleicon[data-pc-section=\"clearicon\"]')\n    .first()\n    .click({ force: true });\ncy.get(\"@nameT1\").then((nameT1) => {\n    general_setting_1.GeneralSetting.inputTagNameEditted(\"Edited \" + (0, utils_1.trimText)(nameT1.toString().trim()));\n});\ngeneral_setting_1.GeneralSetting.clickDialogcancelButton();\ncy.wait(3000);\ncy.assertAfterItemEditedInListView();\ncy.get(\"@codeT1\").then((codeT1) => {\n    cy.verifyFirstCellInTable(0, (0, utils_1.trimText)(codeT1.toString().trim()));\n});\ncy.get(\"@nameT1\").then((nameT1) => {\n    cy.verifyFirstCellInTable(1, (0, utils_1.trimText)(nameT1.toString().trim()));\n});",
-              "err": {},
-              "uuid": "80a597fd-5c02-4b51-b733-1f1056ee0f76",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "err": {
+                "message": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"Cancel\" data-testid=\"cancel\" class=\"btn cancel body_b16\" style=\"width: 100%;\">Cancel</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c2319520051=\"\" class=\"pop_up_footer ng-star-inserted\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"Cancel\" data-testid=\"cancel\" class=\"btn cancel body_b16\" style=\"width: 100%;\">Cancel</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c2319520051=\"\" class=\"pop_up_footer ng-star-inserted\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112785:68)\n    at ensureDescendents (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112836:5)\n    at ensureDescendentsAndScroll (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112842:14)\n    at ensureElIsNotCovered (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112973:5)\n    at runAllChecks (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113172:52)\n    at retryActionability (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113209:16)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:4338:29)\n    at whenStable (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143614:68)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143555:14)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1724:18)\n    at Promise._fulfill (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1668:18)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:5473:46)\nFrom Your Spec Code:\n    at GeneralSetting.clickDialogcancelButton (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Tags/pages/general_setting.ts:46:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Tags/tests/tags.cy.ts:86:0)",
+                "diff": null
+              },
+              "uuid": "92de5019-87ba-4200-b504-27519b468bb6",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "7.Verify that the user can Edit an existing tag",
               "fullTitle": "General Setting 7.Verify that the user can Edit an existing tag",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 189651,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ncy.getFirstCellInTableValue(0).then((codeT1) => {\n    cy.wrap(codeT1).as(\"codeT1\");\n});\ncy.getFirstCellInTableValue(1).then((nameT1) => {\n    cy.wrap(nameT1).as(\"nameT1\");\n});\ncy.clickFirstEditActionButton();\ncy.wait(1000);\ncy.get('timescircleicon[data-pc-section=\"clearicon\"]')\n    .first()\n    .click({ force: true });\ncy.get(\"@nameT1\").then((nameT1) => {\n    general_setting_1.GeneralSetting.inputTagNameEditted(\"Edited \" + (0, utils_1.trimText)(nameT1.toString().trim()));\n});\ngeneral_setting_1.GeneralSetting.clickDialogSaveButton();\ncy.wait(3000);\ncy.assertAfterItemEditedInListView();\ncy.get(\"@codeT1\").then((codeT1) => {\n    cy.verifyFirstCellInTable(0, (0, utils_1.trimText)(codeT1.toString().trim()));\n});\ncy.get(\"@nameT1\").then((nameT1) => {\n    cy.verifyFirstCellInTable(1, \"Edited \" + (0, utils_1.trimText)(nameT1.toString().trim()));\n});",
-              "err": {},
-              "uuid": "83420381-a0cf-47a5-916a-5afbf4f7591f",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "err": {
+                "message": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"Save\" data-testid=\"save\" class=\"btn save body_b16\" style=\"width: 100%;\">Save</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c2319520051=\"\" class=\"pop_up_footer ng-star-inserted\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"Save\" data-testid=\"save\" class=\"btn save body_b16\" style=\"width: 100%;\">Save</button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c2319520051=\"\" class=\"pop_up_footer ng-star-inserted\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112785:68)\n    at ensureDescendents (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112836:5)\n    at ensureDescendentsAndScroll (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112842:14)\n    at ensureElIsNotCovered (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112973:5)\n    at runAllChecks (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113172:52)\n    at retryActionability (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113209:16)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:4338:29)\n    at whenStable (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143614:68)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143555:14)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1724:18)\n    at Promise._fulfill (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1668:18)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:5473:46)\nFrom Your Spec Code:\n    at GeneralSetting.clickDialogSaveButton (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Tags/pages/general_setting.ts:42:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Tags/tests/tags.cy.ts:114:0)",
+                "diff": null
+              },
+              "uuid": "8dd969e2-f467-485a-90e0-4ab81e174373",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "8.should filter the table based on search input in the first two columns",
               "fullTitle": "General Setting 8.should filter the table based on search input in the first two columns",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
-              "speed": null,
-              "pass": false,
+              "duration": 164557,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ncy.wait(2000);\ncy.verifySearchFunctionality();",
               "err": {},
-              "uuid": "422fa7a7-b2b8-441a-898f-de07298ecd0b",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "uuid": "4d76f65d-bece-4f07-b4e7-d6f154b4a418",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "9.Verify that the user can delete a new tag",
               "fullTitle": "General Setting 9.Verify that the user can delete a new tag",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 82127,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "general_setting_1.GeneralSetting.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ncy.clickFirstDeleteActionButton();\ncy.confirmDeletePopUp();\ncy.assertItemDeletedFromListView();",
-              "err": {},
-              "uuid": "17d6541f-cca6-4aa6-9003-7390506f3c8f",
-              "parentUUID": "5abd435b-22a9-404c-b1f6-9d69e3e629f0",
+              "err": {
+                "message": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"delete\" data-testid=\"table_button_delete\" class=\"btn table_button_delete body_b16\"></button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c832184040=\"\" class=\"actions flex align-items-center ng-star-inserted\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with",
+                "estack": "CypressError: Timed out retrying after 25050ms: `cy.click()` failed because this element:\n\n`<button _ngcontent-ng-c2574396526=\"\" type=\"undefined\" title=\"delete\" data-testid=\"table_button_delete\" class=\"btn table_button_delete body_b16\"></button>`\n\nis being covered by another element:\n\n`<div _ngcontent-ng-c832184040=\"\" class=\"actions flex align-items-center ng-star-inserted\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n    at ensureIsDescendent (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112785:68)\n    at ensureDescendents (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112836:5)\n    at ensureDescendentsAndScroll (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112842:14)\n    at ensureElIsNotCovered (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:112973:5)\n    at runAllChecks (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113172:52)\n    at retryActionability (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:113209:16)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise.attempt.Promise.try (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:4338:29)\n    at whenStable (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143614:68)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:143555:14)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1724:18)\n    at Promise._fulfill (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1668:18)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:5473:46)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:191:0)",
+                "diff": null
+              },
+              "uuid": "4c600386-755e-4a7a-ac6b-215e47947a7c",
+              "parentUUID": "4176aa40-9168-4647-8fcf-51fb26742f35",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "023cdf6f-c0d3-4267-a6fa-cb6d86fc8eeb"
+            "fbab93b0-ca8d-4f0d-8c05-f07707ad6ba7",
+            "4d76f65d-bece-4f07-b4e7-d6f154b4a418"
           ],
           "failures": [
-            "6cea277f-17e3-45f4-8e29-60af1e714720"
+            "0dc197e1-7b61-4488-993b-081dd534adff",
+            "fec3d2a1-13b5-4a37-a133-b1713922fc95",
+            "2f84b1cc-3472-4b9b-8aa0-dfa6d33608b3",
+            "92de5019-87ba-4200-b504-27519b468bb6",
+            "8dd969e2-f467-485a-90e0-4ab81e174373",
+            "4c600386-755e-4a7a-ac6b-215e47947a7c"
           ],
           "pending": [
-            "3152b360-599c-48a5-a84e-ad1e72f933e6"
+            "f90f713e-5da8-4a96-9756-541d3b9eeff5"
           ],
-          "skipped": [
-            "98023bbc-2467-49d2-ab1f-91cad1e4a04a",
-            "51ae61e3-ae0f-4544-853b-0154a6a93222",
-            "80a597fd-5c02-4b51-b733-1f1056ee0f76",
-            "83420381-a0cf-47a5-916a-5afbf4f7591f",
-            "422fa7a7-b2b8-441a-898f-de07298ecd0b",
-            "17d6541f-cca6-4aa6-9003-7390506f3c8f"
-          ],
-          "duration": 475057,
+          "skipped": [],
+          "duration": 1553965,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

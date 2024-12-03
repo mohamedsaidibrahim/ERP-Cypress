@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:16:41.078Z",
+    "end": "2024-12-03T08:16:44.498Z",
+    "duration": 3420,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "8a0a93a3-8a76-4d49-8567-5b9299f51c19",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/treasury_definition/tests/treasury_definition_edit.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/treasury_definition/tests/treasury_definition_edit.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "3c66a4d1-5367-43cd-ad59-db61d6548ae8",
+          "title": "Treasury Definition (edit)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify All components are displaying",
+              "fullTitle": "Treasury Definition (edit) 1.Verify All components are displaying",
+              "timedOut": null,
+              "duration": 1610,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "treasury_definition_1.TreasuryDefinition.landing();\ncy.clickFirstEditActionButton();\ncy.zoomOut();\ncy.wait(3500);\ncy.verifyDimmidInput(\"code\");\n// Verify Labels\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"name\", /name/i);\ncy.verifyLabelText(\"currencyId\", /currency/i);\ncy.verifyLabelText(\"branches\", /branches/i);\ncy.verifyLabelText(\"accountId\", /gl account/i);\ncy.get('label[for=\"openingBalance\"]')\n    .first()\n    .should(\"include\", /opening account balance/i);\ncy.get('label[for=\"openingBalance\"]')\n    .last()\n    .should(\"include\", /treasury opening balance/i);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "9e9057d9-d34a-4ec9-a58d-1384b4cacae3",
+              "parentUUID": "3c66a4d1-5367-43cd-ad59-db61d6548ae8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Submitting new Treasury Definition",
+              "fullTitle": "Treasury Definition (edit) 2.Verify Submitting new Treasury Definition",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "treasury_definition_1.TreasuryDefinition.landing();\ncy.getInitItemsCountInListView();\ncy.clickFirstEditActionButton();\ncy.zoomOut();\ncy.wait(3500);\ncy.clickInputtedSearchDropDownList(\"accountId\", finance_data_1.FinanceData.edittedAccount);\ncy.clickInputtedSearchDropDownList(\"currencyId\", finance_data_1.FinanceData.correctCurrency);\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.treasuryName);\n// TreasuryDefinition.inputOpeningBalance();\ntreasury_definition_1.TreasuryDefinition.clickSaveButton();\ncy.assertAfterItemEditedInListView();\ncy.verifyFirstCellInTable(1, finance_data_1.FinanceData.treasuryName);\ncy.get(\"table tbody\")\n    .find(\"tr\")\n    .first()\n    .find(\"td\")\n    .eq(2)\n    .then(($el) => {\n    cy.wrap($el)\n        .invoke(\"text\")\n        .then((txtEx) => {\n        expect(txtEx.trim().split(\" \").join(\"\")).to.include(finance_data_1.FinanceData.correctCurrency.substring(1));\n    });\n});\ncy.verifyFirstCellInTable(3, finance_data_1.FinanceData.edittedAccount);",
+              "err": {},
+              "uuid": "a3faefa2-a6b9-4bcc-b144-e1bd12179d76",
+              "parentUUID": "3c66a4d1-5367-43cd-ad59-db61d6548ae8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.Verify Required Validation and The name Field is Required",
+              "fullTitle": "Treasury Definition (edit) 3.Verify Required Validation and The name Field is Required",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "treasury_definition_1.TreasuryDefinition.landing();\ncy.clickFirstEditActionButton();\ncy.zoomOut();\ncy.wait(3500);\ncy.contains(\"span\", /required/i).should(\"not.exist\");\ncy.getByTestAttribute(\"name\").clear();\ncy.contains(\"span\", /required/i).should(\"be.visible\");\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.treasuryName);\ncy.contains(\"span\", /required/i).should(\"not.exist\");",
+              "err": {},
+              "uuid": "e42a9f47-788a-4deb-8419-e61ef0955b84",
+              "parentUUID": "3c66a4d1-5367-43cd-ad59-db61d6548ae8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4.Verify Different Currency Validation",
+              "fullTitle": "Treasury Definition (edit) 4.Verify Different Currency Validation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "treasury_definition_1.TreasuryDefinition.landing();\ncy.clickFirstEditActionButton();\ncy.zoomOut();\ncy.wait(3500);\ncy.clickInputtedSearchDropDownList(\"currencyId\", finance_data_1.FinanceData.wrongCurrency);\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.treasuryName);\ncy.clickInputtedSearchDropDownList(\"accountId\", finance_data_1.FinanceData.edittedAccount);\n// TreasuryDefinition.inputOpeningBalance();\ntreasury_definition_1.TreasuryDefinition.clickSaveButton();\ncy.get('div[role=\"dialog\"]').should(\"be.visible\");",
+              "err": {},
+              "uuid": "c194cfda-f859-41f4-981f-5c8024fe0cfe",
+              "parentUUID": "3c66a4d1-5367-43cd-ad59-db61d6548ae8",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "9e9057d9-d34a-4ec9-a58d-1384b4cacae3"
+          ],
+          "pending": [],
+          "skipped": [
+            "a3faefa2-a6b9-4bcc-b144-e1bd12179d76",
+            "e42a9f47-788a-4deb-8419-e61ef0955b84",
+            "c194cfda-f859-41f4-981f-5c8024fe0cfe"
+          ],
+          "duration": 1610,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

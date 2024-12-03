@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 1,
     "failures": 6,
-    "start": "2024-11-26T03:04:42.824Z",
-    "end": "2024-11-26T03:15:01.127Z",
-    "duration": 618303,
+    "start": "2024-12-03T03:12:49.417Z",
+    "end": "2024-12-03T03:24:07.503Z",
+    "duration": 678086,
     "testsRegistered": 7,
     "passPercent": 0,
     "pendingPercent": 14.285714285714285,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "3bed46a6-ea0f-4ce0-a749-5d1ac0045ffa",
+      "uuid": "60e525f1-b84a-4ae2-9fbb-23b039d7a56a",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "fb7b34a8-fa6d-4039-94ca-837fe7469807",
+          "uuid": "ed56aecf-3dc1-46d9-8a18-9aac41e92665",
           "title": "Add new User",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify That The Dialoge has the same SubDomain name",
               "fullTitle": "Add new User 1.Verify That The Dialoge has the same SubDomain name",
               "timedOut": null,
-              "duration": 55829,
+              "duration": 54215,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n    at ManageUsers.clickFirstManageUsers (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:13:0)",
                 "diff": null
               },
-              "uuid": "df27ef2a-ff61-439e-bc79-a3fe14ab6ca4",
-              "parentUUID": "fb7b34a8-fa6d-4039-94ca-837fe7469807",
+              "uuid": "974f619a-38c8-4373-be4d-d596af814df7",
+              "parentUUID": "ed56aecf-3dc1-46d9-8a18-9aac41e92665",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "2.Verify All The compontes Are Visible",
               "fullTitle": "Add new User 2.Verify All The compontes Are Visible",
               "timedOut": null,
-              "duration": 42948,
+              "duration": 75035,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.\n    at ManageUsers.clickAddNewUser (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:78:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:44:0)",
                 "diff": null
               },
-              "uuid": "762a8ac5-1725-48c7-9ee8-17475c36a0c1",
-              "parentUUID": "fb7b34a8-fa6d-4039-94ca-837fe7469807",
+              "uuid": "779074c7-a29c-4048-b788-4456a4770831",
+              "parentUUID": "ed56aecf-3dc1-46d9-8a18-9aac41e92665",
               "isHook": false,
               "skipped": false
             },
@@ -82,7 +82,7 @@
               "title": "3.Verify That The Dialoge validates All the Required Components",
               "fullTitle": "Add new User 3.Verify That The Dialoge validates All the Required Components",
               "timedOut": null,
-              "duration": 37178,
+              "duration": 69728,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -91,12 +91,12 @@
               "context": null,
               "code": "manage_users_1.ManageUsers.clickFirstManageUsers();\nmanage_users_1.ManageUsers.clickAddNewUser();\nmanage_users_1.ManageUsers.clickSaveButton();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(4);\nmanage_users_1.ManageUsers.selectAdvancedLicence();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(3);\nmanage_users_1.ManageUsers.selectTheLastCompany();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\nmanage_users_1.ManageUsers.inputMail((0, utils_1.generateRandomEmail)());\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\nmanage_users_1.ManageUsers.selectTheFirstAndLastBranch();\ncy.verifyNotExistanceTheRequiredValidation();\ncy.confirmEmailRegExCompatibility('[data-testid=\"email\"]', (0, utils_1.generateRandomEmail)());",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n    at ManageUsers.clickFirstManageUsers (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:86:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.\n    at ManageUsers.clickAddNewUser (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:78:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:87:0)",
                 "diff": null
               },
-              "uuid": "d4b0934d-d36f-437f-b284-25f4eb247d47",
-              "parentUUID": "fb7b34a8-fa6d-4039-94ca-837fe7469807",
+              "uuid": "5d3630ff-e09b-4588-b9e0-b56f4b688e8b",
+              "parentUUID": "ed56aecf-3dc1-46d9-8a18-9aac41e92665",
               "isHook": false,
               "skipped": false
             },
@@ -104,7 +104,7 @@
               "title": "4.Verify That the Submitted data is Displayed on the grid and displayed it in the Table",
               "fullTitle": "Add new User 4.Verify That the Submitted data is Displayed on the grid and displayed it in the Table",
               "timedOut": null,
-              "duration": 58483,
+              "duration": 52793,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -113,12 +113,12 @@
               "context": null,
               "code": "var mail = (0, utils_1.generateRandomEmail)();\nmanage_users_1.ManageUsers.clickFirstManageUsers();\ncy.wait(500);\ncy.getInitItemsCountInListView();\nmanage_users_1.ManageUsers.clickAddNewUser();\n// input All Required Dataو MAil, Company, Breanches, Licence\nmanage_users_1.ManageUsers.inputAllRegularData(mail);\nmanage_users_1.ManageUsers.clickSaveButton();\ncy.wait(2000);\ncy.reload();\ncy.wait(500);\ncy.assertnewItemAddedToListView();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n    at ManageUsers.clickFirstManageUsers (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:102:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.\n    at ManageUsers.clickAddNewUser (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:78:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:105:0)",
                 "diff": null
               },
-              "uuid": "6f9d4080-dd8a-4e44-a4d7-08b1dfd5df9f",
-              "parentUUID": "fb7b34a8-fa6d-4039-94ca-837fe7469807",
+              "uuid": "b981692c-ec03-43c8-a9e4-ff6463305ed4",
+              "parentUUID": "ed56aecf-3dc1-46d9-8a18-9aac41e92665",
               "isHook": false,
               "skipped": false
             },
@@ -126,7 +126,7 @@
               "title": "5.Verify That the System does not display Branches, If there is not any Chosen Company",
               "fullTitle": "Add new User 5.Verify That the System does not display Branches, If there is not any Chosen Company",
               "timedOut": null,
-              "duration": 56116,
+              "duration": 63204,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -135,12 +135,12 @@
               "context": null,
               "code": "manage_users_1.ManageUsers.clickFirstManageUsers();\nmanage_users_1.ManageUsers.clickAddNewUser();\n// There is not any chosen company\ncy.get('p-multiselect[data-testid=\"branchIds\"]').click();\ncy.get('li[class=\"p-multiselect-empty-message ng-star-inserted\"]').should(\"be.visible\");\nmanage_users_1.ManageUsers.inputMail(\"test@test.co\");\n// There is a chosen company\nmanage_users_1.ManageUsers.selectTheLastCompany();\ncy.get('p-multiselect[data-testid=\"branchIds\"]').click();\ncy.get('div[class=\"p-checkbox-box\"]')\n    .its(\"length\")\n    .then((cout) => {\n    expect(cout).to.be.greaterThan(1);\n});",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n    at ManageUsers.clickFirstManageUsers (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:115:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.\n    at ManageUsers.clickAddNewUser (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:78:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:116:0)",
                 "diff": null
               },
-              "uuid": "ed356e19-a1ae-425e-a258-e902016e53bc",
-              "parentUUID": "fb7b34a8-fa6d-4039-94ca-837fe7469807",
+              "uuid": "58fd0caa-b7d8-4958-b266-549902f6236e",
+              "parentUUID": "ed56aecf-3dc1-46d9-8a18-9aac41e92665",
               "isHook": false,
               "skipped": false
             },
@@ -148,7 +148,7 @@
               "title": "6.Verify That the Dialog prevents dublicated Email",
               "fullTitle": "Add new User 6.Verify That the Dialog prevents dublicated Email",
               "timedOut": null,
-              "duration": 62697,
+              "duration": 45518,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -157,12 +157,12 @@
               "context": null,
               "code": "var mail = (0, utils_1.generateRandomEmail)();\nmanage_users_1.ManageUsers.clickFirstManageUsers();\nmanage_users_1.ManageUsers.clickAddNewUser();\n// input All Required Dataو MAil, Company, Breanches, Licence\nmanage_users_1.ManageUsers.inputAllRegularData(mail);\nmanage_users_1.ManageUsers.clickSaveButton();\ncy.wait(2000);\ncy.get('div[role=\"dialog\"]').should(\"not.exist\");\nmanage_users_1.ManageUsers.clickAddNewUser();\n// input All Required Dataو MAil, Company, Breanches, Licence\nmanage_users_1.ManageUsers.inputAllRegularData(mail);\nmanage_users_1.ManageUsers.clickSaveButton();\ncy.wait(2000);\ncy.get('div[role=\"dialog\"]').should(\"be.visible\");",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n    at ManageUsers.clickFirstManageUsers (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:132:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[icon=\"pi pi-plus\"]`, but never found it.\n    at ManageUsers.clickAddNewUser (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:78:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Add_new_user.cy.ts:133:0)",
                 "diff": null
               },
-              "uuid": "ab4edec9-dc9c-47bb-8fbb-2d40526915b5",
-              "parentUUID": "fb7b34a8-fa6d-4039-94ca-837fe7469807",
+              "uuid": "251771d6-2cf9-4581-a521-c76992e6456e",
+              "parentUUID": "ed56aecf-3dc1-46d9-8a18-9aac41e92665",
               "isHook": false,
               "skipped": false
             },
@@ -179,8 +179,8 @@
               "context": null,
               "code": "var mail = (0, utils_1.generateRandomEmail)();\nvar licence = \"Advanced\";\nmanage_users_1.ManageUsers.clickFirstManageUsers();\nmanage_users_1.ManageUsers.clickAddNewUser();\nmanage_users_1.ManageUsers.selectTheLastCompany();\nmanage_users_1.ManageUsers.inputMail(mail);\nmanage_users_1.ManageUsers.selectTheFirstAndLastBranch();\nmanage_users_1.ManageUsers.inputMail(mail);\nmanage_users_1.ManageUsers.selectAdvancedLicence();\nmanage_users_1.ManageUsers.clickSaveButton();\ncy.reload();\ncy.wait(500);\ncy.increaseScreenItemsMaxCount(100);\ncy.verifyFirstCellInTable(1, mail);\ncy.verifyFirstCellInTable(3, licence);",
               "err": {},
-              "uuid": "e4adbd6b-df90-4816-b61c-6d938d7b584a",
-              "parentUUID": "fb7b34a8-fa6d-4039-94ca-837fe7469807",
+              "uuid": "8a28380a-9af5-4fb3-8326-f286b8a54503",
+              "parentUUID": "ed56aecf-3dc1-46d9-8a18-9aac41e92665",
               "isHook": false,
               "skipped": false
             }
@@ -188,18 +188,18 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "df27ef2a-ff61-439e-bc79-a3fe14ab6ca4",
-            "762a8ac5-1725-48c7-9ee8-17475c36a0c1",
-            "d4b0934d-d36f-437f-b284-25f4eb247d47",
-            "6f9d4080-dd8a-4e44-a4d7-08b1dfd5df9f",
-            "ed356e19-a1ae-425e-a258-e902016e53bc",
-            "ab4edec9-dc9c-47bb-8fbb-2d40526915b5"
+            "974f619a-38c8-4373-be4d-d596af814df7",
+            "779074c7-a29c-4048-b788-4456a4770831",
+            "5d3630ff-e09b-4588-b9e0-b56f4b688e8b",
+            "b981692c-ec03-43c8-a9e4-ff6463305ed4",
+            "58fd0caa-b7d8-4958-b266-549902f6236e",
+            "251771d6-2cf9-4581-a521-c76992e6456e"
           ],
           "pending": [
-            "e4adbd6b-df90-4816-b61c-6d938d7b584a"
+            "8a28380a-9af5-4fb3-8326-f286b8a54503"
           ],
           "skipped": [],
-          "duration": 313251,
+          "duration": 360493,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

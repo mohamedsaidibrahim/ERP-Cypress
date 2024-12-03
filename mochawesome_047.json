@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:17:25.864Z",
+    "end": "2024-12-03T08:17:29.226Z",
+    "duration": 3362,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "ba482085-59d8-4b49-8c1f-9913ea933bfb",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/payment_methods/tests/payment_methods_edit.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/payment_methods/tests/payment_methods_edit.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6ee32a50-a644-4945-8d10-7ba37b38a202",
+          "title": "Payment Methods  (Edit)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify All components are displaying",
+              "fullTitle": "Payment Methods  (Edit) 1.Verify All components are displaying",
+              "timedOut": null,
+              "duration": 1610,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\ncy.clickFirstEditActionButton();\ncy.wait(6000);\n// Verify Header\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"name\", /name/i);\ncy.verifyLabelText(\"paymentPlace\", /payment place/i);\ncy.verifyLabelText(\"paymentMethodType\", /payment method type/i);\ncy.verifyLabelText(\"bankId\", /related bank/i);\ncy.verifyLabelText(\"bankAccountId\", /bank account/i);\ncy.verifyLabelText(\"currency\", /currency/i);\ncy.verifyLabelText(\"commissionType\", /commission type/i);\ncy.verifyLabelText(\"commissionValue\", /commission value/i);\ncy.verifyLabelText(\"commissionAccountId\", /commission account/i);\ncy.verifyLabelText(\"allowVAT\", /allow vat/i);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "7010c1ac-e3fc-495d-8b5b-d187cbdec468",
+              "parentUUID": "6ee32a50-a644-4945-8d10-7ba37b38a202",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Submitting Editted The \"Commision Options\" Only",
+              "fullTitle": "Payment Methods  (Edit) 2.Verify Submitting Editted The \"Commision Options\" Only",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\ncy.clickFirstEditActionButton();\ncy.wait(6000);\ncy.verifyDimmidInput(\"code\");\ncy.verifyDimmidInput(\"name\");\ncy.verifyDimmidItemDropDownList(\"paymentPlace\");\ncy.verifyDimmidItemDropDownList(\"paymentMethodType\");\ncy.verifyDimmidItemDropDownList(\"bankId\");\ncy.verifyDimmidItemDropDownList(\"bankAccountId\");\ncy.verifyDimmidInput(\"currency\");\n// Commision Options\ncy.getLastItemInDropDownList(\"commissionType\").then(($commissionType) => {\n    if ($commissionType != null) {\n        cy.wrap($commissionType)\n            .invoke(\"text\")\n            .then((commissionTypeTxt) => {\n            cy.log(\"commissionTypeTxt::: \" + commissionTypeTxt);\n            cy.wrap(commissionTypeTxt).as(\"commissionTypeTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"commissionTypeTxt\");\n    }\n});\ncy.getLastItemInDropDownList(\"commissionAccountId\").then(($commissionAccountId) => {\n    if ($commissionAccountId != null) {\n        cy.wrap($commissionAccountId)\n            .invoke(\"text\")\n            .then((commissionAccountIdTxt) => {\n            cy.log(\"commissionAccountIdTxt::: \" + commissionAccountIdTxt);\n            cy.wrap(commissionAccountIdTxt).as(\"commissionAccountIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"commissionAccountIdTxt\");\n    }\n});\npayment_methods_1.PaymentMethods.inputCommissionValue();\ncy.get('input[formcontrolname=\"allowVAT\"]').click();\npayment_methods_1.PaymentMethods.clickSaveButton();\ncy.wait(1500);",
+              "err": {},
+              "uuid": "ef8026b2-82be-4498-a8b0-966a3489c3f0",
+              "parentUUID": "6ee32a50-a644-4945-8d10-7ba37b38a202",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.verify all fields have the Dimed Status if the Place is Treasury OR Method is CHeck",
+              "fullTitle": "Payment Methods  (Edit) 3.verify all fields have the Dimed Status if the Place is Treasury OR Method is CHeck",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\ncy.clickFirstEditActionButton();\ncy.wait(6000);\ncy.verifyDimmidInput(\"code\");\ncy.verifyDimmidInput(\"name\");\ncy.verifyDimmidItemDropDownList(\"paymentPlace\");\ncy.verifyDimmidItemDropDownList(\"paymentMethodType\");\ncy.verifyDimmidItemDropDownList(\"bankId\");\ncy.verifyDimmidItemDropDownList(\"bankAccountId\");\ncy.verifyDimmidInput(\"currency\");\ncy.verifyDimmidItemDropDownList(\"commissionType\");\ncy.verifyDimmidItemDropDownList(\"commissionAccountId\");\ncy.verifyDimmidInput(\"commissionValue\");",
+              "err": {},
+              "uuid": "6516fc68-55df-416f-a982-be668a7eeee6",
+              "parentUUID": "6ee32a50-a644-4945-8d10-7ba37b38a202",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "7010c1ac-e3fc-495d-8b5b-d187cbdec468"
+          ],
+          "pending": [],
+          "skipped": [
+            "ef8026b2-82be-4498-a8b0-966a3489c3f0",
+            "6516fc68-55df-416f-a982-be668a7eeee6"
+          ],
+          "duration": 1610,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

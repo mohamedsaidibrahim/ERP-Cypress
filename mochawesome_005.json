@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
+    "tests": 3,
     "passes": 0,
     "pending": 0,
-    "failures": 1,
-    "start": "2024-11-26T02:53:48.112Z",
-    "end": "2024-11-26T02:56:13.293Z",
-    "duration": 145181,
+    "failures": 3,
+    "start": "2024-12-03T02:57:05.065Z",
+    "end": "2024-12-03T03:03:03.641Z",
+    "duration": 358576,
     "testsRegistered": 9,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 8,
+    "skipped": 6,
     "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "d4f520a3-16a9-4dc1-9202-d3f42ef066f2",
+      "uuid": "95b2de24-cbcc-4f1e-ae43-0725ba34b3de",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/EditCompanyScreen.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/EditCompanyScreen.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+          "uuid": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
           "title": "Edit Company Screen",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1. Verify That The User Can Navigate Between All Tabs",
               "fullTitle": "Edit Company Screen 1. Verify That The User Can Navigate Between All Tabs",
               "timedOut": null,
-              "duration": 46019,
+              "duration": 59340,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "cy.wait(1000);\neditCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\neditCompanyScreenAct_1.EditCompanyScreen.clickContactTab();\neditCompanyScreenAct_1.EditCompanyScreen.clickLegalTab();\neditCompanyScreenAct_1.EditCompanyScreen.clickHierarchyTab();\neditCompanyScreenAct_1.EditCompanyScreen.clickBranchesTab();\neditCompanyScreenAct_1.EditCompanyScreen.clickAddressTab();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Company Screen`",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Company Screen`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/EditCompanyScreen.cy.ts:12:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.\n    at EditCompanyScreen.clickFirstCompanyToEdit (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:25:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/EditCompanyScreen.cy.ts:16:0)",
                 "diff": null
               },
-              "uuid": "896f7835-3aeb-40e3-814b-4a40c4c62bf5",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "uuid": "334afd1e-7701-47d8-8c18-5530753f8917",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
               "skipped": false
             },
@@ -60,37 +60,45 @@
               "title": "2. Verify  Editting Address Tab",
               "fullTitle": "Edit Company Screen 2. Verify  Editting Address Tab",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 77120,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "cy.wait(1000);\n// Click Edit Button\neditCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\ncy.wait(1000);\neditCompanyScreenAct_1.EditCompanyScreen.clickEditCompanyButton();\n// Choose Country\neditCompanyScreenAct_1.EditCompanyScreen.selectCountry();\n// Input Latitude\neditCompanyScreenAct_1.EditCompanyScreen.inputLatitude(company_data_1.CompanyData.cLatitude);\n// Input Langitude\neditCompanyScreenAct_1.EditCompanyScreen.inputLangitude(company_data_1.CompanyData.cLongitude);\n// Input City\neditCompanyScreenAct_1.EditCompanyScreen.inputCity(company_data_1.CompanyData.cCity);\n// Input Region\neditCompanyScreenAct_1.EditCompanyScreen.inputRegion(company_data_1.CompanyData.cRegion);\n// Input Address\neditCompanyScreenAct_1.EditCompanyScreen.inputAddress(company_data_1.CompanyData.address);\n// Add Currency\ncy.getLastItemInDropDownList(\"currencyId\");\n// Submit\neditCompanyScreenAct_1.EditCompanyScreen.clickSaveEditCompanyButton();\n// Check and close the Success POp up\neditCompanyScreenAct_1.EditCompanyScreen.EdittingIsFinished();",
-              "err": {},
-              "uuid": "39ff0d41-1074-4ff3-a4f2-ddb62f4ff6df",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.\n    at EditCompanyScreen.clickFirstCompanyToEdit (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:25:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/EditCompanyScreen.cy.ts:26:0)",
+                "diff": null
+              },
+              "uuid": "56eae702-6ba2-4dbd-9146-bd0893ef13bf",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "3. Verify Editting Adress Tab is Successfully Saved",
               "fullTitle": "Edit Company Screen 3. Verify Editting Adress Tab is Successfully Saved",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
+              "duration": 56062,
+              "state": "failed",
               "speed": null,
               "pass": false,
-              "fail": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "editCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\ncy.wait(1500);\neditCompanyScreenAct_1.EditCompanyScreen.clickEditCompanyButton();\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCity(company_data_1.CompanyData.cCity);\n// Input Region\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyRegion(company_data_1.CompanyData.cRegion);\n// Input Address\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyAddress(company_data_1.CompanyData.address);\n// Input Latitude\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyLatitude(company_data_1.CompanyData.cLatitude);\n// Input Langitude\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyLangitude(company_data_1.CompanyData.cLongitude);",
-              "err": {},
-              "uuid": "2b13aeb0-3e6b-4c91-8c76-a29c16363e69",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Company Screen`",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Company Screen`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/tests/EditCompanyScreen.cy.ts:12:0)",
+                "diff": null
+              },
+              "uuid": "e0a21d1e-7b8c-4a33-ae77-50875d32e36c",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             },
             {
               "title": "4. Verify  Editting Contact Tab",
@@ -105,8 +113,8 @@
               "context": null,
               "code": "editCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\ncy.wait(1500);\neditCompanyScreenAct_1.EditCompanyScreen.clickContactTab();\neditCompanyScreenAct_1.EditCompanyScreen.clickEditCompanyButton();\neditCompanyScreenAct_1.EditCompanyScreen.inputTelephon(company_data_1.CompanyData.cTelephone);\neditCompanyScreenAct_1.EditCompanyScreen.inputCompnayName(company_data_1.CompanyData.companyName);\neditCompanyScreenAct_1.EditCompanyScreen.inputCompnayEmail(company_data_1.CompanyData.cMail);\neditCompanyScreenAct_1.EditCompanyScreen.inputCompanyAddress(company_data_1.CompanyData.cAddress);\neditCompanyScreenAct_1.EditCompanyScreen.inputContactPersonal(company_data_1.CompanyData.cPerson);\neditCompanyScreenAct_1.EditCompanyScreen.inputContactPersonalEmail(company_data_1.CompanyData.cPersonMail);\neditCompanyScreenAct_1.EditCompanyScreen.selectCompanyPhoneNumberCode();\neditCompanyScreenAct_1.EditCompanyScreen.selectContactNumberCode();\neditCompanyScreenAct_1.EditCompanyScreen.inputTelephon(company_data_1.CompanyData.cTelephone);\neditCompanyScreenAct_1.EditCompanyScreen.inputContactPersonalPosition(company_data_1.CompanyData.cContactPersonPosition);\neditCompanyScreenAct_1.EditCompanyScreen.clickSaveEditCompanyButton();\ncy.wait(1000);\neditCompanyScreenAct_1.EditCompanyScreen.EdittingIsFinished();",
               "err": {},
-              "uuid": "3da197d3-bf1f-45f1-b4cb-3b5ef819f1ff",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "uuid": "878d4260-ca1f-47b3-91d7-434aacaeb2a1",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +131,8 @@
               "context": null,
               "code": "cy.wait(1500);\neditCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\ncy.wait(1500);\neditCompanyScreenAct_1.EditCompanyScreen.clickContactTab();\neditCompanyScreenAct_1.EditCompanyScreen.clickEditCompanyButton();\ncy.wait(1500);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyTelephon(company_data_1.CompanyData.cTelephone);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyTelephon(company_data_1.CompanyData.cTelephone);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCompnayEmail(company_data_1.CompanyData.cMail);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCompanyAddress(company_data_1.CompanyData.cAddress);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyContactPersonal(company_data_1.CompanyData.cPerson);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyContactPersonalEmail(company_data_1.CompanyData.cPersonMail);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCountryNumberCode();\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyContactPersonalPosition(company_data_1.CompanyData.cContactPersonPosition);",
               "err": {},
-              "uuid": "b368112b-db97-4ed8-b5dd-9f0b79d26058",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "uuid": "72dbe40e-eb09-4048-97c4-7999843fa084",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +149,8 @@
               "context": null,
               "code": "editCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\ncy.wait(1500);\neditCompanyScreenAct_1.EditCompanyScreen.clickLegalTab();\neditCompanyScreenAct_1.EditCompanyScreen.clickEditCompanyButton();\neditCompanyScreenAct_1.EditCompanyScreen.inputCompanyNameE(company_data_1.CompanyData.companyName);\neditCompanyScreenAct_1.EditCompanyScreen.inputCompanyEmail(company_data_1.CompanyData.cMail);\neditCompanyScreenAct_1.EditCompanyScreen.inputOrganizationUnit(company_data_1.CompanyData.OrganizationUnit);\neditCompanyScreenAct_1.EditCompanyScreen.inputOrganization(company_data_1.CompanyData.Organization);\neditCompanyScreenAct_1.EditCompanyScreen.inputTaxID(company_data_1.CompanyData.TaxID);\neditCompanyScreenAct_1.EditCompanyScreen.inputCommercialID(company_data_1.CompanyData.CommercialID);\neditCompanyScreenAct_1.EditCompanyScreen.inputRegisteredAddress(company_data_1.CompanyData.RegisteredAddress);\neditCompanyScreenAct_1.EditCompanyScreen.inputBusinessCategory(company_data_1.CompanyData.BusinessCategory);\neditCompanyScreenAct_1.EditCompanyScreen.inputStreetName(company_data_1.CompanyData.StreetName);\neditCompanyScreenAct_1.EditCompanyScreen.inputCitySubdivisionName(company_data_1.CompanyData.CitySubdivisionName);\neditCompanyScreenAct_1.EditCompanyScreen.inputCompanyAddCityName(company_data_1.CompanyData.CompanyAddCityName);\neditCompanyScreenAct_1.EditCompanyScreen.inputPostalZone(company_data_1.CompanyData.PostalZone);\neditCompanyScreenAct_1.EditCompanyScreen.inputCountrySubentity(company_data_1.CompanyData.CountrySubentity);\neditCompanyScreenAct_1.EditCompanyScreen.inputBuildingNumber(company_data_1.CompanyData.BuildingNumber);\neditCompanyScreenAct_1.EditCompanyScreen.inputAdditionalStreetName(company_data_1.CompanyData.AdditionalStreetName);\neditCompanyScreenAct_1.EditCompanyScreen.inputRegistrationName(company_data_1.CompanyData.RegistrationName);\neditCompanyScreenAct_1.EditCompanyScreen.clickSaveEditCompanyButton();\neditCompanyScreenAct_1.EditCompanyScreen.EdittingIsFinished();",
               "err": {},
-              "uuid": "b1f26077-2c60-4995-8161-058685c6be42",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "uuid": "7b3c6386-ee43-48d2-914e-6cfcdf9566a7",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
               "skipped": true
             },
@@ -159,8 +167,8 @@
               "context": null,
               "code": "editCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\ncy.wait(1500);\neditCompanyScreenAct_1.EditCompanyScreen.clickLegalTab();\neditCompanyScreenAct_1.EditCompanyScreen.clickEditCompanyButton();\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCompanyNameE(company_data_1.CompanyData.companyName);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCompanyEmail(company_data_1.CompanyData.cMail);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyOrganizationUnit(company_data_1.CompanyData.OrganizationUnit);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyOrganization(company_data_1.CompanyData.Organization);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyTaxID(company_data_1.CompanyData.TaxID);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCommercialID(company_data_1.CompanyData.CommercialID);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyRegisteredAddress(company_data_1.CompanyData.RegisteredAddress);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyBusinessCategory(company_data_1.CompanyData.BusinessCategory);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyStreetName(company_data_1.CompanyData.StreetName);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCitySubdivisionName(company_data_1.CompanyData.CitySubdivisionName);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCompanyAddCityName(company_data_1.CompanyData.CompanyAddCityName);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyPostalZone(company_data_1.CompanyData.PostalZone);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyCountrySubentity(company_data_1.CompanyData.CountrySubentity);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyBuildingNumber(company_data_1.CompanyData.BuildingNumber);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyAdditionalStreetName(company_data_1.CompanyData.AdditionalStreetName);\neditCompanyScreenVerify_1.EditCompanyScreenVerify.verifyRegistrationName(company_data_1.CompanyData.RegistrationName);",
               "err": {},
-              "uuid": "6d03bc1c-ecf8-42b9-b4ba-d9afea15cbd1",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "uuid": "87c47fb0-dcdd-406d-92b1-e43ddd50156e",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
               "skipped": true
             },
@@ -177,8 +185,8 @@
               "context": null,
               "code": "editCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\neditCompanyScreenAct_1.EditCompanyScreen.clickHierarchyTab();\neditCompanyScreenAct_1.EditCompanyScreen.validateCompanyType(\"Holding\");",
               "err": {},
-              "uuid": "175c0690-bca4-4618-a176-f24ea7935b70",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "uuid": "346674c9-6e25-4045-8955-fe60c5b1b46e",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
               "skipped": true
             },
@@ -195,8 +203,8 @@
               "context": null,
               "code": "editCompanyScreenAct_1.EditCompanyScreen.clickFirstCompanyToEdit();\neditCompanyScreenAct_1.EditCompanyScreen.clickBranchesTab();\neditCompanyScreenAct_1.EditCompanyScreen.validateBranchesTab();",
               "err": {},
-              "uuid": "725a0e0d-69b9-4a1a-bd58-ead292e87567",
-              "parentUUID": "ae6ac302-1a5a-4b5b-92c2-54d271c0f1fb",
+              "uuid": "da7cbb22-ad48-4667-9dff-999cf13170af",
+              "parentUUID": "b50cbb4d-aa85-45af-b63f-1b9ca1dfaab2",
               "isHook": false,
               "skipped": true
             }
@@ -204,20 +212,20 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "896f7835-3aeb-40e3-814b-4a40c4c62bf5"
+            "334afd1e-7701-47d8-8c18-5530753f8917",
+            "56eae702-6ba2-4dbd-9146-bd0893ef13bf",
+            "e0a21d1e-7b8c-4a33-ae77-50875d32e36c"
           ],
           "pending": [],
           "skipped": [
-            "39ff0d41-1074-4ff3-a4f2-ddb62f4ff6df",
-            "2b13aeb0-3e6b-4c91-8c76-a29c16363e69",
-            "3da197d3-bf1f-45f1-b4cb-3b5ef819f1ff",
-            "b368112b-db97-4ed8-b5dd-9f0b79d26058",
-            "b1f26077-2c60-4995-8161-058685c6be42",
-            "6d03bc1c-ecf8-42b9-b4ba-d9afea15cbd1",
-            "175c0690-bca4-4618-a176-f24ea7935b70",
-            "725a0e0d-69b9-4a1a-bd58-ead292e87567"
+            "878d4260-ca1f-47b3-91d7-434aacaeb2a1",
+            "72dbe40e-eb09-4048-97c4-7999843fa084",
+            "7b3c6386-ee43-48d2-914e-6cfcdf9566a7",
+            "87c47fb0-dcdd-406d-92b1-e43ddd50156e",
+            "346674c9-6e25-4045-8955-fe60c5b1b46e",
+            "da7cbb22-ad48-4667-9dff-999cf13170af"
           ],
-          "duration": 46019,
+          "duration": 192522,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

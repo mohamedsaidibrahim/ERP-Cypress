@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:17:06.006Z",
+    "end": "2024-12-03T08:17:09.331Z",
+    "duration": 3325,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "ed3fac67-9d01-4ccd-a2b3-5158cb22c841",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/payment_term/tests/add_payment_term.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/payment_term/tests/add_payment_term.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "ed3e5f21-18c0-4e28-b451-a409581f0d23",
+          "title": "Add Payment Term",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify All Column Headers are Displaying",
+              "fullTitle": "Add Payment Term 1.Verify All Column Headers are Displaying",
+              "timedOut": null,
+              "duration": 1598,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "payment_term_1.PaymentTerm.landing();\ncy.wait(2500);\npayment_term_1.PaymentTerm.clickAddNewButton();\ncy.get(\"th\")\n    .eq(0)\n    .should(\"include\", /due term value/i);\ncy.get(\"th\")\n    .eq(1)\n    .should(\"include\", /after value/i);\ncy.get(\"th\")\n    .eq(2)\n    .should(\"include\", /after period/i);\ncy.get(\"th\").eq(3).should(\"include\", /note/i);\ncy.get(\"th\")\n    .eq(4)\n    .should(\"include\", /actions/i);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "3d8bfb66-2e47-4d8e-939f-e104c29d6472",
+              "parentUUID": "ed3e5f21-18c0-4e28-b451-a409581f0d23",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify The Required Validation",
+              "fullTitle": "Add Payment Term 2.Verify The Required Validation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_term_1.PaymentTerm.landing();\npayment_term_1.PaymentTerm.clickAddNewButton();\npayment_term_1.PaymentTerm.verifyCode();\npayment_term_1.PaymentTerm.setName(finance_data_1.FinanceData.bankName);\npayment_term_1.PaymentTerm.clearName();\ncy.contains(\"span\", /required/i).should(\"be.visible\");\npayment_term_1.PaymentTerm.setName(finance_data_1.FinanceData.bankName);\ncy.contains(\"span\", /required/i).should(\"not.exist\");\npayment_term_1.PaymentTerm.setDueTermValue(0, finance_data_1.FinanceData.wrongDueTerm);\npayment_term_1.PaymentTerm.clearDueTermValue(0);\ncy.contains(\"span\", /required/i).should(\"be.visible\");\npayment_term_1.PaymentTerm.setDueTermValue(0, finance_data_1.FinanceData.wrongDueTerm);\ncy.contains(\"span\", /required/i).should(\"not.exist\");\npayment_term_1.PaymentTerm.setAfterValue(0, finance_data_1.FinanceData.afterValue);\npayment_term_1.PaymentTerm.clearafterValue(0);\ncy.contains(\"span\", /required/i).should(\"be.visible\");\npayment_term_1.PaymentTerm.setAfterValue(0, finance_data_1.FinanceData.afterValue);\ncy.contains(\"span\", /required/i).should(\"not.exist\");\npayment_term_1.PaymentTerm.clickSaveButton();\ncy.contains(\"span\", /required/i).should(\"be.visible\");\npayment_term_1.PaymentTerm.setAfterPeriod(0, 0);\ncy.contains(\"span\", /required/i).should(\"not.exist\");\ncy.log(\"Verify that the System Can not Submit Wrong Due Term\");\npayment_term_1.PaymentTerm.setDueTermValue(0, finance_data_1.FinanceData.wrongDueTerm);\npayment_term_1.PaymentTerm.clickSaveButton();\ncy.contains(\"div\", /failure/i);\ncy.contains(\"div\", /The total of Due Term Values must be exactly 100./i);\ncy.wait(2500);\ncy.url().should(\"include\", \"add\");\npayment_term_1.PaymentTerm.setDueTermValue(0, finance_data_1.FinanceData.correctDueTerm);\npayment_term_1.PaymentTerm.clickSaveButton();\ncy.url().should(\"not.include\", \"add\");",
+              "err": {},
+              "uuid": "3d1e4f11-0445-428b-a29a-7257ec503b82",
+              "parentUUID": "ed3e5f21-18c0-4e28-b451-a409581f0d23",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.Verify Adding Happy Scenario",
+              "fullTitle": "Add Payment Term 3.Verify Adding Happy Scenario",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_term_1.PaymentTerm.landing();\ncy.getInitItemsCountInListView();\npayment_term_1.PaymentTerm.clickAddNewButton();\npayment_term_1.PaymentTerm.setName(finance_data_1.FinanceData.bankName);\n// The First Line\npayment_term_1.PaymentTerm.setDueTermValue(0, 20);\npayment_term_1.PaymentTerm.setAfterValue(0, finance_data_1.FinanceData.afterValue);\npayment_term_1.PaymentTerm.setAfterPeriod(0, 0);\npayment_term_1.PaymentTerm.setNote(0, finance_data_1.FinanceData.note);\n// The Second Line\npayment_term_1.PaymentTerm.clickAddNewLine();\npayment_term_1.PaymentTerm.setDueTermValue(1, 30);\npayment_term_1.PaymentTerm.setAfterValue(1, finance_data_1.FinanceData.afterValue);\npayment_term_1.PaymentTerm.setAfterPeriod(1, 1);\npayment_term_1.PaymentTerm.setNote(1, finance_data_1.FinanceData.note);\n// The Third Line\npayment_term_1.PaymentTerm.clickAddNewLine();\ncy.wait(500);\ncy.get(\"tbody tr\").last().scrollIntoView().should(\"be.visible\");\npayment_term_1.PaymentTerm.setDueTermValue(2, 50);\npayment_term_1.PaymentTerm.setAfterValue(2, finance_data_1.FinanceData.afterValue);\npayment_term_1.PaymentTerm.setAfterPeriod(2, 2);\npayment_term_1.PaymentTerm.setNote(2, finance_data_1.FinanceData.note);\npayment_term_1.PaymentTerm.clickSaveButton();\ncy.wait(1000);\ncy.url().should(\"not.include\", \"add\");\ncy.assertnewItemAddedToListView();",
+              "err": {},
+              "uuid": "ee14257d-28fd-4374-82a9-06e52e8227e6",
+              "parentUUID": "ed3e5f21-18c0-4e28-b451-a409581f0d23",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4.Verify setting DueTermValue is smaller than 100",
+              "fullTitle": "Add Payment Term 4.Verify setting DueTermValue is smaller than 100",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_term_1.PaymentTerm.landing();\npayment_term_1.PaymentTerm.clickAddNewButton();\npayment_term_1.PaymentTerm.setName(finance_data_1.FinanceData.bankName);\n// The First Line\npayment_term_1.PaymentTerm.setDueTermValue(0, 99);\npayment_term_1.PaymentTerm.setAfterValue(0, finance_data_1.FinanceData.afterValue);\npayment_term_1.PaymentTerm.setAfterPeriod(0, 0);\npayment_term_1.PaymentTerm.setNote(0, finance_data_1.FinanceData.note);\npayment_term_1.PaymentTerm.clickSaveButton();\ncy.wait(1000);\ncy.contains(\"div\", /failure/i);\ncy.contains(\"div\", /The total of Due Term Values must be exactly 100/i);\ncy.contains(\"button\", /add new line/i).should(\"be.visible\");",
+              "err": {},
+              "uuid": "7bc07778-4b4b-4e34-af04-9a2d894eaa38",
+              "parentUUID": "ed3e5f21-18c0-4e28-b451-a409581f0d23",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "3d8bfb66-2e47-4d8e-939f-e104c29d6472"
+          ],
+          "pending": [],
+          "skipped": [
+            "3d1e4f11-0445-428b-a29a-7257ec503b82",
+            "ee14257d-28fd-4374-82a9-06e52e8227e6",
+            "7bc07778-4b4b-4e34-af04-9a2d894eaa38"
+          ],
+          "duration": 1598,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

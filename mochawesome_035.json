@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 3,
+    "tests": 1,
     "passes": 0,
     "pending": 0,
-    "failures": 3,
-    "start": "2024-11-26T08:03:14.280Z",
-    "end": "2024-11-26T08:16:22.882Z",
-    "duration": 788602,
+    "failures": 1,
+    "start": "2024-12-03T08:16:26.020Z",
+    "end": "2024-12-03T08:16:29.398Z",
+    "duration": 3378,
     "testsRegistered": 3,
     "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 2,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "096ee2a5-5d07-4500-ae6c-d595dbde6f27",
+      "uuid": "e4da67a8-e130-480b-a0b9-40f7a98910ab",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/Cost Center/tests/Displaying_cost_center.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/Cost Center/tests/Displaying_cost_center.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6af2df36-cafb-4d70-9238-a26060c5e508",
+          "uuid": "1355eced-cc96-450c-9ee4-74fb32ffd130",
           "title": "Displaying Cost Center",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.verify all components are visibe in Cost Center Screen",
               "fullTitle": "Displaying Cost Center 1.verify all components are visibe in Cost Center Screen",
               "timedOut": null,
-              "duration": 97739,
+              "duration": 1606,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "cost_center_1.CostCenter.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1000);\ncost_center_1.CostCenter.verifyMenuHeaders();\n// Verift The List Mode Is not exist\ncost_center_1.CostCenter.verifyListModeIsNotExist();\n// verify Pi Bars Button\ncost_center_1.CostCenter.verifyPiBarsButton();\n// verify sitemap Button\ncost_center_1.CostCenter.verifySiteMapButton();\ncost_center_1.CostCenter.verifyTreeAddButton();\ncost_center_1.CostCenter.verifyTreeFilter();\ncost_center_1.CostCenter.verifySideBarButton();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `:nth-child(2) > app-layout-page > [dir=\"ltr\"] > app-layout-header > nav > .card > .header_bussiness > .header_content > p-menubar.p-element > .p-menubar > .p-menubar-start > .start_nav > .modules > .btn_mod_select > .icon`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `:nth-child(2) > app-layout-page > [dir=\"ltr\"] > app-layout-header > nav > .card > .header_bussiness > .header_content > p-menubar.p-element > .p-menubar > .p-menubar-start > .start_nav > .modules > .btn_mod_select > .icon`, but never found it.\n    at CostCenter.verifyMenuHeaders (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/Cost Center/pages/cost_center.ts:336:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/Cost Center/tests/Displaying_cost_center.cy.ts:15:0)",
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
                 "diff": null
               },
-              "uuid": "b2ba0486-0769-466f-9c72-b2fe4420b45f",
-              "parentUUID": "6af2df36-cafb-4d70-9238-a26060c5e508",
+              "uuid": "4369194b-adc8-4895-a93f-c7b77a0ab2d0",
+              "parentUUID": "1355eced-cc96-450c-9ee4-74fb32ffd130",
               "isHook": false,
               "skipped": false
             },
@@ -60,57 +60,50 @@
               "title": "2.Verify that User Can Shify between Tree to List Mode",
               "fullTitle": "Displaying Cost Center 2.Verify that User Can Shify between Tree to List Mode",
               "timedOut": null,
-              "duration": 119918,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cost_center_1.CostCenter.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1000);\n// Verify sitemap Button Is Active\ncy.get(\".active > .pi\").should(\"be.visible\");\n// Verift The List Mode Is not exist\ncy.get(\"table\").should(\"not.exist\");\n// click Pi Bars Button\ncy.get('i[class=\"pi pi-bars\"]').click();\n// Verift The List Mode Is  exist\n// click sitemap Button\ncy.get('i[class=\"pi pi-sitemap\"]').click();\n// Verift The List Mode Is not exist\ncy.get(\"table\").should(\"not.exist\");",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.active > .pi`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.active > .pi`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/Cost Center/tests/Displaying_cost_center.cy.ts:32:0)",
-                "diff": null
-              },
-              "uuid": "de5ed84b-fc03-443f-9bb4-092fdb462e7c",
-              "parentUUID": "6af2df36-cafb-4d70-9238-a26060c5e508",
+              "err": {},
+              "uuid": "d254f84e-27da-4cf6-858f-0f14a0b075fb",
+              "parentUUID": "1355eced-cc96-450c-9ee4-74fb32ffd130",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "3.Verify Tree and List views have the same data",
               "fullTitle": "Displaying Cost Center 3.Verify Tree and List views have the same data",
               "timedOut": null,
-              "duration": 116172,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cost_center_1.CostCenter.landing();\ncost_center_1.CostCenter.clickEditButton();\ncy.wait(2000);\ncy.get('lib-text-input input').eq(0).should('be.visible');\ncy.get('lib-text-input input').eq(0).invoke('removeAttr', 'readonly').invoke('removeAttr', 'disabled');\ncy.get('lib-text-input input').eq(0)\n    .then(($codeEl) => {\n    cy.wrap($codeEl).invoke('attr', 'placeholder').then(cCCode1 => {\n        cy.log(\"-*/ cCCode1: \" + cCCode1);\n        cy.wrap(cCCode1).as(`cCCode1`);\n    });\n});\ncy.get('lib-text-input input').eq(1).then(($cCName1) => {\n    cy.wrap($cCName1).invoke('val').then(cCName1 => {\n        cy.log(\"-*/ cCName1: \" + cCName1);\n        cy.wrap(cCName1).as(`cCName1`);\n    });\n});\ncy.get('span[role=\"combobox\"]').then(($elParent) => {\n    cy.wrap($elParent).invoke('val').then((cCParent1) => {\n        cy.log(\"-*/ parent1: \" + cCParent1);\n        cy.wrap(cCParent1).as('parent1');\n    });\n});\ncost_center_1.CostCenter.switchingToListView();\ncy.wait(2000);\ncy.get('@cCName1').then((cCName1) => {\n    cost_center_1.CostCenter.inputSearchList((0, utils_1.trimText)(cCName1.toString().trim()).substring(2).toString());\n});\ncy.get('@cCCode1').then((cCCode1) => {\n    cy.verifyFirstCellInTable(0, (0, utils_1.trimText)(cCCode1.toString().trim()).substring(2).toString());\n});\ncy.get('@cCName1').then((cCName1) => {\n    cy.verifyFirstCellInTable(1, (0, utils_1.trimText)(cCName1.toString().trim()).substring(2).toString());\n});\ncy.get('@parent1').then((parent1) => {\n    cy.verifyFirstCellInTable(2, (0, utils_1.trimText)(parent1.toString().trim()).substring(2).toString());\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `ul[role=\"tree\"]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `ul[role=\"tree\"]`, but never found it.\n    at CostCenter.clickEditButton (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/Cost Center/pages/cost_center.ts:62:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/Cost Center/tests/Displaying_cost_center.cy.ts:45:0)",
-                "diff": null
-              },
-              "uuid": "0b5bef02-916d-4e62-9e72-c40b4da9d1da",
-              "parentUUID": "6af2df36-cafb-4d70-9238-a26060c5e508",
+              "err": {},
+              "uuid": "6a5593f8-7c3b-424e-b0b0-215148b989d8",
+              "parentUUID": "1355eced-cc96-450c-9ee4-74fb32ffd130",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
           "passes": [],
           "failures": [
-            "b2ba0486-0769-466f-9c72-b2fe4420b45f",
-            "de5ed84b-fc03-443f-9bb4-092fdb462e7c",
-            "0b5bef02-916d-4e62-9e72-c40b4da9d1da"
+            "4369194b-adc8-4895-a93f-c7b77a0ab2d0"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 333829,
+          "skipped": [
+            "d254f84e-27da-4cf6-858f-0f14a0b075fb",
+            "6a5593f8-7c3b-424e-b0b0-215148b989d8"
+          ],
+          "duration": 1606,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

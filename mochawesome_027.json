@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-11-26T06:36:20.922Z",
-    "end": "2024-11-26T06:39:33.621Z",
-    "duration": 192699,
+    "start": "2024-12-03T07:44:01.486Z",
+    "end": "2024-12-03T07:49:08.191Z",
+    "duration": 306705,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "150f0eae-bba9-4017-8e96-799a0587f4fb",
+      "uuid": "555debd8-8ad7-4b74-abd2-0816098fb4f0",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Financial Calender/tests/listview_financial_calendar.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Financial Calender/tests/listview_financial_calendar.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "b447ca1d-468a-4998-ad19-8cea55559d8a",
+          "uuid": "b873249b-06a2-4b41-9a7b-6f4401a8f64c",
           "title": "Financial Calander List View",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify all the components are displayed on the Listview",
               "fullTitle": "Financial Calander List View 1.Verify all the components are displayed on the Listview",
               "timedOut": null,
-              "duration": 21740,
+              "duration": 100091,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "financial_calender_1.FinancialCallender.landing();\ncy.wait(1500);\n// Menu Item Text\ncy.get(\"span\")\n    .should(\"be.visible\")\n    .should(\"include\", /financial calender/i);\ncy.get(\"table\").then((table) => {\n    // Verify Table Column Headers\n    cy.wrap(table).find(\"th\").eq(0).contains(/code/i).should(\"be.visible\");\n    cy.wrap(table).find(\"th\").eq(1).contains(/name/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/from date/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/to date/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(4)\n        .contains(/status/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(5)\n        .contains(/actions/i)\n        .should(\"be.visible\");\n});",
               "err": {},
-              "uuid": "d9104e06-5819-4ea6-b8bf-a2ce34cd5165",
-              "parentUUID": "b447ca1d-468a-4998-ad19-8cea55559d8a",
+              "uuid": "f07496e4-26af-4ff1-a47d-dce23bb5f8b6",
+              "parentUUID": "b873249b-06a2-4b41-9a7b-6f4401a8f64c",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "2.should filter the table based on search input in the first two columns",
               "fullTitle": "Financial Calander List View 2.should filter the table based on search input in the first two columns",
               "timedOut": null,
-              "duration": 60777,
+              "duration": 114438,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "financial_calender_1.FinancialCallender.landing();\ncy.wait(1000);\ncy.verifySearchFunctionality();",
               "err": {},
-              "uuid": "c1d381b2-d4ad-4e31-bcdd-c93888817dae",
-              "parentUUID": "b447ca1d-468a-4998-ad19-8cea55559d8a",
+              "uuid": "657fb730-249f-48df-8fbc-8002b3b25a25",
+              "parentUUID": "b873249b-06a2-4b41-9a7b-6f4401a8f64c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "d9104e06-5819-4ea6-b8bf-a2ce34cd5165",
-            "c1d381b2-d4ad-4e31-bcdd-c93888817dae"
+            "f07496e4-26af-4ff1-a47d-dce23bb5f8b6",
+            "657fb730-249f-48df-8fbc-8002b3b25a25"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 82517,
+          "duration": 214529,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:17:56.205Z",
+    "end": "2024-12-03T08:17:59.576Z",
+    "duration": 3371,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "61902376-86a0-4cc2-927e-ef986cbb0653",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/PaymentOUT/tests/sequence.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/PaymentOUT/tests/sequence.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "a19df4af-33ed-4bbc-873d-3089d4440ef4",
+          "title": "Payment In (Seaquence)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1. Verify All Components Displaying",
+              "fullTitle": "Payment In (Seaquence) 1. Verify All Components Displaying",
+              "timedOut": null,
+              "duration": 1614,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(500);\ncy.clickSequenceButton();\ncy.reload();\ncy.wait(3500);\nsequence_1.Sequence.verifyLabels();\nsequence_1.Sequence.verifyInitDimmedStatus();\nsequence_1.Sequence.verifyTableHeaders();\nsequence_1.Sequence.verifyDisplayingOfTheDefaultBranch();",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "4a6c3867-fda7-4df0-96b5-5aece4884622",
+              "parentUUID": "a19df4af-33ed-4bbc-873d-3089d4440ef4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Delete all inserted lines",
+              "fullTitle": "Payment In (Seaquence) 2.Delete all inserted lines",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.clickSequenceButton();\ncy.reload();\ncy.wait(1500);\ncy.get(\"table\").then(($table) => {\n    if ($table.find(\"tbody tr\").length > 0) {\n        var count = $table.find(\"tbody tr\").length;\n        for (var c = 0; c < count; c++) {\n            cy.clickFirstDeleteActionButton();\n        }\n    }\n    else {\n        cy.logMsg(\"There are not any inserted line\");\n    }\n});\ncy.clickSaveButton();\nsequence_1.Sequence.verifyDisplayingSerialNumberValidation();\nsequence_1.Sequence.addSequenceLineSerialNumber(0);\nsequence_1.Sequence.verifyNotExistanceSerialNumberValidation();",
+              "err": {},
+              "uuid": "fc31205c-3b2e-4d05-bc23-477810579958",
+              "parentUUID": "a19df4af-33ed-4bbc-873d-3089d4440ef4",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3. Verify Creating the Sequence with Serial number Validation",
+              "fullTitle": "Payment In (Seaquence) 3. Verify Creating the Sequence with Serial number Validation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.clickSequenceButton();\ncy.wait(1500);\ncy.reload();\ncy.wait(4000);\ncy.get(\"body\").then(($body) => {\n    cy.wrap($body);\n});\n// Sequence.changeSequenceType(2);\n// cy.clickSaveButton();\n// Sequence.verifyDisplayingSerialNumberValidation();\n// Sequence.changeSequenceType(0);\ncy.scrollToLastElementInTable();\ncy.getAllItemsCount(\"table\", \"tbody tr\").then((max) => {\n    var row1 = max;\n    cy.logMsg(\"Row1: \" + row1);\n    sequence_1.Sequence.addSequenceLineText(row1);\n    cy.clickSaveButton();\n    sequence_1.Sequence.verifyDisplayingSerialNumberValidation();\n    var row2 = max + 1;\n    cy.logMsg(\"Row2: \" + row2);\n    sequence_1.Sequence.addSequenceLineYear(row2);\n    cy.clickSaveButton();\n    sequence_1.Sequence.verifyDisplayingSerialNumberValidation();\n    var row3 = max + 2;\n    cy.logMsg(\"Row3: \" + row3);\n    sequence_1.Sequence.addSequenceLineMonth(row3);\n    cy.clickSaveButton();\n    sequence_1.Sequence.verifyDisplayingSerialNumberValidation();\n    var row4 = max + 3;\n    cy.logMsg(\"Row4: \" + row4);\n    sequence_1.Sequence.addSequenceLineDay(row4);\n    cy.clickSaveButton();\n    sequence_1.Sequence.verifyDisplayingSerialNumberValidation();\n    var row5 = max + 4;\n    sequence_1.Sequence.addSequenceLineSeparator(row5);\n    cy.clickSaveButton();\n    sequence_1.Sequence.verifyDisplayingSerialNumberValidation();\n    var row6 = max + 5;\n    sequence_1.Sequence.addSequenceLineCompanyCode(row6);\n    cy.clickSaveButton();\n    sequence_1.Sequence.verifyDisplayingSerialNumberValidation();\n    var row7 = max + 6;\n    sequence_1.Sequence.addSequenceLineBranchCode(row7);\n    cy.clickSaveButton();\n    sequence_1.Sequence.verifyDisplayingSerialNumberValidation();\n    var row8 = max + 7;\n    sequence_1.Sequence.addSequenceLineSerialNumber(row8);\n    cy.clickSaveButton();\n    cy.get(\"body\").then(($body) => {\n        if ($body.find(\"div[role='dialog']\").is(\":visible\")) {\n            cy.get(\"div[role='dialog']\")\n                .find('[data-testid=\"save\"]')\n                .scrollIntoView()\n                .click();\n        }\n    });\n    sequence_1.Sequence.verifyNotExistanceSerialNumberValidation();\n    sequence_1.Sequence.verifyDisplayingOfSuccessMessagen();\n});",
+              "err": {},
+              "uuid": "4163f74e-6df2-4d5a-b42d-c948899718a9",
+              "parentUUID": "a19df4af-33ed-4bbc-873d-3089d4440ef4",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "Verify that the new Sequence is Saved Successfully",
+              "fullTitle": "Payment In (Seaquence) Verify that the new Sequence is Saved Successfully",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.clickSequenceButton();\ncy.wait(1500);\ncy.reload();\ncy.reload();\ncy.wait(4000);\ncy.reload();\ncy.wait(1500);\ncy.scrollToLastElementInTable();\ncy.get(\"tbody tr\")\n    .eq(0)\n    .find(\"td\")\n    .eq(2)\n    .find(\"p\")\n    .invoke(\"text\")\n    .then((t1) => {\n    expect(t1).to.include(finance_data_1.FinanceData.segmentText.substring(0, 2).toString());\n});\ncy.get(\"tbody tr\")\n    .eq(1)\n    .find(\"td\")\n    .eq(2)\n    .find(\"p\")\n    .invoke(\"text\")\n    .then((t1) => {\n    expect(t1).to.include(\"YYYY\");\n});\ncy.get(\"tbody tr\")\n    .eq(2)\n    .find(\"td\")\n    .eq(2)\n    .find(\"p\")\n    .invoke(\"text\")\n    .then((t1) => {\n    expect(t1).to.include(\"MM\");\n});\ncy.get(\"tbody tr\")\n    .eq(3)\n    .find(\"td\")\n    .eq(2)\n    .find(\"p\")\n    .invoke(\"text\")\n    .then((t1) => {\n    expect(t1).to.include(\"DD\");\n});\ncy.get(\"tbody tr\")\n    .eq(4)\n    .find(\"td\")\n    .eq(2)\n    .find(\"p\")\n    .invoke(\"text\")\n    .then((t1) => {\n    expect(t1).to.include(\".\");\n});\ncy.get(\"tbody tr\")\n    .eq(5)\n    .find(\"td\")\n    .eq(2)\n    .find(\"p\")\n    .invoke(\"text\")\n    .then((t1) => {\n    expect(t1).to.include(finance_data_1.FinanceData.companyCode);\n});\ncy.get(\"tbody tr\")\n    .eq(6)\n    .find(\"td\")\n    .eq(2)\n    .find(\"p\")\n    .invoke(\"text\")\n    .then((t1) => {\n    expect(t1).to.include(finance_data_1.FinanceData.branchCode);\n});\ncy.get(\"tbody tr\")\n    .eq(7)\n    .find(\"td\")\n    .eq(2)\n    .find(\"p\")\n    .invoke(\"text\")\n    .then((t1) => {\n    expect(t1.trim().length).to.equal(finance_data_1.FinanceData.serialNumber.length);\n});",
+              "err": {},
+              "uuid": "09fbad49-1a3d-4879-af06-9d058f4508c7",
+              "parentUUID": "a19df4af-33ed-4bbc-873d-3089d4440ef4",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "4a6c3867-fda7-4df0-96b5-5aece4884622"
+          ],
+          "pending": [],
+          "skipped": [
+            "fc31205c-3b2e-4d05-bc23-477810579958",
+            "4163f74e-6df2-4d5a-b42d-c948899718a9",
+            "09fbad49-1a3d-4879-af06-9d058f4508c7"
+          ],
+          "duration": 1614,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

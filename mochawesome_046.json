@@ -1,0 +1,262 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:17:20.780Z",
+    "end": "2024-12-03T08:17:24.183Z",
+    "duration": 3403,
+    "testsRegistered": 9,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 8,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "bfbcc134-b72d-4f1f-be81-0d9f9ff6dc58",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/payment_methods/tests/payment_methods_add.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/payment_methods/tests/payment_methods_add.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+          "title": "Payment Methods (Add)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify All components are displaying",
+              "fullTitle": "Payment Methods (Add) 1.Verify All components are displaying",
+              "timedOut": null,
+              "duration": 1588,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.wait(5000);\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"name\", /name/i);\ncy.verifyLabelText(\"paymentPlace\", /payment place/i);\ncy.verifyLabelText(\"paymentMethodType\", /payment method type/i);\ncy.verifyLabelText(\"bankId\", /related bank/i);\ncy.verifyLabelText(\"bankAccountId\", /bank account/i);\ncy.verifyLabelText(\"currency\", /currency/i);\ncy.verifyLabelText(\"commissionType\", /commission type/i);\ncy.verifyLabelText(\"commissionValue\", /commission value/i);\ncy.verifyLabelText(\"commissionAccountId\", /commission account/i);\ncy.verifyLabelText(\"allowVAT\", /allow vat/i);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "59577a56-30e0-4ff5-942d-377067168439",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Submitting new Payment Methods (Bank) With Commisions has Method not (Check)",
+              "fullTitle": "Payment Methods (Add) 2.Verify Submitting new Payment Methods (Bank) With Commisions has Method not (Check)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\ncy.getInitItemsCountInListView();\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.wait(5000);\ncy.getByTestAttribute(\"code\").should(\"be.visible\");\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.FCname);\ncy.clickInputtedSearchDropDownList(\"paymentPlace\", \"bank\");\ncy.wait(700);\ncy.clickInputtedSearchDropDownList(\"paymentMethodType\", \"span\");\ncy.wait(700);\ncy.getLastItemInDropDownList(\"bankId\");\ncy.wait(700);\ncy.getFirstItemInDropDownList(\"bankAccountId\");\ncy.wait(700);\ncy.verifyDimmidInput(\"currency\");\ncy.wait(1000);\ncy.getLastItemInDropDownList(\"commissionType\");\ncy.wait(700);\npayment_methods_1.PaymentMethods.inputCommissionValue();\ncy.getFirstItemInDropDownList(\"commissionAccountId\");\ncy.wait(700);\npayment_methods_1.PaymentMethods.clickSaveButton();\npayment_methods_1.PaymentMethods.preAssertion();\ncy.assertnewItemAddedToListView();\ncy.verifyFirstCellInTable(1, finance_data_1.FinanceData.FCname);",
+              "err": {},
+              "uuid": "3fa26ed2-cd76-45d0-8a68-e94a98a5b2df",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.Verify Submitting new Payment Methods (Bank) With Commisions has Method (Transfer)",
+              "fullTitle": "Payment Methods (Add) 3.Verify Submitting new Payment Methods (Bank) With Commisions has Method (Transfer)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\ncy.getInitItemsCountInListView();\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.wait(5000);\ncy.getByTestAttribute(\"code\").should(\"be.visible\");\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.pBankMethod);\ncy.clickInputtedSearchDropDownList(\"paymentPlace\", \"bank\");\ncy.clickInputtedSearchDropDownList(\"paymentMethodType\", \"ransfer\");\ncy.getLastItemInDropDownList(\"bankId\");\ncy.verifyDimmidInput(\"currency\");\ncy.getLastItemInDropDownList(\"commissionType\");\npayment_methods_1.PaymentMethods.inputCommissionValue();\ncy.getFirstItemInDropDownList(\"commissionAccountId\");\npayment_methods_1.PaymentMethods.clickSaveButton();\ncy.assertnewItemAddedToListView();\ncy.verifyFirstCellInTable(1, finance_data_1.FinanceData.FCname);",
+              "err": {},
+              "uuid": "5ab300dd-7a88-41f0-894b-9d2144234606",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4.Verify Submitting new Payment Methods (Bank) Without Commisions has Method (Check)",
+              "fullTitle": "Payment Methods (Add) 4.Verify Submitting new Payment Methods (Bank) Without Commisions has Method (Check)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\ncy.getInitItemsCountInListView();\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.wait(5000);\ncy.getByTestAttribute(\"code\").should(\"be.visible\");\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.FCname);\ncy.clickInputtedSearchDropDownList(\"paymentPlace\", \"bank\");\ncy.clickInputtedSearchDropDownList(\"paymentMethodType\", \"check\");\ncy.getLastItemInDropDownList(\"bankId\");\ncy.getFirstItemInDropDownList(\"bankAccountId\");\ncy.verifyDimmidInput(\"currency\");\npayment_methods_1.PaymentMethods.clickSaveButton();\ncy.assertnewItemAddedToListView();\ncy.verifyFirstCellInTable(1, finance_data_1.FinanceData.FCname);",
+              "err": {},
+              "uuid": "7e2e735d-35e7-49ae-959a-744c93b51e5c",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "5.Verify Submitting new Payment Methods (Treasury) Without Commisions",
+              "fullTitle": "Payment Methods (Add) 5.Verify Submitting new Payment Methods (Treasury) Without Commisions",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\ncy.getInitItemsCountInListView();\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.wait(5000);\ncy.getByTestAttribute(\"code\").should(\"be.visible\");\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.pTreesuryMethod);\ncy.getFirstItemInDropDownList(\"paymentPlace\");\ncy.getFirstItemInDropDownList(\"paymentMethodType\");\ncy.verifyDimmidItemDropDownList(\"bankId\");\ncy.verifyDimmidItemDropDownList(\"bankAccountId\");\ncy.wait(1000);\ncy.verifyDimmidItemDropDownList(\"commissionType\");\ncy.verifyDimmidItemDropDownList(\"commissionAccountId\");\npayment_methods_1.PaymentMethods.clickSaveButton();\npayment_methods_1.PaymentMethods.preAssertion();\ncy.assertnewItemAddedToListView();\ncy.verifyFirstCellInTable(1, finance_data_1.FinanceData.FCname);",
+              "err": {},
+              "uuid": "e4542aef-496c-4e9c-910e-6f7135e6e0b6",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "6.Verify Submitting new Payment Methods (Treasury) Without Commisions",
+              "fullTitle": "Payment Methods (Add) 6.Verify Submitting new Payment Methods (Treasury) Without Commisions",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\ncy.getInitItemsCountInListView();\ncy.wait(5000);\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.getByTestAttribute(\"code\").should(\"be.visible\");\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.FCname);\ncy.getFirstItemInDropDownList(\"paymentPlace\");\ncy.getFirstItemInDropDownList(\"paymentMethodType\");\ncy.verifyDimmidItemDropDownList(\"bankId\");\ncy.wait(500);\ncy.verifyDimmidItemDropDownList(\"bankAccountId\");\npayment_methods_1.PaymentMethods.clickSaveButton();\npayment_methods_1.PaymentMethods.preAssertion();\ncy.assertnewItemAddedToListView();\ncy.verifyFirstCellInTable(1, finance_data_1.FinanceData.FCname);",
+              "err": {},
+              "uuid": "6583a5a6-cc9e-41f7-9b9e-95a8d3f808a8",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "7.Verify Required Validation (Bank) ",
+              "fullTitle": "Payment Methods (Add) 7.Verify Required Validation (Bank) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(2000);\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.wait(5000);\npayment_methods_1.PaymentMethods.clickSaveButton();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(3);\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.FCname);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\ncy.getLastItemInDropDownList(\"paymentPlace\");\ncy.wait(700);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(3);\ncy.getLastItemInDropDownList(\"paymentMethodType\");\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\ncy.getLastItemInDropDownList(\"bankId\");\ncy.wait(700);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\ncy.getLastItemInDropDownList(\"bankAccountId\");\ncy.wait(700);\ncy.verifyNotExistanceTheRequiredValidation();",
+              "err": {},
+              "uuid": "4ff1fa7e-b6bf-4696-92e8-f14061392b75",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "8.Verify Required Validation (Treasury) ",
+              "fullTitle": "Payment Methods (Add) 8.Verify Required Validation (Treasury) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(3000);\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.wait(5000);\npayment_methods_1.PaymentMethods.clickSaveButton();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(3);\n// Choose Treasury\ncy.getFirstItemInDropDownList(\"paymentPlace\");\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\ncy.getFirstItemInDropDownList(\"paymentMethodType\");\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.FCname);\ncy.verifyNotExistanceTheRequiredValidation();",
+              "err": {},
+              "uuid": "a8d2ee74-202e-4a1f-bc36-bfe69d2eed35",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "9.Verify Action Cancel Button",
+              "fullTitle": "Payment Methods (Add) 9.Verify Action Cancel Button",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\npayment_methods_1.PaymentMethods.clickAddNewButton();\ncy.wait(5000);\ncy.getByTestAttribute(\"code\").should(\"be.visible\");\ncy.getByTestAttribute(\"name\").clear().type(finance_data_1.FinanceData.FCname);\ncy.getFirstItemInDropDownList(\"paymentPlace\");\ncy.getFirstItemInDropDownList(\"paymentMethodType\");\ncy.verifyDimmidItemDropDownList(\"bankId\");\ncy.verifyDimmidItemDropDownList(\"bankAccountId\");\npayment_methods_1.PaymentMethods.clickcancelButton();\npayment_methods_1.PaymentMethods.preAssertion();\ncy.assertAfterItemEditedInListView();",
+              "err": {},
+              "uuid": "51418c45-44d2-4957-9dc4-db0d69525232",
+              "parentUUID": "6204c59c-7fd7-449c-9b5e-44a8cb150f8b",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "59577a56-30e0-4ff5-942d-377067168439"
+          ],
+          "pending": [],
+          "skipped": [
+            "3fa26ed2-cd76-45d0-8a68-e94a98a5b2df",
+            "5ab300dd-7a88-41f0-894b-9d2144234606",
+            "7e2e735d-35e7-49ae-959a-744c93b51e5c",
+            "e4542aef-496c-4e9c-910e-6f7135e6e0b6",
+            "6583a5a6-cc9e-41f7-9b9e-95a8d3f808a8",
+            "4ff1fa7e-b6bf-4696-92e8-f14061392b75",
+            "a8d2ee74-202e-4a1f-bc36-bfe69d2eed35",
+            "51418c45-44d2-4957-9dc4-db0d69525232"
+          ],
+          "duration": 1588,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

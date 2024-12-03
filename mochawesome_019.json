@@ -5,9 +5,9 @@
     "passes": 1,
     "pending": 0,
     "failures": 4,
-    "start": "2024-11-26T04:36:25.827Z",
-    "end": "2024-11-26T04:57:39.780Z",
-    "duration": 1273953,
+    "start": "2024-12-03T05:48:29.182Z",
+    "end": "2024-12-03T06:10:37.714Z",
+    "duration": 1328532,
     "testsRegistered": 5,
     "passPercent": 20,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8f560fd0-9a10-43f5-aeb0-0e52b0899082",
+      "uuid": "70a603c5-cd27-4d40-870f-5ae50db4772a",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Edit_taxes_definitions.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Edit_taxes_definitions.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a7d86b6e-a4df-4896-9aaf-3759b5efb9f2",
+          "uuid": "2fe0e7b1-3288-426c-b8a8-16c1c0954ef9",
           "title": "Edit Existing Taxs Definitions",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify all the components are displayed on the Edit Existing Tax Definitions",
               "fullTitle": "Edit Existing Taxs Definitions 1.Verify all the components are displayed on the Edit Existing Tax Definitions",
               "timedOut": null,
-              "duration": 121333,
+              "duration": 104622,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `label[for=\"code\"]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Edit_taxes_definitions.cy.ts:15:0)",
                 "diff": null
               },
-              "uuid": "ae08b86a-79f2-49e1-a531-ab80ab5a17fe",
-              "parentUUID": "a7d86b6e-a4df-4896-9aaf-3759b5efb9f2",
+              "uuid": "e2bc3b52-07c4-4c95-b8ef-eebb3d1c5e22",
+              "parentUUID": "2fe0e7b1-3288-426c-b8a8-16c1c0954ef9",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "2.Verify Displaying Of Required Messsages",
               "fullTitle": "Edit Existing Taxs Definitions 2.Verify Displaying Of Required Messsages",
               "timedOut": null,
-              "duration": 182045,
+              "duration": 105250,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=name]`, but never found it.\n    at TaxsDefinitions.clearName (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/pages/Taxs Definitions.ts:137:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Definition/tests/Edit_taxes_definitions.cy.ts:44:0)",
                 "diff": null
               },
-              "uuid": "9ffa8b25-0526-4e34-97de-6969b3a56397",
-              "parentUUID": "a7d86b6e-a4df-4896-9aaf-3759b5efb9f2",
+              "uuid": "79515e1c-1487-4d86-b9ef-82be7a09554e",
+              "parentUUID": "2fe0e7b1-3288-426c-b8a8-16c1c0954ef9",
               "isHook": false,
               "skipped": false
             },
@@ -82,17 +82,21 @@
               "title": "3.Verify canceling Editting Existing Taxes Definitions",
               "fullTitle": "Edit Existing Taxs Definitions 3.Verify canceling Editting Existing Taxes Definitions",
               "timedOut": null,
-              "duration": 88341,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 169932,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1500);\nTaxs_Definitions_1.TaxsDefinitions.preActions();\ncy.clickFirstEditActionButton();\n// TaxsDefinitions.inputCode(GeneralSettingsData.taxesDefinitionsCode);\nTaxs_Definitions_1.TaxsDefinitions.inputName(general_settings_data_1.GeneralSettingsData.taxesDefinitionsName);\nTaxs_Definitions_1.TaxsDefinitions.inputRatio(general_settings_data_1.GeneralSettingsData.taxesDefinitionsRatio);\nTaxs_Definitions_1.TaxsDefinitions.selectFirstAccountId();\nTaxs_Definitions_1.TaxsDefinitions.selectLastTaxGroupId();\nTaxs_Definitions_1.TaxsDefinitions.cancelDialog();\nTaxs_Definitions_1.TaxsDefinitions.assertNotSaving();",
-              "err": {},
-              "uuid": "c48cd32c-fd13-49cf-a3fd-e19bd3218104",
-              "parentUUID": "a7d86b6e-a4df-4896-9aaf-3759b5efb9f2",
+              "err": {
+                "message": "AssertionError: expected '5' to not equal '5'",
+                "estack": "AssertionError: expected '5' to not equal '5'\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:705:0)",
+                "diff": ""
+              },
+              "uuid": "747f61bc-604a-490c-8bb7-8f172d043f6b",
+              "parentUUID": "2fe0e7b1-3288-426c-b8a8-16c1c0954ef9",
               "isHook": false,
               "skipped": false
             },
@@ -100,21 +104,17 @@
               "title": "4.Verify Editting Existing Taxes Definitions",
               "fullTitle": "Edit Existing Taxs Definitions 4.Verify Editting Existing Taxes Definitions",
               "timedOut": null,
-              "duration": 138364,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 153119,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "Taxs_Definitions_1.TaxsDefinitions.landing();\ncy.wait(1500);\nTaxs_Definitions_1.TaxsDefinitions.preActions();\ncy.clickFirstEditActionButton();\n// TaxsDefinitions.inputCode(GeneralSettingsData.taxesDefinitionsCode);\nTaxs_Definitions_1.TaxsDefinitions.inputName(general_settings_data_1.GeneralSettingsData.taxesDefinitionsName);\nTaxs_Definitions_1.TaxsDefinitions.inputRatio(general_settings_data_1.GeneralSettingsData.taxesDefinitionsRatio);\nTaxs_Definitions_1.TaxsDefinitions.selectFirstAccountId();\nTaxs_Definitions_1.TaxsDefinitions.selectLastTaxGroupId();\nTaxs_Definitions_1.TaxsDefinitions.submitDialog();\nTaxs_Definitions_1.TaxsDefinitions.assertSuccessfulSubmission(true);",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `table`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `table`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:478:0)",
-                "diff": null
-              },
-              "uuid": "510f49d5-e35b-4bf7-b452-4afa43de82e0",
-              "parentUUID": "a7d86b6e-a4df-4896-9aaf-3759b5efb9f2",
+              "err": {},
+              "uuid": "4e4891b2-0289-4704-93fe-39238119ddf7",
+              "parentUUID": "2fe0e7b1-3288-426c-b8a8-16c1c0954ef9",
               "isHook": false,
               "skipped": false
             },
@@ -122,7 +122,7 @@
               "title": "5.Verify That the  Editting Dialog has the correct Data after Landing",
               "fullTitle": "Edit Existing Taxs Definitions 5.Verify That the  Editting Dialog has the correct Data after Landing",
               "timedOut": null,
-              "duration": 162163,
+              "duration": 89022,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -135,25 +135,25 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=code]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:331:0)",
                 "diff": null
               },
-              "uuid": "b1931124-5aad-465f-8954-df0ddc9b3aae",
-              "parentUUID": "a7d86b6e-a4df-4896-9aaf-3759b5efb9f2",
+              "uuid": "a3e89443-d666-429b-a24d-9b61e7ea7ae7",
+              "parentUUID": "2fe0e7b1-3288-426c-b8a8-16c1c0954ef9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "c48cd32c-fd13-49cf-a3fd-e19bd3218104"
+            "4e4891b2-0289-4704-93fe-39238119ddf7"
           ],
           "failures": [
-            "ae08b86a-79f2-49e1-a531-ab80ab5a17fe",
-            "9ffa8b25-0526-4e34-97de-6969b3a56397",
-            "510f49d5-e35b-4bf7-b452-4afa43de82e0",
-            "b1931124-5aad-465f-8954-df0ddc9b3aae"
+            "e2bc3b52-07c4-4c95-b8ef-eebb3d1c5e22",
+            "79515e1c-1487-4d86-b9ef-82be7a09554e",
+            "747f61bc-604a-490c-8bb7-8f172d043f6b",
+            "a3e89443-d666-429b-a24d-9b61e7ea7ae7"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 692246,
+          "duration": 621945,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

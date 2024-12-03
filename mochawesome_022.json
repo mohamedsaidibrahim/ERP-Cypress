@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 0,
-    "start": "2024-11-26T05:19:58.488Z",
-    "end": "2024-11-26T05:24:33.462Z",
-    "duration": 274974,
+    "start": "2024-12-03T06:38:50.865Z",
+    "end": "2024-12-03T06:41:41.982Z",
+    "duration": 171117,
     "testsRegistered": 2,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "0be9cefe-3f38-4381-b1f1-fc4439af9ed6",
+      "uuid": "4b75911f-89c6-42f8-b8c9-1876ade0eb07",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_definitions/tests/currency_definitions_listview.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_definitions/tests/currency_definitions_listview.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a663e0e1-7538-4932-b631-a65e0b5cf9d2",
+          "uuid": "0c2ae16c-8017-4db6-8923-cb1ad760db5c",
           "title": "Currency Definitions List View",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify all the components are displayed on the Listview",
               "fullTitle": "Currency Definitions List View 1.Verify all the components are displayed on the Listview",
               "timedOut": null,
-              "duration": 196217,
+              "duration": 104069,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "currency_definition_1.CurrencyDefinitions.landing();\ncy.wait(1500);\ncy.get(\"table\").then((table) => {\n    cy.wrap(table).find(\"th\").eq(0).contains(/code/i).should(\"be.visible\");\n    cy.wrap(table).find(\"th\").eq(1).contains(/name/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/sympol/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/subunit/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(4)\n        .contains(/country/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(5)\n        .contains(/actions/i)\n        .should(\"be.visible\");\n});",
               "err": {},
-              "uuid": "568df79d-3b58-4847-a430-dd2f0e718e20",
-              "parentUUID": "a663e0e1-7538-4932-b631-a65e0b5cf9d2",
+              "uuid": "970d3467-257b-4cbc-b2c5-8fc10dd660d4",
+              "parentUUID": "0c2ae16c-8017-4db6-8923-cb1ad760db5c",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "2.should filter the table based on search input in the first two columns",
               "fullTitle": "Currency Definitions List View 2.should filter the table based on search input in the first two columns",
               "timedOut": null,
-              "duration": 76663,
+              "duration": 64776,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,21 +65,21 @@
               "context": null,
               "code": "currency_definition_1.CurrencyDefinitions.landing();\ncy.wait(1000);\ncy.verifySearchFunctionality();",
               "err": {},
-              "uuid": "37ebcce4-fb87-43ad-85f2-679b6195d0ff",
-              "parentUUID": "a663e0e1-7538-4932-b631-a65e0b5cf9d2",
+              "uuid": "8cc9c377-2a82-42b5-9e41-5945be70cadd",
+              "parentUUID": "0c2ae16c-8017-4db6-8923-cb1ad760db5c",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "568df79d-3b58-4847-a430-dd2f0e718e20",
-            "37ebcce4-fb87-43ad-85f2-679b6195d0ff"
+            "970d3467-257b-4cbc-b2c5-8fc10dd660d4",
+            "8cc9c377-2a82-42b5-9e41-5945be70cadd"
           ],
           "failures": [],
           "pending": [],
           "skipped": [],
-          "duration": 272880,
+          "duration": 168845,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-26T03:15:02.787Z",
-    "end": "2024-11-26T03:16:59.838Z",
-    "duration": 117051,
+    "start": "2024-12-03T03:24:09.131Z",
+    "end": "2024-12-03T03:25:53.225Z",
+    "duration": 104094,
     "testsRegistered": 3,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "2e50c9a0-d8a2-4a80-93b6-1c0fe478a614",
+      "uuid": "146e647d-a303-4605-acae-8d489e346702",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Displaying_all_subdomains_users.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Displaying_all_subdomains_users.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "60dee88a-6f8b-48e2-bd41-07e043c2a7d2",
+          "uuid": "b40bbccb-4cf6-4ac0-8074-076b16e49ede",
           "title": "verify Displaying All Subdomain's Users",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
               "fullTitle": "verify Displaying All Subdomain's Users 1.Verify That All The Component of The Grid are Displayed (Rows and Columns)",
               "timedOut": null,
-              "duration": 43787,
+              "duration": 44684,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `verify Displaying All Subdo...`\n    at ManageUsers.clickFirstManageUsers (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Displaying_all_subdomains_users.cy.ts:10:0)",
                 "diff": null
               },
-              "uuid": "a3170e89-8b70-46b5-becb-11e81ed072c8",
-              "parentUUID": "60dee88a-6f8b-48e2-bd41-07e043c2a7d2",
+              "uuid": "9e562b82-f159-4fd4-81dd-c61552c3b2dd",
+              "parentUUID": "b40bbccb-4cf6-4ac0-8074-076b16e49ede",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.verifySearchFunctionalityDots();",
               "err": {},
-              "uuid": "e0e38635-3a7a-4d25-8f02-c906bd643538",
-              "parentUUID": "60dee88a-6f8b-48e2-bd41-07e043c2a7d2",
+              "uuid": "9fbea95c-2a12-4059-a469-45701c673d84",
+              "parentUUID": "b40bbccb-4cf6-4ac0-8074-076b16e49ede",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "//  Check That the first row in the table has Resend Button then click it\nmanage_users_1.ManageUsers.verifyDisplayingResendButton();\nmanage_users_1.ManageUsers.clickResendButton();",
               "err": {},
-              "uuid": "57cd4b76-af2d-42f9-937b-d5d59dbb3b2f",
-              "parentUUID": "60dee88a-6f8b-48e2-bd41-07e043c2a7d2",
+              "uuid": "4209717c-1d80-49d1-b483-b48bdc09c9c9",
+              "parentUUID": "b40bbccb-4cf6-4ac0-8074-076b16e49ede",
               "isHook": false,
               "skipped": true
             }
@@ -96,14 +96,14 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "a3170e89-8b70-46b5-becb-11e81ed072c8"
+            "9e562b82-f159-4fd4-81dd-c61552c3b2dd"
           ],
           "pending": [],
           "skipped": [
-            "e0e38635-3a7a-4d25-8f02-c906bd643538",
-            "57cd4b76-af2d-42f9-937b-d5d59dbb3b2f"
+            "9fbea95c-2a12-4059-a469-45701c673d84",
+            "4209717c-1d80-49d1-b483-b48bdc09c9c9"
           ],
-          "duration": 43787,
+          "duration": 44684,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

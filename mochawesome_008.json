@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-26T03:00:33.462Z",
-    "end": "2024-11-26T03:03:05.270Z",
-    "duration": 151808,
+    "start": "2024-12-03T03:08:25.897Z",
+    "end": "2024-12-03T03:10:40.735Z",
+    "duration": 134838,
     "testsRegistered": 4,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "07f87123-6e3d-472f-87e1-f393a8db3e0d",
+      "uuid": "ec5224b3-d54b-40f5-a984-4d0416c2eef2",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Edit_branch_dialoge.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Edit_branch_dialoge.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "d0e4fac3-b3d8-435d-bd4f-75fd60051361",
+          "uuid": "5d2b73ad-fdbf-445a-b452-249a4b6b6542",
           "title": "Edit Branch Dialoge",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1. Verify That The Edit Branch Dialoge Has All Labels.",
               "fullTitle": "Edit Branch Dialoge 1. Verify That The Edit Branch Dialoge Has All Labels.",
               "timedOut": null,
-              "duration": 76709,
+              "duration": 73597,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "branches_management_1.BranchesManagment.clickEditBranch();\nbranches_management_1.BranchesManagment.checkLabels();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Branch Dialoge`",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Branch Dialoge`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Edit_branch_dialoge.cy.ts:14:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Branch Dialoge`",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `p-button[icon=\"pi pi-pencil\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Edit Branch Dialoge`\n    at EditCompanyScreen.clickFirstCompanyToEdit (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:25:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Edit_branch_dialoge.cy.ts:15:0)",
                 "diff": null
               },
-              "uuid": "75542b52-d95b-419e-ab1b-b425b75535b0",
-              "parentUUID": "d0e4fac3-b3d8-435d-bd4f-75fd60051361",
+              "uuid": "a61e7901-f4b1-43f6-a390-3f6358cbf853",
+              "parentUUID": "5d2b73ad-fdbf-445a-b452-249a4b6b6542",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "branches_management_1.BranchesManagment.clickEditBranch();\nbranches_management_1.BranchesManagment.inputBranchName(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchName);\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.inputBranchRegion(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchRegion);\nbranches_management_1.BranchesManagment.inputBranchCity(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchCity);\nbranches_management_1.BranchesManagment.inputBranchEmail(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.inputBranchAddress(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchAddress);\nbranches_management_1.BranchesManagment.selectMobileCode();\nbranches_management_1.BranchesManagment.inputMobileNumber();\nbranches_management_1.BranchesManagment.cancelEditBranchDialog();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();",
               "err": {},
-              "uuid": "30649216-4be6-4c4e-8540-9d78988be23e",
-              "parentUUID": "d0e4fac3-b3d8-435d-bd4f-75fd60051361",
+              "uuid": "fa9be80c-d7a2-4740-8f6d-f5a74686bf1b",
+              "parentUUID": "5d2b73ad-fdbf-445a-b452-249a4b6b6542",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "branches_management_1.BranchesManagment.clickEditBranch();\nbranches_management_1.BranchesManagment.inputBranchName(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchName);\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.inputBranchRegion(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchRegion);\nbranches_management_1.BranchesManagment.inputBranchCity(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchCity);\nbranches_management_1.BranchesManagment.inputBranchEmail(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.inputBranchAddress(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchAddress);\nbranches_management_1.BranchesManagment.selectMobileCode();\nbranches_management_1.BranchesManagment.inputMobileNumber();\nbranches_management_1.BranchesManagment.submitEditBranchDialog();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();\ncy.wait(1000);\n// Verify Data is Displaying in the Table\ncy.verifyFirstCellInTable(1, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchName);\ncy.verifyFirstCellInTable(2, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchRegion);\ncy.verifyFirstCellInTable(3, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchCity);\ncy.verifyFirstCellInTable(4, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchAddress);\ncy.verifyFirstCellInTable(5, company_data_1.CompanyData.branchMobileNumber);\ncy.verifyFirstCellInTable(6, \"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.clickEditBranch();\n// Verify Data is Displaying in the Editting Dialog\nbranches_management_1.BranchesManagment.verifyBranchRegion(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchRegion);\nbranches_management_1.BranchesManagment.verifyBranchCity(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchCity);\nbranches_management_1.BranchesManagment.verifyBranchEmail(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchMail);\nbranches_management_1.BranchesManagment.verifyBranchAddress(\"Edited_\" + branches_managment__data_1.BranchesManagmentData.branchAddress);",
               "err": {},
-              "uuid": "22f80fc0-2a2d-4f97-9964-c8b05db4ba86",
-              "parentUUID": "d0e4fac3-b3d8-435d-bd4f-75fd60051361",
+              "uuid": "a3d7dfc1-d6b3-4d50-8f16-8be56d0a400d",
+              "parentUUID": "5d2b73ad-fdbf-445a-b452-249a4b6b6542",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "cy.wait(2000);\ncy.getFirstCellInTableValue(1).then((nameT) => {\n    cy.wrap(nameT).as(\"nameT\");\n});\ncy.getFirstCellInTableValue(2).then((regionT) => {\n    cy.wrap(regionT).as(\"regionT\");\n});\ncy.getFirstCellInTableValue(3).then((cityT) => {\n    cy.wrap(cityT).as(\"cityT\");\n});\ncy.getFirstCellInTableValue(4).then((addressT) => {\n    cy.wrap(addressT).as(\"addressT\");\n});\ncy.getFirstCellInTableValue(5).then((phoneT) => {\n    cy.wrap(phoneT).as(\"phoneT\");\n});\ncy.getFirstCellInTableValue(6).then((emailT) => {\n    cy.wrap(emailT).as(\"emailT\");\n});\nbranches_management_1.BranchesManagment.clickEditBranch();\ncy.wait(2000);\ncy.get(\"@nameT\").then((nameT) => {\n    branches_management_1.BranchesManagment.verifyBranchName((0, utils_1.getWrappedString)(nameT));\n});\ncy.get(\"@regionT\").then((regionT) => {\n    branches_management_1.BranchesManagment.verifyBranchRegion((0, utils_1.getWrappedString)(regionT));\n});\ncy.get(\"@cityT\").then((cityT) => {\n    branches_management_1.BranchesManagment.verifyBranchCity((0, utils_1.getWrappedString)(cityT));\n});\ncy.get(\"@addressT\").then((addressT) => {\n    branches_management_1.BranchesManagment.verifyBranchAddress((0, utils_1.getWrappedString)(addressT));\n});\ncy.get(\"@phoneT\").then(() => {\n    branches_management_1.BranchesManagment.verifyMobileNumber();\n});\ncy.get(\"@emailT\").then((emailT) => {\n    branches_management_1.BranchesManagment.verifyBranchEmail((0, utils_1.getWrappedString)(emailT));\n});",
               "err": {},
-              "uuid": "0e3ca25e-a437-4883-987d-b001ac23bcb6",
-              "parentUUID": "d0e4fac3-b3d8-435d-bd4f-75fd60051361",
+              "uuid": "fe4f98da-8a8e-4d46-813b-68113680cf54",
+              "parentUUID": "5d2b73ad-fdbf-445a-b452-249a4b6b6542",
               "isHook": false,
               "skipped": true
             }
@@ -114,15 +114,15 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "75542b52-d95b-419e-ab1b-b425b75535b0"
+            "a61e7901-f4b1-43f6-a390-3f6358cbf853"
           ],
           "pending": [],
           "skipped": [
-            "30649216-4be6-4c4e-8540-9d78988be23e",
-            "22f80fc0-2a2d-4f97-9964-c8b05db4ba86",
-            "0e3ca25e-a437-4883-987d-b001ac23bcb6"
+            "fa9be80c-d7a2-4740-8f6d-f5a74686bf1b",
+            "a3d7dfc1-d6b3-4d50-8f16-8be56d0a400d",
+            "fe4f98da-8a8e-4d46-813b-68113680cf54"
           ],
-          "duration": 76709,
+          "duration": 73597,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

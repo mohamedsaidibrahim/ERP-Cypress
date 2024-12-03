@@ -2,14 +2,14 @@
   "stats": {
     "suites": 1,
     "tests": 4,
-    "passes": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 3,
-    "start": "2024-11-26T05:05:36.409Z",
-    "end": "2024-11-26T05:19:56.829Z",
-    "duration": 860420,
+    "failures": 4,
+    "start": "2024-12-03T06:21:14.805Z",
+    "end": "2024-12-03T06:38:49.231Z",
+    "duration": 1054426,
     "testsRegistered": 4,
-    "passPercent": 25,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "fc6e3843-bf07-4d42-a4b2-bf97b26467f5",
+      "uuid": "0c8f03e8-5cbb-4b3d-a126-167a33411b9b",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_definitions/tests/currency_definitions_edit.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_definitions/tests/currency_definitions_edit.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "010e71cb-e33e-4e99-b08d-55a8963eb730",
+          "uuid": "0430f0c7-d355-4f13-b963-bad6e779e3d0",
           "title": "Currency Definitions (Edit)",
           "fullFile": "",
           "file": "",
@@ -38,17 +38,21 @@
               "title": "1.Verify All components are displaying",
               "fullTitle": "Currency Definitions (Edit) 1.Verify All components are displaying",
               "timedOut": null,
-              "duration": 102521,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
-              "fail": false,
+              "duration": 190124,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
               "pending": false,
               "context": null,
               "code": "currency_definition_1.CurrencyDefinitions.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\ncy.wait(1500);\n// Verify Labels\ncy.verifyLabelText(\"code\", /currency code/i);\ncy.verifyLabelText(\"name\", /currency name/i);\ncy.verifyLabelText(\"subUnit\", /currency subunit/i);\ncy.verifyLabelText(\"symbol\", /currency symbol/i);\ncy.verifyLabelText(\"countryCode\", /currency country/i);\ncy.verifyLabelText(\"differenceAccount\", /difference account/i);",
-              "err": {},
-              "uuid": "6c35d275-3565-4749-a3b8-987035d8327e",
-              "parentUUID": "010e71cb-e33e-4e99-b08d-55a8963eb730",
+              "err": {
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.ts` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.ts` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:130509:64)\n    at <unknown> (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:130825:16)\n    at tryCatcher (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1830:23)\n    at <unknown> (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:4209:41)\n    at tryCatcher (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1270:0)",
+                "diff": null
+              },
+              "uuid": "9098ea7a-dd4c-4071-af13-abb0094ce0dd",
+              "parentUUID": "0430f0c7-d355-4f13-b963-bad6e779e3d0",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +60,7 @@
               "title": "2.Verify Submitting Editing an Existing Currency Definitions",
               "fullTitle": "Currency Definitions (Edit) 2.Verify Submitting Editing an Existing Currency Definitions",
               "timedOut": null,
-              "duration": 124790,
+              "duration": 110308,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -69,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[role=\"listbox\"]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1151:0)",
                 "diff": null
               },
-              "uuid": "0069575b-7709-4b6a-b634-5e91bfe9142e",
-              "parentUUID": "010e71cb-e33e-4e99-b08d-55a8963eb730",
+              "uuid": "0ea2498a-9331-4ee3-a839-c1c40f4a7aac",
+              "parentUUID": "0430f0c7-d355-4f13-b963-bad6e779e3d0",
               "isHook": false,
               "skipped": false
             },
@@ -78,7 +82,7 @@
               "title": "3.Verify canceling Editing an Existing Currency Definitions",
               "fullTitle": "Currency Definitions (Edit) 3.Verify canceling Editing an Existing Currency Definitions",
               "timedOut": null,
-              "duration": 123865,
+              "duration": 126070,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -91,8 +95,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[role=\"listbox\"]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1151:0)",
                 "diff": null
               },
-              "uuid": "b162cf9a-9e92-4da4-a408-356f96005f80",
-              "parentUUID": "010e71cb-e33e-4e99-b08d-55a8963eb730",
+              "uuid": "0f62bb2a-9892-478a-a77f-c3cecd46e06e",
+              "parentUUID": "0430f0c7-d355-4f13-b963-bad6e779e3d0",
               "isHook": false,
               "skipped": false
             },
@@ -100,7 +104,7 @@
               "title": "4.Verify Required Validation and The name Field is Required",
               "fullTitle": "Currency Definitions (Edit) 4.Verify Required Validation and The name Field is Required",
               "timedOut": null,
-              "duration": 115965,
+              "duration": 110625,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -109,28 +113,27 @@
               "context": null,
               "code": "currency_definition_1.CurrencyDefinitions.landing();\ncy.clickFirstEditActionButton();\ncy.wait(1500);\ncy.verifyNotExistanceTheRequiredValidation();\ncy.getByTestAttribute(\"name\").clear();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\ncy.getByTestAttribute(\"symbol\").clear();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\ncy.getByTestAttribute(\"name\").clear().type((0, utils_1.generateRandomString)(7));\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\ncurrency_definition_1.CurrencyDefinitions.clickSaveButton();\ncy.get('div[role=\"dialog\"]').should(\"be.visible\");\ncy.getByTestAttribute(\"symbol\").clear().type(general_settings_data_1.GeneralSettingsData.cSymbolE);\ncy.verifyNotExistanceTheRequiredValidation();\ncurrency_definition_1.CurrencyDefinitions.clickSaveButton();\ncy.wait(1500);\ncy.get('div[role=\"dialog\"]').should(\"not.exist\");",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `table`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `table`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:156:0)",
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=name]`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=name]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:331:0)",
                 "diff": null
               },
-              "uuid": "ecb6d50f-dd6e-47ed-a6f9-e6716a7e8dee",
-              "parentUUID": "010e71cb-e33e-4e99-b08d-55a8963eb730",
+              "uuid": "5af5483d-67f1-4746-baf6-c06a1b2d7a59",
+              "parentUUID": "0430f0c7-d355-4f13-b963-bad6e779e3d0",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
-          "passes": [
-            "6c35d275-3565-4749-a3b8-987035d8327e"
-          ],
+          "passes": [],
           "failures": [
-            "0069575b-7709-4b6a-b634-5e91bfe9142e",
-            "b162cf9a-9e92-4da4-a408-356f96005f80",
-            "ecb6d50f-dd6e-47ed-a6f9-e6716a7e8dee"
+            "9098ea7a-dd4c-4071-af13-abb0094ce0dd",
+            "0ea2498a-9331-4ee3-a839-c1c40f4a7aac",
+            "0f62bb2a-9892-478a-a77f-c3cecd46e06e",
+            "5af5483d-67f1-4746-baf6-c06a1b2d7a59"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 467141,
+          "duration": 537127,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

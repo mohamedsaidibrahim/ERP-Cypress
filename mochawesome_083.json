@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:20:25.401Z",
+    "end": "2024-12-03T08:20:28.803Z",
+    "duration": 3402,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "84de3667-e5cf-4614-9886-aa92bdcc5367",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Operation_Tags/tests/operation_tags_add.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Operation_Tags/tests/operation_tags_add.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "6ad5c4fa-31aa-49ce-bd10-375ad2b7189b",
+          "title": "Add Operation Tags",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify All Labels",
+              "fullTitle": "Add Operation Tags 1.Verify All Labels",
+              "timedOut": null,
+              "duration": 1619,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "operation_tags_1.OperationTags.landing();\ncy.wait(2000);\ncy.clickAddNewButton();\ncy.wait(1000);\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"name\", /name/i);\ncy.verifyLabelText(\"operationType\", /Operation Type/i);\ncy.verifyLabelText(\"warehouseId\", /Warehouse Name/i);\ncy.verifyLabelText(\"glAccountId\", /GL Account/i);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "2d842fc2-2025-42e8-a382-946670adc75b",
+              "parentUUID": "6ad5c4fa-31aa-49ce-bd10-375ad2b7189b",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2. Verify Required Validation",
+              "fullTitle": "Add Operation Tags 2. Verify Required Validation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "operation_tags_1.OperationTags.landing();\ncy.wait(2000);\ncy.clickAddNewButton();\ncy.wait(1000);\noperation_tags_1.OperationTags.verifyDimmedCode();\noperation_tags_1.OperationTags.clickSaveButton();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(3);\noperation_tags_1.OperationTags.inputName();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\noperation_tags_1.OperationTags.selectOperationType(\"in\");\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\noperation_tags_1.OperationTags.selectwarehouse(inventory_data_1.InventoryData.warehouseAdd);\ncy.verifyNotExistanceTheRequiredValidation();",
+              "err": {},
+              "uuid": "ad05d78a-2697-4345-865b-c29d6228bddb",
+              "parentUUID": "6ad5c4fa-31aa-49ce-bd10-375ad2b7189b",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3. Verify Saving new Operation Tag",
+              "fullTitle": "Add Operation Tags 3. Verify Saving new Operation Tag",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "operation_tags_1.OperationTags.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ncy.clickAddNewButton();\ncy.wait(1000);\noperation_tags_1.OperationTags.verifyDimmedCode();\noperation_tags_1.OperationTags.clickSaveButton();\noperation_tags_1.OperationTags.inputName();\noperation_tags_1.OperationTags.selectOperationType(\"in\");\noperation_tags_1.OperationTags.selectwarehouse(inventory_data_1.InventoryData.warehouseAdd);\noperation_tags_1.OperationTags.selectglAccountAdd();\noperation_tags_1.OperationTags.clickSaveButton();\ncy.assertnewItemAddedToListView();",
+              "err": {},
+              "uuid": "8591760e-dc60-4905-8c96-643c891fb375",
+              "parentUUID": "6ad5c4fa-31aa-49ce-bd10-375ad2b7189b",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "2d842fc2-2025-42e8-a382-946670adc75b"
+          ],
+          "pending": [],
+          "skipped": [
+            "ad05d78a-2697-4345-865b-c29d6228bddb",
+            "8591760e-dc60-4905-8c96-643c891fb375"
+          ],
+          "duration": 1619,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

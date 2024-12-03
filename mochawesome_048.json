@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:17:30.843Z",
+    "end": "2024-12-03T08:17:34.200Z",
+    "duration": 3357,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "5dde7c2e-7f56-4b5c-9415-432e49fc3d58",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/payment_methods/tests/payment_methods_listview.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/payment_methods/tests/payment_methods_listview.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "939b594e-464f-427d-b1a3-2920ab6fcb18",
+          "title": "payment method List View",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify all the components are displayed on the Listview",
+              "fullTitle": "payment method List View 1.Verify all the components are displayed on the Listview",
+              "timedOut": null,
+              "duration": 1597,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(1500);\ncy.get(\"span\")\n    .should(\"be.visible\")\n    .should(\"include\", /payment method/i);\ncy.get(\"table\").then((table) => {\n    cy.wrap(table).find(\"th\").eq(0).contains(/code/i).should(\"be.visible\");\n    cy.wrap(table).find(\"th\").eq(1).contains(/name/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/payment place/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/payment method type/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(4)\n        .contains(/actions/i)\n        .should(\"be.visible\");\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "650376eb-36ed-4887-8c48-8275293101d3",
+              "parentUUID": "939b594e-464f-427d-b1a3-2920ab6fcb18",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Deleting A payment method",
+              "fullTitle": "payment method List View 2.Verify Deleting A payment method",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\ncy.clickFirstDeleteActionButton();\npayment_methods_1.PaymentMethods.confirmDeleteDialog();\n// Assertion\ncy.wait(1000);\ncy.reload();\ncy.wait(1000);\ncy.clickContinueAs();\ncy.wait(1000);\ncy.assertItemDeletedFromListView();",
+              "err": {},
+              "uuid": "66e90c59-ec2f-4c36-a1ef-7f2a53c88ac0",
+              "parentUUID": "939b594e-464f-427d-b1a3-2920ab6fcb18",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.should filter the table based on search input in the first two columns",
+              "fullTitle": "payment method List View 3.should filter the table based on search input in the first two columns",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_methods_1.PaymentMethods.landing();\ncy.wait(1000);\ncy.verifySearchFunctionality();",
+              "err": {},
+              "uuid": "74b0059d-9e21-4425-b3b0-cfa965569f43",
+              "parentUUID": "939b594e-464f-427d-b1a3-2920ab6fcb18",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "650376eb-36ed-4887-8c48-8275293101d3"
+          ],
+          "pending": [],
+          "skipped": [
+            "66e90c59-ec2f-4c36-a1ef-7f2a53c88ac0",
+            "74b0059d-9e21-4425-b3b0-cfa965569f43"
+          ],
+          "duration": 1597,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

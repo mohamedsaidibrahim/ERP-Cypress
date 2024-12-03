@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 3,
-    "start": "2024-11-26T05:24:35.132Z",
-    "end": "2024-11-26T05:43:19.099Z",
-    "duration": 1123967,
+    "start": "2024-12-03T06:41:43.631Z",
+    "end": "2024-12-03T07:01:18.014Z",
+    "duration": 1174383,
     "testsRegistered": 5,
     "passPercent": 40,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "bebf05be-7488-4694-b716-e48ede26650f",
+      "uuid": "eb48be41-2c9a-4942-ae55-8c62bc07c175",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_add.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_add.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "44f2ed7d-d195-406a-be16-388df5aa2493",
+          "uuid": "f684d90c-4aa2-4994-b77c-60f7df957631",
           "title": "Currency Conversion (Add)",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify All components are displaying",
               "fullTitle": "Currency Conversion (Add) 1.Verify All components are displaying",
               "timedOut": null,
-              "duration": 117875,
+              "duration": 118667,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button' but never did.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:227:0)",
                 "diff": null
               },
-              "uuid": "a635f686-df19-4f12-bb64-b563eb64f8a8",
-              "parentUUID": "44f2ed7d-d195-406a-be16-388df5aa2493",
+              "uuid": "2cbf8169-b512-4110-972b-c983875426fa",
+              "parentUUID": "f684d90c-4aa2-4994-b77c-60f7df957631",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "2.Verify Submitting new Currency Conversion",
               "fullTitle": "Currency Conversion (Add) 2.Verify Submitting new Currency Conversion",
               "timedOut": null,
-              "duration": 110171,
+              "duration": 169160,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: expected 0 to equal 1\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:244:0)",
                 "diff": null
               },
-              "uuid": "b990a76a-0a9b-4a5a-a311-3d1ed01dcd8e",
-              "parentUUID": "44f2ed7d-d195-406a-be16-388df5aa2493",
+              "uuid": "31a22511-3f6e-488d-94e3-e2035e89ec3c",
+              "parentUUID": "f684d90c-4aa2-4994-b77c-60f7df957631",
               "isHook": false,
               "skipped": false
             },
@@ -82,7 +82,7 @@
               "title": "3.Verify Cancelling Submitting new Currency Conversion",
               "fullTitle": "Currency Conversion (Add) 3.Verify Cancelling Submitting new Currency Conversion",
               "timedOut": null,
-              "duration": 169657,
+              "duration": 151366,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -91,8 +91,8 @@
               "context": null,
               "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncurrency_conversion_1.CurrencyConversion.clickAddNewButton();\ncy.wait(1000);\ncy.clickInputtedSearchDropDownList(\"fromCurrencyId\", general_settings_data_1.GeneralSettingsData.newCurrencySearch);\ncy.wait(1000);\ncy.getByTestAttribute(\"fromCurrencyRate\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);\ncy.clickInputtedSearchDropDownList(\"toCurrencyId\", general_settings_data_1.GeneralSettingsData.currency1);\ncy.getByTestAttribute(\"note\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccNote);\ncurrency_conversion_1.CurrencyConversion.clickcancelButton();\n// Assertion\ncy.wait(1000);\ncy.assertAfterItemEditedInListView();",
               "err": {},
-              "uuid": "88f2c33d-cf37-4daa-a457-793c56729cbd",
-              "parentUUID": "44f2ed7d-d195-406a-be16-388df5aa2493",
+              "uuid": "fea9dd69-3302-463a-9599-25755436d0a9",
+              "parentUUID": "f684d90c-4aa2-4994-b77c-60f7df957631",
               "isHook": false,
               "skipped": false
             },
@@ -100,7 +100,7 @@
               "title": "4.Verify Required Validation and The name Field is Required",
               "fullTitle": "Currency Conversion (Add) 4.Verify Required Validation and The name Field is Required",
               "timedOut": null,
-              "duration": 92233,
+              "duration": 107537,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -109,12 +109,12 @@
               "context": null,
               "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncurrency_conversion_1.CurrencyConversion.clickAddNewButton();\ncy.wait(1500);\ncurrency_conversion_1.CurrencyConversion.clickSaveButton();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(3);\ncy.clickInputtedSearchDropDownList(\"fromCurrencyId\", general_settings_data_1.GeneralSettingsData.newCurrencySearch);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\ncy.getByTestAttribute(\"fromCurrencyRate\")\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\ncy.clickInputtedSearchDropDownList(\"toCurrencyId\", general_settings_data_1.GeneralSettingsData.currency1);\ncy.verifyNotExistanceTheRequiredValidation();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Too many elements found. Found '3', expected '2'.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Too many elements found. Found '3', expected '2'.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:466:0)",
-                "diff": "- 3\n+ 2\n"
+                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button' but never did.",
+                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button' but never did.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:227:0)",
+                "diff": null
               },
-              "uuid": "0fb46997-9692-4179-b86f-e3c446d5898b",
-              "parentUUID": "44f2ed7d-d195-406a-be16-388df5aa2493",
+              "uuid": "1467339f-3380-4e80-9b50-3487a2abe183",
+              "parentUUID": "f684d90c-4aa2-4994-b77c-60f7df957631",
               "isHook": false,
               "skipped": false
             },
@@ -122,7 +122,7 @@
               "title": "5.Verify Validation of the same From and To Currency",
               "fullTitle": "Currency Conversion (Add) 5.Verify Validation of the same From and To Currency",
               "timedOut": null,
-              "duration": 167970,
+              "duration": 167743,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -131,25 +131,25 @@
               "context": null,
               "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncurrency_conversion_1.CurrencyConversion.clickAddNewButton();\ncy.wait(1500);\ncy.clickInputtedSearchDropDownList(\"fromCurrencyId\", general_settings_data_1.GeneralSettingsData.currency1);\ncy.getByTestAttribute(\"fromCurrencyRate\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);\ncy.wait(1000);\ncy.clickInputtedSearchDropDownList(\"toCurrencyId\", general_settings_data_1.GeneralSettingsData.currency1);\ncy.wait(1000);\ncy.getByTestAttribute(\"note\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccNote);\ncy.contains(\"div\", /different/i)\n    .first()\n    .scrollIntoView()\n    .should(\"be.visible\");\ncy.contains(\"div\", /different/i)\n    .last()\n    .scrollIntoView()\n    .should(\"be.visible\");",
               "err": {},
-              "uuid": "e96f6bcc-d39c-4ef6-b834-5161460186fe",
-              "parentUUID": "44f2ed7d-d195-406a-be16-388df5aa2493",
+              "uuid": "973ba5d3-6a0a-44ce-b233-d99946e20f29",
+              "parentUUID": "f684d90c-4aa2-4994-b77c-60f7df957631",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "88f2c33d-cf37-4daa-a457-793c56729cbd",
-            "e96f6bcc-d39c-4ef6-b834-5161460186fe"
+            "fea9dd69-3302-463a-9599-25755436d0a9",
+            "973ba5d3-6a0a-44ce-b233-d99946e20f29"
           ],
           "failures": [
-            "a635f686-df19-4f12-bb64-b563eb64f8a8",
-            "b990a76a-0a9b-4a5a-a311-3d1ed01dcd8e",
-            "0fb46997-9692-4179-b86f-e3c446d5898b"
+            "2cbf8169-b512-4110-972b-c983875426fa",
+            "31a22511-3f6e-488d-94e3-e2035e89ec3c",
+            "1467339f-3380-4e80-9b50-3487a2abe183"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 657906,
+          "duration": 714473,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

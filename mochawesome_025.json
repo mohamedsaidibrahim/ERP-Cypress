@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 5,
-    "start": "2024-11-26T05:52:58.207Z",
-    "end": "2024-11-26T06:20:40.224Z",
-    "duration": 1662017,
+    "start": "2024-12-03T07:10:58.888Z",
+    "end": "2024-12-03T07:31:24.291Z",
+    "duration": 1225403,
     "testsRegistered": 5,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "d3c2f369-8810-4990-a3f6-04328ae30b75",
+      "uuid": "dab54c82-35b9-44be-b0a9-6fdf887033f0",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_edit.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_edit.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "e6c1aa2f-a7f8-4e8b-9fd5-9b4072eb8f34",
+          "uuid": "1d4ef0ec-a45e-44ea-9d3c-01d55e5f979b",
           "title": "Currency Conversion (Edit)",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify All components are displaying",
               "fullTitle": "Currency Conversion (Edit) 1.Verify All components are displaying",
               "timedOut": null,
-              "duration": 167826,
+              "duration": 111668,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `label[for=fromCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:302:0)",
                 "diff": null
               },
-              "uuid": "5d36fbef-b2c7-427c-bd15-03543cd77491",
-              "parentUUID": "e6c1aa2f-a7f8-4e8b-9fd5-9b4072eb8f34",
+              "uuid": "49e05d30-74e6-4279-aa40-7bba839ec4f1",
+              "parentUUID": "1d4ef0ec-a45e-44ea-9d3c-01d55e5f979b",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "2.Verify Submitting Editted Currency Conversion",
               "fullTitle": "Currency Conversion (Edit) 2.Verify Submitting Editted Currency Conversion",
               "timedOut": null,
-              "duration": 104988,
+              "duration": 92123,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -73,8 +73,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=toCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:331:0)",
                 "diff": null
               },
-              "uuid": "c8240497-76a3-4c3e-afce-0f8b14172881",
-              "parentUUID": "e6c1aa2f-a7f8-4e8b-9fd5-9b4072eb8f34",
+              "uuid": "9829cb15-8b23-4bea-91a6-87c199126c96",
+              "parentUUID": "1d4ef0ec-a45e-44ea-9d3c-01d55e5f979b",
               "isHook": false,
               "skipped": false
             },
@@ -82,7 +82,7 @@
               "title": "3.Verify Rejecting Submitting Editted Currency Conversion (2 Currencies has previous Conversion relation)",
               "fullTitle": "Currency Conversion (Edit) 3.Verify Rejecting Submitting Editted Currency Conversion (2 Currencies has previous Conversion relation)",
               "timedOut": null,
-              "duration": 105527,
+              "duration": 93325,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -91,12 +91,12 @@
               "context": null,
               "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\ncy.wait(1000);\ncy.clickInputtedSearchDropDownList(\"fromCurrencyId\", general_settings_data_1.GeneralSettingsData.newCurrencySearch).then(($fromCurrencyId) => {\n    if ($fromCurrencyId != null) {\n        cy.wrap($fromCurrencyId)\n            .invoke(\"text\")\n            .then((fromCurrencyIdTxt) => {\n            cy.log(\"fromCurrencyIdTxt::: \" + fromCurrencyIdTxt);\n            cy.wrap(fromCurrencyIdTxt).as(\"fromCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"fromCurrencyIdTxt\");\n    }\n});\ncy.wait(1000);\ncy.getByTestAttribute(\"note\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccNote);\ncy.clickInputtedSearchDropDownList(\"toCurrencyId\", general_settings_data_1.GeneralSettingsData.currency2).then(($toCurrencyId) => {\n    if ($toCurrencyId != null) {\n        cy.wrap($toCurrencyId)\n            .invoke(\"text\")\n            .then((toCurrencyIdTxt) => {\n            cy.log(\"toCurrencyIdTxt::: \" + toCurrencyIdTxt);\n            cy.wrap(toCurrencyIdTxt).as(\"toCurrencyIdTxt\");\n        });\n    }\n    else {\n        cy.wrap(\"\").as(\"toCurrencyIdTxt\");\n    }\n});\ncy.getByTestAttribute(\"fromCurrencyRate\")\n    .scrollIntoView()\n    .clear()\n    .type(general_settings_data_1.GeneralSettingsData.ccFromCurrencyRate);\ncurrency_conversion_1.CurrencyConversion.clickSaveButton();\ncy.wait(2000);\ncy.contains(\"div[role='dialog']\").should(\"be.visible\");",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=fromCurrencyId]`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=fromCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:331:0)",
+                "message": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.ts` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.",
+                "estack": "CypressError: Timed out after waiting `60000ms` for your remote page to load.\n\nYour page did not fire its `load` event within `60000ms`.\n\nYou can try increasing the `pageLoadTimeout` value in `cypress.config.ts` to wait longer.\n\nBrowsers will not fire the `load` event until all stylesheets and scripts are done downloading.\n\nWhen this `load` event occurs, Cypress will continue running commands.\n    at timedOutWaitingForPageLoad (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:130509:64)\n    at <unknown> (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:130825:16)\n    at tryCatcher (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1830:23)\n    at <unknown> (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:4209:41)\n    at tryCatcher (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://mohamed.microtecdev.com:2050/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1270:0)",
                 "diff": null
               },
-              "uuid": "98e0cc5b-338c-497d-8224-55eba270f80c",
-              "parentUUID": "e6c1aa2f-a7f8-4e8b-9fd5-9b4072eb8f34",
+              "uuid": "c5632436-3d27-46a7-9cda-4e9fa111b214",
+              "parentUUID": "1d4ef0ec-a45e-44ea-9d3c-01d55e5f979b",
               "isHook": false,
               "skipped": false
             },
@@ -104,7 +104,7 @@
               "title": "4.Verify Cancelling Editting Currency Conversion",
               "fullTitle": "Currency Conversion (Edit) 4.Verify Cancelling Editting Currency Conversion",
               "timedOut": null,
-              "duration": 104399,
+              "duration": 125568,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -117,8 +117,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=toCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:331:0)",
                 "diff": null
               },
-              "uuid": "0071ae17-d988-43be-84b4-b8649b874eaf",
-              "parentUUID": "e6c1aa2f-a7f8-4e8b-9fd5-9b4072eb8f34",
+              "uuid": "4540e1ec-fa3e-4270-b6b5-8b2eda55baf3",
+              "parentUUID": "1d4ef0ec-a45e-44ea-9d3c-01d55e5f979b",
               "isHook": false,
               "skipped": false
             },
@@ -126,7 +126,7 @@
               "title": "5.Verify Validation of the same From and To Currency",
               "fullTitle": "Currency Conversion (Edit) 5.Verify Validation of the same From and To Currency",
               "timedOut": null,
-              "duration": 183535,
+              "duration": 125917,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -139,8 +139,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `[data-testid=fromCurrencyId]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:331:0)",
                 "diff": null
               },
-              "uuid": "295a92e2-2833-4a96-90e8-59be3370e1ee",
-              "parentUUID": "e6c1aa2f-a7f8-4e8b-9fd5-9b4072eb8f34",
+              "uuid": "9b59bef1-8ad8-4ed2-a8e1-51913c386bef",
+              "parentUUID": "1d4ef0ec-a45e-44ea-9d3c-01d55e5f979b",
               "isHook": false,
               "skipped": false
             }
@@ -148,15 +148,15 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "5d36fbef-b2c7-427c-bd15-03543cd77491",
-            "c8240497-76a3-4c3e-afce-0f8b14172881",
-            "98e0cc5b-338c-497d-8224-55eba270f80c",
-            "0071ae17-d988-43be-84b4-b8649b874eaf",
-            "295a92e2-2833-4a96-90e8-59be3370e1ee"
+            "49e05d30-74e6-4279-aa40-7bba839ec4f1",
+            "9829cb15-8b23-4bea-91a6-87c199126c96",
+            "c5632436-3d27-46a7-9cda-4e9fa111b214",
+            "4540e1ec-fa3e-4270-b6b5-8b2eda55baf3",
+            "9b59bef1-8ad8-4ed2-a8e1-51913c386bef"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 666275,
+          "duration": 548601,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

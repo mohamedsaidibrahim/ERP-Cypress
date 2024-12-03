@@ -5,9 +5,9 @@
     "passes": 2,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-26T05:43:20.729Z",
-    "end": "2024-11-26T05:52:56.504Z",
-    "duration": 575775,
+    "start": "2024-12-03T07:01:19.576Z",
+    "end": "2024-12-03T07:10:57.288Z",
+    "duration": 577712,
     "testsRegistered": 3,
     "passPercent": 66.66666666666666,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "c1b2dce8-6efc-441e-aa5f-229ee656a3ec",
+      "uuid": "0a70cdc2-d2ae-4de4-85d3-ecf6297a9564",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_listview.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/currency_conversion/tests/currency_conversion_listview.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "6b153718-db6c-4e7d-8a98-1b4697df4ece",
+          "uuid": "3e91b730-6252-4b98-9a29-86f0cb736c16",
           "title": "Currency Conversion List View",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify all the components are displayed on the Listview",
               "fullTitle": "Currency Conversion List View 1.Verify all the components are displayed on the Listview",
               "timedOut": null,
-              "duration": 41293,
+              "duration": 81739,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -47,8 +47,8 @@
               "context": null,
               "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.get(\"table\").then((table) => {\n    // Verify Table Column Headers\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(0)\n        .contains(/from currency/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(1)\n        .contains(/currency rate/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/to currency/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/reversed rate/i)\n        .should(\"be.visible\");\n    cy.wrap(table).find(\"th\").eq(4).contains(/notes/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(5)\n        .scrollIntoView()\n        .contains(/actions/i)\n        .should(\"be.visible\");\n});",
               "err": {},
-              "uuid": "65b92ae3-36c0-476d-956a-b9c47ce47893",
-              "parentUUID": "6b153718-db6c-4e7d-8a98-1b4697df4ece",
+              "uuid": "87a41fc8-3225-4003-80cd-f35cd2390430",
+              "parentUUID": "3e91b730-6252-4b98-9a29-86f0cb736c16",
               "isHook": false,
               "skipped": false
             },
@@ -56,7 +56,7 @@
               "title": "2.should filter the table based on search input in the first two columns",
               "fullTitle": "Currency Conversion List View 2.should filter the table based on search input in the first two columns",
               "timedOut": null,
-              "duration": 98018,
+              "duration": 96380,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -65,8 +65,8 @@
               "context": null,
               "code": "currency_conversion_1.CurrencyConversion.landing();\ncy.wait(1500);\ncy.verifySearchFunctionality();",
               "err": {},
-              "uuid": "7356ab1a-3bde-4c12-a99c-c741d45a0d2f",
-              "parentUUID": "6b153718-db6c-4e7d-8a98-1b4697df4ece",
+              "uuid": "0b8ae78d-ef39-4264-8e0a-3a83df33c35f",
+              "parentUUID": "3e91b730-6252-4b98-9a29-86f0cb736c16",
               "isHook": false,
               "skipped": false
             },
@@ -74,7 +74,7 @@
               "title": "3.Verify Deleting A Currency Conversion",
               "fullTitle": "Currency Conversion List View 3.Verify Deleting A Currency Conversion",
               "timedOut": null,
-              "duration": 186329,
+              "duration": 108449,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -87,23 +87,23 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `div[role=\"dialog\"]`, but never found it.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:289:0)",
                 "diff": null
               },
-              "uuid": "afac784c-9827-44f9-a738-c12c7b6710f2",
-              "parentUUID": "6b153718-db6c-4e7d-8a98-1b4697df4ece",
+              "uuid": "4a9d72ed-e2de-4ba5-ad92-b1c2b7dd2612",
+              "parentUUID": "3e91b730-6252-4b98-9a29-86f0cb736c16",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "65b92ae3-36c0-476d-956a-b9c47ce47893",
-            "7356ab1a-3bde-4c12-a99c-c741d45a0d2f"
+            "87a41fc8-3225-4003-80cd-f35cd2390430",
+            "0b8ae78d-ef39-4264-8e0a-3a83df33c35f"
           ],
           "failures": [
-            "afac784c-9827-44f9-a738-c12c7b6710f2"
+            "4a9d72ed-e2de-4ba5-ad92-b1c2b7dd2612"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 325640,
+          "duration": 286568,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

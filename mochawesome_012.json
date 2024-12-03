@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 1,
-    "passes": 0,
+    "tests": 2,
+    "passes": 2,
     "pending": 0,
-    "failures": 1,
-    "start": "2024-11-26T03:17:01.454Z",
-    "end": "2024-11-26T03:19:04.251Z",
-    "duration": 122797,
+    "failures": 0,
+    "start": "2024-12-03T03:25:54.792Z",
+    "end": "2024-12-03T03:27:10.912Z",
+    "duration": 76120,
     "testsRegistered": 2,
-    "passPercent": 0,
+    "passPercent": 100,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 1,
-    "hasSkipped": true
+    "skipped": 0,
+    "hasSkipped": false
   },
   "results": [
     {
-      "uuid": "be1bba16-5837-4400-8753-07ce6febb4fa",
+      "uuid": "70b9c2e3-027c-4a36-9a9f-72a4c55d914d",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Delete_existing_user.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Delete_existing_user.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "31ebd622-69ef-4bdc-bd92-54ba619f4a94",
+          "uuid": "62252dc2-64cb-426d-81b0-1e3171b54f1b",
           "title": "Delete Existing User",
           "fullFile": "",
           "file": "",
@@ -38,21 +38,17 @@
               "title": "1.Verify That The User Can Cancel in the confirmation Pop up",
               "fullTitle": "Delete Existing User 1.Verify That The User Can Cancel in the confirmation Pop up",
               "timedOut": null,
-              "duration": 49630,
-              "state": "failed",
-              "speed": null,
-              "pass": false,
-              "fail": true,
+              "duration": 50651,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get(\"table\").then(($table) => {\n    if ($table.find(\"tbody tr\").is(\":visible\")) {\n        cy.get(\"table tbody tr\")\n            .eq(0)\n            .find(\"td\")\n            .eq(1)\n            .invoke(\"text\")\n            .then((tMail) => {\n            cy.wrap(tMail.trim()).as(\"tMail1\");\n        });\n        cy.getInitItemsCountInListView();\n        manage_users_1.ManageUsers.clickDeleteOnTheLastUser();\n        //  Verify The Components of Cancel Pop up\n        // ManageUsers.verifyTheComponentsOfCancelPopup();\n        //  Click Cancel Button\n        manage_users_1.ManageUsers.cancelTheDeletePopUp();\n        //  Verify that No Data is Deleted\n        cy.get(\"@tMail1\").then((tMail1) => {\n            cy.get(\"table tbody tr\")\n                .eq(0)\n                .find(\"td\")\n                .eq(1)\n                .scrollIntoView()\n                .invoke(\"text\")\n                .then((tMail2) => {\n                expect((0, utils_1.trimText)(tMail1.toString().trim())).to.equal((0, utils_1.trimText)(tMail2));\n            });\n        });\n        cy.assertItemDeletedFromListView();\n    }\n    else {\n        cy.log(\"Table is Empty\");\n    }\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Delete Existing User`",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 user\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Delete Existing User`\n    at ManageUsers.clickFirstManageUsers (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/pages/manage_users.ts:6:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_users/tests/Delete_existing_user.cy.ts:11:0)",
-                "diff": null
-              },
-              "uuid": "e615f5ac-3c86-4360-9554-7320eb9e272f",
-              "parentUUID": "31ebd622-69ef-4bdc-bd92-54ba619f4a94",
+              "err": {},
+              "uuid": "4f78e1c4-0561-471b-826c-a3f58d5a4337",
+              "parentUUID": "62252dc2-64cb-426d-81b0-1e3171b54f1b",
               "isHook": false,
               "skipped": false
             },
@@ -60,31 +56,30 @@
               "title": "2.Verify That The User Can Delete The User From Delete Button on The User Row an Action. ",
               "fullTitle": "Delete Existing User 2.Verify That The User Can Delete The User From Delete Button on The User Row an Action. ",
               "timedOut": null,
-              "duration": 0,
-              "state": "skipped",
-              "speed": null,
-              "pass": false,
+              "duration": 25268,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "cy.get(\"table\").then(($table) => {\n    if ($table.find(\"tbody tr\").is(\":visible\")) {\n        cy.get(\"tbody tr\")\n            .last()\n            .find(\"td\")\n            .eq(1)\n            .invoke(\"text\")\n            .then((tMail) => {\n            cy.wrap(tMail.trim()).as(\"tMail1\");\n        });\n        cy.getInitItemsCountInListView();\n        manage_users_1.ManageUsers.clickDeleteOnTheLastUser();\n        cy.confirmDeletePopUp();\n        //  Verify that No Data is Deleted\n        cy.get(\"@tMail1\").then((tMail1) => {\n            cy.get(\"tbody tr\")\n                .last()\n                .find(\"td\")\n                .eq(1)\n                .scrollIntoView()\n                .invoke(\"text\")\n                .then((tMail2) => {\n                expect((0, utils_1.trimText)(tMail1.toString().trim())).not.to.equal((0, utils_1.trimText)(tMail2));\n            });\n        });\n        cy.assertItemDeletedFromListView();\n    }\n    else {\n        cy.log(\"Table is Empty\");\n    }\n});",
               "err": {},
-              "uuid": "8b5e32c5-f377-44ee-83c9-c6092a85d0c0",
-              "parentUUID": "31ebd622-69ef-4bdc-bd92-54ba619f4a94",
+              "uuid": "90532eef-1d2f-4514-b78e-6e61dbb8039a",
+              "parentUUID": "62252dc2-64cb-426d-81b0-1e3171b54f1b",
               "isHook": false,
-              "skipped": true
+              "skipped": false
             }
           ],
           "suites": [],
-          "passes": [],
-          "failures": [
-            "e615f5ac-3c86-4360-9554-7320eb9e272f"
+          "passes": [
+            "4f78e1c4-0561-471b-826c-a3f58d5a4337",
+            "90532eef-1d2f-4514-b78e-6e61dbb8039a"
           ],
+          "failures": [],
           "pending": [],
-          "skipped": [
-            "8b5e32c5-f377-44ee-83c9-c6092a85d0c0"
-          ],
-          "duration": 49630,
+          "skipped": [],
+          "duration": 75919,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

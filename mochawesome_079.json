@@ -1,0 +1,167 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:20:05.634Z",
+    "end": "2024-12-03T08:20:09.019Z",
+    "duration": 3385,
+    "testsRegistered": 4,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 3,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "f0e3a58b-5cd1-4557-bf2a-d8bce3c3dfd2",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_add_quick.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_add_quick.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "dbf87aac-9a57-476a-abff-f72349572c79",
+          "title": "Warehouse (Add Quick)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify Labels",
+              "fullTitle": "Warehouse (Add Quick) 1.Verify Labels",
+              "timedOut": null,
+              "duration": 1629,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "warehouse_1.Warehouse.landing();\ncy.wait(1500);\ncy.contains(\"label\", /name/i).should(\"be.visible\");\ncy.contains(\"label\", /default Branch /i).should(\"be.visible\");\ncy.contains(\"label\", /Warehouse Type/i).should(\"be.visible\");",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "02abc7a9-7d32-4eb1-8bf8-2e6ba7c2271d",
+              "parentUUID": "dbf87aac-9a57-476a-abff-f72349572c79",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Required Validation",
+              "fullTitle": "Warehouse (Add Quick) 2.Verify Required Validation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "warehouse_1.Warehouse.landing();\ncy.wait(1500);\ncy.clickAddNewButton();\ncy.wait(1500);\nwarehouse_1.Warehouse.clickSaveButton();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(3);\nwarehouse_1.Warehouse.selectWarehouseTypeTxt(inventory_data_1.InventoryData.physicalType);\n;\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\nwarehouse_1.Warehouse.selectBranchWarehousesTxt();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\nwarehouse_1.Warehouse.setName(inventory_data_1.InventoryData.itemName);\ncy.verifyNotExistanceTheRequiredValidation();\nwarehouse_1.Warehouse.clickSaveButton();\ncy.InvisiblityofAddEditDialoge();",
+              "err": {},
+              "uuid": "1629e892-33c5-4a8a-924b-9dc507c0c3f8",
+              "parentUUID": "dbf87aac-9a57-476a-abff-f72349572c79",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.Verify Adding new Warehouse (Save Button) ",
+              "fullTitle": "Warehouse (Add Quick) 3.Verify Adding new Warehouse (Save Button) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "warehouse_1.Warehouse.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncy.clickAddNewButton();\ncy.wait(1500);\nwarehouse_1.Warehouse.selectWarehouseTypeTxt(inventory_data_1.InventoryData.physicalType);\n;\nwarehouse_1.Warehouse.selectBranchWarehousesTxt();\nwarehouse_1.Warehouse.setName(inventory_data_1.InventoryData.itemName);\nwarehouse_1.Warehouse.clickSaveButton();\ncy.assertnewItemAddedToListView();",
+              "err": {},
+              "uuid": "5bb1c91d-913b-46a4-9402-ed5eb4687fae",
+              "parentUUID": "dbf87aac-9a57-476a-abff-f72349572c79",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4.Verify Adding new Warehouse (Save & Continue Button) ",
+              "fullTitle": "Warehouse (Add Quick) 4.Verify Adding new Warehouse (Save & Continue Button) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "warehouse_1.Warehouse.landing();\ncy.wait(1500);\ncy.clickAddNewButton();\ncy.wait(1500);\nwarehouse_1.Warehouse.selectWarehouseTypeTxt(inventory_data_1.InventoryData.physicalType);\n;\nwarehouse_1.Warehouse.selectBranchWarehousesTxt();\nwarehouse_1.Warehouse.setName(inventory_data_1.InventoryData.itemName);\nwarehouse_1.Warehouse.clickSaveContinueButton();\ncy.wait(1500);\ncy.get('li[role=\"presentation\"]').should(\"be.visible\");",
+              "err": {},
+              "uuid": "8d51071e-8900-468c-bd71-e2027fa446ec",
+              "parentUUID": "dbf87aac-9a57-476a-abff-f72349572c79",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "02abc7a9-7d32-4eb1-8bf8-2e6ba7c2271d"
+          ],
+          "pending": [],
+          "skipped": [
+            "1629e892-33c5-4a8a-924b-9dc507c0c3f8",
+            "5bb1c91d-913b-46a4-9402-ed5eb4687fae",
+            "8d51071e-8900-468c-bd71-e2027fa446ec"
+          ],
+          "duration": 1629,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,0 +1,148 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:20:20.502Z",
+    "end": "2024-12-03T08:20:23.804Z",
+    "duration": 3302,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 2,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "275e9dee-944b-4639-9616-0b50f5ffc6fe",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_listview.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Warehouses/tests/warehouse_listview.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b7342dd7-340a-4bd0-9868-44a618a6e475",
+          "title": "Warehouse (Delete)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify all the components are displayed on the Listview",
+              "fullTitle": "Warehouse (Delete) 1.Verify all the components are displayed on the Listview",
+              "timedOut": null,
+              "duration": 1581,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "warehouse_1.Warehouse.landing();\ncy.wait(1500);\ncy.zoomOut();\ncy.get(\"table\").then((table) => {\n    cy.wrap(table).find(\"th\").eq(0).contains(/code/i).should(\"be.visible\");\n    cy.wrap(table).find(\"th\").eq(1).contains(/name/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/Warehouse Type/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/action/i)\n        .should(\"be.visible\");\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "5ce6ccaf-c828-4cf4-95fe-1337cfa5632f",
+              "parentUUID": "b7342dd7-340a-4bd0-9868-44a618a6e475",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.should filter the table based on search input in the first two columns",
+              "fullTitle": "Warehouse (Delete) 2.should filter the table based on search input in the first two columns",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "warehouse_1.Warehouse.landing();\ncy.wait(1500);\ncy.verifySearchFunctionalityDots();",
+              "err": {},
+              "uuid": "ece58fdf-afa4-483d-b75d-71c1e587284a",
+              "parentUUID": "b7342dd7-340a-4bd0-9868-44a618a6e475",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.Verify Deleting An Existing Warehouse (All fields are filled)",
+              "fullTitle": "Warehouse (Delete) 3.Verify Deleting An Existing Warehouse (All fields are filled)",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "warehouse_1.Warehouse.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncy.clickFirstDeleteActionButton();\ncy.confirmDeletePopUp();\ncy.assertItemDeletedFromListView();",
+              "err": {},
+              "uuid": "f90153e8-427b-4ea0-a9a1-f2cf858040c7",
+              "parentUUID": "b7342dd7-340a-4bd0-9868-44a618a6e475",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "5ce6ccaf-c828-4cf4-95fe-1337cfa5632f"
+          ],
+          "pending": [],
+          "skipped": [
+            "ece58fdf-afa4-483d-b75d-71c1e587284a",
+            "f90153e8-427b-4ea0-a9a1-f2cf858040c7"
+          ],
+          "duration": 1581,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

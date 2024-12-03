@@ -1,0 +1,224 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:19:55.719Z",
+    "end": "2024-12-03T08:19:59.124Z",
+    "duration": 3405,
+    "testsRegistered": 7,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 6,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "f7aafc0f-b6c3-4920-b288-78091f493970",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_edit.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Unit_of_measurments/tests/uom_edit.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d8283e1c-b575-4992-bfa6-f9d3d121ede2",
+          "title": "Unit Of Measurements (Add )",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify Labels",
+              "fullTitle": "Unit Of Measurements (Add ) 1.Verify Labels",
+              "timedOut": null,
+              "duration": 1618,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "unit_of_measurments_1.UnitOfMeasurements.landing();\ncy.wait(3000);\ncy.clickFirstEditActionButton();\ncy.wait(1500);\ncy.contains(\"p\", /Category/i).should(\"be.visible\");\ncy.contains(\"label\", /Code/i).should(\"be.visible\");\ncy.verifyLabelText(\"nameEn\", /Name En/i);\ncy.verifyLabelText(\"nameAr\", /Name Ar/i);\ncy.verifyLabelText(\"baseUomEn\", /Name En/i);\ncy.verifyLabelText(\"baseUomAr\", /Name Ar/i);\ncy.contains(\"p\", /Base UOM/i).should(\"be.visible\");\ncy.contains(\"label\", /system Unit Base/i).should(\"be.visible\");\ncy.contains(\"label\", /Short Name/i).should(\"be.visible\");\ncy.zoomOut();\ncy.get(\"table\").then((table) => {\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(0)\n        .contains(/system Unit Base/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(1)\n        .contains(/Name En/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(2)\n        .contains(/Name Ar/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(3)\n        .contains(/Short Name/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(4)\n        .contains(/factor/i)\n        .should(\"be.visible\");\n    cy.wrap(table).find(\"th\").eq(5).contains(/from/i).should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(6)\n        .contains(/Calculation/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(7)\n        .contains(/reversal/i)\n        .should(\"be.visible\");\n    cy.wrap(table)\n        .find(\"th\")\n        .eq(8)\n        .contains(/actions/i)\n        .should(\"be.visible\");\n});",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "216d840d-5557-4526-939f-fc7d921e9309",
+              "parentUUID": "d8283e1c-b575-4992-bfa6-f9d3d121ede2",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify Cancelling new UnitOf Measurements (Cancel Button) ",
+              "fullTitle": "Unit Of Measurements (Add ) 2.Verify Cancelling new UnitOf Measurements (Cancel Button) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "unit_of_measurments_1.UnitOfMeasurements.landing();\ncy.getInitItemsCountInListView();\nunit_of_measurments_1.UnitOfMeasurements.editPreCondition();\ncy.clickFirstEditActionButton();\ncy.wait(2000);\nunit_of_measurments_1.UnitOfMeasurements.inputEnNameM();\nunit_of_measurments_1.UnitOfMeasurements.inputARNameM();\nunit_of_measurments_1.UnitOfMeasurements.selectSystemUnitOfMeasure(\"k\");\nunit_of_measurments_1.UnitOfMeasurements.inputEnNameB();\nunit_of_measurments_1.UnitOfMeasurements.inputARNameB();\nunit_of_measurments_1.UnitOfMeasurements.inputShortNameB();\nunit_of_measurments_1.UnitOfMeasurements.selectSystemUnitOfMeasureLine();\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameEn(inventory_data_1.InventoryData.nameEn);\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameAr(inventory_data_1.InventoryData.nameAr);\nunit_of_measurments_1.UnitOfMeasurements.inputLineShortName(inventory_data_1.InventoryData.shortName);\nunit_of_measurments_1.UnitOfMeasurements.inputLineUomFactor(inventory_data_1.InventoryData.ratio);\nunit_of_measurments_1.UnitOfMeasurements.selectFromUnitOfMeasureId();\nunit_of_measurments_1.UnitOfMeasurements.CancelSubmission();\ncy.assertAfterItemEditedInListView();\nunit_of_measurments_1.UnitOfMeasurements.assertNotEditting();",
+              "err": {},
+              "uuid": "f87c07a3-0efc-4d1b-90d8-4cadb13f5959",
+              "parentUUID": "d8283e1c-b575-4992-bfa6-f9d3d121ede2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.Verify Adding new UnitOf Measurements Base UOM --ONLY-- Required Data(Save Button) ",
+              "fullTitle": "Unit Of Measurements (Add ) 3.Verify Adding new UnitOf Measurements Base UOM --ONLY-- Required Data(Save Button) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "unit_of_measurments_1.UnitOfMeasurements.landing();\ncy.getInitItemsCountInListView();\nunit_of_measurments_1.UnitOfMeasurements.editPreCondition();\ncy.clickFirstEditActionButton();\ncy.wait(2000);\nunit_of_measurments_1.UnitOfMeasurements.inputEnNameM();\nunit_of_measurments_1.UnitOfMeasurements.inputARNameM();\nunit_of_measurments_1.UnitOfMeasurements.selectSystemUnitOfMeasure(\"k\");\nunit_of_measurments_1.UnitOfMeasurements.inputEnNameB();\nunit_of_measurments_1.UnitOfMeasurements.inputARNameB();\nunit_of_measurments_1.UnitOfMeasurements.inputShortNameB();\nunit_of_measurments_1.UnitOfMeasurements.SaveTheSubmission();\nunit_of_measurments_1.UnitOfMeasurements.confirmTheSubmissionSuccessMessage();\ncy.assertAfterItemEditedInListView();\nunit_of_measurments_1.UnitOfMeasurements.assertSubmitEdittingTheBaseUOM();",
+              "err": {},
+              "uuid": "f65ea568-7837-4788-b878-21f1a1475a27",
+              "parentUUID": "d8283e1c-b575-4992-bfa6-f9d3d121ede2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4.Verify Adding new UnitOf Measurements Adding New Lines (All Data) ",
+              "fullTitle": "Unit Of Measurements (Add ) 4.Verify Adding new UnitOf Measurements Adding New Lines (All Data) ",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "unit_of_measurments_1.UnitOfMeasurements.landing();\ncy.getInitItemsCountInListView();\nunit_of_measurments_1.UnitOfMeasurements.editPreCondition();\ncy.clickFirstEditActionButton();\ncy.wait(2000);\nunit_of_measurments_1.UnitOfMeasurements.clickAddNewLine();\nunit_of_measurments_1.UnitOfMeasurements.selectSystemUnitOfMeasureLine();\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameEn((0, utils_1.generateRandomString)(9));\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameAr((0, utils_1.generateRandomString)(10));\nunit_of_measurments_1.UnitOfMeasurements.inputLineShortName((0, utils_1.generateRandomString)(3));\nunit_of_measurments_1.UnitOfMeasurements.inputLineUomFactor(inventory_data_1.InventoryData.ratio2);\nunit_of_measurments_1.UnitOfMeasurements.selectFromUnitOfMeasureId();\nunit_of_measurments_1.UnitOfMeasurements.clickAddNewLine();\nunit_of_measurments_1.UnitOfMeasurements.selectSystemUnitOfMeasureLine();\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameEn(inventory_data_1.InventoryData.nameEn);\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameAr(inventory_data_1.InventoryData.nameAr);\nunit_of_measurments_1.UnitOfMeasurements.inputLineShortName(inventory_data_1.InventoryData.shortName);\nunit_of_measurments_1.UnitOfMeasurements.inputLineUomFactor(inventory_data_1.InventoryData.ratio);\nunit_of_measurments_1.UnitOfMeasurements.selectFromUnitOfMeasureId();\nunit_of_measurments_1.UnitOfMeasurements.SaveTheSubmission();\nunit_of_measurments_1.UnitOfMeasurements.confirmTheSubmissionSuccessMessage();\ncy.assertAfterItemEditedInListView();\nunit_of_measurments_1.UnitOfMeasurements.assertSubmitEdittingSystemUnitBaseLine();",
+              "err": {},
+              "uuid": "c69f35f3-048a-4c01-a134-a722b77f24b2",
+              "parentUUID": "d8283e1c-b575-4992-bfa6-f9d3d121ede2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "5.Verify Deleting All Existing Lines",
+              "fullTitle": "Unit Of Measurements (Add ) 5.Verify Deleting All Existing Lines",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "unit_of_measurments_1.UnitOfMeasurements.landing();\ncy.getInitItemsCountInListView();\nunit_of_measurments_1.UnitOfMeasurements.editPreCondition();\ncy.clickFirstEditActionButton();\ncy.wait(2000);\nunit_of_measurments_1.UnitOfMeasurements.deleteAllLines();\nunit_of_measurments_1.UnitOfMeasurements.SaveTheSubmission();\nunit_of_measurments_1.UnitOfMeasurements.confirmTheSubmissionSuccessMessage();\ncy.assertAfterItemEditedInListView();\nunit_of_measurments_1.UnitOfMeasurements.assertSubmitEdittingTheBaseUOM();",
+              "err": {},
+              "uuid": "09fef806-8af2-447a-8f78-b0d2c22903c1",
+              "parentUUID": "d8283e1c-b575-4992-bfa6-f9d3d121ede2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "6.Editing Existing Lines",
+              "fullTitle": "Unit Of Measurements (Add ) 6.Editing Existing Lines",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "unit_of_measurments_1.UnitOfMeasurements.landing();\ncy.getInitItemsCountInListView();\nunit_of_measurments_1.UnitOfMeasurements.editPreCondition();\ncy.clickAddNewButton();\ncy.wait(2000);\nunit_of_measurments_1.UnitOfMeasurements.selectSystemUnitOfMeasureLine();\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameEn(inventory_data_1.InventoryData.nameEn);\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameAr(inventory_data_1.InventoryData.nameAr);\nunit_of_measurments_1.UnitOfMeasurements.inputLineShortName(inventory_data_1.InventoryData.shortName);\nunit_of_measurments_1.UnitOfMeasurements.inputLineUomFactor(inventory_data_1.InventoryData.ratio);\nunit_of_measurments_1.UnitOfMeasurements.selectFromUnitOfMeasureId();\nunit_of_measurments_1.UnitOfMeasurements.SaveTheSubmission();\nunit_of_measurments_1.UnitOfMeasurements.confirmTheSubmissionSuccessMessage();\ncy.assertAfterItemEditedInListView();\nunit_of_measurments_1.UnitOfMeasurements.assertSubmitEdittingSystemUnitBaseLine();",
+              "err": {},
+              "uuid": "c39aca14-8993-4179-9749-c9caae6e1008",
+              "parentUUID": "d8283e1c-b575-4992-bfa6-f9d3d121ede2",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "7. Verify Required Validations",
+              "fullTitle": "Unit Of Measurements (Add ) 7. Verify Required Validations",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "unit_of_measurments_1.UnitOfMeasurements.landing();\ncy.clickFirstEditActionButton();\ncy.wait(2000);\nunit_of_measurments_1.UnitOfMeasurements.clearEnNameM();\nunit_of_measurments_1.UnitOfMeasurements.clearARNameM();\nunit_of_measurments_1.UnitOfMeasurements.clearARNameB();\nunit_of_measurments_1.UnitOfMeasurements.clearEnNameB();\nunit_of_measurments_1.UnitOfMeasurements.clearShortNameB();\nunit_of_measurments_1.UnitOfMeasurements.clearLineNameEn();\nunit_of_measurments_1.UnitOfMeasurements.clearLineNameAr();\nunit_of_measurments_1.UnitOfMeasurements.SaveTheSubmission();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(7);\nunit_of_measurments_1.UnitOfMeasurements.inputEnNameM();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(6);\nunit_of_measurments_1.UnitOfMeasurements.inputARNameM();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(5);\nunit_of_measurments_1.UnitOfMeasurements.inputARNameB();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(4);\nunit_of_measurments_1.UnitOfMeasurements.inputEnNameB();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(3);\nunit_of_measurments_1.UnitOfMeasurements.inputShortNameB();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameEn(inventory_data_1.InventoryData.nameEn);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\nunit_of_measurments_1.UnitOfMeasurements.inputLineNameAr(inventory_data_1.InventoryData.nameAr);\ncy.verifyNotExistanceTheRequiredValidation();",
+              "err": {},
+              "uuid": "3e71cf2b-ac21-4b37-80c6-41da22505d64",
+              "parentUUID": "d8283e1c-b575-4992-bfa6-f9d3d121ede2",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "216d840d-5557-4526-939f-fc7d921e9309"
+          ],
+          "pending": [],
+          "skipped": [
+            "f87c07a3-0efc-4d1b-90d8-4cadb13f5959",
+            "f65ea568-7837-4788-b878-21f1a1475a27",
+            "c69f35f3-048a-4c01-a134-a722b77f24b2",
+            "09fef806-8af2-447a-8f78-b0d2c22903c1",
+            "c39aca14-8993-4179-9749-c9caae6e1008",
+            "3e71cf2b-ac21-4b37-80c6-41da22505d64"
+          ],
+          "duration": 1618,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

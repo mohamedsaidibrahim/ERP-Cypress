@@ -5,9 +5,9 @@
     "passes": 3,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-26T03:49:59.162Z",
-    "end": "2024-11-26T04:00:05.522Z",
-    "duration": 606360,
+    "start": "2024-12-03T04:56:17.864Z",
+    "end": "2024-12-03T05:05:25.803Z",
+    "duration": 547939,
     "testsRegistered": 4,
     "passPercent": 75,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "ecb390e5-a0e3-4c69-a6c0-d3e1a4a04c3b",
+      "uuid": "c67a09cb-dfe2-4015-a68b-bac81a6005c1",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Group/tests/Add_taxes_group.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/General_Setting/Taxs Group/tests/Add_taxes_group.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "a1bb757b-06f7-4436-9b02-920f78bb60a3",
+          "uuid": "ef47133d-838e-44d7-8b08-38ab6c0394d9",
           "title": "Add New Taxs Group",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1.Verify all the components are displayed on the Add New Tax Group",
               "fullTitle": "Add New Taxs Group 1.Verify all the components are displayed on the Add New Tax Group",
               "timedOut": null,
-              "duration": 112890,
+              "duration": 119590,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find content: '/create/i' within the selector: 'button' but never did.\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:227:0)",
                 "diff": null
               },
-              "uuid": "4c4515d8-1d96-4462-b7be-e28cf464e68c",
-              "parentUUID": "a1bb757b-06f7-4436-9b02-920f78bb60a3",
+              "uuid": "fae53cf2-10e8-4ad9-a94e-dd4f0409c097",
+              "parentUUID": "ef47133d-838e-44d7-8b08-38ab6c0394d9",
               "isHook": false,
               "skipped": false
             },
@@ -60,7 +60,7 @@
               "title": "2.Verify Displaying Of Required Messsages",
               "fullTitle": "Add New Taxs Group 2.Verify Displaying Of Required Messsages",
               "timedOut": null,
-              "duration": 130909,
+              "duration": 100692,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -69,8 +69,8 @@
               "context": null,
               "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(2000);\nTaxsGroup_1.TaxsGroup.clickAddNewButton();\nTaxsGroup_1.TaxsGroup.submitDialog();\nTaxsGroup_1.TaxsGroup.verifyRequiredMessages(\"2\");\ncy.get(\".pop_up_footer\").invoke(\"hide\");\nTaxsGroup_1.TaxsGroup.inputCode(\"123\");\nTaxsGroup_1.TaxsGroup.verifyRequiredMessages(\"1\");\nTaxsGroup_1.TaxsGroup.inputName(\"name\");\nTaxsGroup_1.TaxsGroup.verifyInExistenceOfRequiredMessage();",
               "err": {},
-              "uuid": "4b43372a-c3cc-435d-baa4-2c161cadc3d4",
-              "parentUUID": "a1bb757b-06f7-4436-9b02-920f78bb60a3",
+              "uuid": "239e55c3-1bea-40e4-b5a4-33ee5b7760fa",
+              "parentUUID": "ef47133d-838e-44d7-8b08-38ab6c0394d9",
               "isHook": false,
               "skipped": false
             },
@@ -78,7 +78,7 @@
               "title": "3.Verify canceling Adding New Taxes Group",
               "fullTitle": "Add New Taxs Group 3.Verify canceling Adding New Taxes Group",
               "timedOut": null,
-              "duration": 99281,
+              "duration": 53531,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -87,8 +87,8 @@
               "context": null,
               "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\nTaxsGroup_1.TaxsGroup.clickAddNewButton();\nTaxsGroup_1.TaxsGroup.inputCode(general_settings_data_1.GeneralSettingsData.taxesGroupCode);\nTaxsGroup_1.TaxsGroup.inputName(general_settings_data_1.GeneralSettingsData.taxesGroupName);\nTaxsGroup_1.TaxsGroup.cancelDialog();\ncy.wait(1000);\ncy.assertAfterItemEditedInListView();",
               "err": {},
-              "uuid": "d50dbb87-de55-4824-a9db-a3a889e4696c",
-              "parentUUID": "a1bb757b-06f7-4436-9b02-920f78bb60a3",
+              "uuid": "98713768-65a6-4a37-ad20-4d5dc7432487",
+              "parentUUID": "ef47133d-838e-44d7-8b08-38ab6c0394d9",
               "isHook": false,
               "skipped": false
             },
@@ -96,7 +96,7 @@
               "title": "4.Verify Adding New Taxes Group",
               "fullTitle": "Add New Taxs Group 4.Verify Adding New Taxes Group",
               "timedOut": null,
-              "duration": 102490,
+              "duration": 102988,
               "state": "passed",
               "speed": "slow",
               "pass": true,
@@ -105,24 +105,24 @@
               "context": null,
               "code": "TaxsGroup_1.TaxsGroup.landing();\ncy.wait(2000);\ncy.getInitItemsCountInListView();\nTaxsGroup_1.TaxsGroup.clickAddNewButton();\nTaxsGroup_1.TaxsGroup.inputCode(general_settings_data_1.GeneralSettingsData.taxesGroupCode);\nTaxsGroup_1.TaxsGroup.inputName(general_settings_data_1.GeneralSettingsData.taxesGroupName);\nTaxsGroup_1.TaxsGroup.submitDialog();\ncy.wait(1000);\ncy.assertnewItemAddedToListView();\ncy.verifyFirstCellInTable(0, general_settings_data_1.GeneralSettingsData.taxesGroupCode);\ncy.verifyFirstCellInTable(1, general_settings_data_1.GeneralSettingsData.taxesGroupName);",
               "err": {},
-              "uuid": "9a6f951a-442e-4ceb-a5f4-919321040285",
-              "parentUUID": "a1bb757b-06f7-4436-9b02-920f78bb60a3",
+              "uuid": "77a8d8f1-f94f-4c24-ba1d-bee704805ae3",
+              "parentUUID": "ef47133d-838e-44d7-8b08-38ab6c0394d9",
               "isHook": false,
               "skipped": false
             }
           ],
           "suites": [],
           "passes": [
-            "4b43372a-c3cc-435d-baa4-2c161cadc3d4",
-            "d50dbb87-de55-4824-a9db-a3a889e4696c",
-            "9a6f951a-442e-4ceb-a5f4-919321040285"
+            "239e55c3-1bea-40e4-b5a4-33ee5b7760fa",
+            "98713768-65a6-4a37-ad20-4d5dc7432487",
+            "77a8d8f1-f94f-4c24-ba1d-bee704805ae3"
           ],
           "failures": [
-            "4c4515d8-1d96-4462-b7be-e28cf464e68c"
+            "fae53cf2-10e8-4ad9-a94e-dd4f0409c097"
           ],
           "pending": [],
           "skipped": [],
-          "duration": 445570,
+          "duration": 376801,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -1,0 +1,186 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:19:25.845Z",
+    "end": "2024-12-03T08:19:29.238Z",
+    "duration": 3393,
+    "testsRegistered": 5,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 4,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "a9a48d1f-c594-4efc-9a42-122e74721886",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Item_Category/tests/Edit_item_category.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Inventory/Item_Category/tests/Edit_item_category.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d9c43723-0da9-49a9-8387-383c40e299f8",
+          "title": "Editting Item of Category",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify All Labels in Detailed Category",
+              "fullTitle": "Editting Item of Category 1.Verify All Labels in Detailed Category",
+              "timedOut": null,
+              "duration": 1635,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "item_category_1.ItemCategory.landing();\ncy.wait(2000);\nitem_category_1.ItemCategory.switchingToListView();\ncy.wait(1000);\nitem_category_1.ItemCategory.getDetailedCategoryInTheListViewMissing();\nitem_category_1.ItemCategory.switchingToTreeView();\ncy.get(\"@detailedCategory\").then((detailedCategory) => {\n    item_category_1.ItemCategory.SearchAnTreeAccount((0, utils_1.getWrappedString)(detailedCategory));\n});\ncy.wait(1000);\nitem_category_1.ItemCategory.clickEditButtonDetailAccount();\ncy.wait(1500);\ncy.contains(\"span\", /Main/i).should(\"be.visible\");\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"nameEn\", /nameEn/i);\ncy.verifyLabelText(\"nameAr\", /nameAr/i);\ncy.verifyLabelText(\"isDetailed\", /is Detailed/i);\ncy.contains(\"span\", /Parent Category/i).should(\"be.visible\");\ncy.verifyLabelText(\"parentCategoryId\", /Parent Category/i);\ncy.contains(\"span\", /Activation/i).should(\"be.visible\");\ncy.verifyLabelText(\"categoryType\", /Category Type/i);\ncy.contains(\"span\", /account/i).should(\"be.visible\");\n// Deactivate\nitem_category_1.ItemCategory.clickActivationStatus();\ncy.verifyLabelText(\"purchaseAccountId\", /Purchase Account/i);\n// Activate Again\nitem_category_1.ItemCategory.clickActivationStatus();\ncy.verifyLabelText(\"costOfGoodSoldAccountId\", /Cost Of Goods Sold/i);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "51dcf169-a120-4b8b-a1f3-9a9229963711",
+              "parentUUID": "d9c43723-0da9-49a9-8387-383c40e299f8",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify All Labels in Parent Category",
+              "fullTitle": "Editting Item of Category 2.Verify All Labels in Parent Category",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "item_category_1.ItemCategory.landing();\ncy.wait(2000);\nitem_category_1.ItemCategory.switchingToListView();\ncy.wait(1000);\nitem_category_1.ItemCategory.getFirstParentCategoryInTheListView();\nitem_category_1.ItemCategory.switchingToTreeView();\ncy.get(\"@parentCategory\").then((parentCategory) => {\n    item_category_1.ItemCategory.SearchAnTreeAccount((0, utils_1.getWrappedString)(parentCategory));\n});\ncy.wait(1000);\nitem_category_1.ItemCategory.clickEditButtonDetailAccount();\ncy.wait(1500);\ncy.contains(\"span\", /Main/i).should(\"be.visible\");\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"nameEn\", /nameEn/i);\ncy.verifyLabelText(\"nameAr\", /nameAr/i);\ncy.verifyLabelText(\"isDetailed\", /is Detailed/i);\ncy.contains(\"span\", /Parent Category/i).should(\"be.visible\");\ncy.verifyLabelText(\"parentCategoryId\", /Parent Category/i);\ncy.contains(\"span\", /Activation/i).should(\"be.visible\");",
+              "err": {},
+              "uuid": "dd8fa202-abe5-44b2-87c9-d072f940ef41",
+              "parentUUID": "d9c43723-0da9-49a9-8387-383c40e299f8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3. Verify Editting an Detailed Item of Category",
+              "fullTitle": "Editting Item of Category 3. Verify Editting an Detailed Item of Category",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\nitem_category_1.ItemCategory.landing();\ncy.wait(2000);\nitem_category_1.ItemCategory.switchingToListView();\ncy.wait(1000);\nitem_category_1.ItemCategory.getDetailedCategoryInTheListViewMissing();\ncy.get(\"@detailedCategory\").then((detailedCategory) => {\n    item_category_1.ItemCategory.SearchAListAccount((0, utils_1.getWrappedString)(detailedCategory));\n});\ncy.getFirstCellInTableValue(0).then((codeTxt1) => {\n    cy.wrap(codeTxt1).as(\"codeTxt1\");\n});\ncy.getFirstCellInTableValue(1).then((nameTextEn1) => {\n    cy.wrap(nameTextEn1).as(\"nameTextEn1\");\n});\nitem_category_1.ItemCategory.switchingToTreeView();\ncy.wait(1000);\ncy.get(\"@detailedCategory\").then((detailedCategory) => {\n    item_category_1.ItemCategory.SearchAnTreeAccount((0, utils_1.getWrappedString)(detailedCategory));\n});\ncy.wait(1000);\nitem_category_1.ItemCategory.clickEditButtonDetailAccount();\ncy.wait(1000);\nadding_item_category_screen_1.AddingCategoryScreen.verifyCodeFieldISReadOnly();\nadding_item_category_screen_1.AddingCategoryScreen.selectParentCategoryEdit();\nadding_item_category_screen_1.AddingCategoryScreen.verifyCodeFieldISReadOnly();\ncy.get(\"@detailedCategory\").then((detailedCategory) => {\n    adding_item_category_screen_1.AddingCategoryScreen.inputNameEn((0, utils_1.getWrappedString)(detailedCategory) + \"_En\");\n    adding_item_category_screen_1.AddingCategoryScreen.inputNameAr((0, utils_1.getWrappedString)(detailedCategory) + \"_Ar\");\n});\nitem_category_1.ItemCategory.clickISDetailedSwitch();\nadding_item_category_screen_1.AddingCategoryScreen.verifyCancelButton();\nadding_item_category_screen_1.AddingCategoryScreen.clickSaveButton();\ncy.wait(2500);\nitem_category_1.ItemCategory.switchingToListView();\ncy.get(\"@detailedCategory\").then((detailedCategory) => {\n    item_category_1.ItemCategory.SearchAListAccount((0, utils_1.getWrappedString)(detailedCategory) + \"_En\");\n    item_category_1.ItemCategory.verifyTheListViewHasTheParentCategory((0, utils_1.getWrappedString)(detailedCategory) + \"_En\");\n});",
+              "err": {},
+              "uuid": "2549a808-9105-46de-ac17-fd9d2778d472",
+              "parentUUID": "d9c43723-0da9-49a9-8387-383c40e299f8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4. Verify Editting an Parent Item of Category",
+              "fullTitle": "Editting Item of Category 4. Verify Editting an Parent Item of Category",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.wait(2000);\nitem_category_1.ItemCategory.landing();\ncy.wait(2000);\nitem_category_1.ItemCategory.switchingToListView();\ncy.wait(1000);\nitem_category_1.ItemCategory.getFirstParentCategoryInTheListView();\ncy.get(\"@parentCategory\").then((parentCategory) => {\n    item_category_1.ItemCategory.SearchAListAccount((0, utils_1.getWrappedString)(parentCategory));\n});\ncy.getFirstCellInTableValue(0).then((codeTxt1) => {\n    cy.wrap(codeTxt1).as(\"codeTxt1\");\n});\ncy.getFirstCellInTableValue(1).then((nameTextEn1) => {\n    cy.wrap(nameTextEn1).as(\"nameTextEn1\");\n});\nitem_category_1.ItemCategory.switchingToTreeView();\ncy.wait(1000);\ncy.get(\"@parentCategory\").then((parentCategory) => {\n    item_category_1.ItemCategory.SearchAnTreeAccount((0, utils_1.getWrappedString)(parentCategory));\n});\ncy.wait(1000);\nitem_category_1.ItemCategory.clickEditButtonDetailAccount();\ncy.wait(1000);\nadding_item_category_screen_1.AddingCategoryScreen.verifyCodeFieldISReadOnly();\nadding_item_category_screen_1.AddingCategoryScreen.selectParentCategory();\nadding_item_category_screen_1.AddingCategoryScreen.inputNameEn(inventory_data_1.InventoryData.itemCategoryNameEn);\nadding_item_category_screen_1.AddingCategoryScreen.inputNameAr(inventory_data_1.InventoryData.itemCategoryNameAr);\nitem_category_1.ItemCategory.clickISDetailedSwitch();\nadding_item_category_screen_1.AddingCategoryScreen.selectCostOfGoodSoldAccount();\nadding_item_category_screen_1.AddingCategoryScreen.selectCategoryType();\nadding_item_category_screen_1.AddingCategoryScreen.verifyCancelButton();\nadding_item_category_screen_1.AddingCategoryScreen.selectpurchaseAccount();\nadding_item_category_screen_1.AddingCategoryScreen.clickSaveButton();\ncy.wait(1500);\nitem_category_1.ItemCategory.switchingToListView();\nitem_category_1.ItemCategory.SearchAListAccount(inventory_data_1.InventoryData.itemCategoryNameEn);\nitem_category_1.ItemCategory.verifyTheListViewHasTheDetailedCategory(inventory_data_1.InventoryData.itemCategoryNameEn);",
+              "err": {},
+              "uuid": "4c866659-a713-4af7-a1a4-449fb931a6d3",
+              "parentUUID": "d9c43723-0da9-49a9-8387-383c40e299f8",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "5. Verify The Required Validation",
+              "fullTitle": "Editting Item of Category 5. Verify The Required Validation",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "item_category_1.ItemCategory.landing();\ncy.wait(2000);\nitem_category_1.ItemCategory.switchingToListView();\ncy.wait(1000);\nitem_category_1.ItemCategory.getFirstParentCategoryInTheListView();\ncy.get(\"@parentCategory\").then((parentCategory) => {\n    item_category_1.ItemCategory.SearchAListAccount((0, utils_1.getWrappedString)(parentCategory));\n});\nitem_category_1.ItemCategory.switchingToTreeView();\ncy.wait(1000);\ncy.get(\"@parentCategory\").then((parentCategory) => {\n    item_category_1.ItemCategory.SearchAnTreeAccount((0, utils_1.getWrappedString)(parentCategory));\n});\ncy.wait(1000);\nitem_category_1.ItemCategory.clickEditButtonDetailAccount();\ncy.wait(1000);\nadding_item_category_screen_1.AddingCategoryScreen.selectParentCategory();\nadding_item_category_screen_1.AddingCategoryScreen.clearNameEn();\nadding_item_category_screen_1.AddingCategoryScreen.clearNameAr();\ncy.verifyDisplayingTheRequiredValidationMsgsCount(2);\nadding_item_category_screen_1.AddingCategoryScreen.inputNameEn(inventory_data_1.InventoryData.itemCategoryNameEn);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\nadding_item_category_screen_1.AddingCategoryScreen.inputNameAr(inventory_data_1.InventoryData.itemCategoryNameAr);\ncy.verifyNotExistanceTheRequiredValidation();\nitem_category_1.ItemCategory.clickISDetailedSwitch();\nadding_item_category_screen_1.AddingCategoryScreen.clickSaveButton();\ncy.wait(1000);\ncy.verifyDisplayingTheRequiredValidationMsgsCount(1);\nadding_item_category_screen_1.AddingCategoryScreen.selectCostOfGoodSoldAccount();\nadding_item_category_screen_1.AddingCategoryScreen.selectCategoryType();\nadding_item_category_screen_1.AddingCategoryScreen.verifyCancelButton();\ncy.wait(1000);\nadding_item_category_screen_1.AddingCategoryScreen.selectCategoryType();\ncy.wait(1000);\ncy.verifyNotExistanceTheRequiredValidation();",
+              "err": {},
+              "uuid": "9001b872-8b0a-47b5-99b1-586a7e76cfa6",
+              "parentUUID": "d9c43723-0da9-49a9-8387-383c40e299f8",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "51dcf169-a120-4b8b-a1f3-9a9229963711"
+          ],
+          "pending": [],
+          "skipped": [
+            "dd8fa202-abe5-44b2-87c9-d072f940ef41",
+            "2549a808-9105-46de-ac17-fd9d2778d472",
+            "4c866659-a713-4af7-a1a4-449fb931a6d3",
+            "9001b872-8b0a-47b5-99b1-586a7e76cfa6"
+          ],
+          "duration": 1635,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

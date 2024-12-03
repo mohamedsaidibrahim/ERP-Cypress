@@ -1,0 +1,205 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2024-12-03T08:18:06.331Z",
+    "end": "2024-12-03T08:18:09.731Z",
+    "duration": 3400,
+    "testsRegistered": 6,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 5,
+    "hasSkipped": true
+  },
+  "results": [
+    {
+      "uuid": "6fda0029-d4b4-45a4-a629-697bec343449",
+      "title": "",
+      "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/PaymentOUT/tests/payment_out_edit.cy.ts",
+      "file": "cypress/e2e/Bussiness_owners/Erp_Login/Finance/PaymentOUT/tests/payment_out_edit.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "fa2f0d5e-e1b9-4fb3-8d33-4fa683b5089f",
+          "title": "Payment In (Edit)",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "1.Verify Labels are Displayed",
+              "fullTitle": "Payment In (Edit) 1.Verify Labels are Displayed",
+              "timedOut": null,
+              "duration": 1625,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\ncy.wait(2000);\ncy.verifyLabelText(\"code\", /code/i);\ncy.verifyLabelText(\"paymentOutDate\", /date/i);\ncy.verifyLabelText(\"description\", /description/i);\ncy.verifyLabelText(\"paymentHub\", /payment Hub/i);\ncy.verifyLabelText(\"paymentHubDetailId\", /payment Hub Detail/i);\ncy.verifyLabelText(\"currency\", /currency/i);\ncy.verifyLabelText(\"rate\", /rate/i);\ncy.verifyLabelText(\"currentBalance\", /current Balance/i);\ncy.verifyLabelText(\"totalPaidAmount\", /total paid Amount/i);\ncy.verifyLabelText(\"newBalance\", /new Balance/i);",
+              "err": {
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
+                "diff": null
+              },
+              "uuid": "1cce09d5-5017-49ad-aab0-eab42a951ff0",
+              "parentUUID": "fa2f0d5e-e1b9-4fb3-8d33-4fa683b5089f",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "2.Verify All Column Headers are displaying",
+              "fullTitle": "Payment In (Edit) 2.Verify All Column Headers are displaying",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\ncy.wait(2000);\ncy.get(\"th\")\n    .eq(0)\n    .contains(/amount/i)\n    .should(\"be.visible\");\ncy.get(\"th\")\n    .eq(1)\n    .contains(/local amount/i)\n    .should(\"be.visible\");\ncy.get(\"th\")\n    .eq(2)\n    .contains(/payment method/i)\n    .should(\"be.visible\");\ncy.get(\"th\")\n    .eq(3)\n    .contains(/payment method details/i)\n    .should(\"be.visible\");\ncy.get(\"th\")\n    .eq(4)\n    .contains(/paid by/i)\n    .should(\"be.visible\");\ncy.get(\"th\")\n    .eq(5)\n    .contains(/paid by details/i)\n    .should(\"be.visible\");\ncy.get(\"th\")\n    .eq(6)\n    .contains(/linked gl account/i)\n    .should(\"be.visible\");\ncy.get(\"th\")\n    .eq(7)\n    .contains(/cost center/i)\n    .should(\"be.visible\");\ncy.get(\"th\").eq(8).contains(/notes/i).should(\"be.visible\");\ncy.get(\"th\")\n    .eq(9)\n    .contains(/actions/i)\n    .should(\"be.visible\");",
+              "err": {},
+              "uuid": "215f6cac-e69f-45d3-a397-2f9848be0fa1",
+              "parentUUID": "fa2f0d5e-e1b9-4fb3-8d33-4fa683b5089f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "3.Verify Submitting new Payment OUt Treasury",
+              "fullTitle": "Payment In (Edit) 3.Verify Submitting new Payment OUt Treasury",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\npayment_out_1.PaymentOUT.clickAddNewButton();\ncy.wait(2000);\ncy.verifyDimmidInput(\"code\");\n// cy.inputFollowingToDate(\"paymentOutDate\");\ncy.getByTestAttribute(\"description\").clear().type(finance_data_1.FinanceData.desc);\npayment_out_1.PaymentOUT.selectTreasuryHub();\npayment_out_1.PaymentOUT.selectPaymentHubDetailIdTxt();\ncy.verifyDimmidInput(\"currency\");\n// cy.getByTestAttribute(\"rate\").clear().type(FinanceData.pRate);\ncy.verifyDimmidInput(\"input-text\");\n// cy.verifyDimmidInput(\"newBalance\");\npayment_out_1.PaymentOUT.clickAddNewLine();\npayment_out_1.PaymentOUT.inputAmountLine(finance_data_1.FinanceData.pAmount);\npayment_out_1.PaymentOUT.choosePaymentMethodIdLine(finance_data_1.FinanceData.pTreesuryMethod);\npayment_out_1.PaymentOUT.selectPaidBy();\npayment_out_1.PaymentOUT.selectPaidByDetailsId();\npayment_out_1.PaymentOUT.selectGlAccountCode();\npayment_out_1.PaymentOUT.addCostCenter();\npayment_out_1.PaymentOUT.inputNote();\ncy.wait(1000);\npayment_out_1.PaymentOUT.clickSaveButton();\n// Assertion111111111111111\ncy.wait(1000);\ncy.reload();\ncy.wait(1000);\ncy.clickContinueAs();\ncy.wait(1000);\ncy.assertnewItemAddedToListView();",
+              "err": {},
+              "uuid": "9b89e123-b8cb-40ca-8324-897bee6875a4",
+              "parentUUID": "fa2f0d5e-e1b9-4fb3-8d33-4fa683b5089f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "4. Verify that the Payment Hub (Treasury) Drobdowns are dimmed",
+              "fullTitle": "Payment In (Edit) 4. Verify that the Payment Hub (Treasury) Drobdowns are dimmed",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\ncy.wait(2000);\ncy.verifyDimmidItemDropDownList(\"paymentHub\");\ncy.verifyDimmidItemDropDownList(\"paymentHubDetailId\");",
+              "err": {},
+              "uuid": "9acf32cb-2bd2-4a88-89dc-1ea4801e78dd",
+              "parentUUID": "fa2f0d5e-e1b9-4fb3-8d33-4fa683b5089f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "5. Verify that the Payment Hub (Bank) Drobdowns are dimmed",
+              "fullTitle": "Payment In (Edit) 5. Verify that the Payment Hub (Bank) Drobdowns are dimmed",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.clickFirstEditActionButton();\ncy.wait(2000);\ncy.verifyDimmidItemDropDownList(\"paymentHub\");\ncy.verifyDimmidItemDropDownList(\"paymentHubDetailId\");\ncy.verifyDimmidItemDropDownList(\"bankAccountId\");",
+              "err": {},
+              "uuid": "4086a51c-9c89-4014-8249-644135e3f1f8",
+              "parentUUID": "fa2f0d5e-e1b9-4fb3-8d33-4fa683b5089f",
+              "isHook": false,
+              "skipped": true
+            },
+            {
+              "title": "6.Verify Editting new Payment OUt Treasury",
+              "fullTitle": "Payment In (Edit) 6.Verify Editting new Payment OUt Treasury",
+              "timedOut": null,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "payment_out_1.PaymentOUT.landing();\ncy.wait(1500);\ncy.getInitItemsCountInListView();\ncy.clickFirstEditActionButton();\ncy.wait(2000);\ncy.verifyDimmidInput(\"code\");\ncy.getByTestAttribute(\"code\")\n    .invoke(\"val\")\n    .then((codeVal) => {\n    cy.wrap(codeVal).as(\"codeVal\");\n});\ncy.inputFollowingToDate(\"paymentOutDate\");\n// cy.inputFollowingToDate(\"paymentOutDate\");\ncy.getByTestAttribute(\"description\").clear().type(finance_data_1.FinanceData.desc);\ncy.get(\".p-dropdown-label\")\n    .eq(0)\n    .invoke(\"text\")\n    .then((paymentHubTxt) => {\n    cy.wrap(paymentHubTxt).as(\"paymentHubTxt\");\n});\ncy.get(\".p-dropdown-label\")\n    .eq(1)\n    .invoke(\"text\")\n    .then((paymentHubDetailTxt) => {\n    cy.wrap(paymentHubDetailTxt).as(\"paymentHubDetailTxt\");\n});\ncy.verifyDimmidInput(\"currency\");\ncy.getByTestAttribute(\"currency\")\n    .invoke(\"val\")\n    .then((currencyVal) => {\n    cy.wrap(currencyVal).as(\"currencyVal\");\n});\ncy.get(\"body\").click();\ncy.getByTestAttribute(\"rate\").clear().type(finance_data_1.FinanceData.pRate.toString());\ncy.wrap((finance_data_1.FinanceData.pRate * 200).toString()).as(\"localAmountTxt\");\ncy.get(\".p-calendar > .p-inputtext\")\n    .scrollIntoView()\n    .invoke(\"val\")\n    .then((paymentOutDateVal) => {\n    cy.wrap(paymentOutDateVal).as(\"paymentOutDateVal\");\n});\ncy.verifyDimmidInput(\"input-text\");\n// cy.verifyDimmidInput(\"newBalance\");\npayment_out_1.PaymentOUT.inputAmountLine(finance_data_1.FinanceData.pAmountEditted);\npayment_out_1.PaymentOUT.choosePaymentMethodIdLine(finance_data_1.FinanceData.pTreesuryMethod);\npayment_out_1.PaymentOUT.selectPaidBy();\npayment_out_1.PaymentOUT.selectPaidByDetailsId();\npayment_out_1.PaymentOUT.selectGlAccountCode();\npayment_out_1.PaymentOUT.addCostCenter();\npayment_out_1.PaymentOUT.inputNote();\ncy.wait(1000);\npayment_out_1.PaymentOUT.clickSaveEditButton();\n// Assertion111111111111111\ncy.wait(1000);\ncy.reload();\ncy.wait(1000);\ncy.clickContinueAs();\ncy.wait(1000);\ncy.clickFirstEditActionButton();\ncy.wait(2000);\ncy.get(\"@codeVal\").then((codeVal) => {\n    cy.get('[data-testid=\"code\"]').should(\"have.value\", (0, utils_1.getWrappedString)(codeVal));\n});\n// **************************************\n// cy.get(\"@paymentOutDateVal\").then((paymentOutDateVal) => {\n//   cy.get(\".p-calendar > .p-inputtext\").should(\n//     \"have.value\",\n//     getWrappedString(paymentOutDateVal)\n//   );\n// });\ncy.get('[data-testid=\"description\"]').should(\"have.value\", finance_data_1.FinanceData.desc);\ncy.get(\"@paymentHubTxt\").then((paymentHubTxt) => {\n    cy.get(\".p-dropdown-label\")\n        .eq(0)\n        .should(\"have.text\", (0, utils_1.getWrappedString)(paymentHubTxt));\n});\ncy.get(\"@paymentHubDetailTxt\").then((paymentHubDetailTxt) => {\n    cy.get(\".p-dropdown-label\")\n        .eq(1)\n        .should(\"have.text\", (0, utils_1.getWrappedString)(paymentHubDetailTxt));\n});\ncy.get(\"@currencyVal\").then((currencyVal) => {\n    cy.get('[data-testid=\"currency\"]')\n        .invoke(\"val\")\n        .then((currencyFF) => {\n        expect((0, utils_1.removeSpacesBetween)(currencyFF)).to.equal((0, utils_1.removeSpacesBetween)((0, utils_1.getWrappedString)(currencyVal)));\n    });\n});\n// ******************************************************\n// cy.get('[data-testid=\"rate\"]').should(\"have.value\", FinanceData.pRate);\ncy.get('[peditablecolumnfield=\"amount\"] > .p-element').should(\"have.text\", \" \" + finance_data_1.FinanceData.pAmountEditted + \" \");\n// ******************************************************\n// cy.get(\"@localAmountTxt\").then((localAmountTxt) => {\n//   cy.get(\".p-datatable-tbody > .ng-untouched > :nth-child(2)\").should(\n//     \"include\",\n//     getWrappedString(localAmountTxt)\n//   );\n// });\ncy.get('[peditablecolumnfield=\"paymentMethodId\"] > .p-element')\n    .invoke(\"text\")\n    .then((paymentMethodFFFTxt) => {\n    cy.get(\"@paymentMethodIdTxt\").then((paymentMethodIdTxt) => {\n        expect(paymentMethodFFFTxt).to.contain((0, utils_1.getWrappedString)(paymentMethodIdTxt));\n    });\n});\ncy.get('[peditablecolumnfield=\"paidBy\"] > .p-element').should(\"have.text\", \" Other \");\ncy.get('[peditablecolumnfield=\"paidByDetailsId\"] > .p-element').should(\"have.text\", \" GL account \");\ncy.get('[peditablecolumnfield=\"glAccountId\"] > .p-element')\n    .invoke(\"text\")\n    .then((accountFF) => {\n    cy.get(\"@glAccountIdTxt\").then((glAccountIdTxt) => {\n        expect((0, utils_1.getWrappedString)(glAccountIdTxt)).to.contains((0, utils_1.removeSpacesBetween)(accountFF));\n    });\n});\n// **************************************\n// cy.get('[peditablecolumnfield=\"notes\"] > .p-element').should(\n//   \"include\",\n//   FinanceData.note\n// );",
+              "err": {},
+              "uuid": "4dac31e5-1bb2-449d-ae7b-be9bb98aa15a",
+              "parentUUID": "fa2f0d5e-e1b9-4fb3-8d33-4fa683b5089f",
+              "isHook": false,
+              "skipped": true
+            }
+          ],
+          "suites": [],
+          "passes": [],
+          "failures": [
+            "1cce09d5-5017-49ad-aab0-eab42a951ff0"
+          ],
+          "pending": [],
+          "skipped": [
+            "215f6cac-e69f-45d3-a397-2f9848be0fa1",
+            "9b89e123-b8cb-40ca-8324-897bee6875a4",
+            "9acf32cb-2bd2-4a88-89dc-1ea4801e78dd",
+            "4086a51c-9c89-4014-8249-644135e3f1f8",
+            "4dac31e5-1bb2-449d-ae7b-be9bb98aa15a"
+          ],
+          "duration": 1625,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/reports",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}

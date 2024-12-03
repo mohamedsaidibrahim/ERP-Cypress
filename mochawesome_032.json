@@ -1,24 +1,24 @@
 {
   "stats": {
     "suites": 1,
-    "tests": 3,
-    "passes": 1,
+    "tests": 1,
+    "passes": 0,
     "pending": 0,
-    "failures": 2,
-    "start": "2024-11-26T07:29:39.775Z",
-    "end": "2024-11-26T07:43:19.468Z",
-    "duration": 819693,
+    "failures": 1,
+    "start": "2024-12-03T08:16:10.993Z",
+    "end": "2024-12-03T08:16:14.349Z",
+    "duration": 3356,
     "testsRegistered": 3,
-    "passPercent": 33.33333333333333,
+    "passPercent": 0,
     "pendingPercent": 0,
     "other": 0,
     "hasOther": false,
-    "skipped": 0,
-    "hasSkipped": false
+    "skipped": 2,
+    "hasSkipped": true
   },
   "results": [
     {
-      "uuid": "b7c32c02-c6ad-4b43-82b0-a1afbd5a7126",
+      "uuid": "02120cc7-8220-46f2-8b9b-a60073933890",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "57c0b657-5252-4f69-8629-e846b48f67db",
+          "uuid": "7ec77282-8dcc-445e-8775-ac473f188659",
           "title": "Displaying List View Chart of Account",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1. Verify All Components are displaying in their correct states",
               "fullTitle": "Displaying List View Chart of Account 1. Verify All Components are displaying in their correct states",
               "timedOut": null,
-              "duration": 123238,
+              "duration": 1604,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -47,12 +47,12 @@
               "context": null,
               "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1500);\ncy.clickContinueAs();\ncy.wait(1500);\ndisplaying_main_screen_1.DisplayingMainScreen.verifyEmptyViewPanal();\ndisplaying_main_screen_1.DisplayingMainScreen.verifyTHeTreeHeaders();\ndisplaying_main_screen_1.DisplayingMainScreen.verifySearchTextField();\ndisplaying_main_screen_1.DisplayingMainScreen.verifyTheMainParentAccounts();",
               "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.md\\:col-8`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.md\\:col-8`, but never found it.\n    at DisplayingMainScreen.verifyEmptyViewPanal (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/displaying_main_screen.ts:22:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts:18:0)",
+                "message": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.",
+                "estack": "CypressError: `cy.visit()` failed trying to load:\n\nhttps://intmicrotec.neat-url.com:2006/bussiness-owners/\n\nWe attempted to make an http request to this URL but the request failed without a response.\n\nWe received this error at the network level:\n\n  > Error: connect ECONNREFUSED 77.31.144.166:2006\n\nCommon situations why this would fail:\n  - you don't have internet access\n  - you forgot to run / boot your web server\n  - your web server isn't accessible\n  - you have weird network configuration settings on your computer\n\nThis error occurred while creating the session. Because the session setup failed, we failed the test.\n\nBecause this error occurred during a `before each` hook we are skipping all of the remaining tests.\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131477:74)\n    at visitFailedByErr (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:130876:12)\n    at <unknown> (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:131476:11)\n    at tryCatcher (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1830:23)\n    at Promise._settlePromiseFromHandler (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1542:31)\n    at Promise._settlePromise (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1599:18)\n    at Promise._settlePromise0 (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1644:10)\n    at Promise._settlePromises (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:1720:18)\n    at _drainQueueStep (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2430:12)\n    at _drainQueue (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2423:9)\n    at Async._drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2439:5)\n    at Async.drainQueues (https://intmicrotec.neat-url.com:2006/__cypress/runner/cypress_runner.js:2309:14)\nFrom Your Spec Code:\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/support/commands.ts:1239:0)\n\nFrom Node.js Internals:\n  Error: connect ECONNREFUSED 77.31.144.166:2006\n      at TCPConnectWrap.afterConnect [as oncomplete] (node:net:1495:16)",
                 "diff": null
               },
-              "uuid": "cba5bfac-5c62-4d7c-b2a3-a5c63136d62b",
-              "parentUUID": "57c0b657-5252-4f69-8629-e846b48f67db",
+              "uuid": "fb5738c5-f0d8-4622-bf90-e51dd6ba6531",
+              "parentUUID": "7ec77282-8dcc-445e-8775-ac473f188659",
               "isHook": false,
               "skipped": false
             },
@@ -60,54 +60,50 @@
               "title": "2. Verify Shiftting between Tree and List view",
               "fullTitle": "Displaying List View Chart of Account 2. Verify Shiftting between Tree and List view",
               "timedOut": null,
-              "duration": 136363,
-              "state": "passed",
-              "speed": "slow",
-              "pass": true,
+              "duration": 0,
+              "state": "skipped",
+              "speed": null,
+              "pass": false,
               "fail": false,
               "pending": false,
               "context": null,
               "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncharts_of_accounts_1.ChartOfAccounts.switchingToListView();\ncharts_of_accounts_1.ChartOfAccounts.switchingToTreeView();",
               "err": {},
-              "uuid": "9caf88bd-c44a-4cb6-826a-1142ad5363d6",
-              "parentUUID": "57c0b657-5252-4f69-8629-e846b48f67db",
+              "uuid": "103312c7-eee5-458a-bdc9-d8db6444b75f",
+              "parentUUID": "7ec77282-8dcc-445e-8775-ac473f188659",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             },
             {
               "title": "3. Verify Tree and List views have the same data",
               "fullTitle": "Displaying List View Chart of Account 3. Verify Tree and List views have the same data",
               "timedOut": null,
-              "duration": 104837,
-              "state": "failed",
+              "duration": 0,
+              "state": "skipped",
               "speed": null,
               "pass": false,
-              "fail": true,
+              "fail": false,
               "pending": false,
               "context": null,
               "code": "charts_of_accounts_1.ChartOfAccounts.landing();\ncy.wait(1500);\ncy.reload();\ncy.wait(1500);\ncy.clickContinueAs();\ncy.wait(1500);\ncharts_of_accounts_1.ChartOfAccounts.SearchAnTreeAccount(accounting_data_1.AccountingData.accountCOde);\ncy.wait(1000);\ncy.get('div[class=\"description\"]').last().scrollIntoView().click();\ncy.wait(1000);\ncy.wrapDisabledPlaceholderValue(0).then((codeT) => {\n    cy.wrap(codeT).as(\"codeT\");\n});\ncy.wrapDisabledPlaceholderValue(2).then((nameText) => {\n    cy.wrap(nameText).as(\"nameText\");\n});\ncy.wrapDisabledPlaceholderValue(5).then((natureTxt) => {\n    cy.wrap(natureTxt).as(\"natureTxt\");\n});\ncy.wrapDisabledPlaceholderValue(6).then((sectionTxt) => {\n    cy.wrap(sectionTxt).as(\"sectionTxt\");\n});\ncy.wrapDisabledPlaceholderValue(7).then((typeText) => {\n    cy.wrap(typeText).as(\"typeText\");\n});\ncy.wait(2000);\ncharts_of_accounts_1.ChartOfAccounts.switchingToListView();\ncharts_of_accounts_1.ChartOfAccounts.SearchAListAccount(accounting_data_1.AccountingData.accountCOde);\ncy.wait(2000);\ncy.get(\"@codeT\").then((codeT) => {\n    cy.verifyFirstCellInTable(0, (0, utils_1.getWrappedString)(codeT));\n});\ncy.get(\"@nameText\").then((nameText) => {\n    cy.verifyFirstCellInTable(1, (0, utils_1.getWrappedString)(nameText));\n});\ncy.get(\"@sectionTxt\").then((sectionTxt) => {\n    cy.verifyFirstCellInTable(3, (0, utils_1.getWrappedString)(sectionTxt));\n});\ncy.get(\"@typeText\").then((typeText) => {\n    cy.verifyFirstCellInTable(4, (0, utils_1.getWrappedString)(typeText));\n});\ncy.get(\"@natureTxt\").then((natureTxt) => {\n    cy.verifyFirstCellInTable(5, (0, utils_1.getWrappedString)(natureTxt));\n});",
-              "err": {
-                "message": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.p-tree-filter`, but never found it.",
-                "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `.p-tree-filter`, but never found it.\n    at ChartOfAccounts.SearchAnTreeAccount (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/pages/charts_of_accounts.ts:49:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/Erp_Login/Accounting/charts_of_accounts/tests/Displaying_main_screen.cy.ts:35:0)",
-                "diff": null
-              },
-              "uuid": "90cfa091-4ad2-4336-90b4-d0944be344e3",
-              "parentUUID": "57c0b657-5252-4f69-8629-e846b48f67db",
+              "err": {},
+              "uuid": "8862029e-b0b8-413f-a8e6-3e7c7c324751",
+              "parentUUID": "7ec77282-8dcc-445e-8775-ac473f188659",
               "isHook": false,
-              "skipped": false
+              "skipped": true
             }
           ],
           "suites": [],
-          "passes": [
-            "9caf88bd-c44a-4cb6-826a-1142ad5363d6"
-          ],
+          "passes": [],
           "failures": [
-            "cba5bfac-5c62-4d7c-b2a3-a5c63136d62b",
-            "90cfa091-4ad2-4336-90b4-d0944be344e3"
+            "fb5738c5-f0d8-4622-bf90-e51dd6ba6531"
           ],
           "pending": [],
-          "skipped": [],
-          "duration": 364438,
+          "skipped": [
+            "103312c7-eee5-458a-bdc9-d8db6444b75f",
+            "8862029e-b0b8-413f-a8e6-3e7c7c324751"
+          ],
+          "duration": 1604,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000

@@ -5,9 +5,9 @@
     "passes": 0,
     "pending": 0,
     "failures": 1,
-    "start": "2024-11-26T02:58:20.703Z",
-    "end": "2024-11-26T03:00:31.642Z",
-    "duration": 130939,
+    "start": "2024-12-03T03:06:24.936Z",
+    "end": "2024-12-03T03:08:24.127Z",
+    "duration": 119191,
     "testsRegistered": 6,
     "passPercent": 0,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "a220e740-6499-42f8-8b08-9187ea0e49e3",
+      "uuid": "f214bb2b-50bd-4514-967e-1d49a6a684ed",
       "title": "",
       "fullFile": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Add_branch_dialoge.cy.ts",
       "file": "cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Add_branch_dialoge.cy.ts",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "9420b9a2-1d37-467c-9a6e-83fe49b6e4a3",
+          "uuid": "4a220cdf-69fb-4629-87d8-daa16aff66d8",
           "title": "Add Branch Dialoge",
           "fullFile": "",
           "file": "",
@@ -38,7 +38,7 @@
               "title": "1. Check The Labels",
               "fullTitle": "Add Branch Dialoge 1. Check The Labels",
               "timedOut": null,
-              "duration": 56565,
+              "duration": 51154,
               "state": "failed",
               "speed": null,
               "pass": false,
@@ -51,8 +51,8 @@
                 "estack": "AssertionError: Timed out retrying after 25000ms: Expected to find element: `button[class=\"mange body_b14 Companies\"]`, but never found it.\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Add Branch Dialoge`\n    at EditCompanyScreen.clickLastManageCompanies (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/Manage_companies/pages/editCompanyScreenAct.ts:17:0)\n    at Context.eval (webpack://ERP_MicroTec_Cypress/./cypress/e2e/Bussiness_owners/My-subscriptions/manage_branches/tests/Add_branch_dialoge.cy.ts:14:0)",
                 "diff": null
               },
-              "uuid": "bf4c75cf-4626-48ff-99b1-048845c85df8",
-              "parentUUID": "9420b9a2-1d37-467c-9a6e-83fe49b6e4a3",
+              "uuid": "15e2c247-8b04-463f-a771-6acf00b1c448",
+              "parentUUID": "4a220cdf-69fb-4629-87d8-daa16aff66d8",
               "isHook": false,
               "skipped": false
             },
@@ -69,8 +69,8 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.clickCancelIcon();\ncy.get(\"body\").then(($body) => {\n    if ($body.find(branches_managment__data_1.BranchesManagmentData.deleteActionButton).length < 2) {\n        cy.wrap($body).find(branches_managment__data_1.BranchesManagmentData.deleteActionButton).click();\n        branches_management_1.BranchesManagment.ConfirmDeleteBranchDialog();\n    }\n    else {\n        cy.log(\"There Are many Branches \");\n    }\n});",
               "err": {},
-              "uuid": "70e93d87-04c5-4549-a0d3-b2e483402788",
-              "parentUUID": "9420b9a2-1d37-467c-9a6e-83fe49b6e4a3",
+              "uuid": "21a0c741-9d14-41a6-bb1b-5e0f0d07a5e7",
+              "parentUUID": "4a220cdf-69fb-4629-87d8-daa16aff66d8",
               "isHook": false,
               "skipped": true
             },
@@ -87,8 +87,8 @@
               "context": null,
               "code": "cy.wait(1000);\ncy.getInitItemsCountInListView();\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.inputBranchName(branchName);\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.inputBranchRegion(\"region\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.inputBranchCity(\"city\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.inputBranchEmail((0, utils_1.generateRandomEmail)());\nbranches_management_1.BranchesManagment.inputBranchAddress(\"address\" + (0, utils_1.getRandomNumber)(1, 1000));\ncy.hideDialogFooter();\nbranches_management_1.BranchesManagment.selectMobileCode();\nbranches_management_1.BranchesManagment.inputMobileNumber();\ncy.displayDialogFooter();\nbranches_management_1.BranchesManagment.clickSaveButton();\nbranches_management_1.BranchesManagment.verifySuccessAlertVisibility();\ncy.assertnewItemAddedToListView();",
               "err": {},
-              "uuid": "13c7d184-7d14-422f-bf93-7656e2b98404",
-              "parentUUID": "9420b9a2-1d37-467c-9a6e-83fe49b6e4a3",
+              "uuid": "d526c6c6-d406-4e78-8f1d-2b6b29dd5108",
+              "parentUUID": "4a220cdf-69fb-4629-87d8-daa16aff66d8",
               "isHook": false,
               "skipped": true
             },
@@ -105,8 +105,8 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.inputBranchName(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfRequiredMessage(1);\n// Type In Region Text field without Selecting Country\nbranches_management_1.BranchesManagment.inputBranchRegion(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfRequiredMessage(1);\nbranches_management_1.BranchesManagment.clickSaveButton();\nbranches_management_1.BranchesManagment.checKVisibilityOfRequiredMessage(2);\nbranches_management_1.BranchesManagment.inputBranchName(\"branch\" + (0, utils_1.getRandomNumber)(1, 1000) + \"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfRequiredMessage(1);\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.verifyRemovingRequiredMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"@test.com\");\nbranches_management_1.BranchesManagment.inputBranchRegion(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email\");\nbranches_management_1.BranchesManagment.inputBranchCity(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email@test\");\nbranches_management_1.BranchesManagment.inputBranchAddress(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email.com\");\nbranches_management_1.BranchesManagment.inputBranchCity(\"{enter}\");\nbranches_management_1.BranchesManagment.checKVisibilityOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email@test.co\");\nbranches_management_1.BranchesManagment.checKLackingOfInvalidEmailMessage();\nbranches_management_1.BranchesManagment.inputBranchEmail(\"email@test.com\");\nbranches_management_1.BranchesManagment.checKLackingOfInvalidEmailMessage();",
               "err": {},
-              "uuid": "ff6fa81a-a8c7-4ec2-876b-84b258036f4e",
-              "parentUUID": "9420b9a2-1d37-467c-9a6e-83fe49b6e4a3",
+              "uuid": "58361eab-b340-4eca-b84c-cb97041b9e1e",
+              "parentUUID": "4a220cdf-69fb-4629-87d8-daa16aff66d8",
               "isHook": false,
               "skipped": true
             },
@@ -123,8 +123,8 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.clickCancelIcon();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.clickCancelButton();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();",
               "err": {},
-              "uuid": "33449006-c1f1-4d35-9113-94bf0ba41393",
-              "parentUUID": "9420b9a2-1d37-467c-9a6e-83fe49b6e4a3",
+              "uuid": "ca9904dc-a9ad-49d3-bab6-16275525031c",
+              "parentUUID": "4a220cdf-69fb-4629-87d8-daa16aff66d8",
               "isHook": false,
               "skipped": true
             },
@@ -141,8 +141,8 @@
               "context": null,
               "code": "cy.wait(1000);\nbranches_management_1.BranchesManagment.clickAddNewButton();\nbranches_management_1.BranchesManagment.clickCancelIcon();\nbranches_management_1.BranchesManagment.verifyDialogeRemoval();\ncy.getLastCellInTableValue(1).as(\"name\");\nbranches_management_1.BranchesManagment.clickAddNewButton();\ncy.get(\".p-inputtext\").eq(0).should(\"be.visible\");\ncy.get(\"@name\").then((brName) => {\n    cy.log(\"brName var : \" + brName);\n    cy.log(\"branchName var : \" + branchName);\n    expect((0, utils_1.trimText)(brName.toString().trim())).to.equal((0, utils_1.trimText)(branchName.toString().trim()));\n    branches_management_1.BranchesManagment.inputBranchName(branchName);\n});\nbranches_management_1.BranchesManagment.selectCountry();\nbranches_management_1.BranchesManagment.inputBranchRegion(\"region\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.inputBranchCity(\"city\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.inputBranchEmail((0, utils_1.generateRandomEmail)());\nbranches_management_1.BranchesManagment.inputBranchAddress(\"address\" + (0, utils_1.getRandomNumber)(1, 1000));\nbranches_management_1.BranchesManagment.selectMobileCode();\nbranches_management_1.BranchesManagment.inputMobileNumber();\nbranches_management_1.BranchesManagment.clickSaveButton();\nbranches_management_1.BranchesManagment.verifySuccessAlertInVisibility();",
               "err": {},
-              "uuid": "3cd23d3c-3a7a-4da2-bcad-9246e35e06a2",
-              "parentUUID": "9420b9a2-1d37-467c-9a6e-83fe49b6e4a3",
+              "uuid": "c2e1cce3-20ad-42d7-8886-44979a0ef4a3",
+              "parentUUID": "4a220cdf-69fb-4629-87d8-daa16aff66d8",
               "isHook": false,
               "skipped": true
             }
@@ -150,17 +150,17 @@
           "suites": [],
           "passes": [],
           "failures": [
-            "bf4c75cf-4626-48ff-99b1-048845c85df8"
+            "15e2c247-8b04-463f-a771-6acf00b1c448"
           ],
           "pending": [],
           "skipped": [
-            "70e93d87-04c5-4549-a0d3-b2e483402788",
-            "13c7d184-7d14-422f-bf93-7656e2b98404",
-            "ff6fa81a-a8c7-4ec2-876b-84b258036f4e",
-            "33449006-c1f1-4d35-9113-94bf0ba41393",
-            "3cd23d3c-3a7a-4da2-bcad-9246e35e06a2"
+            "21a0c741-9d14-41a6-bb1b-5e0f0d07a5e7",
+            "d526c6c6-d406-4e78-8f1d-2b6b29dd5108",
+            "58361eab-b340-4eca-b84c-cb97041b9e1e",
+            "ca9904dc-a9ad-49d3-bab6-16275525031c",
+            "c2e1cce3-20ad-42d7-8886-44979a0ef4a3"
           ],
-          "duration": 56565,
+          "duration": 51154,
           "root": false,
           "rootEmpty": false,
           "_timeout": 2000
